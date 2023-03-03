@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'C Language Standards 9899:TC3 (C99)'
+project = 'C99 Language Standard'
 author = 'Ryan Gambord'
 
 # -- General configuration ---------------------------------------------------
@@ -27,7 +27,8 @@ html_static_path = ['_static']
 html_show_sphinx = False
 html_show_copyright = False
 html_show_sourcelink = False
-
+html_favicon = '_static/favicon.ico'
+html_logo = '_static/logo.svg'
 html_theme_options = {
         'style_external_links': True,
         'prev_next_buttons_location': 'both',

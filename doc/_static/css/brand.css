@@ -1,3 +1,7 @@
+img.logo {
+  max-width: 60%;
+}
+
 .rst-content code.literal {
   color: black;
 }

@@ -1,5 +1,5 @@
-C Language Standard (9899:TC3 ~ c99)
-====================================
+C99 Language Standard
+=====================
 
 .. toctree::
    :caption: Contents
@@ -29,5 +29,4 @@ C Language Standard (9899:TC3 ~ c99)
 Indices and tables
 ==================
 
-* :ref:`genindex`
 * :ref:`search`

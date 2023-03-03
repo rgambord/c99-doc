@@ -1,0 +1,57 @@
+.. _9899_7.24.6.3.2:
+
+7.24.6.3.2 The mbrtowc function
+"""""""""""""""""""""""""""""""
+
+.. rubric:: Synopsis
+
+.. _9899_7.24.6.3.2p1:
+
+:ref:`1 <9899_7.24.6.3.2p1>`
+
+::
+
+    #include <wchar.h>
+    size_t mbrtowc(wchar_t * restrict pwc,
+         const char * restrict s,
+         size_t n,
+         mbstate_t * restrict ps);
+
+.. rubric:: Description
+
+.. _9899_7.24.6.3.2p2:
+
+:ref:`2 <9899_7.24.6.3.2p2>` If s is a null pointer, the mbrtowc function is equivalent to the call:
+
+::
+
+    mbrtowc(NULL, "", 1, ps)
+
+In this case, the values of the parameters pwc and n are ignored.
+
+.. _9899_7.24.6.3.2p3:
+
+:ref:`3 <9899_7.24.6.3.2p3>` If s is not a null pointer, the mbrtowc function inspects at most n bytes beginning with the byte pointed to by s to determine the number of bytes needed to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character is complete and valid, it determines the value of the corresponding wide character and then, if pwc is not a null pointer, stores that value in the object pointed to by pwc. If the corresponding wide character is the null wide character, the resulting state described is the initial conversion state.
+
+.. rubric:: Returns
+
+.. _9899_7.24.6.3.2p4:
+
+:ref:`4 <9899_7.24.6.3.2p4>` The mbrtowc function returns the first of the following that applies (given the current conversion state):
+
+0
+   if the next n or fewer bytes complete the multibyte character that corresponds to the null wide character (which is the value stored).
+between 1 and n inclusive
+   if the next n or fewer bytes complete a valid multibyte character (which is the value stored); the value returned is the number of bytes that complete the multibyte character.
+(size_t)(-2)
+   if the next n bytes contribute to an incomplete (but potentially valid) multibyte character, and all n bytes have been processed (no value is stored).\ [#9899_note300]_
+(size_t)(-1)
+   if an encoding error occurs, in which case the next n or fewer bytes do not contribute to a complete and valid multibyte character (no value is stored); the value of the macro EILSEQ is stored in errno, and the conversion state is unspecified.
+
+
+
+
+
+.. rubric:: Footnotes
+
+.. [#9899_note300] When n has at least the value of the MB_CUR_MAX macro, this case can only occur if s points at a sequence of redundant shift sequences (for implementations with state-dependent encodings).

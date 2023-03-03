@@ -1,0 +1,12 @@
+BasedOnStyle: LLVM
+AlwaysBreakAfterReturnType: TopLevelDefinitions
+BreakBeforeBraces: Linux
+ColumnLimit: 80
+AllowShortIfStatementsOnASingleLine: WithoutElse
+IndentCaseLabels: true
+IndentWidth: 4
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveMacros: AcrossEmptyLines
+AlignConsecutiveBitFields: Consecutive
+AlignOperands: true
+AlignTrailingComments: true

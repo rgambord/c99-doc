@@ -1,0 +1,57 @@
+.rst-content code.literal {
+  color: black;
+}
+
+.syntax-block {
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.syntax-block .syntax-production {
+}
+
+.syntax-block .syntax-definition * {
+  float: left;
+}
+
+.syntax-block .syntax-rule {
+  margin-left: 40px;
+  clear: both;
+}
+
+.syntax-block .syntax-rule-tbl {
+  clear: both;
+  display: table;
+  padding-left: 40px;
+  border-spacing: 10px 0;
+}
+
+.syntax-block .syntax-rule-tbl .syntax-rule {
+  display: table-row;
+}
+
+.syntax-block .syntax-rule-tbl .syntax-rule * {
+  display: table-cell;
+}
+
+.syntax-block .syntax-opt{
+  display: inline;
+  margin-left: -1ch;
+}
+
+.syntax-block p {
+  display: inline;
+  white-space: pre;
+  margin: 0;
+}
+.syntax-block  .syntax-nonterminal {
+  font-style: italic;
+  display: inline;
+}
+
+.syntax-block  .syntax-terminal {
+  font-weight: bold;
+  display: inline;
+}

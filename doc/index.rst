@@ -26,7 +26,5 @@ C99 Language Standard
    sections/17/index
    sections/18/index
 
-Indices and tables
-==================
 
-* :ref:`search`
+(Derived from :title:`ISO/IEC 9899:TC3` hosted at `Open Standards: JTC1/SC22/WG14 - C <https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf>`_)

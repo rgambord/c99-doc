@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.24.2.2 The fwscanf function &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="7.24.2.3 The swprintf function" href="../3/index.html" />
+    <link rel="prev" title="7.24.2.1 The fwprintf function" href="../1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">7.24.1 Introduction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">7.24.2 Formatted wide character input/output functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">7.24.2.1 The fwprintf function</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7.24.2.2 The fwscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">7.24.2.3 The swprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../4/index.html">7.24.2.4 The swscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../5/index.html">7.24.2.5 The vfwprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../6/index.html">7.24.2.6 The vfwscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../7/index.html">7.24.2.7 The vswprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../8/index.html">7.24.2.8 The vswscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9/index.html">7.24.2.9 The vwprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../10/index.html">7.24.2.10 The vwscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11/index.html">7.24.2.11 The wprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../12/index.html">7.24.2.12 The wscanf function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">7.24.3 Wide character input/output functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">7.24.4 General wide string utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">7.24.5 Wide character time conversion functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">7.24.6 Extended multibyte/wide character conversion utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">7. Library</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7.24.2 Formatted wide character input/output functions</a></li>
+      <li class="breadcrumb-item active">7.24.2.2 The fwscanf function</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="7.24.2.1 The fwprintf function" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="7.24.2.3 The swprintf function" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-fwscanf-function">
+<span id="id1"></span><h1>7.24.2.2 The fwscanf function<a class="headerlink" href="#the-fwscanf-function" title="Permalink to this heading"></a></h1>
+<p class="rubric">Synopsis</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">fwscanf</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span>
+<span class="w">     </span><span class="k">const</span><span class="w"> </span><span class="kt">wchar_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</pre></div>
+</div>
+<p class="rubric">Description</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The fwscanf function reads input from the stream pointed to by stream, under control of the wide string pointed to by format that specifies the admissible input sequences and how they are to be converted for assignment, using subsequent arguments as pointers to the objects to receive the converted input. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The format is composed of zero or more directives: one or more white-space wide characters, an ordinary wide character (neither % nor a white-space wide character), or a conversion specification. Each conversion specification is introduced by the wide character %. After the %, the following appear in sequence:</p>
+<ul class="simple">
+<li><p>An optional assignment-suppressing wide character *.</p></li>
+<li><p>An optional decimal integer greater than zero that specifies the maximum field width (in wide characters).</p></li>
+<li><p>An optional length modifier that specifies the size of the receiving object.</p></li>
+<li><p>A conversion specifier wide character that specifies the type of conversion to be applied.</p></li>
+</ul>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The fwscanf function executes each directive of the format in turn. If a directive fails, as detailed below, the function returns. Failures are described as input failures (due to the occurrence of an encoding error or the unavailability of input characters), or matching failures (due to inappropriate input).</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>A directive composed of white-space wide character(s) is executed by reading input up to the first non-white-space wide character (which remains unread), or until no more wide characters can be read.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>A directive that is an ordinary wide character is executed by reading the next wide character of the stream. If that wide character differs from the directive, the directive fails and the differing and subsequent wide characters remain unread. Similarly, if end- of-file, an encoding error, or a read error prevents a wide character from being read, the directive fails.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>A directive that is a conversion specification defines a set of matching input sequences, as described below for each specifier. A conversion specification is executed in the following steps:</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>Input white-space wide characters (as specified by the iswspace function) are skipped, unless the specification includes a [, c, or n specifier.<a class="footnote-reference brackets" href="#note288" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>An input item is read from the stream, unless the specification includes an n specifier. An input item is defined as the longest sequence of input wide characters which does not exceed any specified field width and which is, or is a prefix of, a matching input sequence.<a class="footnote-reference brackets" href="#note289" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> The first wide character, if any, after the input item remains unread. If the length of the input item is zero, the execution of the directive fails; this condition is a matching failure unless end-of-file, an encoding error, or a read error prevented input from the stream, in which case it is an input failure.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>Except in the case of a % specifier, the input item (or, in the case of a %n directive, the count of input wide characters) is converted to a type appropriate to the conversion specifier. If the input item is not a matching sequence, the execution of the directive fails: this condition is a matching failure. Unless assignment suppression was indicated by a *, the result of the conversion is placed in the object pointed to by the first argument following the format argument that has not already received a conversion result. If this object does not have an appropriate type, or if the result of the conversion cannot be represented in the object, the behavior is undefined.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>The length modifiers and their meanings are:</p>
+<dl class="simple">
+<dt>hh</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to signed char or unsigned char.</p>
+</dd>
+<dt>h</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to short int or unsigned short int.</p>
+</dd>
+<dt>l (ell)</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to long int or unsigned long int; that a following a, A, e, E, f, F, g, or G conversion specifier applies to an argument with type pointer to double; or that a following c, s, or [ conversion specifier applies to an argument with type pointer to wchar_t.</p>
+</dd>
+<dt>ll (ell-ell)</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to long long int or unsigned long long int.</p>
+</dd>
+<dt>j</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to intmax_t or uintmax_t.</p>
+</dd>
+<dt>z</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to size_t or the corresponding signed integer type.</p>
+</dd>
+<dt>t</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to ptrdiff_t or the corresponding unsigned integer type.</p>
+</dd>
+<dt>L</dt><dd><p>Specifies that a following a, A, e, E, f, F, g, or G conversion specifier applies to an argument with type pointer to long double.</p>
+</dd>
+</dl>
+<p>If a length modifier appears with any conversion specifier other than as specified above, the behavior is undefined.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>The conversion specifiers and their meanings are:</p>
+<dl class="simple">
+<dt>d</dt><dd><p>Matches an optionally signed decimal integer, whose format is the same as expected for the subject sequence of the wcstol function with the value 10 for the base argument. The corresponding argument shall be a pointer to signed integer.</p>
+</dd>
+<dt>i</dt><dd><p>Matches an optionally signed integer, whose format is the same as expected for the subject sequence of the wcstol function with the value 0 for the base argument. The corresponding argument shall be a pointer to signed integer.</p>
+</dd>
+<dt>o</dt><dd><p>Matches an optionally signed octal integer, whose format is the same as expected for the subject sequence of the wcstoul function with the value 8 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>u</dt><dd><p>Matches an optionally signed decimal integer, whose format is the same as expected for the subject sequence of the wcstoul function with the value 10 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>x</dt><dd><p>Matches an optionally signed hexadecimal integer, whose format is the same as expected for the subject sequence of the wcstoul function with the value 16 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>a,e,f,g</dt><dd><p>Matches an optionally signed floating-point number, infinity, or NaN, whose format is the same as expected for the subject sequence of the wcstod function. The corresponding argument shall be a pointer to floating.</p>
+</dd>
+<dt>c</dt><dd><p>Matches a sequence of wide characters of exactly the number specified by the field width (1 if no field width is present in the directive). If no l length modifier is present, characters from the input field are converted as if by repeated calls to the wcrtomb function, with the conversion state described by an mbstate_t object initialized to zero before the first wide character is converted. The corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence. No null character is added. If an l length modifier is present, the corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the sequence. No null wide character is added.</p>
+</dd>
+<dt>s</dt><dd><p>Matches a sequence of non-white-space wide characters. If no l length modifier is present, characters from the input field are converted as if by repeated calls to the wcrtomb function, with the conversion state described by an mbstate_t object initialized to zero before the first wide character is converted. The corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence and a terminating null character, which will be added automatically. If an l length modifier is present, the corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the sequence and the terminating null wide character, which will be added automatically.</p>
+</dd>
+<dt>[</dt><dd><p>Matches a nonempty sequence of wide characters from a set of expected characters (the scanset). If no l length modifier is present, characters from the input field are converted as if by repeated calls to the wcrtomb function, with the conversion state described by an mbstate_t object initialized to zero before the first wide character is converted. The corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence and a terminating null character, which will be added automatically. If an l length modifier is present, the corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the sequence and the terminating null wide character, which will be added automatically. The conversion specifier includes all subsequent wide characters in the format string, up to and including the matching right bracket (]). The wide characters between the brackets (the scanlist) compose the scanset, unless the wide character after the left bracket is a circumflex (^), in which case the scanset contains all wide characters that do not appear in the scanlist between the circumflex and the right bracket. If the conversion specifier begins with [] or ⌈], the right bracket wide character is in the scanlist and the next following right bracket wide character is the matching right bracket that ends the specification; otherwise the first following right bracket wide character is the one that ends the specification. If a - wide character is in the scanlist and is not the first, nor the second where the first wide character is a ^, nor the last character, the behavior is implementation-defined.</p>
+</dd>
+<dt>p</dt><dd><p>Matches an implementation-defined set of sequences, which should be the same as the set of sequences that may be produced by the %p conversion of the fwprintf function. The corresponding argument shall be a pointer to a pointer to void. The input item is converted to a pointer value in an implementation-defined manner. If the input item is a value converted earlier during the same program execution, the pointer that results shall compare equal to that value; otherwise the behavior of the %p conversion is undefined.</p>
+</dd>
+<dt>n</dt><dd><p>No input is consumed. The corresponding argument shall be a pointer to signed integer into which is to be written the number of wide characters read from the input stream so far by this call to the fwscanf function. Execution of a %n directive does not increment the assignment count returned at the completion of execution of the fwscanf function. No argument is converted, but one is consumed. If the conversion specification includes an assignment-suppressing wide character or a field width, the behavior is undefined.</p>
+</dd>
+<dt>%</dt><dd><p>Matches a single % wide character; no conversion or assignment occurs. The complete conversion specification shall be %%.</p>
+</dd>
+</dl>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>If a conversion specification is invalid, the behavior is undefined.<a class="footnote-reference brackets" href="#note290" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>The conversion specifiers A, E, F, G, and X are also valid and behave the same as, respectively, a, e, f, g, and x.</p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>Trailing white space (including new-line wide characters) is left unread unless matched by a directive. The success of literal matches and suppressed assignments is not directly determinable other than via the %n directive.</p>
+<p class="rubric">Returns</p>
+<div class="snum docutils container" id="p16">
+<p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
+</div>
+<p>The fwscanf function returns the value of the macro EOF if an input failure occurs before any conversion. Otherwise, the function returns the number of input items assigned, which can be fewer than provided for, or even zero, in the event of an early matching failure.</p>
+<div class="snum docutils container" id="p17">
+<p><a class="reference internal" href="#p17"><span class="std std-ref">17</span></a></p>
+</div>
+<p>EXAMPLE 1 The call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">wchar_t</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fwscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;%d%f%ls&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the input line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>25 54.32E-1 thompson
+</pre></div>
+</div>
+<p>will assign to n the value 3, to i the value 25, to x the value 5.432, and to name the sequence thompson\0.</p>
+<div class="snum docutils container" id="p18">
+<p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
+</div>
+<p>EXAMPLE 2 The call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="n">fwscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;%2d%f%*d %lf&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with input:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>56789 0123 56a72
+</pre></div>
+</div>
+<p>will assign to i the value 56 and to x the value 789.0, will skip past 0123, and will assign to y the value 56.0. The next wide character read from the input stream will be a.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../4/1/1/index.html#id1"><span class="std std-ref">7.24.4.1.1 The wcstod, wcstof, and wcstold functions</span></a></p></li>
+<li><p><a class="reference internal" href="../../4/1/2/index.html#id1"><span class="std std-ref">7.24.4.1.2 The wcstol, wcstoll, wcstoul, and wcstoull functions</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../6/3/3/index.html#id1"><span class="std std-ref">7.24.6.3.3 The wcrtomb function</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note288" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>These white-space wide characters are not counted against a specified field width.</p>
+</aside>
+<aside class="footnote brackets" id="note289" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>fwscanf pushes back at most one input wide character onto the input stream. Therefore, some sequences that are acceptable to wcstod, wcstol, etc., are unacceptable to fwscanf.</p>
+</aside>
+<aside class="footnote brackets" id="note290" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>See “future library directions” (<a class="reference internal" href="../../../26/11/index.html#id1"><span class="std std-ref">7.26.12</span></a>).</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="7.24.2.1 The fwprintf function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="7.24.2.3 The swprintf function" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

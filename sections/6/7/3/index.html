@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.7.3 Type qualifiers &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.7.3.1 Formal definition of restrict" href="1/index.html" />
+    <link rel="prev" title="6.7.2.3 Tags" href="../2/3/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">6.7 Declarations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">6.7.1 Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">6.7.2 Type specifiers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.7.3 Type qualifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1/index.html">6.7.3.1 Formal definition of restrict</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">6.7.4 Function specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5/index.html">6.7.5 Declarators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">6.7.6 Type names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7/index.html">6.7.7 Type definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8/index.html">6.7.8 Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.7 Declarations</a></li>
+      <li class="breadcrumb-item active">6.7.3 Type qualifiers</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../2/3/index.html" class="btn btn-neutral float-left" title="6.7.2.3 Tags" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="6.7.3.1 Formal definition of restrict" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="type-qualifiers">
+<span id="id1"></span><h1>6.7.3 Type qualifiers<a class="headerlink" href="#type-qualifiers" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1/index.html">6.7.3.1 Formal definition of restrict</a></li>
+</ul>
+</div>
+<p class="rubric">Syntax</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">type-qualifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">const</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">restrict</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">volatile</span></p>
+</div>
+</div>
+</div>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>Types other than pointer types derived from object or incomplete types shall not be restrict-qualified.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The properties associated with qualified types are meaningful only for expressions that are lvalues.<a class="footnote-reference brackets" href="#note114" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>If the same qualifier appears more than once in the same specifier-qualifier-list, either directly or via one or more typedefs, the behavior is the same as if it appeared only once.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If an attempt is made to modify an object defined with a const-qualified type through use of an lvalue with non-const-qualified type, the behavior is undefined. If an attempt is made to refer to an object defined with a volatile-qualified type through use of an lvalue with non-volatile-qualified type, the behavior is undefined.<a class="footnote-reference brackets" href="#note115" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>An object that has volatile-qualified type may be modified in ways unknown to the implementation or have other unknown side effects. Therefore any expression referring to such an object shall be evaluated strictly according to the rules of the abstract machine, as described in <a class="reference internal" href="../../../5/1/2/2/3/index.html#id3"><span class="std std-ref">5.1.2.3</span></a>. Furthermore, at every sequence point the value last stored in the object shall agree with that prescribed by the abstract machine, except as modified by the unknown factors mentioned previously.<a class="footnote-reference brackets" href="#note116" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> What constitutes an access to an object that has volatile-qualified type is implementation-defined.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>An object that is accessed through a restrict-qualified pointer has a special association with that pointer. This association, defined in <a class="reference internal" href="1/index.html#id1"><span class="std std-ref">6.7.3.1</span></a> below, requires that all accesses to that object use, directly or indirectly, the value of that particular pointer.<a class="footnote-reference brackets" href="#note117" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> The intended use of the restrict qualifier (like the register storage class) is to promote optimization, and deleting all instances of the qualifier from all preprocessing translation units composing a conforming program does not change its meaning (i.e., observable behavior).</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>If the specification of an array type includes any type qualifiers, the element type is so- qualified, not the array type. If the specification of a function type includes any type qualifiers, the behavior is undefined.<a class="footnote-reference brackets" href="#note118" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>For two qualified types to be compatible, both shall have the identically qualified version of a compatible type; the order of type qualifiers within a list of specifiers or qualifiers does not affect the specified type.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>EXAMPLE 1 An object declared</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">real_time_clock</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>may be modifiable by hardware, but cannot be assigned to, incremented, or decremented.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>EXAMPLE 2 The following declarations and expressions illustrate the behavior when type qualifiers modify an aggregate type:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">s</span><span class="w"> </span><span class="n">ncs</span><span class="p">;</span><span class="w"> </span><span class="c1">// the object ncs is modifiable</span>
+<span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
+<span class="k">const</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}};</span><span class="w"> </span><span class="c1">// array of array of const int</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">pi</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">pci</span><span class="p">;</span>
+<span class="n">ncs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cs</span><span class="p">;</span><span class="w">             </span><span class="c1">//   valid</span>
+<span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncs</span><span class="p">;</span><span class="w">             </span><span class="c1">//   violates modifiable lvalue constraint for =</span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ncs</span><span class="p">.</span><span class="n">mem</span><span class="p">;</span><span class="w">        </span><span class="c1">//   valid</span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cs</span><span class="p">.</span><span class="n">mem</span><span class="p">;</span><span class="w">         </span><span class="c1">//   violates type constraints for =</span>
+<span class="n">pci</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cs</span><span class="p">.</span><span class="n">mem</span><span class="p">;</span><span class="w">        </span><span class="c1">//   valid</span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">            </span><span class="c1">//   invalid: a[0] has type &quot;const int *&#39;&#39;</span>
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note114" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>The implementation may place a const object that is not volatile in a read-only region of storage. Moreover, the implementation need not allocate storage for such an object if its address is never used.</p>
+</aside>
+<aside class="footnote brackets" id="note115" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>This applies to those objects that behave as if they were defined with qualified types, even if they are never actually defined as objects in the program (such as an object at a memory-mapped input/output address).</p>
+</aside>
+<aside class="footnote brackets" id="note116" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>A volatile declaration may be used to describe an object corresponding to a memory-mapped input/output port or an object accessed by an asynchronously interrupting function. Actions on objects so declared shall not be “optimized out” by an implementation or reordered except as permitted by the rules for evaluating expressions.</p>
+</aside>
+<aside class="footnote brackets" id="note117" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>For example, a statement that assigns a value returned by malloc to a single pointer establishes this association between the allocated object and the pointer.</p>
+</aside>
+<aside class="footnote brackets" id="note118" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>Both of these can occur through the use of typedefs.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../2/3/index.html" class="btn btn-neutral float-left" title="6.7.2.3 Tags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="6.7.3.1 Formal definition of restrict" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

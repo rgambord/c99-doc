@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.4.4.4 Character constants &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.4.5 String literals" href="../../5/index.html" />
+    <link rel="prev" title="6.4.4.3 Enumeration constants" href="../3/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.4 Lexical elements</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.4.1 Keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">6.4.2 Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.4.3 Universal character names</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.4.4 Constants</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">6.4.4.1 Integer constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.4.4.2 Floating constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">6.4.4.3 Enumeration constants</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.4.4.4 Character constants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.4.5 String literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.4.6 Punctuators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.4.7 Header names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.4.8 Preprocessing numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">6.4.9 Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.4 Lexical elements</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.4.4 Constants</a></li>
+      <li class="breadcrumb-item active">6.4.4.4 Character constants</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../3/index.html" class="btn btn-neutral float-left" title="6.4.4.3 Enumeration constants" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../5/index.html" class="btn btn-neutral float-right" title="6.4.5 String literals" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="character-constants">
+<span id="id1"></span><h1>6.4.4.4 Character constants<a class="headerlink" href="#character-constants" title="Permalink to this heading"></a></h1>
+<p class="rubric">Syntax</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">character-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">‘</span> <span class="syn-nonterm">c-char-sequence</span> <span class="syn-term">‘</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">L’</span> <span class="syn-nonterm">c-char-sequence</span> <span class="syn-term">‘</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">c-char-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">c-char</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">c-char-sequence</span> <span class="syn-nonterm">c-char</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">c-char</span>:</p>
+</div>
+<div class="syntax-text-rule docutils container">
+<p>any member of the source character set except the single-quote </p>
+<p><span class="syn-term">‘</span></p>
+<p>, backslash </p>
+<p><span class="syn-term">\</span></p>
+<p>, or </p>
+<p><span class="syn-nonterm">new-line</span></p>
+<p> character</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">escape-sequence</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">simple-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">octal-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">universal-character-name</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">simple-escape-sequence</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\’</span> <span class="syn-term">\”</span> <span class="syn-term">\?</span> <span class="syn-term">\\</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\a</span> <span class="syn-term">\b</span> <span class="syn-term">\f</span> <span class="syn-term">\n</span> <span class="syn-term">\r</span> <span class="syn-term">\t</span> <span class="syn-term">\v</span></p>
+</div>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">octal-escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\x</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+</div>
+</div>
+<p class="rubric">Description</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>An integer character constant is a sequence of one or more multibyte characters enclosed in single-quotes, as in <code class="code docutils literal notranslate"><span class="pre">'x'</span></code>. A wide character constant is the same, except prefixed by the letter <strong>L</strong>. With a few exceptions detailed later, the elements of the sequence are any members of the source character set; they are mapped in an implementation-defined manner to members of the execution character set.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The single-quote <strong>‘</strong>, the double-quote <strong>“</strong>, the question-mark <strong>?</strong>, the backslash <strong>\</strong>, and arbitrary integer values are representable according to the following table of escape sequences:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>single quote <strong>‘</strong></p></td>
+<td><p><strong>\’</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>double quote <strong>“</strong></p></td>
+<td><p><strong>\”</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>question mark <strong>?</strong></p></td>
+<td><p><strong>\?</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>backslash <strong>\</strong></p></td>
+<td><p><strong>\\</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>octal character</p></td>
+<td><p><strong>\</strong><em>octal digits</em></p></td>
+</tr>
+<tr class="row-even"><td><p>hexadecimal character</p></td>
+<td><p><strong>\x</strong> <em>hexadecimal digits</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The double-quote <strong>“</strong> and question-mark <strong>?</strong> are representable either by themselves or by the escape sequences <strong>\”</strong> and <strong>\?</strong>, respectively, but the single-quote <strong>‘</strong> and the backslash <strong>\</strong> shall be represented, respectively, by the escape sequences <strong>\’</strong> and <strong>\\</strong>.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The octal digits that follow the backslash in an octal escape sequence are taken to be part of the construction of a single character for an integer character constant or of a single wide character for a wide character constant. The numerical value of the octal integer so formed specifies the value of the desired character or wide character.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>The hexadecimal digits that follow the backslash and the letter <strong>x</strong> in a hexadecimal escape sequence are taken to be part of the construction of a single character for an integer character constant or of a single wide character for a wide character constant. The numerical value of the hexadecimal integer so formed specifies the value of the desired character or wide character.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>Each octal or hexadecimal escape sequence is the longest sequence of characters that can constitute the escape sequence.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>In addition, characters not in the basic character set are representable by universal character names and certain nongraphic characters are representable by escape sequences consisting of the backslash <strong>\</strong> followed by a lowercase letter: <strong>\a</strong>, <strong>\b</strong>, <strong>\f</strong>, <strong>\n</strong>, <strong>\r</strong>, <strong>\t</strong>, and <strong>\v</strong>.<a class="footnote-reference brackets" href="#note65" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>The value of an octal or hexadecimal escape sequence shall be in the range of representable values for the type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code> for an integer character constant, or the unsigned type corresponding to <code class="code docutils literal notranslate"><span class="pre">wchar_t</span></code> for a wide character constant.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>An integer character constant has type <code class="code docutils literal notranslate"><span class="pre">int</span></code>. The value of an integer character constant containing a single character that maps to a single-byte execution character is the numerical value of the representation of the mapped character interpreted as an integer. The value of an integer character constant containing more than one character (e.g., <code class="code docutils literal notranslate"><span class="pre">'ab'</span></code>), or containing a character or escape sequence that does not map to a single-byte execution character, is implementation-defined. If an integer character constant contains a single character or escape sequence, its value is the one that results when an object with type <code class="code docutils literal notranslate"><span class="pre">char</span></code> whose value is that of the single character or escape sequence is converted to type <code class="code docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>A wide character constant has type <code class="code docutils literal notranslate"><span class="pre">wchar_t</span></code>, an integer type defined in the <a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">&lt;stddef.h&gt;</span></a> header. The value of a wide character constant containing a single multibyte character that maps to a member of the extended execution character set is the wide character corresponding to that multibyte character, as defined by the mbtowc function, with an implementation-defined current locale. The value of a wide character constant containing more than one multibyte character, or containing a multibyte character or escape sequence not represented in the extended execution character set, is implementation-defined.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>EXAMPLE 1 The construction <code class="code docutils literal notranslate"><span class="pre">'\0'</span></code> is commonly used to represent the null character.</p>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>EXAMPLE 2 Consider implementations that use two’s-complement representation for integers and eight bits for objects that have type <code class="code docutils literal notranslate"><span class="pre">char</span></code>. In an implementation in which type char has the same range of values as <code class="code docutils literal notranslate"><span class="pre">signed</span> <span class="pre">char</span></code>, the integer character constant <code class="code docutils literal notranslate"><span class="pre">'\xFF'</span></code> has the value <code class="code docutils literal notranslate"><span class="pre">-1</span></code>; if type <code class="code docutils literal notranslate"><span class="pre">char</span></code> has the same range of values as <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code>, the character constant <code class="code docutils literal notranslate"><span class="pre">'\xFF'</span></code> has the value <code class="code docutils literal notranslate"><span class="pre">+255</span></code>.</p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>EXAMPLE 3 Even if eight bits are used for objects that have type char, the construction <code class="code docutils literal notranslate"><span class="pre">'\x123'</span></code> specifies an integer character constant containing only one character, since a hexadecimal escape sequence is terminated only by a non-hexadecimal character. To specify an integer character constant containing the two characters whose values are <code class="code docutils literal notranslate"><span class="pre">'\x12'</span></code> and <code class="code docutils literal notranslate"><span class="pre">'3'</span></code>, the construction <code class="code docutils literal notranslate"><span class="pre">'\0223'</span></code> may be used, since an octal escape sequence is terminated after three octal digits. (The value of this two-character integer character constant is implementation-defined.)</p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>EXAMPLE 4 Even if 12 or more bits are used for objects that have type <code class="code docutils literal notranslate"><span class="pre">wchar_t</span></code>, the construction <code class="code docutils literal notranslate"><span class="pre">L'\1234'</span></code> specifies the implementation-defined value that results from the combination of the values <code class="code docutils literal notranslate"><span class="pre">0123</span></code> and <code class="code docutils literal notranslate"><span class="pre">'4'</span></code>.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../../7/20/7/2/index.html#id1"><span class="std std-ref">7.20.7.2 The mbtowc function</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note65" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>The semantics of these characters were discussed in <a class="reference internal" href="../../../../5/2/2/index.html#id1"><span class="std std-ref">5.2.2</span></a>. If any other character follows a backslash, the result is not a token and a diagnostic is required. See “future language directions” (<a class="reference internal" href="../../../11/4/index.html#id1"><span class="std std-ref">6.11.4</span></a>).</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../3/index.html" class="btn btn-neutral float-left" title="6.4.4.3 Enumeration constants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../5/index.html" class="btn btn-neutral float-right" title="6.4.5 String literals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

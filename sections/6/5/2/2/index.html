@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.5.2.2 Function calls &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.5.2.3 Structure and union members" href="../3/index.html" />
+    <link rel="prev" title="6.5.2.1 Array subscripting" href="../1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.5 Expressions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.5.1 Primary expressions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.5.2 Postfix operators</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">6.5.2.1 Array subscripting</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.5.2.2 Function calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">6.5.2.3 Structure and union members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../4/index.html">6.5.2.4 Postfix increment and decrement operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../5/index.html">6.5.2.5 Compound literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.5.3 Unary operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.5.4 Cast operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.5.5 Multiplicative operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.5.6 Additive operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.5.7 Bitwise shift operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.5.8 Relational operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">6.5.9 Equality operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10/index.html">6.5.10 Bitwise AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../11/index.html">6.5.11 Bitwise exclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../12/index.html">6.5.12 Bitwise inclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../13/index.html">6.5.13 Logical AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../14/index.html">6.5.14 Logical OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../15/index.html">6.5.15 Conditional operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../16/index.html">6.5.16 Assignment operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../17/index.html">6.5.17 Comma operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.5 Expressions</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.5.2 Postfix operators</a></li>
+      <li class="breadcrumb-item active">6.5.2.2 Function calls</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="6.5.2.1 Array subscripting" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="6.5.2.3 Structure and union members" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-calls">
+<span id="id1"></span><h1>6.5.2.2 Function calls<a class="headerlink" href="#function-calls" title="Permalink to this heading"></a></h1>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The expression that denotes the called function<a class="footnote-reference brackets" href="#note80" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> shall have type pointer to function returning void or returning an object type other than an array type.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>If the expression that denotes the called function has a type that includes a prototype, the number of arguments shall agree with the number of parameters. Each argument shall have a type such that its value may be assigned to an object with the unqualified version of the type of its corresponding parameter.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>A postfix expression followed by parentheses () containing a possibly empty, comma- separated list of expressions is a function call. The postfix expression denotes the called function. The list of expressions specifies the arguments to the function.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>An argument may be an expression of any object type. In preparing for the call to a function, the arguments are evaluated, and each parameter is assigned the value of the corresponding argument.<a class="footnote-reference brackets" href="#note81" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If the expression that denotes the called function has type pointer to function returning an object type, the function call expression has the same type as that object type, and has the value determined as specified in <a class="reference internal" href="../../../8/6/4/index.html#id1"><span class="std std-ref">6.8.6.4</span></a>. Otherwise, the function call has type void. If an attempt is made to modify the result of a function call or to access it after the next sequence point, the behavior is undefined.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>If the expression that denotes the called function has a type that does not include a prototype, the integer promotions are performed on each argument, and arguments that have type float are promoted to double. These are called the default argument promotions. If the number of arguments does not equal the number of parameters, the behavior is undefined. If the function is defined with a type that includes a prototype, and either the prototype ends with an ellipsis (, ...) or the types of the arguments after promotion are not compatible with the types of the parameters, the behavior is undefined. If the function is defined with a type that does not include a prototype, and the types of the arguments after promotion are not compatible with those of the parameters after promotion, the behavior is undefined, except for the following cases:</p>
+<ul class="simple">
+<li><p>one promoted type is a signed integer type, the other promoted type is the corresponding unsigned integer type, and the value is representable in both types;</p></li>
+<li><p>both types are pointers to qualified or unqualified versions of a character type or void.</p></li>
+</ul>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>If the expression that denotes the called function has a type that does include a prototype, the arguments are implicitly converted, as if by assignment, to the types of the corresponding parameters, taking the type of each parameter to be the unqualified version of its declared type. The ellipsis notation in a function prototype declarator causes argument type conversion to stop after the last declared parameter. The default argument promotions are performed on trailing arguments.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>No other conversions are performed implicitly; in particular, the number and types of arguments are not compared with those of the parameters in a function definition that does not include a function prototype declarator.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>If the function is defined with a type that is not compatible with the type (of the expression) pointed to by the expression that denotes the called function, the behavior is undefined.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>The order of evaluation of the function designator, the actual arguments, and subexpressions within the actual arguments is unspecified, but there is a sequence point before the actual call.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>Recursive function calls shall be permitted, both directly and indirectly through any chain of other functions.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>EXAMPLE In the function call</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">*</span><span class="n">pf</span><span class="p">[</span><span class="n">f1</span><span class="p">()])</span><span class="w"> </span><span class="p">(</span><span class="n">f2</span><span class="p">(),</span><span class="w"> </span><span class="n">f3</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f4</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>the functions f1, f2, f3, and f4 may be called in any order. All side effects have to be completed before the function pointed to by pf[f1()] is called.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../7/5/3/index.html#id1"><span class="std std-ref">6.7.5.3 Function declarators (including prototypes)</span></a></p></li>
+<li><p><a class="reference internal" href="../../../9/1/index.html#id1"><span class="std std-ref">6.9.1 Function definitions</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../8/6/4/index.html#id1"><span class="std std-ref">6.8.6.4 The return statement</span></a></p></li>
+<li><p><a class="reference internal" href="../../16/1/index.html#id1"><span class="std std-ref">6.5.16.1 Simple assignment</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note80" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Most often, this is the result of converting an identifier that is a function designator.</p>
+</aside>
+<aside class="footnote brackets" id="note81" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>A function may change the values of its parameters, but these changes cannot affect the values of the arguments. On the other hand, it is possible to pass a pointer to an object, and the function may change the value of the object pointed to. A parameter declared to have array or function type is adjusted to have a pointer type as described in <a class="reference internal" href="../../../9/1/index.html#id1"><span class="std std-ref">6.9.1</span></a>.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="6.5.2.1 Array subscripting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="6.5.2.3 Structure and union members" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

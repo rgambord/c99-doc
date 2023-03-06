@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.2.2 Declarations &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="A.2.3 Statements" href="../3/index.html" />
+    <link rel="prev" title="A.2.1 Expressions" href="../1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Annex A</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">A.1 Lexical grammar</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">A.2 Phrase structure grammar</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">A.2.1 Expressions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">A.2.2 Declarations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">A.2.3 Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">A.2.4 External definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">A.3 Preprocessing directives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Annex A</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">A.2 Phrase structure grammar</a></li>
+      <li class="breadcrumb-item active">A.2.2 Declarations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="A.2.1 Expressions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="A.2.3 Statements" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="a-2-2-declarations">
+<span id="a-2-2"></span><h1>A.2.2 Declarations<a class="headerlink" href="#a-2-2-declarations" title="Permalink to this heading"></a></h1>
+<p>(<a class="reference internal" href="../../../6/7/index.html#id1"><span class="std std-ref">6.7</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">declaration</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declaration-specifiers</span> <span class="syn-nonterm">init-declarator-list</span><span class="syn-opt">opt</span> <span class="syn-term">;</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/index.html#id1"><span class="std std-ref">6.7</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">declaration-specifiers</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">storage-class-specifier</span> <span class="syn-nonterm">declaration-specifiers</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-specifier</span> <span class="syn-nonterm">declaration-specifiers</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-qualifier</span> <span class="syn-nonterm">declaration-specifiers</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">function-specifier</span> <span class="syn-nonterm">declaration-specifiers</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/index.html#id1"><span class="std std-ref">6.7</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">init-declarator-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">init-declarator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">init-declarator-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">init-declarator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/index.html#id1"><span class="std std-ref">6.7</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">init-declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declarator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declarator</span> <span class="syn-term">=</span> <span class="syn-nonterm">initializer</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/1/index.html#id1"><span class="std std-ref">6.7.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">storage-class-specifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">typedef</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">extern</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">static</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">auto</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">register</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/index.html#id1"><span class="std std-ref">6.7.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">type-specifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">void</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">char</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">short</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">int</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">long</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">float</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">double</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">signed</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">unsigned</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">_Bool</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">_Complex</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-or-union-specifier</span> <span class="syn-term">*</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enum-specifier</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">typedef-name</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-or-union-specifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-or-union</span> <span class="syn-nonterm">identifier</span><span class="syn-opt">opt</span> <span class="syn-term">{</span> <span class="syn-nonterm">struct-declaration-list</span> <span class="syn-term">}</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-or-union</span> <span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-or-union</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">struct</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">union</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-declaration-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-declaration</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-declaration-list</span> <span class="syn-nonterm">struct-declaration</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-declaration</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">specifier-qualifier-list</span> <span class="syn-nonterm">struct-declarator-list</span> <span class="syn-term">;</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">specifier-qualifier-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-specifier</span> <span class="syn-nonterm">specifier-qualifier-list</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-qualifier</span> <span class="syn-nonterm">specifier-qualifier-list</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-declarator-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-declarator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">struct-declarator-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">struct-declarator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/1/index.html#id1"><span class="std std-ref">6.7.2.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">struct-declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declarator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declarator</span><span class="syn-opt">opt</span> <span class="syn-term">:</span> <span class="syn-nonterm">constant-expression</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/2/index.html#id1"><span class="std std-ref">6.7.2.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">enum-specifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">enum</span> <span class="syn-nonterm">identifier</span><span class="syn-opt">opt</span> <span class="syn-term">{</span> <span class="syn-nonterm">enumerator-list</span> <span class="syn-term">}</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">enum</span> <span class="syn-nonterm">identifier</span><span class="syn-opt">opt</span> <span class="syn-term">{</span> <span class="syn-nonterm">enumerator-list</span> <span class="syn-term">,</span> <span class="syn-term">}</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">enum</span> <span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/2/index.html#id1"><span class="std std-ref">6.7.2.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">enumerator-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enumerator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enumerator-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">enumerator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/2/2/index.html#id1"><span class="std std-ref">6.7.2.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">enumerator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enumeration-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enumeration-constant</span> <span class="syn-term">=</span> <span class="syn-nonterm">constant-expression</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/3/index.html#id1"><span class="std std-ref">6.7.3</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">type-qualifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">const</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">restrict</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">volatile</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/4/index.html#id1"><span class="std std-ref">6.7.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">function-specifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">inline</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">pointer</span><span class="syn-opt">opt</span> <span class="syn-nonterm">direct-declarator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">direct-declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">(</span> <span class="syn-nonterm">declarator</span> <span class="syn-term">)</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">[</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span> <span class="syn-nonterm">assignment-expression</span><span class="syn-opt">opt</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">[</span> <span class="syn-term">static</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span> <span class="syn-nonterm">assignment-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">[</span> <span class="syn-nonterm">type-qualifier-list</span> <span class="syn-term">static</span> <span class="syn-nonterm">assignment-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">[</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span> <span class="syn-term">*</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">(</span> <span class="syn-nonterm">parameter-type-list</span> <span class="syn-term">)</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-declarator</span> <span class="syn-term">(</span> <span class="syn-nonterm">identifier-list</span><span class="syn-opt">opt</span> <span class="syn-term">)</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">pointer</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">*</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">*</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span> <span class="syn-nonterm">pointer</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">type-qualifier-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-qualifier</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">type-qualifier-list</span> <span class="syn-nonterm">type-qualifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">parameter-type-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">parameter-list</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">parameter-list</span> <span class="syn-term">,</span> <span class="syn-term">...</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">parameter-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">parameter-declaration</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">parameter-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">parameter-declaration</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">parameter-declaration</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declaration-specifiers</span> <span class="syn-nonterm">declarator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">declaration-specifiers</span> <span class="syn-nonterm">abstract-declarator</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">identifier-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/6/index.html#id1"><span class="std std-ref">6.7.6</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">type-name</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">specifier-qualifier-list</span> <span class="syn-nonterm">abstract-declarator</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/6/index.html#id1"><span class="std std-ref">6.7.6</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">abstract-declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">pointer</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">pointer</span><span class="syn-opt">opt</span> <span class="syn-nonterm">direct-abstract-declarator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/6/index.html#id1"><span class="std std-ref">6.7.6</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">(</span> <span class="syn-nonterm">abstract-declarator</span> <span class="syn-term">)</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span><span class="syn-opt">opt</span> <span class="syn-term">[</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">assignment-expression</span><span class="syn-opt">opt</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span><span class="syn-opt">opt</span> <span class="syn-term">[</span> <span class="syn-term">static</span> <span class="syn-nonterm">type-qualifier-list</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">assignment-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span><span class="syn-opt">opt</span> <span class="syn-term">[</span> <span class="syn-nonterm">type-qualifier-list</span> <span class="syn-term">static</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">assignment-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span><span class="syn-opt">opt</span> <span class="syn-term">[</span> <span class="syn-term">*</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">direct-abstract-declarator</span><span class="syn-opt">opt</span> <span class="syn-term">(</span> <span class="syn-nonterm">parameter-type-list</span><span class="syn-opt">opt</span> <span class="syn-term">)</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/7/index.html#id1"><span class="std std-ref">6.7.7</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">typedef-name</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/8/index.html#id1"><span class="std std-ref">6.7.8</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">initializer</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">assignment-expression</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">{</span> <span class="syn-nonterm">initializer-list</span> <span class="syn-term">}</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">{</span> <span class="syn-nonterm">initializer-list</span> <span class="syn-term">,</span> <span class="syn-term">}</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/8/index.html#id1"><span class="std std-ref">6.7.8</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">initializer-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designation</span><span class="syn-opt">opt</span> <span class="syn-nonterm">initializer</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">initializer-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">designation</span><span class="syn-opt">opt</span> <span class="syn-nonterm">initializer</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/8/index.html#id1"><span class="std std-ref">6.7.8</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designation</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator-list</span> <span class="syn-term">=</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/8/index.html#id1"><span class="std std-ref">6.7.8</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designator-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator-list</span> <span class="syn-nonterm">designator</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/7/8/index.html#id1"><span class="std std-ref">6.7.8</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">[</span> <span class="syn-nonterm">constant-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">.</span> <span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="A.2.1 Expressions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="A.2.3 Statements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

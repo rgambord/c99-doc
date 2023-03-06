@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.12 Mathematics &lt;math.h&gt; &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="7.12.1 Treatment of error conditions" href="1/index.html" />
+    <link rel="prev" title="7.11.2.1 The localeconv function" href="../11/2/1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.12 Mathematics &lt;math.h&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1/index.html">7.12.1 Treatment of error conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2/index.html">7.12.2 The FP_CONTRACT pragma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3/index.html">7.12.3 Classification macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4/index.html">7.12.4 Trigonometric functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5/index.html">7.12.5 Hyperbolic functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6/index.html">7.12.6 Exponential and logarithmic functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7/index.html">7.12.7 Power and absolute-value functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8/index.html">7.12.8 Error and gamma functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9/index.html">7.12.9 Nearest integer functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10/index.html">7.12.10 Remainder functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11/index.html">7.12.11 Manipulation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12/index.html">7.12.12 Maximum, minimum, and positive difference functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13/index.html">7.12.13 Floating multiply-add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14/index.html">7.12.14 Comparison macros</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7. Library</a></li>
+      <li class="breadcrumb-item active">7.12 Mathematics &lt;math.h&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../11/2/1/index.html" class="btn btn-neutral float-left" title="7.11.2.1 The localeconv function" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="7.12.1 Treatment of error conditions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mathematics-math-h">
+<span id="id1"></span><h1>7.12 Mathematics &lt;math.h&gt;<a class="headerlink" href="#mathematics-math-h" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1/index.html">7.12.1 Treatment of error conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2/index.html">7.12.2 The FP_CONTRACT pragma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3/index.html">7.12.3 Classification macros</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3/1/index.html">7.12.3.1 The fpclassify macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/2/index.html">7.12.3.2 The isfinite macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/3/index.html">7.12.3.3 The isinf macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/4/index.html">7.12.3.4 The isnan macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/5/index.html">7.12.3.5 The isnormal macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/6/index.html">7.12.3.6 The signbit macro</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4/index.html">7.12.4 Trigonometric functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4/1/index.html">7.12.4.1 The acos functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/2/index.html">7.12.4.2 The asin functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/3/index.html">7.12.4.3 The atan functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/4/index.html">7.12.4.4 The atan2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/5/index.html">7.12.4.5 The cos functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/6/index.html">7.12.4.6 The sin functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/7/index.html">7.12.4.7 The tan functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5/index.html">7.12.5 Hyperbolic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5/1/index.html">7.12.5.1 The acosh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/2/index.html">7.12.5.2 The asinh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/3/index.html">7.12.5.3 The atanh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/4/index.html">7.12.5.4 The cosh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/5/index.html">7.12.5.5 The sinh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/6/index.html">7.12.5.6 The tanh functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6/index.html">7.12.6 Exponential and logarithmic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6/1/index.html">7.12.6.1 The exp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/2/index.html">7.12.6.2 The exp2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/3/index.html">7.12.6.3 The expm1 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/4/index.html">7.12.6.4 The frexp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/5/index.html">7.12.6.5 The ilogb functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/6/index.html">7.12.6.6 The ldexp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/7/index.html">7.12.6.7 The log functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/8/index.html">7.12.6.8 The log10 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/9/index.html">7.12.6.9 The log1p functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/10/index.html">7.12.6.10 The log2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/11/index.html">7.12.6.11 The logb functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/12/index.html">7.12.6.12 The modf functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/13/index.html">7.12.6.13 The scalbn and scalbln functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7/index.html">7.12.7 Power and absolute-value functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7/1/index.html">7.12.7.1 The cbrt functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/2/index.html">7.12.7.2 The fabs functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/3/index.html">7.12.7.3 The hypot functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/4/index.html">7.12.7.4 The pow functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/5/index.html">7.12.7.5 The sqrt functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8/index.html">7.12.8 Error and gamma functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8/1/index.html">7.12.8.1 The erf functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/2/index.html">7.12.8.2 The erfc functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/3/index.html">7.12.8.3 The lgamma functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/4/index.html">7.12.8.4 The tgamma functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9/index.html">7.12.9 Nearest integer functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9/1/index.html">7.12.9.1 The ceil functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/2/index.html">7.12.9.2 The floor functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/3/index.html">7.12.9.3 The nearbyint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/4/index.html">7.12.9.4 The rint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/5/index.html">7.12.9.5 The lrint and llrint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/6/index.html">7.12.9.6 The round functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/7/index.html">7.12.9.7 The lround and llround functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/8/index.html">7.12.9.8 The trunc functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10/index.html">7.12.10 Remainder functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10/1/index.html">7.12.10.1 The fmod functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10/2/index.html">7.12.10.2 The remainder functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10/3/index.html">7.12.10.3 The remquo functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11/index.html">7.12.11 Manipulation functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11/1/index.html">7.12.11.1 The copysign functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11/2/index.html">7.12.11.2 The nan functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11/3/index.html">7.12.11.3 The nextafter functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11/4/index.html">7.12.11.4 The nexttoward functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12/index.html">7.12.12 Maximum, minimum, and positive difference functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12/1/index.html">7.12.12.1 The fdim functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12/2/index.html">7.12.12.2 The fmax functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12/3/index.html">7.12.12.3 The fmin functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13/index.html">7.12.13 Floating multiply-add</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13/1/index.html">7.12.13.1 The fma functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="14/index.html">7.12.14 Comparison macros</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="14/1/index.html">7.12.14.1 The isgreater macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/2/index.html">7.12.14.2 The isgreaterequal macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/3/index.html">7.12.14.3 The isless macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/4/index.html">7.12.14.4 The islessequal macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/5/index.html">7.12.14.5 The islessgreater macro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14/6/index.html">7.12.14.6 The isunordered macro</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The header <a class="reference internal" href="#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> declares two types and many mathematical functions and defines several macros. Most synopses specify a family of functions consisting of a principal function with one or more double parameters, a double return value, or both; and other functions with the same name but with f and l suffixes, which are corresponding functions with float and long double parameters, return values, or both.<a class="footnote-reference brackets" href="#note198" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Integer arithmetic functions and conversion functions are discussed later.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The types</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">float_t</span>
+<span class="n">double_t</span>
+</pre></div>
+</div>
+<p>are floating types at least as wide as float and double, respectively, and such that double_t is at least as wide as float_t. If FLT_EVAL_METHOD equals 0, float_t and double_t are float and double, respectively; if FLT_EVAL_METHOD equals 1, they are both double; if FLT_EVAL_METHOD equals 2, they are both long double; and for other values of FLT_EVAL_METHOD, they are otherwise implementation-defined.<a class="footnote-reference brackets" href="#note199" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The macro</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HUGE_VAL</span>
+</pre></div>
+</div>
+<p>expands to a positive double constant expression, not necessarily representable as a float. The macros</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HUGE_VALF</span>
+<span class="n">HUGE_VALL</span>
+</pre></div>
+</div>
+<p>are respectively float and long double analogs of HUGE_VAL.<a class="footnote-reference brackets" href="#note200" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The macro</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INFINITY</span>
+</pre></div>
+</div>
+<p>expands to a constant expression of type float representing positive or unsigned infinity, if available; else to a positive constant of type float that overflows at translation time.<a class="footnote-reference brackets" href="#note201" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The macro</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">NAN</span>
+</pre></div>
+</div>
+<p>is defined if and only if the implementation supports quiet NaNs for the float type. It expands to a constant expression of type float representing a quiet NaN.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>The number classification macros</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_INFINITE</span>
+<span class="n">FP_NAN</span>
+<span class="n">FP_NORMAL</span>
+<span class="n">FP_SUBNORMAL</span>
+<span class="n">FP_ZERO</span>
+</pre></div>
+</div>
+<p>represent the mutually exclusive kinds of floating-point values. They expand to integer constant expressions with distinct values. Additional implementation-defined floating- point classifications, with macro definitions beginning with FP_ and an uppercase letter, may also be specified by the implementation.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The macro</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_FAST_FMA</span>
+</pre></div>
+</div>
+<p>is optionally defined. If defined, it indicates that the fma function generally executes about as fast as, or faster than, a multiply and an add of double operands.<a class="footnote-reference brackets" href="#note202" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> The macros</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_FAST_FMAF</span>
+<span class="n">FP_FAST_FMAL</span>
+</pre></div>
+</div>
+<p>are, respectively, float and long double analogs of FP_FAST_FMA. If defined, these macros expand to the integer constant 1.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>The macros</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_ILOGB0</span>
+<span class="n">FP_ILOGBNAN</span>
+</pre></div>
+</div>
+<p>expand to integer constant expressions whose values are returned by ilogb(x) if x is zero or NaN, respectively. The value of FP_ILOGB0 shall be either INT_MIN or -INT_MAX. The value of FP_ILOGBNAN shall be either INT_MAX or INT_MIN.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>The macros</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MATH_ERRNO</span>
+<span class="n">MATH_ERREXCEPT</span>
+</pre></div>
+</div>
+<p>expand to the integer constants 1 and 2, respectively; the macro</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">math_errhandling</span>
+</pre></div>
+</div>
+<p>expands to an expression that has type int and the value MATH_ERRNO, MATH_ERREXCEPT, or the bitwise OR of both. The value of math_errhandling is constant for the duration of the program. It is unspecified whether math_errhandling is a macro or an identifier with external linkage. If a macro definition is suppressed or a program defines an identifier with the name math_errhandling, the behavior is undefined. If the expression math_errhandling &amp; MATH_ERREXCEPT can be nonzero, the implementation shall define the macros FE_DIVBYZERO, FE_INVALID, and FE_OVERFLOW in <a class="reference internal" href="../6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note198" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Particularly on systems with wide expression evaluation, a <a class="reference internal" href="#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> function might pass arguments and return values in wider format than the synopsis prototype indicates.</p>
+</aside>
+<aside class="footnote brackets" id="note199" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>The types float_t and double_t are intended to be the implementation’s most efficient types at least as wide as float and double, respectively. For FLT_EVAL_METHOD equal 0, 1, or 2, the type float_t is the narrowest type used by the implementation to evaluate floating expressions.</p>
+</aside>
+<aside class="footnote brackets" id="note200" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>HUGE_VAL, HUGE_VALF, and HUGE_VALL can be positive infinities in an implementation that supports infinities.</p>
+</aside>
+<aside class="footnote brackets" id="note201" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>In this case, using INFINITY will violate the constraint in <a class="reference internal" href="../../6/4/4/index.html#id1"><span class="std std-ref">6.4.4</span></a> and thus require a diagnostic.</p>
+</aside>
+<aside class="footnote brackets" id="note202" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>Typically, the FP_FAST_FMA macro is defined if and only if the fma function is implemented directly with a hardware multiply-add instruction. Software implementations are expected to be substantially slower.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../11/2/1/index.html" class="btn btn-neutral float-left" title="7.11.2.1 The localeconv function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="7.12.1 Treatment of error conditions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

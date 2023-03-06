@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.4.2.1 General &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.4.2.2 Predefined identifiers" href="../2/index.html" />
+    <link rel="prev" title="6.4.2 Identifiers" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.4 Lexical elements</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.4.1 Keywords</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.4.2 Identifiers</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.4.2.1 General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.4.2.2 Predefined identifiers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.4.3 Universal character names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.4.4 Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.4.5 String literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.4.6 Punctuators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.4.7 Header names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.4.8 Preprocessing numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">6.4.9 Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.4 Lexical elements</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.4.2 Identifiers</a></li>
+      <li class="breadcrumb-item active">6.4.2.1 General</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../index.html" class="btn btn-neutral float-left" title="6.4.2 Identifiers" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="6.4.2.2 Predefined identifiers" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general">
+<span id="general-1"></span><h1>6.4.2.1 General<a class="headerlink" href="#general" title="Permalink to this heading"></a></h1>
+<p class="rubric">Syntax</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">identifier</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier-nondigit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span> <span class="syn-nonterm">identifier-nondigit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span> <span class="syn-nonterm">digit</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">identifier-nondigit</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">nondigit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">universal-character-name</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p>other implementation-defined characters</p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">nondigit</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">_</span> <span class="syn-term">a</span> <span class="syn-term">b</span> <span class="syn-term">c</span> <span class="syn-term">d</span> <span class="syn-term">e</span> <span class="syn-term">f</span> <span class="syn-term">g</span> <span class="syn-term">h</span> <span class="syn-term">i</span> <span class="syn-term">j</span> <span class="syn-term">k</span> <span class="syn-term">l</span> <span class="syn-term">m</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">n</span> <span class="syn-term">o</span> <span class="syn-term">p</span> <span class="syn-term">q</span> <span class="syn-term">r</span> <span class="syn-term">s</span> <span class="syn-term">t</span> <span class="syn-term">u</span> <span class="syn-term">v</span> <span class="syn-term">w</span> <span class="syn-term">x</span> <span class="syn-term">y</span> <span class="syn-term">z</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">A</span> <span class="syn-term">B</span> <span class="syn-term">C</span> <span class="syn-term">D</span> <span class="syn-term">E</span> <span class="syn-term">F</span> <span class="syn-term">G</span> <span class="syn-term">H</span> <span class="syn-term">I</span> <span class="syn-term">J</span> <span class="syn-term">K</span> <span class="syn-term">L</span> <span class="syn-term">M</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">N</span> <span class="syn-term">O</span> <span class="syn-term">P</span> <span class="syn-term">Q</span> <span class="syn-term">R</span> <span class="syn-term">S</span> <span class="syn-term">T</span> <span class="syn-term">U</span> <span class="syn-term">V</span> <span class="syn-term">W</span> <span class="syn-term">X</span> <span class="syn-term">Y</span> <span class="syn-term">Z</span></p>
+</div>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">digit</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">0</span> <span class="syn-term">1</span> <span class="syn-term">2</span> <span class="syn-term">3</span> <span class="syn-term">4</span> <span class="syn-term">5</span> <span class="syn-term">6</span> <span class="syn-term">7</span> <span class="syn-term">8</span> <span class="syn-term">9</span></p>
+</div>
+</div>
+</div>
+</div>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>An identifier is a sequence of nondigit characters (including the underscore _, the lowercase and uppercase Latin letters, and other characters) and digits, which designates one or more entities as described in <a class="reference internal" href="../../../2/1/index.html#id1"><span class="std std-ref">6.2.1</span></a>. Lowercase and uppercase letters are distinct. There is no specific limit on the maximum length of an identifier.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>Each universal character name in an identifier shall designate a character whose encoding in ISO/IEC 10646 falls into one of the ranges specified in <a class="reference internal" href="../../../../11/index.html#d"><span class="std std-ref">annex D</span></a>.<a class="footnote-reference brackets" href="#note60" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The initial character shall not be a universal character name designating a digit. An implementation may allow multibyte characters that are not part of the basic source character set to appear in identifiers; which characters and their correspondence to universal character names is implementation-defined.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>When preprocessing tokens are converted to tokens during translation phase 7, if a preprocessing token could be converted to either a keyword or an identifier, it is converted to a keyword.</p>
+<p class="rubric">Implementation limits</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>As discussed in <a class="reference internal" href="../../../../5/2/4/1/index.html#id1"><span class="std std-ref">5.2.4.1</span></a>, an implementation may limit the number of significant initial characters in an identifier; the limit for an external name (an identifier that has external linkage) may be more restrictive than that for an internal name (a macro name or an identifier that does not have external linkage). The number of significant characters in an identifier is implementation-defined.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>Any identifiers that differ in a significant character are different identifiers. If two identifiers differ only in nonsignificant characters, the behavior is undefined.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../3/index.html#id1"><span class="std std-ref">6.4.3 Universal character names</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../10/3/index.html#id1"><span class="std std-ref">6.10.3 Macro replacement</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note60" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>On systems in which linkers cannot accept extended characters, an encoding of the universal character name may be used in forming valid external identifiers. For example, some otherwise unused character or sequence of characters may be used to encode the \u in a universal character name. Extended characters may produce a long external identifier.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="6.4.2 Identifiers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="6.4.2.2 Predefined identifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

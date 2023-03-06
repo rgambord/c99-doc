@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.3.12 Library functions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="J.3.13 Architecture" href="../13/index.html" />
+    <link rel="prev" title="J.3.11 Preprocessing directives" href="../11/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Annex J</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">J.1 Unspecified behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">J.2 Undefined behavior</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">J.3 Implementation-defined behavior</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">J.3.1 Translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">J.3.2 Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">J.3.3 Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">J.3.4 Characters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5/index.html">J.3.5 Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">J.3.6 Floating point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7/index.html">J.3.7 Arrays and pointers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8/index.html">J.3.8 Hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9/index.html">J.3.9 Structures, unions, enumerations, and bit-fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../10/index.html">J.3.10 Qualifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../11/index.html">J.3.11 Preprocessing directives</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">J.3.12 Library functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../13/index.html">J.3.13 Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">J.4 Locale-specific behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">J.5 Common extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Annex J</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">J.3 Implementation-defined behavior</a></li>
+      <li class="breadcrumb-item active">J.3.12 Library functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../11/index.html" class="btn btn-neutral float-left" title="J.3.11 Preprocessing directives" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../13/index.html" class="btn btn-neutral float-right" title="J.3.13 Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="j-3-12-library-functions">
+<span id="j-3-12"></span><h1>J.3.12 Library functions<a class="headerlink" href="#j-3-12-library-functions" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="j-3-12p1">
+<p><a class="reference internal" href="#j-3-12p1"><span class="std std-ref">1</span></a></p>
+</div>
+<ul class="simple">
+<li><p>Any library facilities available to a freestanding program, other than the minimal set required by clause 4 (<a class="reference internal" href="../../../5/1/2/1/index.html#id1"><span class="std std-ref">5.1.2.1</span></a>).</p></li>
+<li><p>The format of the diagnostic printed by the assert macro (<a class="reference internal" href="../../../7/2/1/1/index.html#id1"><span class="std std-ref">7.2.1.1</span></a>).</p></li>
+<li><p>The representation of the floating-point status flags stored by the fegetexceptflag function (<a class="reference internal" href="../../../7/6/2/2/index.html#id1"><span class="std std-ref">7.6.2.2</span></a>).</p></li>
+<li><p>Whether the feraiseexcept function raises the “inexact” floating-point exception in addition to the “overflow” or “underflow” floating-point exception (<a class="reference internal" href="../../../7/6/2/3/index.html#id1"><span class="std std-ref">7.6.2.3</span></a>).</p></li>
+<li><p>Strings other than “C” and “” that may be passed as the second argument to the setlocale function (<a class="reference internal" href="../../../7/11/1/1/index.html#id1"><span class="std std-ref">7.11.1.1</span></a>).</p></li>
+<li><p>The types defined for float_t and double_t when the value of the FLT_EVAL_METHOD macro is less than 0 (<a class="reference internal" href="../../../7/12/index.html#id1"><span class="std std-ref">7.12</span></a>).</p></li>
+<li><p>Domain errors for the mathematics functions, other than those required by this International Standard (<a class="reference internal" href="../../../7/12/1/index.html#id1"><span class="std std-ref">7.12.1</span></a>).</p></li>
+<li><p>The values returned by the mathematics functions on domain errors (<a class="reference internal" href="../../../7/12/1/index.html#id1"><span class="std std-ref">7.12.1</span></a>).</p></li>
+<li><p>The values returned by the mathematics functions on underflow range errors, whether errno is set to the value of the macro ERANGE when the integer expression math_errhandling &amp; MATH_ERRNO is nonzero, and whether the “underflow” floating-point exception is raised when the integer expression math_errhandling &amp; MATH_ERREXCEPT is nonzero. (<a class="reference internal" href="../../../7/12/1/index.html#id1"><span class="std std-ref">7.12.1</span></a>).</p></li>
+<li><p>Whether a domain error occurs or zero is returned when an fmod function has a second argument of zero (<a class="reference internal" href="../../../7/12/10/1/index.html#id1"><span class="std std-ref">7.12.10.1</span></a>).</p></li>
+<li><p>Whether a domain error occurs or zero is returned when a remainder function has a second argument of zero (<a class="reference internal" href="../../../7/12/10/2/index.html#id1"><span class="std std-ref">7.12.10.2</span></a>).</p></li>
+<li><p>The base-2 logarithm of the modulus used by the remquo functions in reducing the quotient (<a class="reference internal" href="../../../7/12/10/3/index.html#id1"><span class="std std-ref">7.12.10.3</span></a>).</p></li>
+<li><p>Whether a domain error occurs or zero is returned when a remquo function has a second argument of zero (<a class="reference internal" href="../../../7/12/10/3/index.html#id1"><span class="std std-ref">7.12.10.3</span></a>).</p></li>
+<li><p>Whether the equivalent of signal(sig, SIG_DFL); is executed prior to the call of a signal handler, and, if not, the blocking of signals that is performed (<a class="reference internal" href="../../../7/14/1/1/index.html#id1"><span class="std std-ref">7.14.1.1</span></a>).</p></li>
+<li><p>The null pointer constant to which the macro NULL expands (<a class="reference internal" href="../../../7/17/index.html#id1"><span class="std std-ref">7.17</span></a>).</p></li>
+<li><p>Whether the last line of a text stream requires a terminating new-line character (<a class="reference internal" href="../../../7/19/2/index.html#id1"><span class="std std-ref">7.19.2</span></a>).</p></li>
+<li><p>Whether space characters that are written out to a text stream immediately before a new-line character appear when read in (<a class="reference internal" href="../../../7/19/2/index.html#id1"><span class="std std-ref">7.19.2</span></a>).</p></li>
+<li><p>The number of null characters that may be appended to data written to a binary stream (<a class="reference internal" href="../../../7/19/2/index.html#id1"><span class="std std-ref">7.19.2</span></a>).</p></li>
+<li><p>Whether the file position indicator of an append-mode stream is initially positioned at the beginning or end of the file (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>Whether a write on a text stream causes the associated file to be truncated beyond that point (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>The characteristics of file buffering (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>Whether a zero-length file actually exists (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>The rules for composing valid file names (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>Whether the same file can be simultaneously open multiple times (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>The nature and choice of encodings used for multibyte characters in files (<a class="reference internal" href="../../../7/19/3/index.html#id1"><span class="std std-ref">7.19.3</span></a>).</p></li>
+<li><p>The effect of the remove function on an open file (<a class="reference internal" href="../../../7/19/4/1/index.html#id1"><span class="std std-ref">7.19.4.1</span></a>).</p></li>
+<li><p>The effect if a file with the new name exists prior to a call to the rename function (<a class="reference internal" href="../../../7/19/4/2/index.html#id1"><span class="std std-ref">7.19.4.2</span></a>).</p></li>
+<li><p>Whether an open temporary file is removed upon abnormal program termination (<a class="reference internal" href="../../../7/19/4/3/index.html#id1"><span class="std std-ref">7.19.4.3</span></a>).</p></li>
+<li><p>Which changes of mode are permitted (if any), and under what circumstances (<a class="reference internal" href="../../../7/19/5/4/index.html#id1"><span class="std std-ref">7.19.5.4</span></a>).</p></li>
+<li><p>The style used to print an infinity or NaN, and the meaning of any n-char or n-wchar sequence printed for a NaN (<a class="reference internal" href="../../../7/19/6/1/index.html#id1"><span class="std std-ref">7.19.6.1</span></a>, <a class="reference internal" href="../../../7/24/2/1/index.html#id1"><span class="std std-ref">7.24.2.1</span></a>).</p></li>
+<li><p>The output for %p conversion in the fprintf or fwprintf function (<a class="reference internal" href="../../../7/19/6/1/index.html#id1"><span class="std std-ref">7.19.6.1</span></a>, <a class="reference internal" href="../../../7/24/2/1/index.html#id1"><span class="std std-ref">7.24.2.1</span></a>).</p></li>
+<li><p>The interpretation of a - character that is neither the first nor the last character, nor the second where a ^ character is the first, in the scanlist for %[ conversion in the fscanf or fwscanf function (<a class="reference internal" href="../../../7/19/6/2/index.html#id1"><span class="std std-ref">7.19.6.2</span></a>, <a class="reference internal" href="../../../7/24/2/1/index.html#id1"><span class="std std-ref">7.24.2.1</span></a>).</p></li>
+<li><p>The set of sequences matched by a %p conversion and the interpretation of the corresponding input item in the fscanf or fwscanf function (<a class="reference internal" href="../../../7/19/6/2/index.html#id1"><span class="std std-ref">7.19.6.2</span></a>, <a class="reference internal" href="../../../7/24/2/2/index.html#id1"><span class="std std-ref">7.24.2.2</span></a>).</p></li>
+<li><p>The value to which the macro errno is set by the fgetpos, fsetpos, or ftell functions on failure (<a class="reference internal" href="../../../7/19/9/1/index.html#id1"><span class="std std-ref">7.19.9.1</span></a>, <a class="reference internal" href="../../../7/19/9/3/index.html#id1"><span class="std std-ref">7.19.9.3</span></a>, <a class="reference internal" href="../../../7/19/9/4/index.html#id1"><span class="std std-ref">7.19.9.4</span></a>).</p></li>
+<li><p>The meaning of any n-char or n-wchar sequence in a string representing a NaN that is converted by the strtod, strtof, strtold, wcstod, wcstof, or wcstold function (<a class="reference internal" href="../../../7/20/1/3/index.html#id1"><span class="std std-ref">7.20.1.3</span></a>, <a class="reference internal" href="../../../7/24/4/1/1/index.html#id1"><span class="std std-ref">7.24.4.1.1</span></a>).</p></li>
+<li><p>Whether or not the strtod, strtof, strtold, wcstod, wcstof, or wcstold function sets errno to ERANGE when underflow occurs (<a class="reference internal" href="../../../7/20/1/3/index.html#id1"><span class="std std-ref">7.20.1.3</span></a>, <a class="reference internal" href="../../../7/24/4/1/1/index.html#id1"><span class="std std-ref">7.24.4.1.1</span></a>).</p></li>
+<li><p>Whether the calloc, malloc, and realloc functions return a null pointer or a pointer to an allocated object when the size requested is zero (<a class="reference internal" href="../../../7/20/3/index.html#id1"><span class="std std-ref">7.20.3</span></a>).</p></li>
+<li><p>Whether open streams with unwritten buffered data are flushed, open streams are closed, or temporary files are removed when the abort or _Exit function is called (<a class="reference internal" href="../../../7/20/4/1/index.html#id1"><span class="std std-ref">7.20.4.1</span></a>, <a class="reference internal" href="../../../7/20/4/4/index.html#id1"><span class="std std-ref">7.20.4.4</span></a>).</p></li>
+<li><p>The termination status returned to the host environment by the abort, exit, or _Exit function (<a class="reference internal" href="../../../7/20/4/1/index.html#id1"><span class="std std-ref">7.20.4.1</span></a>, <a class="reference internal" href="../../../7/20/4/3/index.html#id1"><span class="std std-ref">7.20.4.3</span></a>, <a class="reference internal" href="../../../7/20/4/4/index.html#id1"><span class="std std-ref">7.20.4.4</span></a>).</p></li>
+<li><p>The value returned by the system function when its argument is not a null pointer (<a class="reference internal" href="../../../7/20/4/6/index.html#id1"><span class="std std-ref">7.20.4.6</span></a>).</p></li>
+<li><p>The local time zone and Daylight Saving Time (<a class="reference internal" href="../../../7/23/1/index.html#id1"><span class="std std-ref">7.23.1</span></a>).</p></li>
+<li><p>The range and precision of times representable in clock_t and time_t (<a class="reference internal" href="../../../7/23/index.html#id1"><span class="std std-ref">7.23</span></a>).</p></li>
+<li><p>The era for the clock function (<a class="reference internal" href="../../../7/23/2/1/index.html#id1"><span class="std std-ref">7.23.2.1</span></a>).</p></li>
+<li><p>The replacement string for the %Z specifier to the strftime, and wcsftime functions in the “C” locale (<a class="reference internal" href="../../../7/23/3/5/index.html#id1"><span class="std std-ref">7.23.3.5</span></a>, <a class="reference internal" href="../../../7/24/5/1/index.html#id1"><span class="std std-ref">7.24.5.1</span></a>).</p></li>
+<li><p>Whether the functions in <a class="reference internal" href="../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> honor the rounding direction mode in an IEC 60559 conformant implementation, unless explicitly specified otherwise (<a class="reference internal" href="../../../13/9/index.html#f-9"><span class="std std-ref">F.9</span></a>).</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../11/index.html" class="btn btn-neutral float-left" title="J.3.11 Preprocessing directives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../13/index.html" class="btn btn-neutral float-right" title="J.3.13 Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

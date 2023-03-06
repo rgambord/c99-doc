@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.7.8 Initialization &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.8 Statements and blocks" href="../../8/index.html" />
+    <link rel="prev" title="6.7.7 Type definitions" href="../7/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">6.7 Declarations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">6.7.1 Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">6.7.2 Type specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">6.7.3 Type qualifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">6.7.4 Function specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5/index.html">6.7.5 Declarators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">6.7.6 Type names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7/index.html">6.7.7 Type definitions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.7.8 Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.7 Declarations</a></li>
+      <li class="breadcrumb-item active">6.7.8 Initialization</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../7/index.html" class="btn btn-neutral float-left" title="6.7.7 Type definitions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../8/index.html" class="btn btn-neutral float-right" title="6.8 Statements and blocks" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="initialization">
+<span id="id1"></span><h1>6.7.8 Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading"></a></h1>
+<p class="rubric">Syntax</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">initializer</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">assignment-expression</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">{</span> <span class="syn-nonterm">initializer-list</span> <span class="syn-term">}</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">{</span> <span class="syn-nonterm">initializer-list</span> <span class="syn-term">,</span> <span class="syn-term">}</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">initializer-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designation</span><span class="syn-opt">opt</span> <span class="syn-nonterm">initializer</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">initializer-list</span> <span class="syn-term">,</span> <span class="syn-nonterm">designation</span><span class="syn-opt">opt</span> <span class="syn-nonterm">initializer</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designation</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator-list</span> <span class="syn-term">=</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designator-list</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">designator-list</span> <span class="syn-nonterm">designator</span></p>
+</div>
+</div>
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">designator</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">[</span> <span class="syn-nonterm">constant-expression</span> <span class="syn-term">]</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">.</span> <span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>No initializer shall attempt to provide a value for an object not contained within the entity being initialized.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The type of the entity to be initialized shall be an array of unknown size or an object type that is not a variable length array type.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>All the expressions in an initializer for an object that has static storage duration shall be constant expressions or string literals.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If the declaration of an identifier has block scope, and the identifier has external or internal linkage, the declaration shall have no initializer for the identifier.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>If a designator has the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ constant-expression ]
+</pre></div>
+</div>
+<p>then the current object (defined below) shall have array type and the expression shall be an integer constant expression. If the array is of unknown size, any nonnegative value is valid.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>If a designator has the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>. identifier
+</pre></div>
+</div>
+<p>then the current object (defined below) shall have structure or union type and the identifier shall be the name of a member of that type.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>An initializer specifies the initial value stored in an object.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>Except where explicitly stated otherwise, for the purposes of this subclause unnamed members of objects of structure and union type do not participate in initialization. Unnamed members of structure objects have indeterminate value even after initialization.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>If an object that has automatic storage duration is not initialized explicitly, its value is indeterminate. If an object that has static storage duration is not initialized explicitly, then:</p>
+<ul class="simple">
+<li><p>if it has pointer type, it is initialized to a null pointer;</p></li>
+<li><p>if it has arithmetic type, it is initialized to (positive or unsigned) zero;</p></li>
+<li><p>if it is an aggregate, every member is initialized (recursively) according to these rules;</p></li>
+<li><p>if it is a union, the first named member is initialized (recursively) according to these rules.</p></li>
+</ul>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>The initializer for a scalar shall be a single expression, optionally enclosed in braces. The initial value of the object is that of the expression (after conversion); the same type constraints and conversions as for simple assignment apply, taking the type of the scalar to be the unqualified version of its declared type.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>The rest of this subclause deals with initializers for objects that have aggregate or union type.</p>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>The initializer for a structure or union object that has automatic storage duration shall be either an initializer list as described below, or a single expression that has compatible structure or union type. In the latter case, the initial value of the object, including unnamed members, is that of the expression.</p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>An array of character type may be initialized by a character string literal, optionally enclosed in braces. Successive characters of the character string literal (including the terminating null character if there is room or if the array is of unknown size) initialize the elements of the array.</p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>An array with element type compatible with wchar_t may be initialized by a wide string literal, optionally enclosed in braces. Successive wide characters of the wide string literal (including the terminating null wide character if there is room or if the array is of unknown size) initialize the elements of the array.</p>
+<div class="snum docutils container" id="p16">
+<p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
+</div>
+<p>Otherwise, the initializer for an object that has aggregate or union type shall be a brace- enclosed list of initializers for the elements or named members.</p>
+<div class="snum docutils container" id="p17">
+<p><a class="reference internal" href="#p17"><span class="std std-ref">17</span></a></p>
+</div>
+<p>Each brace-enclosed initializer list has an associated current object. When no designations are present, subobjects of the current object are initialized in order according to the type of the current object: array elements in increasing subscript order, structure members in declaration order, and the first named member of a union.<a class="footnote-reference brackets" href="#note129" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> In contrast, a designation causes the following initializer to begin initialization of the subobject described by the designator. Initialization then continues forward in order, beginning with the next subobject after that described by the designator.<a class="footnote-reference brackets" href="#note130" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p18">
+<p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
+</div>
+<p>Each designator list begins its description with the current object associated with the closest surrounding brace pair. Each item in the designator list (in order) specifies a particular member of its current object and changes the current object for the next designator (if any) to be that member.<a class="footnote-reference brackets" href="#note131" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> The current object that results at the end of the designator list is the subobject to be initialized by the following initializer.</p>
+<div class="snum docutils container" id="p19">
+<p><a class="reference internal" href="#p19"><span class="std std-ref">19</span></a></p>
+</div>
+<p>The initialization shall occur in initializer list order, each initializer provided for a particular subobject overriding any previously listed initializer for the same subobject;<a class="footnote-reference brackets" href="#note132" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> all subobjects that are not initialized explicitly shall be initialized implicitly the same as objects that have static storage duration.</p>
+<div class="snum docutils container" id="p20">
+<p><a class="reference internal" href="#p20"><span class="std std-ref">20</span></a></p>
+</div>
+<p>If the aggregate or union contains elements or members that are aggregates or unions, these rules apply recursively to the subaggregates or contained unions. If the initializer of a subaggregate or contained union begins with a left brace, the initializers enclosed by that brace and its matching right brace initialize the elements or members of the subaggregate or the contained union. Otherwise, only enough initializers from the list are taken to account for the elements or members of the subaggregate or the first member of the contained union; any remaining initializers are left to initialize the next element or member of the aggregate of which the current subaggregate or contained union is a part.</p>
+<div class="snum docutils container" id="p21">
+<p><a class="reference internal" href="#p21"><span class="std std-ref">21</span></a></p>
+</div>
+<p>If there are fewer initializers in a brace-enclosed list than there are elements or members of an aggregate, or fewer characters in a string literal used to initialize an array of known size than there are elements in the array, the remainder of the aggregate shall be initialized implicitly the same as objects that have static storage duration.</p>
+<div class="snum docutils container" id="p22">
+<p><a class="reference internal" href="#p22"><span class="std std-ref">22</span></a></p>
+</div>
+<p>If an array of unknown size is initialized, its size is determined by the largest indexed element with an explicit initializer. At the end of its initializer list, the array no longer has incomplete type.</p>
+<div class="snum docutils container" id="p23">
+<p><a class="reference internal" href="#p23"><span class="std std-ref">23</span></a></p>
+</div>
+<p>The order in which any side effects occur among the initialization list expressions is unspecified.<a class="footnote-reference brackets" href="#note133" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p24">
+<p><a class="reference internal" href="#p24"><span class="std std-ref">24</span></a></p>
+</div>
+<p>EXAMPLE 1 Provided that <a class="reference internal" href="../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> has been <code class="code docutils literal notranslate"><span class="pre">#include</span></code>_d, the declarations</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">I</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>define and initialize i with the value 3 and c with the value 5.0 + i3.0.</p>
+<div class="snum docutils container" id="p25">
+<p><a class="reference internal" href="#p25"><span class="std std-ref">25</span></a></p>
+</div>
+<p>EXAMPLE 2 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>defines and initializes x as a one-dimensional array object that has three elements, as no size was specified and there are three initializers.</p>
+<div class="snum docutils container" id="p26">
+<p><a class="reference internal" href="#p26"><span class="std std-ref">26</span></a></p>
+</div>
+<p>EXAMPLE 3 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">         </span><span class="p">{</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">         </span><span class="mi">6</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">         </span><span class="mi">7</span><span class="w"> </span><span class="p">},</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>is a definition with a fully bracketed initialization: 1, 3, and 5 initialize the first row of y (the array object y[0]), namely y[0][0], y[0][1], and y[0][2]. Likewise the next two lines initialize y[1] and y[2]. The initializer ends early, so y[3] is initialized with zeros. Precisely the same effect could have been achieved by</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The initializer for y[0] does not begin with a left brace, so three items from the list are used. Likewise the next three are taken successively for y[1] and y[2].</p>
+<div class="snum docutils container" id="p27">
+<p><a class="reference internal" href="#p27"><span class="std std-ref">27</span></a></p>
+</div>
+<p>EXAMPLE 4 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>initializes the first column of z as specified and initializes the rest with zeros.</p>
+<div class="snum docutils container" id="p28">
+<p><a class="reference internal" href="#p28"><span class="std std-ref">28</span></a></p>
+</div>
+<p>EXAMPLE 5 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">w</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>is a definition with an inconsistently bracketed initialization. It defines an array with two element structures: w[0].a[0] is 1 and w[1].a[0] is 2; all the other elements are zero.</p>
+<div class="snum docutils container" id="p29">
+<p><a class="reference internal" href="#p29"><span class="std std-ref">29</span></a></p>
+</div>
+<p>EXAMPLE 6 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">short</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>contains an incompletely but consistently bracketed initialization. It defines a three-dimensional array object: q[0][0][0] is 1, q[1][0][0] is 2, q[1][0][1] is 3, and 4, 5, and 6 initialize q[2][0][0], q[2][0][1], and q[2][1][0], respectively; all the rest are zero. The initializer for q[0][0] does not begin with a left brace, so up to six items from the current list may be used. There is only one, so the values for the remaining five elements are initialized with zero. Likewise, the initializers for q[1][0] and q[2][0] do not begin with a left brace, so each uses up to six items, initializing their respective two-dimensional subaggregates. If there had been more than six items in any of the lists, a diagnostic message would have been issued. The same initialization result could have been achieved by:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">short</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>or by:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">short</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>in a fully bracketed form.</p>
+<div class="snum docutils container" id="p30">
+<p><a class="reference internal" href="#p30"><span class="std std-ref">30</span></a></p>
+</div>
+<p>Note that the fully bracketed and minimally bracketed forms of initialization are, in general, less likely to cause confusion.</p>
+<div class="snum docutils container" id="p31">
+<p><a class="reference internal" href="#p31"><span class="std std-ref">31</span></a></p>
+</div>
+<p>EXAMPLE 7 One form of initialization that completes array types involves typedef names. Given the declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[];</span><span class="w">          </span><span class="c1">// OK - declared with block scope</span>
+</pre></div>
+</div>
+<p>the declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>is identical to</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">b</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>due to the rules for incomplete types.</p>
+<div class="snum docutils container" id="p32">
+<p><a class="reference internal" href="#p32"><span class="std std-ref">32</span></a></p>
+</div>
+<p>EXAMPLE 8 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>defines “plain” char array objects s and t whose elements are initialized with character string literals. This declaration is identical to</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="n">t</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>The contents of the arrays are modifiable. On the other hand, the declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>defines p with type “pointer to char” and initializes it to point to an object with type “array of char” with length 4 whose elements are initialized with a character string literal. If an attempt is made to use p to modify the contents of the array, the behavior is undefined.</p>
+<div class="snum docutils container" id="p33">
+<p><a class="reference internal" href="#p33"><span class="std std-ref">33</span></a></p>
+</div>
+<p>EXAMPLE 9 Arrays can be initialized to correspond to the elements of an enumeration by using designators:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">member_one</span><span class="p">,</span><span class="w">           </span><span class="n">member_two</span><span class="w"> </span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">nm</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w">           </span><span class="p">{</span>
+<span class="w">      </span><span class="p">[</span><span class="n">member_two</span><span class="p">]</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;member two&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">[</span><span class="n">member_one</span><span class="p">]</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;member one&quot;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p34">
+<p><a class="reference internal" href="#p34"><span class="std std-ref">34</span></a></p>
+</div>
+<p>EXAMPLE 10 Structure members can be initialized to nonzero values without depending on their order:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">div_t</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">quot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">rem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p35">
+<p><a class="reference internal" href="#p35"><span class="std std-ref">35</span></a></p>
+</div>
+<p>EXAMPLE 11 Designators can be used to provide explicit initialization when unadorned initializer lists might be misunderstood:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">w</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p36">
+<p><a class="reference internal" href="#p36"><span class="std std-ref">36</span></a></p>
+</div>
+<p>EXAMPLE 12 Space can be “allocated” from both ends of an array by using a single designator:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">MAX</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">MAX</span><span class="mi">-5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p37">
+<p><a class="reference internal" href="#p37"><span class="std std-ref">37</span></a></p>
+</div>
+<p>In the above, if MAX is greater than ten, there will be some zero-valued elements in the middle; if it is less than ten, some of the values provided by the first five initializers will be overridden by the second five.</p>
+<div class="snum docutils container" id="p38">
+<p><a class="reference internal" href="#p38"><span class="std std-ref">38</span></a></p>
+</div>
+<p>EXAMPLE 13 Any member of a union can be initialized:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">union</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">any_member</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note129" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>If the initializer list for a subaggregate or contained union does not begin with a left brace, its subobjects are initialized as usual, but the subaggregate or contained union does not become the current object: current objects are associated only with brace-enclosed initializer lists.</p>
+</aside>
+<aside class="footnote brackets" id="note130" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>After a union member is initialized, the next object is not the next member of the union; instead, it is the next subobject of an object containing the union.</p>
+</aside>
+<aside class="footnote brackets" id="note131" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Thus, a designator can only specify a strict subobject of the aggregate or union that is associated with the surrounding brace pair. Note, too, that each separate designator list is independent.</p>
+</aside>
+<aside class="footnote brackets" id="note132" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>Any initializer for the subobject which is overridden and so not used to initialize that subobject might not be evaluated at all.</p>
+</aside>
+<aside class="footnote brackets" id="note133" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>In particular, the evaluation order need not be the same as the order of subobject initialization.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../7/index.html" class="btn btn-neutral float-left" title="6.7.7 Type definitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../8/index.html" class="btn btn-neutral float-right" title="6.8 Statements and blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

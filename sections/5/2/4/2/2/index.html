@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5.2.4.2.2 Characteristics of floating types &lt;float.h&gt; &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title="6. Language" href="../../../../../6/index.html" />
+    <link rel="prev" title="5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;" href="../1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">5. Environment</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../1/index.html">5.1 Conceptual models</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">5.2 Environmental considerations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../1/index.html">5.2.1 Character sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../2/index.html">5.2.2 Character display semantics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../3/index.html">5.2.3 Signals and interrupts</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">5.2.4 Environmental limits</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../1/index.html">5.2.4.1 Translation limits</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">5.2.4.2 Numerical limits</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../1/index.html">5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">5.2.4.2.2 Characteristics of floating types &lt;float.h&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">5. Environment</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">5.2 Environmental considerations</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">5.2.4 Environmental limits</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">5.2.4.2 Numerical limits</a></li>
+      <li class="breadcrumb-item active">5.2.4.2.2 Characteristics of floating types &lt;float.h&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../../../6/index.html" class="btn btn-neutral float-right" title="6. Language" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="characteristics-of-floating-types-float-h">
+<span id="id1"></span><h1>5.2.4.2.2 Characteristics of floating types &lt;float.h&gt;<a class="headerlink" href="#characteristics-of-floating-types-float-h" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The characteristics of floating types are defined in terms of a model that describes a representation of floating-point numbers and values that provide information about an implementation’s floating-point arithmetic.<a class="footnote-reference brackets" href="#note16" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The following parameters are used to define the model for each floating-point type:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>s          sign ((+-)1)
+b          base or radix of exponent representation (an integer &gt; 1)
+e          exponent (an integer between a minimum emin and a maximum emax )
+p          precision (the number of base-b digits in the significand)
+fk         nonnegative integers less than b (the significand digits)
+</pre></div>
+</div>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>A floating-point number (x) is defined by the following model:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p
+       x = s be  (Sum) fk b-k ,   emin &lt;= e &lt;= emax
+                  k=1
+</pre></div>
+</div>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>In addition to normalized floating-point numbers ( f<sub>1</sub> &gt; 0 if x != 0), floating types may be able to contain other kinds of floating-point numbers, such as subnormal floating-point numbers (x != 0, e = emin , f<sub>1</sub> = 0) and unnormalized floating-point numbers (x != 0, e &gt; emin , f<sub>1</sub> = 0), and values that are not floating-point numbers, such as infinities and NaNs. A NaN is an encoding signifying Not-a-Number. A quiet NaN propagates through almost every arithmetic operation without raising a floating-point exception; a signaling NaN generally raises a floating-point exception when occurring as an arithmetic operand.<code class="code docutils literal notranslate"><span class="pre">17)</span> <span class="pre">&lt;note17&gt;</span></code></p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>An implementation may give zero and non-numeric values (such as infinities and NaNs) a sign or may leave them unsigned. Wherever such values are unsigned, any requirement in this International Standard to retrieve the sign shall produce an unspecified sign, and any requirement to set the sign shall be ignored.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The accuracy of the floating-point operations (+, -, *, /) and of the library functions in <a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that return floating-point results is implementation- defined, as is the accuracy of the conversion between floating-point internal representations and string representations performed by the library functions in <a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, <a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, and <a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a>. The implementation may state that the accuracy is unknown.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>All integer values in the <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header, except FLT_ROUNDS, shall be constant expressions suitable for use in <code class="code docutils literal notranslate"><span class="pre">#if</span></code> preprocessing directives; all floating values shall be constant expressions. All except DECIMAL_DIG, FLT_EVAL_METHOD, FLT_RADIX, and FLT_ROUNDS have separate names for all three floating-point types. The floating-point model representation is provided for all values except FLT_EVAL_METHOD and FLT_ROUNDS.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The rounding mode for floating-point addition is characterized by the implementation- defined value of FLT_ROUNDS:<a class="footnote-reference brackets" href="#note18" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-1      indeterminable
+ 0      toward zero
+ 1      to nearest
+ 2      toward positive infinity
+ 3      toward negative infinity
+</pre></div>
+</div>
+<p>All other values for FLT_ROUNDS characterize implementation-defined rounding behavior.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>Except for assignment and cast (which remove all extra range and precision), the values of operations with floating operands and values subject to the usual arithmetic conversions and of floating constants are evaluated to a format whose range and precision may be greater than required by the type. The use of evaluation formats is characterized by the implementation-defined value of FLT_EVAL_METHOD:<a class="footnote-reference brackets" href="#note19" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-1        indeterminable;
+ 0        evaluate all operations and constants just to the range and precision of the
+          type;
+ 1        evaluate operations and constants of type float and double to the
+          range and precision of the double type, evaluate long double
+          operations and constants to the range and precision of the long double
+          type;
+ 2        evaluate all operations and constants to the range and precision of the
+          long double type.
+</pre></div>
+</div>
+<p>All other negative values for FLT_EVAL_METHOD characterize implementation-defined behavior.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater or equal in magnitude (absolute value) to those shown, with the same sign:</p>
+<ul class="simple">
+<li><p>radix of exponent representation, b</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_RADIX</span><span class="w">                                                 </span><span class="mi">2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>number of base-FLT_RADIX digits in the floating-point significand, p</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MANT_DIG</span>
+<span class="n">DBL_MANT_DIG</span>
+<span class="n">LDBL_MANT_DIG</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>number of decimal digits, n, such that any floating-point number in the widest supported floating type with pmax radix b digits can be rounded to a floating-point number with n decimal digits and back again without change to the value,</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{ pmax log10 b       if b is a power of 10
+{
+{ ⌈1 + pmax log10 b⌉ otherwise
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">DECIMAL_DIG</span><span class="w">                                            </span><span class="mi">10</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>number of decimal digits, q, such that any floating-point number with q decimal digits can be rounded into a floating-point number with p radix b digits and back again without change to the q decimal digits,</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">log10</span><span class="w"> </span><span class="n">b</span><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">power</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">10</span>
+<span class="p">{</span>
+<span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">log10</span><span class="w"> </span><span class="n">b_</span><span class="p">]</span><span class="w"> </span><span class="n">otherwise</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_DIG                                         6
+DBL_DIG                                        10
+LDBL_DIG                                       10
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>minimum negative integer such that FLT_RADIX raised to one less than that power is a normalized floating-point number, emin</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN_EXP</span>
+<span class="n">DBL_MIN_EXP</span>
+<span class="n">LDBL_MIN_EXP</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>minimum negative integer such that 10 raised to that power is in the range of normalized floating-point numbers, ⌈log10 b<sup>emin -1</sup>⌉</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN_10_EXP</span><span class="w">                                 </span><span class="mi">-37</span>
+<span class="n">DBL_MIN_10_EXP</span><span class="w">                                 </span><span class="mi">-37</span>
+<span class="n">LDBL_MIN_10_EXP</span><span class="w">                                </span><span class="mi">-37</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>maximum integer such that FLT_RADIX raised to one less than that power is a representable finite floating-point number, emax</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX_EXP</span>
+<span class="n">DBL_MAX_EXP</span>
+<span class="n">LDBL_MAX_EXP</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>maximum integer such that 10 raised to that power is in the range of representable finite floating-point numbers, ⌊log10 ((1 - b<sup>-p</sup>)b<sup>emax</sup>)⌋</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX_10_EXP</span><span class="w">                                 </span><span class="o">+</span><span class="mi">37</span>
+<span class="n">DBL_MAX_10_EXP</span><span class="w">                                 </span><span class="o">+</span><span class="mi">37</span>
+<span class="n">LDBL_MAX_10_EXP</span><span class="w">                                </span><span class="o">+</span><span class="mi">37</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater than or equal to those shown:</p>
+<ul class="simple">
+<li><p>maximum representable finite floating-point number, (1 - b<sup>-p</sup>)b<sup>emax</sup></p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX</span><span class="w">                                     </span><span class="mf">1E+37</span>
+<span class="n">DBL_MAX</span><span class="w">                                     </span><span class="mf">1E+37</span>
+<span class="n">LDBL_MAX</span><span class="w">                                    </span><span class="mf">1E+37</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>The values given in the following list shall be replaced by constant expressions with implementation-defined (positive) values that are less than or equal to those shown:</p>
+<ul class="simple">
+<li><p>the difference between 1 and the least value greater than 1 that is representable in the given floating point type, b<sup>1-p</sup></p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_EPSILON</span><span class="w">                                         </span><span class="mf">1E-5</span>
+<span class="n">DBL_EPSILON</span><span class="w">                                         </span><span class="mf">1E-9</span>
+<span class="n">LDBL_EPSILON</span><span class="w">                                        </span><span class="mf">1E-9</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>minimum normalized positive floating-point number, b<sup>emin -1</sup></p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN</span><span class="w">                                            </span><span class="mf">1E-37</span>
+<span class="n">DBL_MIN</span><span class="w">                                            </span><span class="mf">1E-37</span>
+<span class="n">LDBL_MIN</span><span class="w">                                           </span><span class="mf">1E-37</span>
+</pre></div>
+</div>
+<p class="rubric">Recommended practice</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>Conversion from (at least) double to decimal with DECIMAL_DIG digits and back should be the identity function.</p>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>EXAMPLE 1 The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type float:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6
+      x = s 16e   (Sum) fk 16-k ,   -31 &lt;= e &lt;= +32
+                  k=1
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_RADIX                                  16
+FLT_MANT_DIG                                6
+FLT_EPSILON                   9.53674316E-07F
+FLT_DIG                                     6
+FLT_MIN_EXP                               -31
+FLT_MIN                       2.93873588E-39F
+FLT_MIN_10_EXP                            -38
+FLT_MAX_EXP                               +32
+FLT_MAX                       3.40282347E+38F
+FLT_MAX_10_EXP                            +38
+</pre></div>
+</div>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>EXAMPLE 2 The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types float and double:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>24
+      xf = s 2e  (Sum) fk 2-k ,   -125 &lt;= e &lt;= +128
+                  k=1
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>53
+      xd = s 2e  (Sum) fk 2-k ,   -1021 &lt;= e &lt;= +1024
+                  k=1
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_RADIX                                   2
+DECIMAL_DIG                                17
+FLT_MANT_DIG                               24
+FLT_EPSILON                   1.19209290E-07F // decimal constant
+FLT_EPSILON                          0X1P-23F // hex constant
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_DIG                           6
+FLT_MIN_EXP                    -125
+FLT_MIN             1.17549435E-38F               // decimal constant
+FLT_MIN                   0X1P-126F               // hex constant
+FLT_MIN_10_EXP                  -37
+FLT_MAX_EXP                    +128
+FLT_MAX             3.40282347E+38F               // decimal constant
+FLT_MAX             0X1.fffffeP127F               // hex constant
+FLT_MAX_10_EXP                  +38
+DBL_MANT_DIG                     53
+DBL_EPSILON 2.2204460492503131E-16                // decimal constant
+DBL_EPSILON                 0X1P-52               // hex constant
+DBL_DIG                          15
+DBL_MIN_EXP                   -1021
+DBL_MIN     2.2250738585072014E-308               // decimal constant
+DBL_MIN                   0X1P-1022               // hex constant
+DBL_MIN_10_EXP                 -307
+DBL_MAX_EXP                   +1024
+DBL_MAX     1.7976931348623157E+308               // decimal constant
+DBL_MAX      0X1.fffffffffffffP1023               // hex constant
+DBL_MAX_10_EXP                 +308
+</pre></div>
+</div>
+<p>If a type wider than double were supported, then DECIMAL_DIG would be greater than 17. For example, if the widest type were to use the minimal-width IEC 60559 double-extended format (64 bits of precision), then DECIMAL_DIG would be 21.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../../../6/10/1/index.html#id1"><span class="std std-ref">6.10.1 Conditional inclusion</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">7.3 Complex arithmetic &lt;complex.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">7.3 Complex arithmetic &lt;complex.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">7.6 Floating-point environment &lt;fenv.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">7.6 Floating-point environment &lt;fenv.h&gt;</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">7.20 General utilities &lt;stdlib.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">7.20 General utilities &lt;stdlib.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">7.19 Input/output &lt;stdio.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">7.19 Input/output &lt;stdio.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">7.12 Mathematics &lt;math.h&gt;</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">7.12 Mathematics &lt;math.h&gt;</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note16" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>The floating-point model is intended to clarify the description of each floating-point characteristic and does not require the floating-point arithmetic of the implementation to be identical.</p>
+</aside>
+<aside class="footnote brackets" id="note18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Evaluation of FLT_ROUNDS correctly reflects any execution-time change of rounding mode through the function fesetround in <a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="note19" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>The evaluation method determines evaluation formats of expressions involving all floating types, not just real types. For example, if FLT_EVAL_METHOD is 1, then the product of two float _Complex operands is represented in the double _Complex format, and its parts are evaluated to double.</p>
+</aside>
+<aside class="footnote brackets" id="note20" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>The floating-point model in that standard sums powers of b from zero, so the values of the exponent limits are one less than shown here.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../../../6/index.html" class="btn btn-neutral float-right" title="6. Language" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

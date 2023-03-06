@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.7.7 Type definitions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.7.8 Initialization" href="../8/index.html" />
+    <link rel="prev" title="6.7.6 Type names" href="../6/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">6.7 Declarations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">6.7.1 Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">6.7.2 Type specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">6.7.3 Type qualifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">6.7.4 Function specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5/index.html">6.7.5 Declarators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">6.7.6 Type names</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.7.7 Type definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8/index.html">6.7.8 Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.7 Declarations</a></li>
+      <li class="breadcrumb-item active">6.7.7 Type definitions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../6/index.html" class="btn btn-neutral float-left" title="6.7.6 Type names" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../8/index.html" class="btn btn-neutral float-right" title="6.7.8 Initialization" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="type-definitions">
+<span id="id1"></span><h1>6.7.7 Type definitions<a class="headerlink" href="#type-definitions" title="Permalink to this heading"></a></h1>
+<p class="rubric">Syntax</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">typedef-name</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>If a typedef name specifies a variably modified type then it shall have block scope.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>In a declaration whose storage-class specifier is typedef, each declarator defines an identifier to be a typedef name that denotes the type specified for the identifier in the way described in <a class="reference internal" href="../5/index.html#id1"><span class="std std-ref">6.7.5</span></a>. Any array size expressions associated with variable length array declarators are evaluated each time the declaration of the typedef name is reached in the order of execution. A typedef declaration does not introduce a new type, only a synonym for the type so specified. That is, in the following declarations:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">type_ident</span><span class="p">;</span>
+<span class="n">type_ident</span><span class="w"> </span><span class="n">D</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>type_ident is defined as a typedef name with the type specified by the declaration specifiers in T (known as T ), and the identifier in D has the type “derived-declarator- type-list T ‘’ where the derived-declarator-type-list is specified by the declarators of D. A typedef name shares the same name space as other identifiers declared in ordinary declarators.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>EXAMPLE 1 After</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MILES</span><span class="p">,</span><span class="w"> </span><span class="n">KLICKSP</span><span class="p">();</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">hi</span><span class="p">,</span><span class="w"> </span><span class="n">lo</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">range</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>the constructions</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MILES</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">KLICKSP</span><span class="w"> </span><span class="o">*</span><span class="n">metricp</span><span class="p">;</span>
+<span class="n">range</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">range</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">zp</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>are all valid declarations. The type of distance is int, that of metricp is “pointer to function with no parameter specification returning int”, and that of x and z is the specified structure; zp is a pointer to such a structure. The object distance has a type compatible with any other int object.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>EXAMPLE 2 After the declarations</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tp1</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tp2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>type t1 and the type pointed to by tp1 are compatible. Type t1 is also compatible with type struct s1, but not compatible with the types struct s2, t2, the type pointed to by tp2, or int.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>EXAMPLE 3 The following obscure constructions</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">signed</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">plain</span><span class="p">;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tag</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">t</span><span class="o">:</span><span class="mi">4</span><span class="p">;</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">t</span><span class="o">:</span><span class="mi">5</span><span class="p">;</span>
+<span class="w">      </span><span class="n">plain</span><span class="w"> </span><span class="n">r</span><span class="o">:</span><span class="mi">5</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>declare a typedef name t with type signed int, a typedef name plain with type int, and a structure with three bit-field members, one named t that contains values in the range [0, 15], an unnamed const- qualified bit-field which (if it could be accessed) would contain values in either the range [-15, +15] or [-16, +15], and one named r that contains values in one of the ranges [0, 31], [-15, +15], or [-16, +15]. (The choice of range is implementation-defined.) The first two bit-field declarations differ in that unsigned is a type specifier (which forces t to be the name of a structure member), while const is a type qualifier (which modifies t which is still visible as a typedef name). If these declarations are followed in an inner scope by</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+<span class="kt">long</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>then a function f is declared with type “function returning signed int with one unnamed parameter with type pointer to function returning signed int with one unnamed parameter with type signed int”, and an identifier t with type long int.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>EXAMPLE 4 On the other hand, typedef names can be used to improve code readability. All three of the following declarations of the signal function specify exactly the same type, the first without making use of any typedef names.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fv</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pfv</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
+<span class="n">fv</span><span class="w"> </span><span class="o">*</span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">fv</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
+<span class="n">pfv</span><span class="w"> </span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">pfv</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>EXAMPLE 5 If a typedef name denotes a variable length array type, the length of the array is fixed at the time the typedef name is defined, not each time it is used:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">copyt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">      </span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w">    </span><span class="c1">//               B is n ints, n evaluated now</span>
+<span class="w">      </span><span class="n">n</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">      </span><span class="n">B</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">                </span><span class="c1">//                a is n ints, n without += 1</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w">           </span><span class="c1">//                a and b are different sizes</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../6/index.html" class="btn btn-neutral float-left" title="6.7.6 Type names" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../8/index.html" class="btn btn-neutral float-right" title="6.7.8 Initialization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

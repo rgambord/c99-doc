@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.7.2.3 Tags &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.7.3 Type qualifiers" href="../../3/index.html" />
+    <link rel="prev" title="6.7.2.2 Enumeration specifiers" href="../2/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.7 Declarations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.7.1 Storage-class specifiers</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.7.2 Type specifiers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">6.7.2.1 Structure and union specifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.7.2.2 Enumeration specifiers</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.7.2.3 Tags</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.7.3 Type qualifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.7.4 Function specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.7.5 Declarators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.7.6 Type names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.7.7 Type definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.7.8 Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.7 Declarations</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.7.2 Type specifiers</a></li>
+      <li class="breadcrumb-item active">6.7.2.3 Tags</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../2/index.html" class="btn btn-neutral float-left" title="6.7.2.2 Enumeration specifiers" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../3/index.html" class="btn btn-neutral float-right" title="6.7.3 Type qualifiers" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tags">
+<span id="id1"></span><h1>6.7.2.3 Tags<a class="headerlink" href="#tags" title="Permalink to this heading"></a></h1>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>A specific type shall have its content defined at most once.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>Where two declarations that use the same tag declare the same type, they shall both use the same choice of struct, union, or enum.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>A type specifier of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>enum identifier
+</pre></div>
+</div>
+<p>without an enumerator list shall only appear after the type it specifies is complete.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>All declarations of structure, union, or enumerated types that have the same scope and use the same tag declare the same type. The type is incomplete<a class="footnote-reference brackets" href="#note111" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> until the closing brace of the list defining the content, and complete thereafter.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>Two declarations of structure, union, or enumerated types which are in different scopes or use different tags declare distinct types. Each declaration of a structure, union, or enumerated type which does not include a tag declares a distinct type.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>A type specifier of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>struct-or-union identifieropt { struct-declaration-list }
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>enum identifier { enumerator-list }
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>enum identifier { enumerator-list , }
+</pre></div>
+</div>
+<p>declares a structure, union, or enumerated type. The list defines the structure content, union content, or enumeration content. If an identifier is provided,<a class="footnote-reference brackets" href="#note112" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> the type specifier also declares the identifier to be the tag of that type.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>A declaration of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>struct-or-union identifier ;
+</pre></div>
+</div>
+<p>specifies a structure or union type and declares the identifier as a tag of that type.<a class="footnote-reference brackets" href="#note113" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>If a type specifier of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>struct-or-union identifier
+</pre></div>
+</div>
+<p>occurs other than as part of one of the above forms, and no other declaration of the identifier as a tag is visible, then it declares an incomplete structure or union type, and declares the identifier as the tag of that type.<a class="footnote-reference brackets" href="#note113" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>If a type specifier of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>struct-or-union identifier
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>enum identifier
+</pre></div>
+</div>
+<p>occurs other than as part of one of the above forms, and a declaration of the identifier as a tag is visible, then it specifies the same type as that other declaration, and does not redeclare the tag.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>EXAMPLE 1 This mechanism allows declaration of a self-referential structure.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">      </span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>specifies a structure that contains an integer and two pointers to objects of the same type. Once this declaration has been given, the declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>declares s to be an object of the given type and sp to be a pointer to an object of the given type. With these declarations, the expression sp-&gt;left refers to the left struct tnode pointer of the object to which sp points; the expression s.right-&gt;count designates the count member of the right struct tnode pointed to from s.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>The following alternative formulation uses the typedef mechanism:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="n">TNODE</span><span class="p">;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">      </span><span class="n">TNODE</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">TNODE</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>EXAMPLE 2 To illustrate the use of prior declaration of a tag to specify a pair of mutually referential structures, the declarations</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="o">*</span><span class="n">s2p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// D1</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="o">*</span><span class="n">s1p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// D2</span>
+</pre></div>
+</div>
+<p>specify a pair of structures that contain pointers to each other. Note, however, that if s2 were already declared as a tag in an enclosing scope, the declaration D1 would refer to it, not to the tag s2 declared in D2. To eliminate this context sensitivity, the declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>may be inserted ahead of D1. This declares a new tag s2 in the inner scope; the declaration D2 then completes the specification of the new type.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../5/index.html#id1"><span class="std std-ref">6.7.5 Declarators</span></a></p></li>
+<li><p><a class="reference internal" href="../../5/2/index.html#id1"><span class="std std-ref">6.7.5.2 Array declarators</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../7/index.html#id1"><span class="std std-ref">6.7.7 Type definitions</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note111" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>An incomplete type may only by used when the size of an object of that type is not needed. It is not needed, for example, when a typedef name is declared to be a specifier for a structure or union, or when a pointer to or a function returning a structure or union is being declared. (See incomplete types in <a class="reference internal" href="../../../2/5/index.html#id1"><span class="std std-ref">6.2.5</span></a>.) The specification has to be complete before such a function is called or defined.</p>
+</aside>
+<aside class="footnote brackets" id="note112" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>If there is no identifier, the type can, within the translation unit, only be referred to by the declaration of which it is a part. Of course, when the declaration is of a typedef name, subsequent declarations can make use of that typedef name to declare objects having the specified structure, union, or enumerated type.</p>
+</aside>
+<aside class="footnote brackets" id="note113" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>A similar construction with enum does not exist.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../2/index.html" class="btn btn-neutral float-left" title="6.7.2.2 Enumeration specifiers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../3/index.html" class="btn btn-neutral float-right" title="6.7.3 Type qualifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

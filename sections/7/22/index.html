@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.22 Type-generic math &lt;tgmath.h&gt; &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="7.23 Date and time &lt;time.h&gt;" href="../23/index.html" />
+    <link rel="prev" title="7.21.6.3 The strlen function" href="../21/6/3/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7. Library</a></li>
+      <li class="breadcrumb-item active">7.22 Type-generic math &lt;tgmath.h&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../21/6/3/index.html" class="btn btn-neutral float-left" title="7.21.6.3 The strlen function" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../23/index.html" class="btn btn-neutral float-right" title="7.23 Date and time &lt;time.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="type-generic-math-tgmath-h">
+<span id="id1"></span><h1>7.22 Type-generic math &lt;tgmath.h&gt;<a class="headerlink" href="#type-generic-math-tgmath-h" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The header <a class="reference internal" href="#id1"><span class="std std-ref">&lt;tgmath.h&gt;</span></a> includes the headers <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> and defines several type-generic macros.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>Of the <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> functions without an f (float) or l (long double) suffix, several have one or more parameters whose corresponding real type is double. For each such function, except modf, there is a corresponding type-generic macro.<a class="footnote-reference brackets" href="#note272" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The parameters whose corresponding real type is double in the function synopsis are generic parameters. Use of the macro invokes a function whose corresponding real type and type domain are determined by the arguments for the generic parameters.<a class="footnote-reference brackets" href="#note273" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>Use of the macro invokes a function whose generic parameters have the corresponding real type determined as follows:</p>
+<ul class="simple">
+<li><p>First, if any argument for generic parameters has type long double, the type determined is long double.</p></li>
+<li><p>Otherwise, if any argument for generic parameters has type double or is of integer type, the type determined is double.</p></li>
+<li><p>Otherwise, the type determined is float.</p></li>
+</ul>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>For each unsuffixed function in <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> for which there is a function in <a class="reference internal" href="../3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> with the same name except for a c prefix, the corresponding type- generic macro (for both functions) has the same name as the function in <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a>. The corresponding type-generic macro for fabs and cabs is fabs.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;math.h&gt;          &lt;complex.h&gt;           type-generic
+function          function              macro
+
+acos              cacos                 acos
+asin              casin                 asin
+atan              catan                 atan
+acosh             cacosh                acosh
+asinh             casinh                asinh
+atanh             catanh                atanh
+cos               ccos                  cos
+sin               csin                  sin
+tan               ctan                  tan
+cosh              ccosh                 cosh
+sinh              csinh                 sinh
+tanh              ctanh                 tanh
+exp               cexp                  exp
+log               clog                  log
+pow               cpow                  pow
+sqrt              csqrt                 sqrt
+fabs              cabs                  fabs
+</pre></div>
+</div>
+<p>If at least one argument for a generic parameter is complex, then use of the macro invokes a complex function; otherwise, use of the macro invokes a real function.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>For each unsuffixed function in <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> without a c-prefixed counterpart in <a class="reference internal" href="../3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> (except modf), the corresponding type-generic macro has the same name as the function. These type-generic macros are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">atan2</span><span class="w">                </span><span class="n">fma</span><span class="w">                  </span><span class="n">llround</span><span class="w">              </span><span class="n">remainder</span>
+<span class="n">cbrt</span><span class="w">                 </span><span class="n">fmax</span><span class="w">                 </span><span class="n">log10</span><span class="w">                </span><span class="n">remquo</span>
+<span class="n">ceil</span><span class="w">                 </span><span class="n">fmin</span><span class="w">                 </span><span class="n">log1p</span><span class="w">                </span><span class="n">rint</span>
+<span class="n">copysign</span><span class="w">             </span><span class="n">fmod</span><span class="w">                 </span><span class="n">log2</span><span class="w">                 </span><span class="n">round</span>
+<span class="n">erf</span><span class="w">                  </span><span class="n">frexp</span><span class="w">                </span><span class="n">logb</span><span class="w">                 </span><span class="n">scalbn</span>
+<span class="n">erfc</span><span class="w">                 </span><span class="n">hypot</span><span class="w">                </span><span class="n">lrint</span><span class="w">                </span><span class="n">scalbln</span>
+<span class="n">exp2</span><span class="w">                 </span><span class="n">ilogb</span><span class="w">                </span><span class="n">lround</span><span class="w">               </span><span class="n">tgamma</span>
+<span class="n">expm1</span><span class="w">                </span><span class="n">ldexp</span><span class="w">                </span><span class="n">nearbyint</span><span class="w">            </span><span class="n">trunc</span>
+<span class="n">fdim</span><span class="w">                 </span><span class="n">lgamma</span><span class="w">               </span><span class="n">nextafter</span>
+<span class="n">floor</span><span class="w">                </span><span class="n">llrint</span><span class="w">               </span><span class="n">nexttoward</span>
+</pre></div>
+</div>
+<p>If all arguments for generic parameters are real, then use of the macro invokes a real function; otherwise, use of the macro results in undefined behavior.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>For each unsuffixed function in <a class="reference internal" href="../3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that is not a c-prefixed counterpart to a function in <a class="reference internal" href="../12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a>, the corresponding type-generic macro has the same name as the function. These type-generic macros are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">carg</span><span class="w">                    </span><span class="n">conj</span><span class="w">                     </span><span class="n">creal</span>
+<span class="n">cimag</span><span class="w">                   </span><span class="n">cproj</span>
+</pre></div>
+</div>
+<p>Use of the macro with any real or complex argument invokes a complex function.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>EXAMPLE With the declarations</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tgmath.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ld</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">fc</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">dc</span><span class="p">;</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="k">complex</span><span class="w"> </span><span class="n">ldc</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>functions invoked by use of type-generic macros are shown in the following table:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>macro use                                  invokes
+
+            exp(n)                              exp(n), the function
+            acosh(f)                            acoshf(f)
+            sin(d)                              sin(d), the function
+            atan(ld)                            atanl(ld)
+            log(fc)                             clogf(fc)
+            sqrt(dc)                            csqrt(dc)
+            pow(ldc, f)                         cpowl(ldc, f)
+            remainder(n, n)                     remainder(n, n), the function
+            nextafter(d, f)                     nextafter(d, f), the function
+            nexttoward(f, ld)                   nexttowardf(f, ld)
+            copysign(n, ld)                     copysignl(n, ld)
+            ceil(fc)                            undefined behavior
+            rint(dc)                            undefined behavior
+            fmax(ldc, ld)                       undefined behavior
+            carg(n)                             carg(n), the function
+            cproj(f)                            cprojf(f)
+            creal(d)                            creal(d), the function
+            cimag(ld)                           cimagl(ld)
+            fabs(fc)                            cabsf(fc)
+            carg(dc)                            carg(dc), the function
+            cproj(ldc)                          cprojl(ldc)
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note272" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Like other function-like macros in Standard libraries, each type-generic macro can be suppressed to make available the corresponding ordinary function.</p>
+</aside>
+<aside class="footnote brackets" id="note273" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>If the type of the argument is not compatible with the type of the parameter for the selected function, the behavior is undefined.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../21/6/3/index.html" class="btn btn-neutral float-left" title="7.21.6.3 The strlen function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../23/index.html" class="btn btn-neutral float-right" title="7.23 Date and time &lt;time.h&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F.9 Mathematics &lt;math.h&gt; &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="F.9.1 Trigonometric functions" href="1/index.html" />
+    <link rel="prev" title="F.8.4 Constant arithmetic" href="../8/4/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Annex F</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">F.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">F.2 Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/index.html">F.3 Operators and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">F.4 Floating to integer conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/index.html">F.5 Binary-decimal conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">F.6 Contracted expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">F.7 Floating-point environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">F.8 Optimization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">F.9 Mathematics &lt;math.h&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1/index.html">F.9.1 Trigonometric functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2/index.html">F.9.2 Hyperbolic functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3/index.html">F.9.3 Exponential and logarithmic functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4/index.html">F.9.4 Power and absolute value functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5/index.html">F.9.5 Error and gamma functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6/index.html">F.9.6 Nearest integer functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7/index.html">F.9.7 Remainder functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8/index.html">F.9.8 Manipulation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9/index.html">F.9.9 Maximum, minimum, and positive difference functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10/index.html">F.9.10 Floating multiply-add</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Annex F</a></li>
+      <li class="breadcrumb-item active">F.9 Mathematics &lt;math.h&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../8/4/index.html" class="btn btn-neutral float-left" title="F.8.4 Constant arithmetic" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="F.9.1 Trigonometric functions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="f-9-mathematics-math-h">
+<span id="f-9"></span><h1>F.9 Mathematics &lt;math.h&gt;<a class="headerlink" href="#f-9-mathematics-math-h" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1/index.html">F.9.1 Trigonometric functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1/1/index.html">F.9.1.1 The acos functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/2/index.html">F.9.1.2 The asin functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/3/index.html">F.9.1.3 The atan functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/4/index.html">F.9.1.4 The atan2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/5/index.html">F.9.1.5 The cos functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/6/index.html">F.9.1.6 The sin functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1/7/index.html">F.9.1.7 The tan functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2/index.html">F.9.2 Hyperbolic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2/1/index.html">F.9.2.1 The acosh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/2/index.html">F.9.2.2 The asinh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/3/index.html">F.9.2.3 The atanh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/4/index.html">F.9.2.4 The cosh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/5/index.html">F.9.2.5 The sinh functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/6/index.html">F.9.2.6 The tanh functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3/index.html">F.9.3 Exponential and logarithmic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3/1/index.html">F.9.3.1 The exp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/2/index.html">F.9.3.2 The exp2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/3/index.html">F.9.3.3 The expm1 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/4/index.html">F.9.3.4 The frexp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/5/index.html">F.9.3.5 The ilogb functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/6/index.html">F.9.3.6 The ldexp functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/7/index.html">F.9.3.7 The log functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/8/index.html">F.9.3.8 The log10 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/9/index.html">F.9.3.9 The log1p functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/10/index.html">F.9.3.10 The log2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/11/index.html">F.9.3.11 The logb functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/12/index.html">F.9.3.12 The modf functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/13/index.html">F.9.3.13 The scalbn and scalbln functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4/index.html">F.9.4 Power and absolute value functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4/1/index.html">F.9.4.1 The cbrt functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/2/index.html">F.9.4.2 The fabs functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/3/index.html">F.9.4.3 The hypot functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/4/index.html">F.9.4.4 The pow functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4/5/index.html">F.9.4.5 The sqrt functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5/index.html">F.9.5 Error and gamma functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5/1/index.html">F.9.5.1 The erf functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/2/index.html">F.9.5.2 The erfc functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/3/index.html">F.9.5.3 The lgamma functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5/4/index.html">F.9.5.4 The tgamma functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6/index.html">F.9.6 Nearest integer functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6/1/index.html">F.9.6.1 The ceil functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/2/index.html">F.9.6.2 The floor functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/3/index.html">F.9.6.3 The nearbyint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/4/index.html">F.9.6.4 The rint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/5/index.html">F.9.6.5 The lrint and llrint functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/6/index.html">F.9.6.6 The round functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/7/index.html">F.9.6.7 The lround and llround functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6/8/index.html">F.9.6.8 The trunc functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7/index.html">F.9.7 Remainder functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7/1/index.html">F.9.7.1 The fmod functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/2/index.html">F.9.7.2 The remainder functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7/3/index.html">F.9.7.3 The remquo functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8/index.html">F.9.8 Manipulation functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8/1/index.html">F.9.8.1 The copysign functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/2/index.html">F.9.8.2 The nan functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/3/index.html">F.9.8.3 The nextafter functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8/4/index.html">F.9.8.4 The nexttoward functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9/index.html">F.9.9 Maximum, minimum, and positive difference functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9/1/index.html">F.9.9.1 The fdim functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/2/index.html">F.9.9.2 The fmax functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9/3/index.html">F.9.9.3 The fmin functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10/index.html">F.9.10 Floating multiply-add</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10/1/index.html">F.9.10.1 The fma functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="snum docutils container" id="f-9p1">
+<p><a class="reference internal" href="#f-9p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>This subclause contains specifications of <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> facilities that are particularly suited for IEC 60559 implementations.</p>
+<div class="snum docutils container" id="f-9p2">
+<p><a class="reference internal" href="#f-9p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The Standard C macro HUGE_VAL and its float and long double analogs, HUGE_VALF and HUGE_VALL, expand to expressions whose values are positive infinities.</p>
+<div class="snum docutils container" id="f-9p3">
+<p><a class="reference internal" href="#f-9p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>Special cases for functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> are covered directly or indirectly by IEC 60559. The functions that IEC 60559 specifies directly are identified in <a class="reference internal" href="../3/index.html#f-3"><span class="std std-ref">F.3</span></a>. The other functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> treat infinities, NaNs, signed zeros, subnormals, and (provided the state of the FENV_ACCESS pragma is “on”) the floating-point status flags in a manner consistent with the basic arithmetic operations covered by IEC 60559.</p>
+<div class="snum docutils container" id="f-9p4">
+<p><a class="reference internal" href="#f-9p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The expression math_errhandling &amp; MATH_ERREXCEPT shall evaluate to a nonzero value.</p>
+<div class="snum docutils container" id="f-9p5">
+<p><a class="reference internal" href="#f-9p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The “invalid” and “divide-by-zero” floating-point exceptions are raised as specified in subsequent subclauses of this annex.</p>
+<div class="snum docutils container" id="f-9p6">
+<p><a class="reference internal" href="#f-9p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>The “overflow” floating-point exception is raised whenever an infinity – or, because of rounding direction, a maximal-magnitude finite number – is returned in lieu of a value whose magnitude is too large.</p>
+<div class="snum docutils container" id="f-9p7">
+<p><a class="reference internal" href="#f-9p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The “underflow” floating-point exception is raised whenever a result is tiny (essentially subnormal or zero) and suffers loss of accuracy.<a class="footnote-reference brackets" href="#note320" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="f-9p8">
+<p><a class="reference internal" href="#f-9p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>Whether or when library functions raise the “inexact” floating-point exception is unspecified, unless explicitly specified otherwise.</p>
+<div class="snum docutils container" id="f-9p9">
+<p><a class="reference internal" href="#f-9p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>Whether or when library functions raise an undeserved “underflow” floating-point exception is unspecified.<a class="footnote-reference brackets" href="#note321" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Otherwise, as implied by <a class="reference internal" href="../7/6/index.html#f-7-6"><span class="std std-ref">F.7.6</span></a>, the <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> functions do not raise spurious floating-point exceptions (detectable by the user), other than the “inexact” floating-point exception.</p>
+<div class="snum docutils container" id="f-9p10">
+<p><a class="reference internal" href="#f-9p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>Whether the functions honor the rounding direction mode is implementation-defined, unless explicitly specified otherwise.</p>
+<div class="snum docutils container" id="f-9p11">
+<p><a class="reference internal" href="#f-9p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>Functions with a NaN argument return a NaN result and raise no floating-point exception, except where stated otherwise.</p>
+<div class="snum docutils container" id="f-9p12">
+<p><a class="reference internal" href="#f-9p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>The specifications in the following subclauses append to the definitions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a>. For families of functions, the specifications apply to all of the functions even though only the principal function is shown. Unless otherwise specified, where the symbol ‘’(+-)’’ occurs in both an argument and the result, the result has the same sign as the argument.</p>
+<p class="rubric">Recommended practice</p>
+<div class="snum docutils container" id="f-9p13">
+<p><a class="reference internal" href="#f-9p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>If a function with one or more NaN arguments returns a NaN result, the result should be the same as one of the NaN arguments (after possible type conversion), except perhaps for the sign.</p>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note320" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>IEC 60559 allows different definitions of underflow. They all result in the same values, but differ on when the floating-point exception is raised.</p>
+</aside>
+<aside class="footnote brackets" id="note321" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>It is intended that undeserved “underflow” and “inexact” floating-point exceptions are raised only if avoiding them would be too costly.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../8/4/index.html" class="btn btn-neutral float-left" title="F.8.4 Constant arithmetic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="F.9.1 Trigonometric functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

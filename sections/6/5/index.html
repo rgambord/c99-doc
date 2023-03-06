@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.5 Expressions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="6.5.1 Primary expressions" href="1/index.html" />
+    <link rel="prev" title="6.4.9 Comments" href="../4/9/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.5 Expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1/index.html">6.5.1 Primary expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2/index.html">6.5.2 Postfix operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3/index.html">6.5.3 Unary operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4/index.html">6.5.4 Cast operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5/index.html">6.5.5 Multiplicative operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6/index.html">6.5.6 Additive operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7/index.html">6.5.7 Bitwise shift operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8/index.html">6.5.8 Relational operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9/index.html">6.5.9 Equality operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10/index.html">6.5.10 Bitwise AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11/index.html">6.5.11 Bitwise exclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="12/index.html">6.5.12 Bitwise inclusive OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="13/index.html">6.5.13 Logical AND operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14/index.html">6.5.14 Logical OR operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15/index.html">6.5.15 Conditional operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16/index.html">6.5.16 Assignment operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="17/index.html">6.5.17 Comma operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6. Language</a></li>
+      <li class="breadcrumb-item active">6.5 Expressions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../4/9/index.html" class="btn btn-neutral float-left" title="6.4.9 Comments" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="6.5.1 Primary expressions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="expressions">
+<span id="id1"></span><h1>6.5 Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1/index.html">6.5.1 Primary expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2/index.html">6.5.2 Postfix operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2/1/index.html">6.5.2.1 Array subscripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/2/index.html">6.5.2.2 Function calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/3/index.html">6.5.2.3 Structure and union members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/4/index.html">6.5.2.4 Postfix increment and decrement operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2/5/index.html">6.5.2.5 Compound literals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3/index.html">6.5.3 Unary operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3/1/index.html">6.5.3.1 Prefix increment and decrement operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/2/index.html">6.5.3.2 Address and indirection operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/3/index.html">6.5.3.3 Unary arithmetic operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3/4/index.html">6.5.3.4 The sizeof operator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4/index.html">6.5.4 Cast operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5/index.html">6.5.5 Multiplicative operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6/index.html">6.5.6 Additive operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7/index.html">6.5.7 Bitwise shift operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8/index.html">6.5.8 Relational operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9/index.html">6.5.9 Equality operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10/index.html">6.5.10 Bitwise AND operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11/index.html">6.5.11 Bitwise exclusive OR operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12/index.html">6.5.12 Bitwise inclusive OR operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13/index.html">6.5.13 Logical AND operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14/index.html">6.5.14 Logical OR operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15/index.html">6.5.15 Conditional operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16/index.html">6.5.16 Assignment operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="16/1/index.html">6.5.16.1 Simple assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16/2/index.html">6.5.16.2 Compound assignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="17/index.html">6.5.17 Comma operator</a></li>
+</ul>
+</div>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>An expression is a sequence of operators and operands that specifies computation of a value, or that designates an object or a function, or that generates side effects, or that performs a combination thereof.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>Between the previous and next sequence point an object shall have its stored value modified at most once by the evaluation of an expression.<a class="footnote-reference brackets" href="#note72" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Furthermore, the prior value shall be read only to determine the value to be stored.<a class="footnote-reference brackets" href="#note73" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The grouping of operators and operands is indicated by the syntax.<a class="footnote-reference brackets" href="#note74" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> Except as specified later (for the function-call (), &amp;&amp;, ||, ?:, and comma operators), the order of evaluation of subexpressions and the order in which side effects take place are both unspecified.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>Some operators (the unary operator ~, and the binary operators &lt;&lt;, &gt;&gt;, &amp;, ^, and |, collectively described as bitwise operators) are required to have operands that have integer type. These operators yield values that depend on the internal representations of integers, and have implementation-defined and undefined aspects for signed types.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If an exceptional condition occurs during the evaluation of an expression (that is, if the result is not mathematically defined or not in the range of representable values for its type), the behavior is undefined.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>The effective type of an object for an access to its stored value is the declared type of the object, if any.<a class="footnote-reference brackets" href="#note75" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> If a value is stored into an object having no declared type through an lvalue having a type that is not a character type, then the type of the lvalue becomes the effective type of the object for that access and for subsequent accesses that do not modify the stored value. If a value is copied into an object having no declared type using memcpy or memmove, or is copied as an array of character type, then the effective type of the modified object for that access and for subsequent accesses that do not modify the value is the effective type of the object from which the value is copied, if it has one. For all other accesses to an object having no declared type, the effective type of the object is simply the type of the lvalue used for the access.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>An object shall have its stored value accessed only by an lvalue expression that has one of the following types:<a class="footnote-reference brackets" href="#note76" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
+<ul class="simple">
+<li><p>a type compatible with the effective type of the object,</p></li>
+<li><p>a qualified version of a type compatible with the effective type of the object,</p></li>
+<li><p>a type that is the signed or unsigned type corresponding to the effective type of the object,</p></li>
+<li><p>a type that is the signed or unsigned type corresponding to a qualified version of the effective type of the object,</p></li>
+<li><p>an aggregate or union type that includes one of the aforementioned types among its members (including, recursively, a member of a subaggregate or contained union), or</p></li>
+<li><p>a character type.</p></li>
+</ul>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>A floating expression may be contracted, that is, evaluated as though it were an atomic operation, thereby omitting rounding errors implied by the source code and the expression evaluation method.<a class="footnote-reference brackets" href="#note77" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> The FP_CONTRACT pragma in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provides a way to disallow contracted expressions. Otherwise, whether and how expressions are contracted is implementation-defined.<a class="footnote-reference brackets" href="#note78" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../7/12/2/index.html#id1"><span class="std std-ref">7.12.2 The FP_CONTRACT pragma</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../7/21/2/index.html#id1"><span class="std std-ref">7.21.2 Copying functions</span></a></p></li>
+</ul>
+</td></tr></table>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>while allowing</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note72" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>A floating-point status flag is not an object and can be set more than once within an expression.</p>
+</aside>
+<aside class="footnote brackets" id="note73" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>This paragraph renders undefined statement expressions such as</p>
+</aside>
+<aside class="footnote brackets" id="note74" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>The syntax specifies the precedence of operators in the evaluation of an expression, which is the same as the order of the major subclauses of this subclause, highest precedence first. Thus, for example, the expressions allowed as the operands of the binary + operator (<a class="reference internal" href="6/index.html#id1"><span class="std std-ref">6.5.6</span></a>) are those expressions defined in <a class="reference internal" href="1/index.html#id1"><span class="std std-ref">6.5.1</span></a> through <a class="reference internal" href="6/index.html#id1"><span class="std std-ref">6.5.6</span></a>. The exceptions are cast expressions (<a class="reference internal" href="4/index.html#id1"><span class="std std-ref">6.5.4</span></a>) as operands of unary operators (<a class="reference internal" href="3/index.html#id1"><span class="std std-ref">6.5.3</span></a>), and an operand contained between any of the following pairs of operators: grouping parentheses () (<a class="reference internal" href="1/index.html#id1"><span class="std std-ref">6.5.1</span></a>), subscripting brackets [] (<a class="reference internal" href="2/1/index.html#id1"><span class="std std-ref">6.5.2.1</span></a>), function-call parentheses () (<a class="reference internal" href="2/2/index.html#id1"><span class="std std-ref">6.5.2.2</span></a>), and the conditional operator ?: (<a class="reference internal" href="15/index.html#id1"><span class="std std-ref">6.5.15</span></a>). Within each major subclause, the operators have the same precedence. Left- or right-associativity is indicated in each subclause by the syntax for the expressions discussed therein.</p>
+</aside>
+<aside class="footnote brackets" id="note75" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>Allocated objects have no declared type.</p>
+</aside>
+<aside class="footnote brackets" id="note76" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>The intent of this list is to specify those circumstances in which an object may or may not be aliased.</p>
+</aside>
+<aside class="footnote brackets" id="note77" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">6</a><span class="fn-bracket">]</span></span>
+<p>A contracted expression might also omit the raising of floating-point exceptions.</p>
+</aside>
+<aside class="footnote brackets" id="note78" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">7</a><span class="fn-bracket">]</span></span>
+<p>This license is specifically intended to allow implementations to exploit fast machine instructions that combine multiple C operators. As contractions potentially undermine predictability, and can even decrease accuracy for containing expressions, their use needs to be well-defined and clearly documented.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../4/9/index.html" class="btn btn-neutral float-left" title="6.4.9 Comments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1/index.html" class="btn btn-neutral float-right" title="6.5.1 Primary expressions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

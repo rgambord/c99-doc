@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.10.3.5 Scope of macro definitions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.10.4 Line control" href="../../4/index.html" />
+    <link rel="prev" title="6.10.3.4 Rescanning and further replacement" href="../4/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.10 Preprocessing directives</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.10.1 Conditional inclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">6.10.2 Source file inclusion</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.10.3 Macro replacement</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">6.10.3.1 Argument substitution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.10.3.2 The # operator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">6.10.3.3 The ## operator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../4/index.html">6.10.3.4 Rescanning and further replacement</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.10.3.5 Scope of macro definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.10.4 Line control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.10.5 Error directive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.10.6 Pragma directive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.10.7 Null directive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.10.8 Predefined macro names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">6.10.9 Pragma operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.10 Preprocessing directives</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.10.3 Macro replacement</a></li>
+      <li class="breadcrumb-item active">6.10.3.5 Scope of macro definitions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="6.10.3.4 Rescanning and further replacement" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../4/index.html" class="btn btn-neutral float-right" title="6.10.4 Line control" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scope-of-macro-definitions">
+<span id="id1"></span><h1>6.10.3.5 Scope of macro definitions<a class="headerlink" href="#scope-of-macro-definitions" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>A macro definition lasts (independent of block structure) until a corresponding <code class="code docutils literal notranslate"><span class="pre">#undef</span></code> directive is encountered or (if none is encountered) until the end of the preprocessing translation unit. Macro definitions have no significance after translation phase 4.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>A preprocessing directive of the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># undef identifier new-line
+</pre></div>
+</div>
+<p>causes the specified identifier no longer to be defined as a macro name. It is ignored if the specified identifier is not currently defined as a macro name.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>EXAMPLE 1 The simplest use of this facility is to define a “manifest constant”, as in</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define TABSIZE 100</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">table</span><span class="p">[</span><span class="n">TABSIZE</span><span class="p">];</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>EXAMPLE 2 The following defines a function-like macro whose value is the maximum of its arguments. It has the advantages of working for any compatible types of the arguments and of generating in-line code without the overhead of function calling. It has the disadvantages of evaluating one or the other of its arguments a second time (including side effects) and generating more code than a function if invoked several times. It also cannot have its address taken, as it has none.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define max(a, b) ((a) &gt; (b) ? (a) : (b))</span>
+</pre></div>
+</div>
+<p>The parentheses ensure that the arguments and the resulting expression are bound properly.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>EXAMPLE 3 To illustrate the rules for redefinition and reexamination, the sequence</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define   x         3</span>
+<span class="cp">#define   f(a)      f(x * (a))</span>
+<span class="cp">#undef    x</span>
+<span class="cp">#define   x         2</span>
+<span class="cp">#define   g         f</span>
+<span class="cp">#define   z         z[0]</span>
+<span class="cp">#define   h         g(~</span>
+<span class="cp">#define   m(a)      a(w)</span>
+<span class="cp">#define   w         0,1</span>
+<span class="cp">#define   t(a)      a</span>
+<span class="cp">#define   p()       int</span>
+<span class="cp">#define   q(x)      x</span>
+<span class="cp">#define   r(x,y)    x ## y</span>
+<span class="cp">#define   str(x)    # x</span>
+<span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="n">g</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="p">)(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span>
+<span class="w">      </span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">^</span><span class="n">m</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+<span class="n">p</span><span class="p">()</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="n">q</span><span class="p">()]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">q</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="mi">4</span><span class="p">,),</span><span class="w"> </span><span class="n">r</span><span class="p">(,</span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">r</span><span class="p">(,)</span><span class="w"> </span><span class="p">};</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">hello</span><span class="p">),</span><span class="w"> </span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>results in</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]))))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="mi">-0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">^</span><span class="n">m</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="p">};</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>EXAMPLE 4 To illustrate the rules for creating character string literals and concatenating tokens, the sequence</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#define str(s)      # s
+#define xstr(s)     str(s)
+#define debug(s, t) printf(&quot;x&quot; # s &quot;= %d, x&quot; # t &quot;= %s&quot;, \
+                        x ## s, x ## t)
+#define INCFILE(n) vers ## n
+#define glue(a, b) a ## b
+#define xglue(a, b) glue(a, b)
+#define HIGHLOW     &quot;hello&quot;
+#define LOW         LOW &quot;, world&quot;
+debug(1, 2);
+fputs(str(strncmp(&quot;abc\0d&quot;, &quot;abc&quot;, &#39;\4&#39;) // this goes away
+      == 0) str(: @\n), s);
+#include xstr(INCFILE(2).h)
+glue(HIGH, LOW);
+xglue(HIGH, LOW)
+</pre></div>
+</div>
+<p>results in</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="s">&quot;= %d, x&quot;</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="s">&quot;= %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span>
+<span class="n">fputs</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;strncmp(</span><span class="se">\&quot;</span><span class="s">abc</span><span class="se">\\</span><span class="s">0d</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">abc</span><span class="se">\&quot;</span><span class="s">, &#39;</span><span class="se">\\</span><span class="s">4&#39;) == 0&quot;</span><span class="w"> </span><span class="s">&quot;: @</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">s</span><span class="p">);</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vers2.h&quot;</span><span class="c1">    (after macro replacement, before file access)</span>
+<span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<span class="s">&quot;hello&quot;</span><span class="w"> </span><span class="s">&quot;, world&quot;</span>
+</pre></div>
+</div>
+<p>or, after concatenation of the character string literals,</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;x1= %d, x2= %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span>
+<span class="n">fputs</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;strncmp(</span><span class="se">\&quot;</span><span class="s">abc</span><span class="se">\\</span><span class="s">0d</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">abc</span><span class="se">\&quot;</span><span class="s">, &#39;</span><span class="se">\\</span><span class="s">4&#39;) == 0: @</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">s</span><span class="p">);</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vers2.h&quot;</span><span class="c1">    (after macro replacement, before file access)</span>
+<span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<span class="s">&quot;hello, world&quot;</span>
+</pre></div>
+</div>
+<p>Space around the # and ## tokens in the macro definition is optional.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>EXAMPLE 5 To illustrate the rules for placemarker preprocessing tokens, the sequence</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define t(x,y,z) x ## y ## z</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="w"> </span><span class="n">t</span><span class="p">(,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="mi">6</span><span class="p">,,</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,),</span>
+<span class="w">           </span><span class="n">t</span><span class="p">(</span><span class="mi">10</span><span class="p">,,),</span><span class="w"> </span><span class="n">t</span><span class="p">(,</span><span class="mi">11</span><span class="p">,),</span><span class="w"> </span><span class="n">t</span><span class="p">(,,</span><span class="mi">12</span><span class="p">),</span><span class="w"> </span><span class="n">t</span><span class="p">(,,)</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>results in</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w"> </span><span class="mi">89</span><span class="p">,</span>
+<span class="w">            </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>EXAMPLE 6 To demonstrate the redefinition rules, the following sequence is valid.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define      OBJ_LIKE      (1-1)</span>
+<span class="cp">#define      OBJ_LIKE      </span><span class="cm">/* white space */</span><span class="cp"> (1-1) </span><span class="cm">/* other */</span>
+<span class="cp">#define      FUNC_LIKE(a)   ( a )</span>
+<span class="cp">#define      FUNC_LIKE( a )( </span><span class="cm">/* note the white space */</span><span class="cp"> \</span>
+<span class="cp">                             a </span><span class="cm">/* other stuff on this line</span>
+<span class="cm">                                 */</span><span class="cp"> )</span>
+</pre></div>
+</div>
+<p>But the following redefinitions are invalid:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define      OBJ_LIKE    (0)     </span><span class="c1">// different token sequence</span>
+<span class="cp">#define      OBJ_LIKE    (1 - 1) </span><span class="c1">// different white space</span>
+<span class="cp">#define      FUNC_LIKE(b) ( a ) </span><span class="c1">// different parameter usage</span>
+<span class="cp">#define      FUNC_LIKE(b) ( b ) </span><span class="c1">// different parameter spelling</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>EXAMPLE 7 Finally, to show the variable argument list macro facilities:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define debug(...)       fprintf(stderr, __VA_ARGS__)</span>
+<span class="cp">#define showlist(...)    puts(#__VA_ARGS__)</span>
+<span class="cp">#define report(test, ...) ((test)?puts(#test):\</span>
+<span class="cp">            printf(__VA_ARGS__))</span>
+<span class="n">debug</span><span class="p">(</span><span class="s">&quot;Flag&quot;</span><span class="p">);</span>
+<span class="n">debug</span><span class="p">(</span><span class="s">&quot;X = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="n">showlist</span><span class="p">(</span><span class="n">The</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">second</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">items</span><span class="p">.);</span>
+<span class="n">report</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x is %d but y is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>results in</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Flag&quot;</span><span class="w"> </span><span class="p">);</span>
+<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">);</span>
+<span class="n">puts</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;The first, second, and third items.&quot;</span><span class="w"> </span><span class="p">);</span>
+<span class="p">((</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span><span class="o">?</span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;x&gt;y&quot;</span><span class="p">)</span><span class="o">:</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;x is %d but y is %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="6.10.3.4 Rescanning and further replacement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../4/index.html" class="btn btn-neutral float-right" title="6.10.4 Line control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.1.5 Constants &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="A.1.6 String literals" href="../6/index.html" />
+    <link rel="prev" title="A.1.4 Universal character names" href="../4/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Annex A</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">A.1 Lexical grammar</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">A.1.1 Lexical elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">A.1.2 Keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">A.1.3 Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">A.1.4 Universal character names</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">A.1.5 Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">A.1.6 String literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7/index.html">A.1.7 Punctuators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8/index.html">A.1.8 Header names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9/index.html">A.1.9 Preprocessing numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">A.2 Phrase structure grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">A.3 Preprocessing directives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Annex A</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">A.1 Lexical grammar</a></li>
+      <li class="breadcrumb-item active">A.1.5 Constants</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="A.1.4 Universal character names" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../6/index.html" class="btn btn-neutral float-right" title="A.1.6 String literals" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="a-1-5-constants">
+<span id="a-1-5"></span><h1>A.1.5 Constants<a class="headerlink" href="#a-1-5-constants" title="Permalink to this heading"></a></h1>
+<p>(<a class="reference internal" href="../../../6/4/4/index.html#id1"><span class="std std-ref">6.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">integer-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">floating-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">enumeration-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">character-constant</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">integer-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">decimal-constant</span> <span class="syn-nonterm">integer-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">octal-constant</span> <span class="syn-nonterm">integer-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-constant</span> <span class="syn-nonterm">integer-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">decimal-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">nonzero-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">decimal-constant</span> <span class="syn-nonterm">digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">octal-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">0</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">octal-constant</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-prefix</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-constant</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-prefix</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">0x</span> <span class="syn-term">0X</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">nonzero-digit</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">1</span> <span class="syn-term">2</span> <span class="syn-term">3</span> <span class="syn-term">4</span> <span class="syn-term">5</span> <span class="syn-term">6</span> <span class="syn-term">7</span> <span class="syn-term">8</span> <span class="syn-term">9</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">octal-digit</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">0</span> <span class="syn-term">1</span> <span class="syn-term">2</span> <span class="syn-term">3</span> <span class="syn-term">4</span> <span class="syn-term">5</span> <span class="syn-term">6</span> <span class="syn-term">7</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">0</span> <span class="syn-term">1</span> <span class="syn-term">2</span> <span class="syn-term">3</span> <span class="syn-term">4</span> <span class="syn-term">5</span> <span class="syn-term">6</span> <span class="syn-term">7</span> <span class="syn-term">8</span> <span class="syn-term">9</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">a</span> <span class="syn-term">b</span> <span class="syn-term">c</span> <span class="syn-term">d</span> <span class="syn-term">e</span> <span class="syn-term">f</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">A</span> <span class="syn-term">B</span> <span class="syn-term">C</span> <span class="syn-term">D</span> <span class="syn-term">E</span> <span class="syn-term">F</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">integer-suffix</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">unsigned-suffix</span> <span class="syn-nonterm">long-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">unsigned-suffix</span> <span class="syn-nonterm">long-long-suffix</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">long-suffix</span> <span class="syn-nonterm">unsigned-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">long-long-suffix</span> <span class="syn-nonterm">unsigned-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">unsigned-suffix</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">u</span> <span class="syn-term">U</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">long-suffix</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">l</span> <span class="syn-term">L</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/1/index.html#id1"><span class="std std-ref">6.4.4.1</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">long-long-suffix</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">ll</span> <span class="syn-term">LL</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">floating-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">decimal-floating-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-floating-constant</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">decimal-floating-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">fractional-constant</span> <span class="syn-nonterm">exponent-part</span><span class="syn-opt">opt</span> <span class="syn-nonterm">floating-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">digit-sequence</span> <span class="syn-nonterm">exponent-part</span> <span class="syn-nonterm">floating-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-floating-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-prefix</span> <span class="syn-nonterm">hexadecimal-fractional-constant</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">binary-exponent-part</span> <span class="syn-nonterm">floating-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-prefix</span> <span class="syn-nonterm">hexadecimal-digit-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">binary-exponent-part</span> <span class="syn-nonterm">floating-suffix</span><span class="syn-opt">opt</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">fractional-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">digit-sequence</span><span class="syn-opt">opt</span> <span class="syn-term">.</span> <span class="syn-nonterm">digit-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">digit-sequence</span> <span class="syn-term">.</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">exponent-part</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">e</span> <span class="syn-nonterm">sign</span><span class="syn-opt">opt</span> <span class="syn-nonterm">digit-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">E</span> <span class="syn-nonterm">sign</span><span class="syn-opt">opt</span> <span class="syn-nonterm">digit-sequence</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">sign</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">+</span> <span class="syn-term">-</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">digit-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">digit-sequence</span> <span class="syn-nonterm">digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-fractional-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit-sequence</span><span class="syn-opt">opt</span> <span class="syn-term">.</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit-sequence</span> <span class="syn-term">.</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">binary-exponent-part</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">p</span> <span class="syn-nonterm">sign</span><span class="syn-opt">opt</span> <span class="syn-nonterm">digit-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">P</span> <span class="syn-nonterm">sign</span><span class="syn-opt">opt</span> <span class="syn-nonterm">digit-sequence</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-digit-sequence</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/2/index.html#id1"><span class="std std-ref">6.4.4.2</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">floating-suffix</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">f</span> <span class="syn-term">l</span> <span class="syn-term">F</span> <span class="syn-term">L</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/3/index.html#id1"><span class="std std-ref">6.4.4.3</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">enumeration-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">identifier</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">character-constant</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">‘</span> <span class="syn-nonterm">c-char-sequence</span> <span class="syn-term">‘</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">L’</span> <span class="syn-nonterm">c-char-sequence</span> <span class="syn-term">‘</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">c-char-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">c-char</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">c-char-sequence</span> <span class="syn-nonterm">c-char</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">c-char</span>:</p>
+</div>
+<div class="syntax-text-rule docutils container">
+<p>any member of the source character set except the single-quote </p>
+<p><span class="syn-term">‘</span></p>
+<p>, backslash </p>
+<p><span class="syn-term">\</span></p>
+<p>, or </p>
+<p><span class="syn-nonterm">new-line</span></p>
+<p> character </p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">escape-sequence</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">simple-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">octal-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">universal-character-name</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">simple-escape-sequence</span>: one of</p>
+</div>
+<div class="syntax-rule-tbl docutils container">
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\’</span> <span class="syn-term">\”</span> <span class="syn-term">\?</span> <span class="syn-term">\\</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\a</span> <span class="syn-term">\b</span> <span class="syn-term">\f</span> <span class="syn-term">\n</span> <span class="syn-term">\r</span> <span class="syn-term">\t</span> <span class="syn-term">\v</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">octal-escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span> <span class="syn-nonterm">octal-digit</span></p>
+</div>
+</div>
+</div>
+<p>(<a class="reference internal" href="../../../6/4/4/4/index.html#id1"><span class="std std-ref">6.4.4.4</span></a>)</p>
+<div class="syntax-block docutils container">
+<div class="syntax-production docutils container">
+<div class="syntax-definition docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span>:</p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-term">\x</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+<div class="syntax-rule docutils container">
+<p><span class="syn-nonterm">hexadecimal-escape-sequence</span> <span class="syn-nonterm">hexadecimal-digit</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="A.1.4 Universal character names" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../6/index.html" class="btn btn-neutral float-right" title="A.1.6 String literals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

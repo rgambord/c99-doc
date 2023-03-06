@@ -7,7 +7,11 @@
 
 .. _9899_7.23.3.3p1:
 
-:ref:`1 <9899_7.23.3.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.23.3.3p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.23.3.3p2:
 
-:ref:`2 <9899_7.23.3.3p2>` The gmtime function converts the calendar time pointed to by timer into a broken- down time, expressed as UTC.
+.. container:: snum
+
+   :ref:`2 <9899_7.23.3.3p2>`
+
+The gmtime function converts the calendar time pointed to by timer into a broken- down time, expressed as UTC.
 
 .. rubric:: Returns
 
 .. _9899_7.23.3.3p3:
 
-:ref:`3 <9899_7.23.3.3p3>` The gmtime function returns a pointer to the broken-down time, or a null pointer if the specified time cannot be converted to UTC.
+.. container:: snum
+
+   :ref:`3 <9899_7.23.3.3p3>`
+
+The gmtime function returns a pointer to the broken-down time, or a null pointer if the specified time cannot be converted to UTC.
 

@@ -9,11 +9,19 @@ Universal character names for identifiers
 
 .. _9899_Dp1:
 
-:ref:`1 <9899_Dp1>` This clause lists the hexadecimal code values that are valid in universal character names in identifiers.
+.. container:: snum
+
+   :ref:`1 <9899_Dp1>`
+
+This clause lists the hexadecimal code values that are valid in universal character names in identifiers.
 
 .. _9899_Dp2:
 
-:ref:`2 <9899_Dp2>` This table is reproduced unchanged from ISO/IEC TR 10176:1998, produced by ISO/IEC JTC 1/SC 22/WG 20, except for the omission of ranges that are part of the basic character sets.
+.. container:: snum
+
+   :ref:`2 <9899_Dp2>`
+
+This table is reproduced unchanged from ISO/IEC TR 10176:1998, produced by ISO/IEC JTC 1/SC 22/WG 20, except for the omission of ranges that are part of the basic character sets.
 
 Latin:
 

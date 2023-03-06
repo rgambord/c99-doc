@@ -7,7 +7,11 @@
 
 .. _9899_7.20.1.2p1:
 
-:ref:`1 <9899_7.20.1.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.1.2p1>`
+
+
 
 ::
 
@@ -20,7 +24,11 @@
 
 .. _9899_7.20.1.2p2:
 
-:ref:`2 <9899_7.20.1.2p2>` The atoi, atol, and atoll functions convert the initial portion of the string pointed to by nptr to int, long int, and long long int representation, respectively. Except for the behavior on error, they are equivalent to
+.. container:: snum
+
+   :ref:`2 <9899_7.20.1.2p2>`
+
+The atoi, atol, and atoll functions convert the initial portion of the string pointed to by nptr to int, long int, and long long int representation, respectively. Except for the behavior on error, they are equivalent to
 
 ::
 
@@ -32,7 +40,14 @@
 
 .. _9899_7.20.1.2p3:
 
-:ref:`3 <9899_7.20.1.2p3>` The atoi, atol, and atoll functions return the converted value.
+.. container:: snum
 
-**Forward references**: the strtol, strtoll, strtoul, and strtoull functions (:ref:`7.20.1.4 <9899_7.20.1.4>`).
+   :ref:`3 <9899_7.20.1.2p3>`
+
+The atoi, atol, and atoll functions return the converted value.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.20.1.4`
 

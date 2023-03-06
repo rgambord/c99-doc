@@ -1,4 +1,4 @@
-.. _9899_section-3:
+.. _9899_3.4:
 
 3.4 behavior
 ~~~~~~~~~~~~
@@ -15,8 +15,10 @@
 
 .. _9899_3.4p1:
 
-:ref:`1 <9899_3.4p1>` behavior
-    external appearance or action
+.. container:: snum
 
-.. _9899_3.4.1:
+   :ref:`1 <9899_3.4p1>`
+
+behavior
+    external appearance or action
 

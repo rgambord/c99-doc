@@ -5,11 +5,19 @@
 
 .. _9899_7.17p1:
 
-:ref:`1 <9899_7.17p1>` The following types and macros are defined in the standard header :ref:`\<stddef.h> <9899_7.17>`. Some are also defined in other headers, as noted in their respective subclauses.
+.. container:: snum
+
+   :ref:`1 <9899_7.17p1>`
+
+The following types and macros are defined in the standard header :ref:`\<stddef.h> <9899_7.17>`. Some are also defined in other headers, as noted in their respective subclauses.
 
 .. _9899_7.17p2:
 
-:ref:`2 <9899_7.17p2>` The types are
+.. container:: snum
+
+   :ref:`2 <9899_7.17p2>`
+
+The types are
 
 ::
 
@@ -31,7 +39,11 @@ which is an integer type whose range of values can represent distinct codes for 
 
 .. _9899_7.17p3:
 
-:ref:`3 <9899_7.17p3>` The macros are
+.. container:: snum
+
+   :ref:`3 <9899_7.17p3>`
+
+The macros are
 
 ::
 
@@ -55,7 +67,14 @@ then the expression &(t.member-designator) evaluates to an address constant. (If
 
 .. _9899_7.17p4:
 
-:ref:`4 <9899_7.17p4>` The types used for size_t and ptrdiff_t should not have an integer conversion rank greater than that of signed long int unless the implementation supports objects large enough to make this necessary.
+.. container:: snum
 
-**Forward references**: localization (:ref:`7.11 <9899_7.11>`).
+   :ref:`4 <9899_7.17p4>`
+
+The types used for size_t and ptrdiff_t should not have an integer conversion rank greater than that of signed long int unless the implementation supports objects large enough to make this necessary.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.11`
 

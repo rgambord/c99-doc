@@ -15,7 +15,11 @@
 
 .. _9899_6.5.16p1:
 
-:ref:`1 <9899_6.5.16p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.16p1>`
+
+
 
 .. container:: syntax-block
 
@@ -117,15 +121,27 @@
 
 .. _9899_6.5.16p2:
 
-:ref:`2 <9899_6.5.16p2>` An assignment operator shall have a modifiable lvalue as its left operand.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.16p2>`
+
+An assignment operator shall have a modifiable lvalue as its left operand.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.16p3:
 
-:ref:`3 <9899_6.5.16p3>` An assignment operator stores a value in the object designated by the left operand. An assignment expression has the value of the left operand after the assignment, but is not an lvalue. The type of an assignment expression is the type of the left operand unless the left operand has qualified type, in which case it is the unqualified version of the type of the left operand. The side effect of updating the stored value of the left operand shall occur between the previous and the next sequence point.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.16p3>`
+
+An assignment operator stores a value in the object designated by the left operand. An assignment expression has the value of the left operand after the assignment, but is not an lvalue. The type of an assignment expression is the type of the left operand unless the left operand has qualified type, in which case it is the unqualified version of the type of the left operand. The side effect of updating the stored value of the left operand shall occur between the previous and the next sequence point.
 
 .. _9899_6.5.16p4:
 
-:ref:`4 <9899_6.5.16p4>` The order of evaluation of the operands is unspecified. If an attempt is made to modify the result of an assignment operator or to access it after the next sequence point, the behavior is undefined.
+.. container:: snum
+
+   :ref:`4 <9899_6.5.16p4>`
+
+The order of evaluation of the operands is unspecified. If an attempt is made to modify the result of an assignment operator or to access it after the next sequence point, the behavior is undefined.
 

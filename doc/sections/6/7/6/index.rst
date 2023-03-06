@@ -7,7 +7,11 @@
 
 .. _9899_6.7.6p1:
 
-:ref:`1 <9899_6.7.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.7.6p1>`
+
+
 
 .. container:: syntax-block
 
@@ -299,11 +303,19 @@
 
 .. _9899_6.7.6p2:
 
-:ref:`2 <9899_6.7.6p2>` In several contexts, it is necessary to specify a type. This is accomplished using a type name, which is syntactically a declaration for a function or an object of that type that omits the identifier.\ [#9899_note128]_
+.. container:: snum
+
+   :ref:`2 <9899_6.7.6p2>`
+
+In several contexts, it is necessary to specify a type. This is accomplished using a type name, which is syntactically a declaration for a function or an object of that type that omits the identifier.\ [#9899_note128]_
 
 .. _9899_6.7.6p3:
 
-:ref:`3 <9899_6.7.6p3>` EXAMPLE The constructions
+.. container:: snum
+
+   :ref:`3 <9899_6.7.6p3>`
+
+EXAMPLE The constructions
 
 .. code-block:: text
 
@@ -324,4 +336,4 @@ name respectively the types (a) int, (b) pointer to int, (c) array of three poin
 
 .. rubric:: Footnotes
 
-.. [#9899_note128] As indicated by the syntax, empty parentheses in a type name are interpreted as ''function with no parameter specification'', rather than redundant parentheses around the omitted identifier.
+.. [#9899_note128] As indicated by the syntax, empty parentheses in a type name are interpreted as "function with no parameter specification", rather than redundant parentheses around the omitted identifier.

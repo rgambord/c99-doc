@@ -5,7 +5,11 @@
 
 .. _9899_7.26.1p1:
 
-:ref:`1 <9899_7.26.1p1>` The function names
+.. container:: snum
+
+   :ref:`1 <9899_7.26.1p1>`
+
+The function names
 
 ::
 

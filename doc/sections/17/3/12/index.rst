@@ -5,17 +5,21 @@ J.3.12 Library functions
 
 .. _9899_J.3.12p1:
 
-:ref:`1 <9899_J.3.12p1>`
+.. container:: snum
+
+   :ref:`1 <9899_J.3.12p1>`
+
+
 
 -  Any library facilities available to a freestanding program, other than the minimal set required by clause 4 (:ref:`5.1.2.1 <9899_5.1.2.1>`).
 -  The format of the diagnostic printed by the assert macro (:ref:`7.2.1.1 <9899_7.2.1.1>`).
 -  The representation of the floating-point status flags stored by the fegetexceptflag function (:ref:`7.6.2.2 <9899_7.6.2.2>`).
--  Whether the feraiseexcept function raises the ''inexact'' floating-point exception in addition to the ''overflow'' or ''underflow'' floating-point exception (:ref:`7.6.2.3 <9899_7.6.2.3>`).
+-  Whether the feraiseexcept function raises the "inexact" floating-point exception in addition to the "overflow" or "underflow" floating-point exception (:ref:`7.6.2.3 <9899_7.6.2.3>`).
 -  Strings other than "C" and "" that may be passed as the second argument to the setlocale function (:ref:`7.11.1.1 <9899_7.11.1.1>`).
 -  The types defined for float_t and double_t when the value of the FLT_EVAL_METHOD macro is less than 0 (:ref:`7.12 <9899_7.12>`).
 -  Domain errors for the mathematics functions, other than those required by this International Standard (:ref:`7.12.1 <9899_7.12.1>`).
 -  The values returned by the mathematics functions on domain errors (:ref:`7.12.1 <9899_7.12.1>`).
--  The values returned by the mathematics functions on underflow range errors, whether errno is set to the value of the macro ERANGE when the integer expression math_errhandling & MATH_ERRNO is nonzero, and whether the ''underflow'' floating-point exception is raised when the integer expression math_errhandling & MATH_ERREXCEPT is nonzero. (:ref:`7.12.1 <9899_7.12.1>`).
+-  The values returned by the mathematics functions on underflow range errors, whether errno is set to the value of the macro ERANGE when the integer expression math_errhandling & MATH_ERRNO is nonzero, and whether the "underflow" floating-point exception is raised when the integer expression math_errhandling & MATH_ERREXCEPT is nonzero. (:ref:`7.12.1 <9899_7.12.1>`).
 -  Whether a domain error occurs or zero is returned when an fmod function has a second argument of zero (:ref:`7.12.10.1 <9899_7.12.10.1>`).
 -  Whether a domain error occurs or zero is returned when a remainder function has a second argument of zero (:ref:`7.12.10.2 <9899_7.12.10.2>`).
 -  The base-2 logarithm of the modulus used by the remquo functions in reducing the quotient (:ref:`7.12.10.3 <9899_7.12.10.3>`).

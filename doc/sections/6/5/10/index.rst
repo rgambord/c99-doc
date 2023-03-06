@@ -7,7 +7,11 @@
 
 .. _9899_6.5.10p1:
 
-:ref:`1 <9899_6.5.10p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.10p1>`
+
+
 
 .. container:: syntax-block
 
@@ -51,15 +55,27 @@
 
 .. _9899_6.5.10p2:
 
-:ref:`2 <9899_6.5.10p2>` Each of the operands shall have integer type.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.10p2>`
+
+Each of the operands shall have integer type.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.10p3:
 
-:ref:`3 <9899_6.5.10p3>` The usual arithmetic conversions are performed on the operands.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.10p3>`
+
+The usual arithmetic conversions are performed on the operands.
 
 .. _9899_6.5.10p4:
 
-:ref:`4 <9899_6.5.10p4>` The result of the binary & operator is the bitwise AND of the operands (that is, each bit in the result is set if and only if each of the corresponding bits in the converted operands is set).
+.. container:: snum
+
+   :ref:`4 <9899_6.5.10p4>`
+
+The result of the binary & operator is the bitwise AND of the operands (that is, each bit in the result is set if and only if each of the corresponding bits in the converted operands is set).
 

@@ -5,7 +5,11 @@ F.3 Operators and functions
 
 .. _9899_F.3p1:
 
-:ref:`1 <9899_F.3p1>` C operators and functions provide IEC 60559 required and recommended facilities as listed below.
+.. container:: snum
+
+   :ref:`1 <9899_F.3p1>`
+
+C operators and functions provide IEC 60559 required and recommended facilities as listed below.
 
 -  The +, -, \*, and / operators provide the IEC 60559 add, subtract, multiply, and divide operations.
 -  The sqrt functions in :ref:`\<math.h> <9899_7.12>` provide the IEC 60559 square root operation.

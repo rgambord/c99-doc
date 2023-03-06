@@ -5,11 +5,19 @@
 
 .. _9899_7.8.1p1:
 
-:ref:`1 <9899_7.8.1p1>` Each of the following object-like macros\ [#9899_note191]_ expands to a character string literal containing a conversion specifier, possibly modified by a length modifier, suitable for use within the format argument of a formatted input/output function when converting the corresponding integer type. These macro names have the general form of PRI (character string literals for the fprintf and fwprintf family) or SCN (character string literals for the fscanf and fwscanf family),\ [#9899_note192]_ followed by the conversion specifier, followed by a name corresponding to a similar type name in :ref:`7.18.1 <9899_7.18.1>`. In these names, N represents the width of the type as described in :ref:`7.18.1 <9899_7.18.1>`. For example, PRIdFAST32 can be used in a format string to print the value of an integer of type int_fast32_t.
+.. container:: snum
+
+   :ref:`1 <9899_7.8.1p1>`
+
+Each of the following object-like macros\ [#9899_note191]_ expands to a character string literal containing a conversion specifier, possibly modified by a length modifier, suitable for use within the format argument of a formatted input/output function when converting the corresponding integer type. These macro names have the general form of PRI (character string literals for the fprintf and fwprintf family) or SCN (character string literals for the fscanf and fwscanf family),\ [#9899_note192]_ followed by the conversion specifier, followed by a name corresponding to a similar type name in :ref:`7.18.1 <9899_7.18.1>`. In these names, N represents the width of the type as described in :ref:`7.18.1 <9899_7.18.1>`. For example, PRIdFAST32 can be used in a format string to print the value of an integer of type int_fast32_t.
 
 .. _9899_7.8.1p2:
 
-:ref:`2 <9899_7.8.1p2>` The fprintf macros for signed integers are:
+.. container:: snum
+
+   :ref:`2 <9899_7.8.1p2>`
+
+The fprintf macros for signed integers are:
 
 ::
 
@@ -18,7 +26,11 @@
 
 .. _9899_7.8.1p3:
 
-:ref:`3 <9899_7.8.1p3>` The fprintf macros for unsigned integers are:
+.. container:: snum
+
+   :ref:`3 <9899_7.8.1p3>`
+
+The fprintf macros for unsigned integers are:
 
 ::
 
@@ -29,7 +41,11 @@
 
 .. _9899_7.8.1p4:
 
-:ref:`4 <9899_7.8.1p4>` The fscanf macros for signed integers are:
+.. container:: snum
+
+   :ref:`4 <9899_7.8.1p4>`
+
+The fscanf macros for signed integers are:
 
 ::
 
@@ -38,7 +54,11 @@
 
 .. _9899_7.8.1p5:
 
-:ref:`5 <9899_7.8.1p5>` The fscanf macros for unsigned integers are:
+.. container:: snum
+
+   :ref:`5 <9899_7.8.1p5>`
+
+The fscanf macros for unsigned integers are:
 
 ::
 
@@ -48,11 +68,19 @@
 
 .. _9899_7.8.1p6:
 
-:ref:`6 <9899_7.8.1p6>` For each type that the implementation provides in :ref:`\<stdint.h> <9899_7.18>`, the corresponding fprintf macros shall be defined and the corresponding fscanf macros shall be defined unless the implementation does not have a suitable fscanf length modifier for the type.
+.. container:: snum
+
+   :ref:`6 <9899_7.8.1p6>`
+
+For each type that the implementation provides in :ref:`\<stdint.h> <9899_7.18>`, the corresponding fprintf macros shall be defined and the corresponding fscanf macros shall be defined unless the implementation does not have a suitable fscanf length modifier for the type.
 
 .. _9899_7.8.1p7:
 
-:ref:`7 <9899_7.8.1p7>` EXAMPLE
+.. container:: snum
+
+   :ref:`7 <9899_7.8.1p7>`
+
+EXAMPLE
 
 ::
 

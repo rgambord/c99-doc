@@ -7,7 +7,11 @@
 
 .. _9899_7.12.9.4p1:
 
-:ref:`1 <9899_7.12.9.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.9.4p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.9.4p2:
 
-:ref:`2 <9899_7.12.9.4p2>` The rint functions differ from the nearbyint functions (:ref:`7.12.9.3 <9899_7.12.9.3>`) only in that the rint functions may raise the ''inexact'' floating-point exception if the result differs in value from the argument.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.9.4p2>`
+
+The rint functions differ from the nearbyint functions (:ref:`7.12.9.3 <9899_7.12.9.3>`) only in that the rint functions may raise the "inexact" floating-point exception if the result differs in value from the argument.
 
 .. rubric:: Returns
 
 .. _9899_7.12.9.4p3:
 
-:ref:`3 <9899_7.12.9.4p3>` The rint functions return the rounded integer value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.9.4p3>`
+
+The rint functions return the rounded integer value.
 

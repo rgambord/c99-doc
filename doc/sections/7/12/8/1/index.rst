@@ -7,7 +7,11 @@
 
 .. _9899_7.12.8.1p1:
 
-:ref:`1 <9899_7.12.8.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.8.1p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.12.8.1p2:
 
-:ref:`2 <9899_7.12.8.1p2>` The erf functions compute the error function of x.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.8.1p2>`
+
+The erf functions compute the error function of x.
 
 .. rubric:: Returns
 
 .. _9899_7.12.8.1p3:
 
-:ref:`3 <9899_7.12.8.1p3>` The erf functions return
+.. container:: snum
+
+   :ref:`3 <9899_7.12.8.1p3>`
+
+The erf functions return
 
 ::
 

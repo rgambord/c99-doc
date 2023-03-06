@@ -36,7 +36,7 @@ jobs:
       - name: diag
         run: sphinx-build --version
       - name: Sphinx build
-        run:  sphinx-build -Ea doc/ build/
+        run:  sphinx-build doc/ build/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

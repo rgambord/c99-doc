@@ -1,15 +1,23 @@
-.. _9899_introduction-3:
+.. _9899_7.19.1:
 
 7.19.1 Introduction
 ^^^^^^^^^^^^^^^^^^^
 
 .. _9899_7.19.1p1:
 
-:ref:`1 <9899_7.19.1p1>` The header :ref:`\<stdio.h> <9899_7.19>` declares three types, several macros, and many functions for performing input and output.
+.. container:: snum
+
+   :ref:`1 <9899_7.19.1p1>`
+
+The header :ref:`\<stdio.h> <9899_7.19>` declares three types, several macros, and many functions for performing input and output.
 
 .. _9899_7.19.1p2:
 
-:ref:`2 <9899_7.19.1p2>` The types declared are size_t (described in :ref:`7.17 <9899_7.17>`);
+.. container:: snum
+
+   :ref:`2 <9899_7.19.1p2>`
+
+The types declared are size_t (described in :ref:`7.17 <9899_7.17>`);
 
 ::
 
@@ -25,7 +33,11 @@ which is an object type other than an array type capable of recording all the in
 
 .. _9899_7.19.1p3:
 
-:ref:`3 <9899_7.19.1p3>` The macros are NULL (described in :ref:`7.17 <9899_7.17>`);
+.. container:: snum
+
+   :ref:`3 <9899_7.19.1p3>`
+
+The macros are NULL (described in :ref:`7.17 <9899_7.17>`);
 
 ::
 
@@ -85,22 +97,38 @@ which expands to an integer constant expression that is the maximum number of un
     stdin
     stdout
 
-which are expressions of type ''pointer to FILE'' that point to the FILE objects associated, respectively, with the standard error, input, and output streams.
+which are expressions of type "pointer to FILE" that point to the FILE objects associated, respectively, with the standard error, input, and output streams.
 
 .. _9899_7.19.1p4:
 
-:ref:`4 <9899_7.19.1p4>` The header :ref:`\<wchar.h> <9899_7.24>` declares a number of functions useful for wide character input and output. The wide character input/output functions described in that subclause provide operations analogous to most of those described here, except that the fundamental units internal to the program are wide characters. The external representation (in the file) is a sequence of ''generalized'' multibyte characters, as described further in :ref:`7.19.3 <9899_7.19.3>`.
+.. container:: snum
+
+   :ref:`4 <9899_7.19.1p4>`
+
+The header :ref:`\<wchar.h> <9899_7.24>` declares a number of functions useful for wide character input and output. The wide character input/output functions described in that subclause provide operations analogous to most of those described here, except that the fundamental units internal to the program are wide characters. The external representation (in the file) is a sequence of "generalized" multibyte characters, as described further in :ref:`7.19.3 <9899_7.19.3>`.
 
 .. _9899_7.19.1p5:
 
-:ref:`5 <9899_7.19.1p5>` The input/output functions are given the following collective terms:
+.. container:: snum
+
+   :ref:`5 <9899_7.19.1p5>`
+
+The input/output functions are given the following collective terms:
 
 -  The wide character input functions -- those functions described in :ref:`7.24 <9899_7.24>` that perform input into wide characters and wide strings: fgetwc, fgetws, getwc, getwchar, fwscanf, wscanf, vfwscanf, and vwscanf.
 -  The wide character output functions -- those functions described in :ref:`7.24 <9899_7.24>` that perform output from wide characters and wide strings: fputwc, fputws, putwc, putwchar, fwprintf, wprintf, vfwprintf, and vwprintf.
 -  The wide character input/output functions -- the union of the ungetwc function, the wide character input functions, and the wide character output functions.
 -  The byte input/output functions -- those functions described in this subclause that perform input/output: fgetc, fgets, fprintf, fputc, fputs, fread, fscanf, fwrite, getc, getchar, gets, printf, putc, putchar, puts, scanf, ungetc, vfprintf, vfscanf, vprintf, and vscanf.
 
-**Forward references**: files (:ref:`7.19.3 <9899_7.19.3>`), the fseek function (:ref:`7.19.9.2 <9899_7.19.9.2>`), streams (:ref:`7.19.2 <9899_7.19.2>`), the tmpnam function (:ref:`7.19.4.4 <9899_7.19.4.4>`), :ref:`\<wchar.h> <9899_7.24>` (:ref:`7.24 <9899_7.24>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.19.3`
+   - :ref:`9899_7.19.9.2`
+   - :ref:`9899_7.19.2`
+   - :ref:`9899_7.19.4.4`
+   - :ref:`9899_7.24`
+   - :ref:`9899_7.24`
 
 
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.12.4.4p1:
 
-:ref:`1 <9899_7.12.4.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.4.4p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.4.4p2:
 
-:ref:`2 <9899_7.12.4.4p2>` The atan2 functions compute the value of the arc tangent of y/x, using the signs of both arguments to determine the quadrant of the return value. A domain error may occur if both arguments are zero.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.4.4p2>`
+
+The atan2 functions compute the value of the arc tangent of y/x, using the signs of both arguments to determine the quadrant of the return value. A domain error may occur if both arguments are zero.
 
 .. rubric:: Returns
 
 .. _9899_7.12.4.4p3:
 
-:ref:`3 <9899_7.12.4.4p3>` The atan2 functions return arctan y/x in the interval [-pi , +pi ] radians.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.4.4p3>`
+
+The atan2 functions return arctan y/x in the interval [-pi , +pi ] radians.
 

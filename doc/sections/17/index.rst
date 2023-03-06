@@ -20,5 +20,9 @@ Portability issues
 
 .. _9899_Jp1:
 
-:ref:`1 <9899_Jp1>` This annex collects some information about portability that appears in this International Standard.
+.. container:: snum
+
+   :ref:`1 <9899_Jp1>`
+
+This annex collects some information about portability that appears in this International Standard.
 

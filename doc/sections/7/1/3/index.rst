@@ -5,7 +5,11 @@
 
 .. _9899_7.1.3p1:
 
-:ref:`1 <9899_7.1.3p1>` Each header declares or defines all identifiers listed in its associated subclause, and optionally declares or defines identifiers listed in its associated future library directions subclause and identifiers which are always reserved either for any use or for use as file scope identifiers.
+.. container:: snum
+
+   :ref:`1 <9899_7.1.3p1>`
+
+Each header declares or defines all identifiers listed in its associated subclause, and optionally declares or defines identifiers listed in its associated future library directions subclause and identifiers which are always reserved either for any use or for use as file scope identifiers.
 
 -  All identifiers that begin with an underscore and either an uppercase letter or another underscore are always reserved for any use.
 -  All identifiers that begin with an underscore are always reserved for use as identifiers with file scope in both the ordinary and tag name spaces.
@@ -15,11 +19,19 @@
 
 .. _9899_7.1.3p2:
 
-:ref:`2 <9899_7.1.3p2>` No other identifiers are reserved. If the program declares or defines an identifier in a context in which it is reserved (other than as allowed by :ref:`7.1.4 <9899_7.1.4>`), or defines a reserved identifier as a macro name, the behavior is undefined.
+.. container:: snum
+
+   :ref:`2 <9899_7.1.3p2>`
+
+No other identifiers are reserved. If the program declares or defines an identifier in a context in which it is reserved (other than as allowed by :ref:`7.1.4 <9899_7.1.4>`), or defines a reserved identifier as a macro name, the behavior is undefined.
 
 .. _9899_7.1.3p3:
 
-:ref:`3 <9899_7.1.3p3>` If the program removes (with #undef) any macro definition of an identifier in the first group listed above, the behavior is undefined.
+.. container:: snum
+
+   :ref:`3 <9899_7.1.3p3>`
+
+If the program removes (with `#undef`) any macro definition of an identifier in the first group listed above, the behavior is undefined.
 
 
 

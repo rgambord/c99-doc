@@ -7,7 +7,11 @@
 
 .. _9899_7.12.5.6p1:
 
-:ref:`1 <9899_7.12.5.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.5.6p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.12.5.6p2:
 
-:ref:`2 <9899_7.12.5.6p2>` The tanh functions compute the hyperbolic tangent of x.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.5.6p2>`
+
+The tanh functions compute the hyperbolic tangent of x.
 
 .. rubric:: Returns
 
 .. _9899_7.12.5.6p3:
 
-:ref:`3 <9899_7.12.5.6p3>` The tanh functions return tanh x.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.5.6p3>`
+
+The tanh functions return tanh x.
 
 .. _9899_7.12.6:
 

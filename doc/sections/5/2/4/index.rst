@@ -13,5 +13,9 @@
 
 .. _9899_5.2.4p1:
 
-:ref:`1 <9899_5.2.4p1>` Both the translation and execution environments constrain the implementation of language translators and libraries. The following summarizes the language-related environmental limits on a conforming implementation; the library-related limits are discussed in clause 7.
+.. container:: snum
+
+   :ref:`1 <9899_5.2.4p1>`
+
+Both the translation and execution environments constrain the implementation of language translators and libraries. The following summarizes the language-related environmental limits on a conforming implementation; the library-related limits are discussed in clause 7.
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.21.6.1p1:
 
-:ref:`1 <9899_7.21.6.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.21.6.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.21.6.1p2:
 
-:ref:`2 <9899_7.21.6.1p2>` The memset function copies the value of c (converted to an unsigned char) into each of the first n characters of the object pointed to by s.
+.. container:: snum
+
+   :ref:`2 <9899_7.21.6.1p2>`
+
+The memset function copies the value of c (converted to an unsigned char) into each of the first n characters of the object pointed to by s.
 
 .. rubric:: Returns
 
 .. _9899_7.21.6.1p3:
 
-:ref:`3 <9899_7.21.6.1p3>` The memset function returns the value of s.
+.. container:: snum
+
+   :ref:`3 <9899_7.21.6.1p3>`
+
+The memset function returns the value of s.
 

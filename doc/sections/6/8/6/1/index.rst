@@ -7,17 +7,29 @@
 
 .. _9899_6.8.6.1p1:
 
-:ref:`1 <9899_6.8.6.1p1>` The identifier in a goto statement shall name a label located somewhere in the enclosing function. A goto statement shall not jump from outside the scope of an identifier having a variably modified type to inside the scope of that identifier.
+.. container:: snum
+
+   :ref:`1 <9899_6.8.6.1p1>`
+
+The identifier in a goto statement shall name a label located somewhere in the enclosing function. A goto statement shall not jump from outside the scope of an identifier having a variably modified type to inside the scope of that identifier.
 
 .. rubric:: Semantics
 
 .. _9899_6.8.6.1p2:
 
-:ref:`2 <9899_6.8.6.1p2>` A goto statement causes an unconditional jump to the statement prefixed by the named label in the enclosing function.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.6.1p2>`
+
+A goto statement causes an unconditional jump to the statement prefixed by the named label in the enclosing function.
 
 .. _9899_6.8.6.1p3:
 
-:ref:`3 <9899_6.8.6.1p3>` EXAMPLE 1 It is sometimes convenient to jump into the middle of a complicated set of statements. The following outline presents one possible approach to a problem based on these three assumptions:
+.. container:: snum
+
+   :ref:`3 <9899_6.8.6.1p3>`
+
+EXAMPLE 1 It is sometimes convenient to jump into the middle of a complicated set of statements. The following outline presents one possible approach to a problem based on these three assumptions:
 
 #. The general initialization code accesses objects only visible to the current function.
 
@@ -46,7 +58,11 @@
 
 .. _9899_6.8.6.1p4:
 
-:ref:`4 <9899_6.8.6.1p4>` EXAMPLE 2 A goto statement is not allowed to jump past any declarations of objects with variably modified types. A jump within the scope, however, is permitted.
+.. container:: snum
+
+   :ref:`4 <9899_6.8.6.1p4>`
+
+EXAMPLE 2 A goto statement is not allowed to jump past any declarations of objects with variably modified types. A jump within the scope, however, is permitted.
 
 ::
 

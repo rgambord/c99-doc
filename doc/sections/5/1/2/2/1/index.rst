@@ -5,7 +5,11 @@
 
 .. _9899_5.1.2.2.1p1:
 
-:ref:`1 <9899_5.1.2.2.1p1>` The function called at program startup is named main. The implementation declares no prototype for this function. It shall be defined with a return type of int and with no parameters:
+.. container:: snum
+
+   :ref:`1 <9899_5.1.2.2.1p1>`
+
+The function called at program startup is named main. The implementation declares no prototype for this function. It shall be defined with a return type of int and with no parameters:
 
 ::
 
@@ -21,7 +25,11 @@ or equivalent;\ [#9899_note9]_ or in some other implementation-defined manner.
 
 .. _9899_5.1.2.2.1p2:
 
-:ref:`2 <9899_5.1.2.2.1p2>` If they are declared, the parameters to the main function shall obey the following constraints:
+.. container:: snum
+
+   :ref:`2 <9899_5.1.2.2.1p2>`
+
+If they are declared, the parameters to the main function shall obey the following constraints:
 
 -  The value of argc shall be nonnegative.
 -  argv[argc] shall be a null pointer.

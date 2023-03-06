@@ -7,7 +7,11 @@
 
 .. _9899_7.24.6.3.1p1:
 
-:ref:`1 <9899_7.24.6.3.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.6.3.1p1>`
+
+
 
 ::
 
@@ -20,7 +24,11 @@
 
 .. _9899_7.24.6.3.1p2:
 
-:ref:`2 <9899_7.24.6.3.1p2>` The mbrlen function is equivalent to the call:
+.. container:: snum
+
+   :ref:`2 <9899_7.24.6.3.1p2>`
+
+The mbrlen function is equivalent to the call:
 
 ::
 
@@ -32,7 +40,14 @@ where internal is the mbstate_t object for the mbrlen function, except that the 
 
 .. _9899_7.24.6.3.1p3:
 
-:ref:`3 <9899_7.24.6.3.1p3>` The mbrlen function returns a value between zero and n, inclusive, (size_t)(-2), or (size_t)(-1).
+.. container:: snum
 
-**Forward references**: the mbrtowc function (:ref:`7.24.6.3.2 <9899_7.24.6.3.2>`).
+   :ref:`3 <9899_7.24.6.3.1p3>`
+
+The mbrlen function returns a value between zero and n, inclusive, (size_t)(-2), or (size_t)(-1).
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.24.6.3.2`
 

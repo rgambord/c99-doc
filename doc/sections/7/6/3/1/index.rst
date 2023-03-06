@@ -7,7 +7,11 @@
 
 .. _9899_7.6.3.1p1:
 
-:ref:`1 <9899_7.6.3.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.6.3.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.6.3.1p2:
 
-:ref:`2 <9899_7.6.3.1p2>` The fegetround function gets the current rounding direction.
+.. container:: snum
+
+   :ref:`2 <9899_7.6.3.1p2>`
+
+The fegetround function gets the current rounding direction.
 
 .. rubric:: Returns
 
 .. _9899_7.6.3.1p3:
 
-:ref:`3 <9899_7.6.3.1p3>` The fegetround function returns the value of the rounding direction macro representing the current rounding direction or a negative value if there is no such rounding direction macro or the current rounding direction is not determinable.
+.. container:: snum
+
+   :ref:`3 <9899_7.6.3.1p3>`
+
+The fegetround function returns the value of the rounding direction macro representing the current rounding direction or a negative value if there is no such rounding direction macro or the current rounding direction is not determinable.
 

@@ -5,14 +5,22 @@ F.9.6.1 The ceil functions
 
 .. _9899_F.9.6.1p1:
 
-:ref:`1 <9899_F.9.6.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_F.9.6.1p1>`
+
+
 
 -  ceil((+-)0) returns (+-)0.
 -  ceil((+-)(inf)) returns (+-)(inf).
 
 .. _9899_F.9.6.1p2:
 
-:ref:`2 <9899_F.9.6.1p2>` The double version of ceil behaves as though implemented by
+.. container:: snum
+
+   :ref:`2 <9899_F.9.6.1p2>`
+
+The double version of ceil behaves as though implemented by
 
 ::
 

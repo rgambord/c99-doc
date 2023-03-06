@@ -5,15 +5,27 @@
 
 .. _9899_7.18.1.3p1:
 
-:ref:`1 <9899_7.18.1.3p1>` Each of the following types designates an integer type that is usually fastest\ [#9899_note225]_ to operate with among all integer types that have at least the specified width.
+.. container:: snum
+
+   :ref:`1 <9899_7.18.1.3p1>`
+
+Each of the following types designates an integer type that is usually fastest\ [#9899_note225]_ to operate with among all integer types that have at least the specified width.
 
 .. _9899_7.18.1.3p2:
 
-:ref:`2 <9899_7.18.1.3p2>` The typedef name int_fastN_t designates the fastest signed integer type with a width of at least N . The typedef name uint_fastN_t designates the fastest unsigned integer type with a width of at least N .
+.. container:: snum
+
+   :ref:`2 <9899_7.18.1.3p2>`
+
+The typedef name int_fastN_t designates the fastest signed integer type with a width of at least N . The typedef name uint_fastN_t designates the fastest unsigned integer type with a width of at least N .
 
 .. _9899_7.18.1.3p3:
 
-:ref:`3 <9899_7.18.1.3p3>` The following types are required:
+.. container:: snum
+
+   :ref:`3 <9899_7.18.1.3p3>`
+
+The following types are required:
 
 ::
 

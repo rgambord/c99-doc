@@ -5,5 +5,9 @@
 
 .. _9899_6.11.9p1:
 
-:ref:`1 <9899_6.11.9p1>` Macro names beginning with \__STDC\_ are reserved for future standardization.
+.. container:: snum
+
+   :ref:`1 <9899_6.11.9p1>`
+
+Macro names beginning with \__STDC\_ are reserved for future standardization.
 

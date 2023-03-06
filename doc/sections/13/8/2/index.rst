@@ -5,7 +5,11 @@ F.8.2 Expression transformations
 
 .. _9899_F.8.2p1:
 
-:ref:`1 <9899_F.8.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_F.8.2p1>`
+
+
 
 .. code-block:: text
 
@@ -59,7 +63,7 @@ The expressions x + 0 and x are not equivalent if x is -0, because (-0) + (+0) y
 
     x - 0 -> x              
 
-(+0) - (+0) yields -0 when rounding is downward (toward -(inf)), but +0 otherwise, and (-0) - (+0) always yields -0; so, if the state of the FENV_ACCESS pragma is ''off'', promising default rounding, then the implementation can replace x - 0 by x, even if x might be zero.
+(+0) - (+0) yields -0 when rounding is downward (toward -(inf)), but +0 otherwise, and (-0) - (+0) always yields -0; so, if the state of the FENV_ACCESS pragma is "off", promising default rounding, then the implementation can replace x - 0 by x, even if x might be zero.
 
 .. code-block:: text
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.12.4.5p1:
 
-:ref:`1 <9899_7.12.4.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.4.5p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.4.5p2:
 
-:ref:`2 <9899_7.12.4.5p2>` The cos functions compute the cosine of x (measured in radians).
+.. container:: snum
+
+   :ref:`2 <9899_7.12.4.5p2>`
+
+The cos functions compute the cosine of x (measured in radians).
 
 .. rubric:: Returns
 
 .. _9899_7.12.4.5p3:
 
-:ref:`3 <9899_7.12.4.5p3>` The cos functions return cos x.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.4.5p3>`
+
+The cos functions return cos x.
 

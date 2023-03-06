@@ -7,7 +7,11 @@
 
 .. _9899_7.20.6.2p1:
 
-:ref:`1 <9899_7.20.6.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.6.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.20.6.2p2:
 
-:ref:`2 <9899_7.20.6.2p2>` The div, ldiv, and lldiv, functions compute numer / denom and numer % denom in a single operation.
+.. container:: snum
+
+   :ref:`2 <9899_7.20.6.2p2>`
+
+The div, ldiv, and lldiv, functions compute numer / denom and numer % denom in a single operation.
 
 .. rubric:: Returns
 
 .. _9899_7.20.6.2p3:
 
-:ref:`3 <9899_7.20.6.2p3>` The div, ldiv, and lldiv functions return a structure of type div_t, ldiv_t, and lldiv_t, respectively, comprising both the quotient and the remainder. The structures shall contain (in either order) the members quot (the quotient) and rem (the remainder), each of which has the same type as the arguments numer and denom. If either part of the result cannot be represented, the behavior is undefined.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.6.2p3>`
+
+The div, ldiv, and lldiv functions return a structure of type div_t, ldiv_t, and lldiv_t, respectively, comprising both the quotient and the remainder. The structures shall contain (in either order) the members quot (the quotient) and rem (the remainder), each of which has the same type as the arguments numer and denom. If either part of the result cannot be represented, the behavior is undefined.
 

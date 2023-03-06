@@ -7,7 +7,11 @@
 
 .. _9899_7.19.6.1p1:
 
-:ref:`1 <9899_7.19.6.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.6.1p1>`
+
+
 
 ::
 
@@ -19,15 +23,27 @@
 
 .. _9899_7.19.6.1p2:
 
-:ref:`2 <9899_7.19.6.1p2>` The fprintf function writes output to the stream pointed to by stream, under control of the string pointed to by format that specifies how subsequent arguments are converted for output. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored. The fprintf function returns when the end of the format string is encountered.
+.. container:: snum
+
+   :ref:`2 <9899_7.19.6.1p2>`
+
+The fprintf function writes output to the stream pointed to by stream, under control of the string pointed to by format that specifies how subsequent arguments are converted for output. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored. The fprintf function returns when the end of the format string is encountered.
 
 .. _9899_7.19.6.1p3:
 
-:ref:`3 <9899_7.19.6.1p3>` The format shall be a multibyte character sequence, beginning and ending in its initial shift state. The format is composed of zero or more directives: ordinary multibyte characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments, converting them, if applicable, according to the corresponding conversion specifier, and then writing the result to the output stream.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.6.1p3>`
+
+The format shall be a multibyte character sequence, beginning and ending in its initial shift state. The format is composed of zero or more directives: ordinary multibyte characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments, converting them, if applicable, according to the corresponding conversion specifier, and then writing the result to the output stream.
 
 .. _9899_7.19.6.1p4:
 
-:ref:`4 <9899_7.19.6.1p4>` Each conversion specification is introduced by the character %. After the %, the following appear in sequence:
+.. container:: snum
+
+   :ref:`4 <9899_7.19.6.1p4>`
+
+Each conversion specification is introduced by the character %. After the %, the following appear in sequence:
 
 -  Zero or more flags (in any order) that modify the meaning of the conversion specification.
 -  An optional minimum field width. If the converted value has fewer characters than the field width, it is padded with spaces (by default) on the left (or right, if the left adjustment flag, described later, has been given) to the field width. The field width takes the form of an asterisk \* (described later) or a nonnegative decimal integer.\ [#9899_note241]_
@@ -37,11 +53,19 @@
 
 .. _9899_7.19.6.1p5:
 
-:ref:`5 <9899_7.19.6.1p5>` As noted above, a field width, or precision, or both, may be indicated by an asterisk. In this case, an int argument supplies the field width or precision. The arguments specifying field width, or precision, or both, shall appear (in that order) before the argument (if any) to be converted. A negative field width argument is taken as a - flag followed by a positive field width. A negative precision argument is taken as if the precision were omitted.
+.. container:: snum
+
+   :ref:`5 <9899_7.19.6.1p5>`
+
+As noted above, a field width, or precision, or both, may be indicated by an asterisk. In this case, an int argument supplies the field width or precision. The arguments specifying field width, or precision, or both, shall appear (in that order) before the argument (if any) to be converted. A negative field width argument is taken as a - flag followed by a positive field width. A negative precision argument is taken as if the precision were omitted.
 
 .. _9899_7.19.6.1p6:
 
-:ref:`6 <9899_7.19.6.1p6>` The flag characters and their meanings are:
+.. container:: snum
+
+   :ref:`6 <9899_7.19.6.1p6>`
+
+The flag characters and their meanings are:
 
 \-
    The result of the conversion is left-justified within the field. (It is right-justified if this flag is not specified.)
@@ -50,13 +74,17 @@
 space
    If the first character of a signed conversion is not a sign, or if a signed conversion results in no characters, a space is prefixed to the result. If the space and + flags both appear, the space flag is ignored.
 \#
-   The result is converted to an ''alternative form''. For o conversion, it increases the precision, if and only if necessary, to force the first digit of the result to be a zero (if the value and precision are both 0, a single 0 is printed). For x (or X) conversion, a nonzero result has 0x (or 0X) prefixed to it. For a, A, e, E, f, F, g, and G conversions, the result of converting a floating-point number always contains a decimal-point character, even if no digits follow it. (Normally, a decimal-point character appears in the result of these conversions only if a digit follows it.) For g and G conversions, trailing zeros are not removed from the result. For other conversions, the behavior is undefined.
+   The result is converted to an "alternative form". For o conversion, it increases the precision, if and only if necessary, to force the first digit of the result to be a zero (if the value and precision are both 0, a single 0 is printed). For x (or X) conversion, a nonzero result has 0x (or 0X) prefixed to it. For a, A, e, E, f, F, g, and G conversions, the result of converting a floating-point number always contains a decimal-point character, even if no digits follow it. (Normally, a decimal-point character appears in the result of these conversions only if a digit follows it.) For g and G conversions, trailing zeros are not removed from the result. For other conversions, the behavior is undefined.
 0
    For d, i, o, u, x, X, a, A, e, E, f, F, g, and G conversions, leading zeros (following any indication of sign or base) are used to pad to the field width rather than performing space padding, except when converting an infinity or NaN. If the 0 and - flags both appear, the 0 flag is ignored. For d, i, o, u, x, and X conversions, if a precision is specified, the 0 flag is ignored. For other conversions, the behavior is undefined.
 
 .. _9899_7.19.6.1p7:
 
-:ref:`7 <9899_7.19.6.1p7>` The length modifiers and their meanings are:
+.. container:: snum
+
+   :ref:`7 <9899_7.19.6.1p7>`
+
+The length modifiers and their meanings are:
 
 hh
    Specifies that a following d, i, o, u, x, or X conversion specifier applies to a signed char or unsigned char argument (the argument will have been promoted according to the integer promotions, but its value shall be converted to signed char or unsigned char before printing); or that a following n conversion specifier applies to a pointer to a signed char argument.
@@ -79,7 +107,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 
 .. _9899_7.19.6.1p8:
 
-:ref:`8 <9899_7.19.6.1p8>` The conversion specifiers and their meanings are:
+.. container:: snum
+
+   :ref:`8 <9899_7.19.6.1p8>`
+
+The conversion specifiers and their meanings are:
 
 d,i
    The int argument is converted to signed decimal in the style [-]dddd. The precision specifies the minimum number of digits to appear; if the value being converted can be represented in fewer digits, it is expanded with leading zeros. The default precision is 1. The result of converting a zero value with a precision of zero is no characters.
@@ -111,41 +143,73 @@ n
 
 .. _9899_7.19.6.1p9:
 
-:ref:`9 <9899_7.19.6.1p9>` If a conversion specification is invalid, the behavior is undefined.\ [#9899_note248]_ If any argument is not the correct type for the corresponding conversion specification, the behavior is undefined.
+.. container:: snum
+
+   :ref:`9 <9899_7.19.6.1p9>`
+
+If a conversion specification is invalid, the behavior is undefined.\ [#9899_note248]_ If any argument is not the correct type for the corresponding conversion specification, the behavior is undefined.
 
 .. _9899_7.19.6.1p10:
 
-:ref:`10 <9899_7.19.6.1p10>` In no case does a nonexistent or small field width cause truncation of a field; if the result of a conversion is wider than the field width, the field is expanded to contain the conversion result.
+.. container:: snum
+
+   :ref:`10 <9899_7.19.6.1p10>`
+
+In no case does a nonexistent or small field width cause truncation of a field; if the result of a conversion is wider than the field width, the field is expanded to contain the conversion result.
 
 .. _9899_7.19.6.1p11:
 
-:ref:`11 <9899_7.19.6.1p11>` For a and A conversions, if FLT_RADIX is a power of 2, the value is correctly rounded to a hexadecimal floating number with the given precision.
+.. container:: snum
+
+   :ref:`11 <9899_7.19.6.1p11>`
+
+For a and A conversions, if FLT_RADIX is a power of 2, the value is correctly rounded to a hexadecimal floating number with the given precision.
 
 .. rubric:: Recommended practice
 
 .. _9899_7.19.6.1p12:
 
-:ref:`12 <9899_7.19.6.1p12>` For a and A conversions, if FLT_RADIX is not a power of 2 and the result is not exactly representable in the given precision, the result should be one of the two adjacent numbers in hexadecimal floating style with the given precision, with the extra stipulation that the error should have a correct sign for the current rounding direction.
+.. container:: snum
+
+   :ref:`12 <9899_7.19.6.1p12>`
+
+For a and A conversions, if FLT_RADIX is not a power of 2 and the result is not exactly representable in the given precision, the result should be one of the two adjacent numbers in hexadecimal floating style with the given precision, with the extra stipulation that the error should have a correct sign for the current rounding direction.
 
 .. _9899_7.19.6.1p13:
 
-:ref:`13 <9899_7.19.6.1p13>` For e, E, f, F, g, and G conversions, if the number of significant decimal digits is at most DECIMAL_DIG, then the result should be correctly rounded.\ [#9899_note249]_ If the number of significant decimal digits is more than DECIMAL_DIG but the source value is exactly representable with DECIMAL_DIG digits, then the result should be an exact representation with trailing zeros. Otherwise, the source value is bounded by two adjacent decimal strings L < U, both having DECIMAL_DIG significant digits; the value of the resultant decimal string D should satisfy L <= D <= U, with the extra stipulation that the error should have a correct sign for the current rounding direction.
+.. container:: snum
+
+   :ref:`13 <9899_7.19.6.1p13>`
+
+For e, E, f, F, g, and G conversions, if the number of significant decimal digits is at most DECIMAL_DIG, then the result should be correctly rounded.\ [#9899_note249]_ If the number of significant decimal digits is more than DECIMAL_DIG but the source value is exactly representable with DECIMAL_DIG digits, then the result should be an exact representation with trailing zeros. Otherwise, the source value is bounded by two adjacent decimal strings L < U, both having DECIMAL_DIG significant digits; the value of the resultant decimal string D should satisfy L <= D <= U, with the extra stipulation that the error should have a correct sign for the current rounding direction.
 
 .. rubric:: Returns
 
 .. _9899_7.19.6.1p14:
 
-:ref:`14 <9899_7.19.6.1p14>` The fprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
+.. container:: snum
+
+   :ref:`14 <9899_7.19.6.1p14>`
+
+The fprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
 
 .. rubric:: Environmental limits
 
 .. _9899_7.19.6.1p15:
 
-:ref:`15 <9899_7.19.6.1p15>` The number of characters that can be produced by any single conversion shall be at least 4095.
+.. container:: snum
+
+   :ref:`15 <9899_7.19.6.1p15>`
+
+The number of characters that can be produced by any single conversion shall be at least 4095.
 
 .. _9899_7.19.6.1p16:
 
-:ref:`16 <9899_7.19.6.1p16>` EXAMPLE 1 To print a date and time in the form ''Sunday, July 3, 10:02'' followed by pi to five decimal places:
+.. container:: snum
+
+   :ref:`16 <9899_7.19.6.1p16>`
+
+EXAMPLE 1 To print a date and time in the form "Sunday, July 3, 10:02" followed by pi to five decimal places:
 
 ::
 
@@ -160,11 +224,19 @@ n
 
 .. _9899_7.19.6.1p17:
 
-:ref:`17 <9899_7.19.6.1p17>` EXAMPLE 2 In this example, multibyte characters do not have a state-dependent encoding, and the members of the extended character set that consist of more than one byte each consist of exactly two bytes, the first of which is denoted here by a and the second by an uppercase letter.
+.. container:: snum
+
+   :ref:`17 <9899_7.19.6.1p17>`
+
+EXAMPLE 2 In this example, multibyte characters do not have a state-dependent encoding, and the members of the extended character set that consist of more than one byte each consist of exactly two bytes, the first of which is denoted here by a and the second by an uppercase letter.
 
 .. _9899_7.19.6.1p18:
 
-:ref:`18 <9899_7.19.6.1p18>` Given the following wide string with length seven,
+.. container:: snum
+
+   :ref:`18 <9899_7.19.6.1p18>`
+
+Given the following wide string with length seven,
 
 ::
 
@@ -194,7 +266,11 @@ will print the following seven lines:
     |      abc Z W|
     |            Z|
 
-**Forward references**: conversion state (:ref:`7.24.6 <9899_7.24.6>`), the wcrtomb function (:ref:`7.24.6.3.3 <9899_7.24.6.3.3>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.24.6`
+   - :ref:`9899_7.24.6.3.3`
 
 
 
@@ -217,5 +293,5 @@ will print the following seven lines:
 .. [#9899_note245] The precision p is sufficient to distinguish values of the source type if 16\ :sup:`p-1` > b n where b is FLT_RADIX and n is the number of base-b digits in the significand of the source type. A smaller p might suffice depending on the implementation's scheme for determining the digit to the left of the decimal-point character.
 .. [#9899_note246] No special provisions are made for multibyte characters.
 .. [#9899_note247] Redundant shift sequences may result if multibyte characters have a state-dependent encoding.
-.. [#9899_note248] See ''future library directions'' (:ref:`7.26.9 <9899_7.26.9>`).
+.. [#9899_note248] See "future library directions" (:ref:`7.26.9 <9899_7.26.9>`).
 .. [#9899_note249] For binary-to-decimal conversion, the result format's values are the numbers representable with the given format specifier. The number of significant digits is determined by the format specifier, and in the case of fixed-point conversion by the source value as well.

@@ -7,7 +7,11 @@
 
 .. _9899_7.3.9.4p1:
 
-:ref:`1 <9899_7.3.9.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.9.4p1>`
+
+
 
 ::
 
@@ -20,7 +24,11 @@
 
 .. _9899_7.3.9.4p2:
 
-:ref:`2 <9899_7.3.9.4p2>` The cproj functions compute a projection of z onto the Riemann sphere: z projects to z except that all complex infinities (even those with one infinite part and one NaN part) project to positive infinity on the real axis. If z has an infinite part, then cproj(z) is equivalent to
+.. container:: snum
+
+   :ref:`2 <9899_7.3.9.4p2>`
+
+The cproj functions compute a projection of z onto the Riemann sphere: z projects to z except that all complex infinities (even those with one infinite part and one NaN part) project to positive infinity on the real axis. If z has an infinite part, then cproj(z) is equivalent to
 
 ::
 
@@ -30,5 +38,9 @@
 
 .. _9899_7.3.9.4p3:
 
-:ref:`3 <9899_7.3.9.4p3>` The cproj functions return the value of the projection onto the Riemann sphere.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.9.4p3>`
+
+The cproj functions return the value of the projection onto the Riemann sphere.
 

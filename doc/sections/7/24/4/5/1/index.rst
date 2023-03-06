@@ -7,7 +7,11 @@
 
 .. _9899_7.24.4.5.1p1:
 
-:ref:`1 <9899_7.24.4.5.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.5.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.24.4.5.1p2:
 
-:ref:`2 <9899_7.24.4.5.1p2>` The wcschr function locates the first occurrence of c in the wide string pointed to by s. The terminating null wide character is considered to be part of the wide string.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.4.5.1p2>`
+
+The wcschr function locates the first occurrence of c in the wide string pointed to by s. The terminating null wide character is considered to be part of the wide string.
 
 .. rubric:: Returns
 
 .. _9899_7.24.4.5.1p3:
 
-:ref:`3 <9899_7.24.4.5.1p3>` The wcschr function returns a pointer to the located wide character, or a null pointer if the wide character does not occur in the wide string.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.4.5.1p3>`
+
+The wcschr function returns a pointer to the located wide character, or a null pointer if the wide character does not occur in the wide string.
 

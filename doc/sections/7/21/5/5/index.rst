@@ -7,7 +7,11 @@
 
 .. _9899_7.21.5.5p1:
 
-:ref:`1 <9899_7.21.5.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.21.5.5p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.21.5.5p2:
 
-:ref:`2 <9899_7.21.5.5p2>` The strrchr function locates the last occurrence of c (converted to a char) in the string pointed to by s. The terminating null character is considered to be part of the string.
+.. container:: snum
+
+   :ref:`2 <9899_7.21.5.5p2>`
+
+The strrchr function locates the last occurrence of c (converted to a char) in the string pointed to by s. The terminating null character is considered to be part of the string.
 
 .. rubric:: Returns
 
 .. _9899_7.21.5.5p3:
 
-:ref:`3 <9899_7.21.5.5p3>` The strrchr function returns a pointer to the character, or a null pointer if c does not occur in the string.
+.. container:: snum
+
+   :ref:`3 <9899_7.21.5.5p3>`
+
+The strrchr function returns a pointer to the character, or a null pointer if c does not occur in the string.
 

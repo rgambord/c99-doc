@@ -7,7 +7,11 @@
 
 .. _9899_7.3.9.1p1:
 
-:ref:`1 <9899_7.3.9.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.9.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.9.1p2:
 
-:ref:`2 <9899_7.3.9.1p2>` The carg functions compute the argument (also called phase angle) of z, with a branch cut along the negative real axis.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.9.1p2>`
+
+The carg functions compute the argument (also called phase angle) of z, with a branch cut along the negative real axis.
 
 .. rubric:: Returns
 
 .. _9899_7.3.9.1p3:
 
-:ref:`3 <9899_7.3.9.1p3>` The carg functions return the value of the argument in the interval [-pi , +pi ].
+.. container:: snum
+
+   :ref:`3 <9899_7.3.9.1p3>`
+
+The carg functions return the value of the argument in the interval [-pi , +pi ].
 

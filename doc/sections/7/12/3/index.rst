@@ -17,5 +17,9 @@
 
 .. _9899_7.12.3p1:
 
-:ref:`1 <9899_7.12.3p1>` In the synopses in this subclause, real-floating indicates that the argument shall be an expression of real floating type.
+.. container:: snum
+
+   :ref:`1 <9899_7.12.3p1>`
+
+In the synopses in this subclause, real-floating indicates that the argument shall be an expression of real floating type.
 

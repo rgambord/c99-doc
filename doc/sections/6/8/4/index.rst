@@ -15,7 +15,11 @@
 
 .. _9899_6.8.4p1:
 
-:ref:`1 <9899_6.8.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.8.4p1>`
+
+
 
 .. container:: syntax-block
 
@@ -127,9 +131,17 @@
 
 .. _9899_6.8.4p2:
 
-:ref:`2 <9899_6.8.4p2>` A selection statement selects among a set of statements depending on the value of a controlling expression.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.4p2>`
+
+A selection statement selects among a set of statements depending on the value of a controlling expression.
 
 .. _9899_6.8.4p3:
 
-:ref:`3 <9899_6.8.4p3>` A selection statement is a block whose scope is a strict subset of the scope of its enclosing block. Each associated substatement is also a block whose scope is a strict subset of the scope of the selection statement.
+.. container:: snum
+
+   :ref:`3 <9899_6.8.4p3>`
+
+A selection statement is a block whose scope is a strict subset of the scope of its enclosing block. Each associated substatement is also a block whose scope is a strict subset of the scope of the selection statement.
 

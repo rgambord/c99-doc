@@ -17,5 +17,9 @@ Language syntax summary
 
 .. _9899_Ap1:
 
-:ref:`1 <9899_Ap1>` NOTE The notation is described in :ref:`6.1 <9899_6.1>`.
+.. container:: snum
+
+   :ref:`1 <9899_Ap1>`
+
+NOTE The notation is described in :ref:`6.1 <9899_6.1>`.
 

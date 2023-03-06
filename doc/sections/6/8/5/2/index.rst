@@ -5,5 +5,9 @@
 
 .. _9899_6.8.5.2p1:
 
-:ref:`1 <9899_6.8.5.2p1>` The evaluation of the controlling expression takes place after each execution of the loop body.
+.. container:: snum
+
+   :ref:`1 <9899_6.8.5.2p1>`
+
+The evaluation of the controlling expression takes place after each execution of the loop body.
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.20.2.1p1:
 
-:ref:`1 <9899_7.20.2.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.2.1p1>`
+
+
 
 ::
 
@@ -18,21 +22,37 @@
 
 .. _9899_7.20.2.1p2:
 
-:ref:`2 <9899_7.20.2.1p2>` The rand function computes a sequence of pseudo-random integers in the range 0 to RAND_MAX.
+.. container:: snum
+
+   :ref:`2 <9899_7.20.2.1p2>`
+
+The rand function computes a sequence of pseudo-random integers in the range 0 to RAND_MAX.
 
 .. _9899_7.20.2.1p3:
 
-:ref:`3 <9899_7.20.2.1p3>` The implementation shall behave as if no library function calls the rand function.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.2.1p3>`
+
+The implementation shall behave as if no library function calls the rand function.
 
 .. rubric:: Returns
 
 .. _9899_7.20.2.1p4:
 
-:ref:`4 <9899_7.20.2.1p4>` The rand function returns a pseudo-random integer.
+.. container:: snum
+
+   :ref:`4 <9899_7.20.2.1p4>`
+
+The rand function returns a pseudo-random integer.
 
 .. rubric:: Environmental limits
 
 .. _9899_7.20.2.1p5:
 
-:ref:`5 <9899_7.20.2.1p5>` The value of the RAND_MAX macro shall be at least 32767.
+.. container:: snum
+
+   :ref:`5 <9899_7.20.2.1p5>`
+
+The value of the RAND_MAX macro shall be at least 32767.
 

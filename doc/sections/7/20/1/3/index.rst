@@ -7,7 +7,11 @@
 
 .. _9899_7.20.1.3p1:
 
-:ref:`1 <9899_7.20.1.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.1.3p1>`
+
+
 
 ::
 
@@ -23,11 +27,19 @@
 
 .. _9899_7.20.1.3p2:
 
-:ref:`2 <9899_7.20.1.3p2>` The strtod, strtof, and strtold functions convert the initial portion of the string pointed to by nptr to double, float, and long double representation, respectively. First, they decompose the input string into three parts: an initial, possibly empty, sequence of white-space characters (as specified by the isspace function), a subject sequence resembling a floating-point constant or representing an infinity or NaN; and a final string of one or more unrecognized characters, including the terminating null character of the input string. Then, they attempt to convert the subject sequence to a floating-point number, and return the result.
+.. container:: snum
+
+   :ref:`2 <9899_7.20.1.3p2>`
+
+The strtod, strtof, and strtold functions convert the initial portion of the string pointed to by nptr to double, float, and long double representation, respectively. First, they decompose the input string into three parts: an initial, possibly empty, sequence of white-space characters (as specified by the isspace function), a subject sequence resembling a floating-point constant or representing an infinity or NaN; and a final string of one or more unrecognized characters, including the terminating null character of the input string. Then, they attempt to convert the subject sequence to a floating-point number, and return the result.
 
 .. _9899_7.20.1.3p3:
 
-:ref:`3 <9899_7.20.1.3p3>` The expected form of the subject sequence is an optional plus or minus sign, then one of the following:
+.. container:: snum
+
+   :ref:`3 <9899_7.20.1.3p3>`
+
+The expected form of the subject sequence is an optional plus or minus sign, then one of the following:
 
 -  a nonempty sequence of decimal digits optionally containing a decimal-point character, then an optional exponent part as defined in :ref:`6.4.4.2 <9899_6.4.4.2>`;
 
@@ -49,35 +61,63 @@ The subject sequence is defined as the longest initial subsequence of the input 
 
 .. _9899_7.20.1.3p4:
 
-:ref:`4 <9899_7.20.1.3p4>` If the subject sequence has the expected form for a floating-point number, the sequence of characters starting with the first digit or the decimal-point character (whichever occurs first) is interpreted as a floating constant according to the rules of :ref:`6.4.4.2 <9899_6.4.4.2>`, except that the decimal-point character is used in place of a period, and that if neither an exponent part nor a decimal-point character appears in a decimal floating point number, or if a binary exponent part does not appear in a hexadecimal floating point number, an exponent part of the appropriate type with value zero is assumed to follow the last digit in the string. If the subject sequence begins with a minus sign, the sequence is interpreted as negated.\ [#9899_note258]_ A character sequence INF or INFINITY is interpreted as an infinity, if representable in the return type, else like a floating constant that is too large for the range of the return type. A character sequence NAN or NAN(n-char-sequence\ :sub:`opt`), is interpreted as a quiet NaN, if supported in the return type, else like a subject sequence part that does not have the expected form; the meaning of the n-char sequences is implementation-defined.\ `259) <note259>` A pointer to the final string is stored in the object pointed to by endptr, provided that endptr is not a null pointer.
+.. container:: snum
+
+   :ref:`4 <9899_7.20.1.3p4>`
+
+If the subject sequence has the expected form for a floating-point number, the sequence of characters starting with the first digit or the decimal-point character (whichever occurs first) is interpreted as a floating constant according to the rules of :ref:`6.4.4.2 <9899_6.4.4.2>`, except that the decimal-point character is used in place of a period, and that if neither an exponent part nor a decimal-point character appears in a decimal floating point number, or if a binary exponent part does not appear in a hexadecimal floating point number, an exponent part of the appropriate type with value zero is assumed to follow the last digit in the string. If the subject sequence begins with a minus sign, the sequence is interpreted as negated.\ [#9899_note258]_ A character sequence INF or INFINITY is interpreted as an infinity, if representable in the return type, else like a floating constant that is too large for the range of the return type. A character sequence NAN or NAN(n-char-sequence\ :sub:`opt`), is interpreted as a quiet NaN, if supported in the return type, else like a subject sequence part that does not have the expected form; the meaning of the n-char sequences is implementation-defined.\ `259) <note259>` A pointer to the final string is stored in the object pointed to by endptr, provided that endptr is not a null pointer.
 
 .. _9899_7.20.1.3p5:
 
-:ref:`5 <9899_7.20.1.3p5>` If the subject sequence has the hexadecimal form and FLT_RADIX is a power of 2, the value resulting from the conversion is correctly rounded.
+.. container:: snum
+
+   :ref:`5 <9899_7.20.1.3p5>`
+
+If the subject sequence has the hexadecimal form and FLT_RADIX is a power of 2, the value resulting from the conversion is correctly rounded.
 
 .. _9899_7.20.1.3p6:
 
-:ref:`6 <9899_7.20.1.3p6>` In other than the "C" locale, additional locale-specific subject sequence forms may be accepted.
+.. container:: snum
+
+   :ref:`6 <9899_7.20.1.3p6>`
+
+In other than the "C" locale, additional locale-specific subject sequence forms may be accepted.
 
 .. _9899_7.20.1.3p7:
 
-:ref:`7 <9899_7.20.1.3p7>` If the subject sequence is empty or does not have the expected form, no conversion is performed; the value of nptr is stored in the object pointed to by endptr, provided that endptr is not a null pointer.
+.. container:: snum
+
+   :ref:`7 <9899_7.20.1.3p7>`
+
+If the subject sequence is empty or does not have the expected form, no conversion is performed; the value of nptr is stored in the object pointed to by endptr, provided that endptr is not a null pointer.
 
 .. rubric:: Recommended practice
 
 .. _9899_7.20.1.3p8:
 
-:ref:`8 <9899_7.20.1.3p8>` If the subject sequence has the hexadecimal form, FLT_RADIX is not a power of 2, and the result is not exactly representable, the result should be one of the two numbers in the appropriate internal format that are adjacent to the hexadecimal floating source value, with the extra stipulation that the error should have a correct sign for the current rounding direction.
+.. container:: snum
+
+   :ref:`8 <9899_7.20.1.3p8>`
+
+If the subject sequence has the hexadecimal form, FLT_RADIX is not a power of 2, and the result is not exactly representable, the result should be one of the two numbers in the appropriate internal format that are adjacent to the hexadecimal floating source value, with the extra stipulation that the error should have a correct sign for the current rounding direction.
 
 .. _9899_7.20.1.3p9:
 
-:ref:`9 <9899_7.20.1.3p9>` If the subject sequence has the decimal form and at most DECIMAL_DIG (defined in :ref:`\<float.h> <9899_7.7>`) significant digits, the result should be correctly rounded. If the subject sequence D has the decimal form and more than DECIMAL_DIG significant digits, consider the two bounding, adjacent decimal strings L and U, both having DECIMAL_DIG significant digits, such that the values of L, D, and U satisfy L \<= D <= U. The result should be one of the (equal or adjacent) values that would be obtained by correctly rounding L and U according to the current rounding direction, with the extra stipulation that the error with respect to D should have a correct sign for the current rounding direction.\ [#9899_note260]_
+.. container:: snum
+
+   :ref:`9 <9899_7.20.1.3p9>`
+
+If the subject sequence has the decimal form and at most DECIMAL_DIG (defined in :ref:`\<float.h> <9899_7.7>`) significant digits, the result should be correctly rounded. If the subject sequence D has the decimal form and more than DECIMAL_DIG significant digits, consider the two bounding, adjacent decimal strings L and U, both having DECIMAL_DIG significant digits, such that the values of L, D, and U satisfy L \<= D <= U. The result should be one of the (equal or adjacent) values that would be obtained by correctly rounding L and U according to the current rounding direction, with the extra stipulation that the error with respect to D should have a correct sign for the current rounding direction.\ [#9899_note260]_
 
 .. rubric:: Returns
 
 .. _9899_7.20.1.3p10:
 
-:ref:`10 <9899_7.20.1.3p10>` The functions return the converted value, if any. If no conversion could be performed, zero is returned. If the correct value is outside the range of representable values, plus or minus HUGE_VAL, HUGE_VALF, or HUGE_VALL is returned (according to the return type and sign of the value), and the value of the macro ERANGE is stored in errno. If the result underflows (:ref:`7.12.1 <9899_7.12.1>`), the functions return a value whose magnitude is no greater than the smallest normalized positive number in the return type; whether errno acquires the value ERANGE is implementation-defined.
+.. container:: snum
+
+   :ref:`10 <9899_7.20.1.3p10>`
+
+The functions return the converted value, if any. If no conversion could be performed, zero is returned. If the correct value is outside the range of representable values, plus or minus HUGE_VAL, HUGE_VALF, or HUGE_VALL is returned (according to the return type and sign of the value), and the value of the macro ERANGE is stored in errno. If the result underflows (:ref:`7.12.1 <9899_7.12.1>`), the functions return a value whose magnitude is no greater than the smallest normalized positive number in the return type; whether errno acquires the value ERANGE is implementation-defined.
 
 
 

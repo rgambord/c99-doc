@@ -18,7 +18,11 @@
 
 .. _9899_6.5.2p1:
 
-:ref:`1 <9899_6.5.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.2p1>`
+
+
 
 .. container:: syntax-block
 

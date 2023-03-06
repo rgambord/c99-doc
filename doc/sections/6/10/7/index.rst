@@ -7,7 +7,11 @@
 
 .. _9899_6.10.7p1:
 
-:ref:`1 <9899_6.10.7p1>` A preprocessing directive of the form
+.. container:: snum
+
+   :ref:`1 <9899_6.10.7p1>`
+
+A preprocessing directive of the form
 
 .. code-block:: text
 

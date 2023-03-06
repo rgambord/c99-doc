@@ -25,7 +25,11 @@
 
 .. _9899_7.19.6p1:
 
-:ref:`1 <9899_7.19.6p1>` The formatted input/output functions shall behave as if there is a sequence point after the actions associated with each specifier.\ [#9899_note240]_
+.. container:: snum
+
+   :ref:`1 <9899_7.19.6p1>`
+
+The formatted input/output functions shall behave as if there is a sequence point after the actions associated with each specifier.\ [#9899_note240]_
 
 
 

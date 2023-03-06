@@ -7,7 +7,11 @@
 
 .. _9899_7.12.9.7p1:
 
-:ref:`1 <9899_7.12.9.7p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.9.7p1>`
+
+
 
 ::
 
@@ -23,11 +27,19 @@
 
 .. _9899_7.12.9.7p2:
 
-:ref:`2 <9899_7.12.9.7p2>` The lround and llround functions round their argument to the nearest integer value, rounding halfway cases away from zero, regardless of the current rounding direction. If the rounded value is outside the range of the return type, the numeric result is unspecified and a domain error or range error may occur.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.9.7p2>`
+
+The lround and llround functions round their argument to the nearest integer value, rounding halfway cases away from zero, regardless of the current rounding direction. If the rounded value is outside the range of the return type, the numeric result is unspecified and a domain error or range error may occur.
 
 .. rubric:: Returns
 
 .. _9899_7.12.9.7p3:
 
-:ref:`3 <9899_7.12.9.7p3>` The lround and llround functions return the rounded integer value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.9.7p3>`
+
+The lround and llround functions return the rounded integer value.
 

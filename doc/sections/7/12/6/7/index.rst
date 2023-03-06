@@ -7,7 +7,11 @@
 
 .. _9899_7.12.6.7p1:
 
-:ref:`1 <9899_7.12.6.7p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.6.7p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.6.7p2:
 
-:ref:`2 <9899_7.12.6.7p2>` The log functions compute the base-e (natural) logarithm of x. A domain error occurs if the argument is negative. A range error may occur if the argument is zero.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.6.7p2>`
+
+The log functions compute the base-e (natural) logarithm of x. A domain error occurs if the argument is negative. A range error may occur if the argument is zero.
 
 .. rubric:: Returns
 
 .. _9899_7.12.6.7p3:
 
-:ref:`3 <9899_7.12.6.7p3>` The log functions return loge x.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.6.7p3>`
+
+The log functions return loge x.
 

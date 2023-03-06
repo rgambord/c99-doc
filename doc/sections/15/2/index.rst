@@ -15,5 +15,9 @@ H.2 Types
 
 .. _9899_H.2p1:
 
-:ref:`1 <9899_H.2p1>` The relevant C arithmetic types meet the requirements of LIA-1 types if an implementation adds notification of exceptional arithmetic operations and meets the 1 unit in the last place (ULP) accuracy requirement (LIA-1 subclause 5.2.8).
+.. container:: snum
+
+   :ref:`1 <9899_H.2p1>`
+
+The relevant C arithmetic types meet the requirements of LIA-1 types if an implementation adds notification of exceptional arithmetic operations and meets the 1 unit in the last place (ULP) accuracy requirement (LIA-1 subclause 5.2.8).
 

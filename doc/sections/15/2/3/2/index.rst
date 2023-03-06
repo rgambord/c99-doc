@@ -5,7 +5,11 @@ H.2.3.2 Floating-point operations
 
 .. _9899_H.2.3.2p1:
 
-:ref:`1 <9899_H.2.3.2p1>` The floating-point operations on floating-point types are the following:
+.. container:: snum
+
+   :ref:`1 <9899_H.2.3.2p1>`
+
+The floating-point operations on floating-point types are the following:
 
 .. code-block:: text
 

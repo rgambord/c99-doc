@@ -5,7 +5,11 @@ H.2.3.1 Floating-point parameters
 
 .. _9899_H.2.3.1p1:
 
-:ref:`1 <9899_H.2.3.1p1>` The parameters for a floating point data type can be accessed by the following:
+.. container:: snum
+
+   :ref:`1 <9899_H.2.3.1p1>`
+
+The parameters for a floating point data type can be accessed by the following:
 
 .. code-block:: text
 
@@ -16,7 +20,11 @@ H.2.3.1 Floating-point parameters
 
 .. _9899_H.2.3.1p2:
 
-:ref:`2 <9899_H.2.3.1p2>` The derived constants for the floating point types are accessed by the following:
+.. container:: snum
+
+   :ref:`2 <9899_H.2.3.1p2>`
+
+The derived constants for the floating point types are accessed by the following:
 
 .. code-block:: text
 

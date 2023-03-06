@@ -7,7 +7,11 @@
 
 .. _9899_7.12.5.1p1:
 
-:ref:`1 <9899_7.12.5.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.5.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.5.1p2:
 
-:ref:`2 <9899_7.12.5.1p2>` The acosh functions compute the (nonnegative) arc hyperbolic cosine of x. A domain error occurs for arguments less than 1.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.5.1p2>`
+
+The acosh functions compute the (nonnegative) arc hyperbolic cosine of x. A domain error occurs for arguments less than 1.
 
 .. rubric:: Returns
 
 .. _9899_7.12.5.1p3:
 
-:ref:`3 <9899_7.12.5.1p3>` The acosh functions return arcosh x in the interval [0, +(inf)].
+.. container:: snum
+
+   :ref:`3 <9899_7.12.5.1p3>`
+
+The acosh functions return arcosh x in the interval [0, +(inf)].
 

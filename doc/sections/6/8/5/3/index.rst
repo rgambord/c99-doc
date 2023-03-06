@@ -5,7 +5,11 @@
 
 .. _9899_6.8.5.3p1:
 
-:ref:`1 <9899_6.8.5.3p1>` The statement
+.. container:: snum
+
+   :ref:`1 <9899_6.8.5.3p1>`
+
+The statement
 
 ::
 
@@ -15,7 +19,11 @@ behaves as follows: The expression expression-2 is the controlling expression th
 
 .. _9899_6.8.5.3p2:
 
-:ref:`2 <9899_6.8.5.3p2>` Both clause-1 and expression-3 can be omitted. An omitted expression-2 is replaced by a nonzero constant.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.5.3p2>`
+
+Both clause-1 and expression-3 can be omitted. An omitted expression-2 is replaced by a nonzero constant.
 
 
 

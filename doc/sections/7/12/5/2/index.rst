@@ -7,7 +7,11 @@
 
 .. _9899_7.12.5.2p1:
 
-:ref:`1 <9899_7.12.5.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.5.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.5.2p2:
 
-:ref:`2 <9899_7.12.5.2p2>` The asinh functions compute the arc hyperbolic sine of x.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.5.2p2>`
+
+The asinh functions compute the arc hyperbolic sine of x.
 
 .. rubric:: Returns
 
 .. _9899_7.12.5.2p3:
 
-:ref:`3 <9899_7.12.5.2p3>` The asinh functions return arsinh x.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.5.2p3>`
+
+The asinh functions return arsinh x.
 

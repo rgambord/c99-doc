@@ -5,7 +5,11 @@
 
 .. _9899_6.3.1.1p1:
 
-:ref:`1 <9899_6.3.1.1p1>` Every integer type has an integer conversion rank defined as follows:
+.. container:: snum
+
+   :ref:`1 <9899_6.3.1.1p1>`
+
+Every integer type has an integer conversion rank defined as follows:
 
 -  No two signed integer types shall have the same rank, even if they have the same representation.
 -  The rank of a signed integer type shall be greater than the rank of any signed integer type with less precision.
@@ -20,7 +24,11 @@
 
 .. _9899_6.3.1.1p2:
 
-:ref:`2 <9899_6.3.1.1p2>` The following may be used in an expression wherever an int or unsigned int may be used:
+.. container:: snum
+
+   :ref:`2 <9899_6.3.1.1p2>`
+
+The following may be used in an expression wherever an int or unsigned int may be used:
 
 -  An object or expression with an integer type whose integer conversion rank is less than or equal to the rank of int and unsigned int.
 -  A bit-field of type \_Bool, int, signed int, or unsigned int.
@@ -29,9 +37,17 @@ If an int can represent all values of the original type, the value is converted 
 
 .. _9899_6.3.1.1p3:
 
-:ref:`3 <9899_6.3.1.1p3>` The integer promotions preserve value including sign. As discussed earlier, whether a ''plain'' char is treated as signed is implementation-defined.
+.. container:: snum
 
-**Forward references**: enumeration specifiers (:ref:`6.7.2.2 <9899_6.7.2.2>`), structure and union specifiers (:ref:`6.7.2.1 <9899_6.7.2.1>`).
+   :ref:`3 <9899_6.3.1.1p3>`
+
+The integer promotions preserve value including sign. As discussed earlier, whether a "plain" char is treated as signed is implementation-defined.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.7.2.2`
+   - :ref:`9899_6.7.2.1`
 
 
 

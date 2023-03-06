@@ -7,7 +7,11 @@
 
 .. _9899_7.12.5.3p1:
 
-:ref:`1 <9899_7.12.5.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.5.3p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.5.3p2:
 
-:ref:`2 <9899_7.12.5.3p2>` The atanh functions compute the arc hyperbolic tangent of x. A domain error occurs for arguments not in the interval [-1, +1]. A range error may occur if the argument equals -1 or +1.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.5.3p2>`
+
+The atanh functions compute the arc hyperbolic tangent of x. A domain error occurs for arguments not in the interval [-1, +1]. A range error may occur if the argument equals -1 or +1.
 
 .. rubric:: Returns
 
 .. _9899_7.12.5.3p3:
 
-:ref:`3 <9899_7.12.5.3p3>` The atanh functions return artanh x.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.5.3p3>`
+
+The atanh functions return artanh x.
 

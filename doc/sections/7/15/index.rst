@@ -12,15 +12,27 @@
 
 .. _9899_7.15p1:
 
-:ref:`1 <9899_7.15p1>` The header :ref:`\<stdarg.h> <9899_7.15>` declares a type and defines four macros, for advancing through a list of arguments whose number and types are not known to the called function when it is translated.
+.. container:: snum
+
+   :ref:`1 <9899_7.15p1>`
+
+The header :ref:`\<stdarg.h> <9899_7.15>` declares a type and defines four macros, for advancing through a list of arguments whose number and types are not known to the called function when it is translated.
 
 .. _9899_7.15p2:
 
-:ref:`2 <9899_7.15p2>` A function may be called with a variable number of arguments of varying types. As described in :ref:`6.9.1 <9899_6.9.1>`, its parameter list contains one or more parameters. The rightmost parameter plays a special role in the access mechanism, and will be designated parmN in this description.
+.. container:: snum
+
+   :ref:`2 <9899_7.15p2>`
+
+A function may be called with a variable number of arguments of varying types. As described in :ref:`6.9.1 <9899_6.9.1>`, its parameter list contains one or more parameters. The rightmost parameter plays a special role in the access mechanism, and will be designated parmN in this description.
 
 .. _9899_7.15p3:
 
-:ref:`3 <9899_7.15p3>` The type declared is
+.. container:: snum
+
+   :ref:`3 <9899_7.15p3>`
+
+The type declared is
 
 ::
 

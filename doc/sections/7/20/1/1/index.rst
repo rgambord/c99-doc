@@ -7,7 +7,11 @@
 
 .. _9899_7.20.1.1p1:
 
-:ref:`1 <9899_7.20.1.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.1.1p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.20.1.1p2:
 
-:ref:`2 <9899_7.20.1.1p2>` The atof function converts the initial portion of the string pointed to by nptr to double representation. Except for the behavior on error, it is equivalent to
+.. container:: snum
+
+   :ref:`2 <9899_7.20.1.1p2>`
+
+The atof function converts the initial portion of the string pointed to by nptr to double representation. Except for the behavior on error, it is equivalent to
 
 ::
 
@@ -28,7 +36,14 @@
 
 .. _9899_7.20.1.1p3:
 
-:ref:`3 <9899_7.20.1.1p3>` The atof function returns the converted value.
+.. container:: snum
 
-**Forward references**: the strtod, strtof, and strtold functions (:ref:`7.20.1.3 <9899_7.20.1.3>`).
+   :ref:`3 <9899_7.20.1.1p3>`
+
+The atof function returns the converted value.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.20.1.3`
 

@@ -13,5 +13,9 @@
 
 .. _9899_7.6.3p1:
 
-:ref:`1 <9899_7.6.3p1>` The fegetround and fesetround functions provide control of rounding direction modes.
+.. container:: snum
+
+   :ref:`1 <9899_7.6.3p1>`
+
+The fegetround and fesetround functions provide control of rounding direction modes.
 

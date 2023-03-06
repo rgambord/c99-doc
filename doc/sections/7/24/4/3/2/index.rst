@@ -7,7 +7,11 @@
 
 .. _9899_7.24.4.3.2p1:
 
-:ref:`1 <9899_7.24.4.3.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.3.2p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.24.4.3.2p2:
 
-:ref:`2 <9899_7.24.4.3.2p2>` The wcsncat function appends not more than n wide characters (a null wide character and those that follow it are not appended) from the array pointed to by s2 to the end of the wide string pointed to by s1. The initial wide character of s2 overwrites the null wide character at the end of s1. A terminating null wide character is always appended to the result.\ [#9899_note298]_
+.. container:: snum
+
+   :ref:`2 <9899_7.24.4.3.2p2>`
+
+The wcsncat function appends not more than n wide characters (a null wide character and those that follow it are not appended) from the array pointed to by s2 to the end of the wide string pointed to by s1. The initial wide character of s2 overwrites the null wide character at the end of s1. A terminating null wide character is always appended to the result.\ [#9899_note298]_
 
 .. rubric:: Returns
 
 .. _9899_7.24.4.3.2p3:
 
-:ref:`3 <9899_7.24.4.3.2p3>` The wcsncat function returns the value of s1.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.4.3.2p3>`
+
+The wcsncat function returns the value of s1.
 
 
 

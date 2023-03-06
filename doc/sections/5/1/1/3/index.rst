@@ -5,11 +5,19 @@
 
 .. _9899_5.1.1.3p1:
 
-:ref:`1 <9899_5.1.1.3p1>` A conforming implementation shall produce at least one diagnostic message (identified in an implementation-defined manner) if a preprocessing translation unit or translation unit contains a violation of any syntax rule or constraint, even if the behavior is also explicitly specified as undefined or implementation-defined. Diagnostic messages need not be produced in other circumstances.\ [#9899_note8]_
+.. container:: snum
+
+   :ref:`1 <9899_5.1.1.3p1>`
+
+A conforming implementation shall produce at least one diagnostic message (identified in an implementation-defined manner) if a preprocessing translation unit or translation unit contains a violation of any syntax rule or constraint, even if the behavior is also explicitly specified as undefined or implementation-defined. Diagnostic messages need not be produced in other circumstances.\ [#9899_note8]_
 
 .. _9899_5.1.1.3p2:
 
-:ref:`2 <9899_5.1.1.3p2>` EXAMPLE An implementation shall issue a diagnostic for the translation unit:
+.. container:: snum
+
+   :ref:`2 <9899_5.1.1.3p2>`
+
+EXAMPLE An implementation shall issue a diagnostic for the translation unit:
 
 ::
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.4.1.5p1:
 
-:ref:`1 <9899_7.4.1.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.4.1.5p1>`
+
+
 
 ::
 
@@ -18,5 +22,9 @@
 
 .. _9899_7.4.1.5p2:
 
-:ref:`2 <9899_7.4.1.5p2>` The isdigit function tests for any decimal-digit character (as defined in :ref:`5.2.1 <9899_5.2.1>`).
+.. container:: snum
+
+   :ref:`2 <9899_7.4.1.5p2>`
+
+The isdigit function tests for any decimal-digit character (as defined in :ref:`5.2.1 <9899_5.2.1>`).
 

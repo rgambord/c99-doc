@@ -7,7 +7,11 @@
 
 .. _9899_7.4.1.12p1:
 
-:ref:`1 <9899_7.4.1.12p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.4.1.12p1>`
+
+
 
 ::
 
@@ -18,5 +22,9 @@
 
 .. _9899_7.4.1.12p2:
 
-:ref:`2 <9899_7.4.1.12p2>` The isxdigit function tests for any hexadecimal-digit character (as defined in :ref:`6.4.4.1 <9899_6.4.4.1>`).
+.. container:: snum
+
+   :ref:`2 <9899_7.4.1.12p2>`
+
+The isxdigit function tests for any hexadecimal-digit character (as defined in :ref:`6.4.4.1 <9899_6.4.4.1>`).
 

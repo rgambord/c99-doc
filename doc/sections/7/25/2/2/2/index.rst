@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.2.2p1:
 
-:ref:`1 <9899_7.25.2.2.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.2.2p1>`
+
+
 
 ::
 
@@ -18,15 +22,27 @@
 
 .. _9899_7.25.2.2.2p2:
 
-:ref:`2 <9899_7.25.2.2.2p2>` The wctype function constructs a value with type wctype_t that describes a class of wide characters identified by the string argument property.
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.2.2p2>`
+
+The wctype function constructs a value with type wctype_t that describes a class of wide characters identified by the string argument property.
 
 .. _9899_7.25.2.2.2p3:
 
-:ref:`3 <9899_7.25.2.2.2p3>` The strings listed in the description of the iswctype function shall be valid in all locales as property arguments to the wctype function.
+.. container:: snum
+
+   :ref:`3 <9899_7.25.2.2.2p3>`
+
+The strings listed in the description of the iswctype function shall be valid in all locales as property arguments to the wctype function.
 
 .. rubric:: Returns
 
 .. _9899_7.25.2.2.2p4:
 
-:ref:`4 <9899_7.25.2.2.2p4>` If property identifies a valid class of wide characters according to the LC_CTYPE category of the current locale, the wctype function returns a nonzero value that is valid as the second argument to the iswctype function; otherwise, it returns zero. \*
+.. container:: snum
+
+   :ref:`4 <9899_7.25.2.2.2p4>`
+
+If property identifies a valid class of wide characters according to the LC_CTYPE category of the current locale, the wctype function returns a nonzero value that is valid as the second argument to the iswctype function; otherwise, it returns zero. \*
 

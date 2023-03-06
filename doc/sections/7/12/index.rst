@@ -25,11 +25,19 @@
 
 .. _9899_7.12p1:
 
-:ref:`1 <9899_7.12p1>` The header :ref:`\<math.h> <9899_7.12>` declares two types and many mathematical functions and defines several macros. Most synopses specify a family of functions consisting of a principal function with one or more double parameters, a double return value, or both; and other functions with the same name but with f and l suffixes, which are corresponding functions with float and long double parameters, return values, or both.\ [#9899_note198]_ Integer arithmetic functions and conversion functions are discussed later.
+.. container:: snum
+
+   :ref:`1 <9899_7.12p1>`
+
+The header :ref:`\<math.h> <9899_7.12>` declares two types and many mathematical functions and defines several macros. Most synopses specify a family of functions consisting of a principal function with one or more double parameters, a double return value, or both; and other functions with the same name but with f and l suffixes, which are corresponding functions with float and long double parameters, return values, or both.\ [#9899_note198]_ Integer arithmetic functions and conversion functions are discussed later.
 
 .. _9899_7.12p2:
 
-:ref:`2 <9899_7.12p2>` The types
+.. container:: snum
+
+   :ref:`2 <9899_7.12p2>`
+
+The types
 
 ::
 
@@ -40,7 +48,11 @@ are floating types at least as wide as float and double, respectively, and such 
 
 .. _9899_7.12p3:
 
-:ref:`3 <9899_7.12p3>` The macro
+.. container:: snum
+
+   :ref:`3 <9899_7.12p3>`
+
+The macro
 
 ::
 
@@ -57,7 +69,11 @@ are respectively float and long double analogs of HUGE_VAL.\ [#9899_note200]_
 
 .. _9899_7.12p4:
 
-:ref:`4 <9899_7.12p4>` The macro
+.. container:: snum
+
+   :ref:`4 <9899_7.12p4>`
+
+The macro
 
 ::
 
@@ -67,7 +83,11 @@ expands to a constant expression of type float representing positive or unsigned
 
 .. _9899_7.12p5:
 
-:ref:`5 <9899_7.12p5>` The macro
+.. container:: snum
+
+   :ref:`5 <9899_7.12p5>`
+
+The macro
 
 ::
 
@@ -77,7 +97,11 @@ is defined if and only if the implementation supports quiet NaNs for the float t
 
 .. _9899_7.12p6:
 
-:ref:`6 <9899_7.12p6>` The number classification macros
+.. container:: snum
+
+   :ref:`6 <9899_7.12p6>`
+
+The number classification macros
 
 ::
 
@@ -91,7 +115,11 @@ represent the mutually exclusive kinds of floating-point values. They expand to 
 
 .. _9899_7.12p7:
 
-:ref:`7 <9899_7.12p7>` The macro
+.. container:: snum
+
+   :ref:`7 <9899_7.12p7>`
+
+The macro
 
 ::
 
@@ -108,7 +136,11 @@ are, respectively, float and long double analogs of FP_FAST_FMA. If defined, the
 
 .. _9899_7.12p8:
 
-:ref:`8 <9899_7.12p8>` The macros
+.. container:: snum
+
+   :ref:`8 <9899_7.12p8>`
+
+The macros
 
 ::
 
@@ -119,7 +151,11 @@ expand to integer constant expressions whose values are returned by ilogb(x) if 
 
 .. _9899_7.12p9:
 
-:ref:`9 <9899_7.12p9>` The macros
+.. container:: snum
+
+   :ref:`9 <9899_7.12p9>`
+
+The macros
 
 ::
 

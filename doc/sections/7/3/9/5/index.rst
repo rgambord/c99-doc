@@ -7,7 +7,11 @@
 
 .. _9899_7.3.9.5p1:
 
-:ref:`1 <9899_7.3.9.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.9.5p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.3.9.5p2:
 
-:ref:`2 <9899_7.3.9.5p2>` The creal functions compute the real part of z.\ [#9899_note171]_
+.. container:: snum
+
+   :ref:`2 <9899_7.3.9.5p2>`
+
+The creal functions compute the real part of z.\ [#9899_note171]_
 
 .. rubric:: Returns
 
 .. _9899_7.3.9.5p3:
 
-:ref:`3 <9899_7.3.9.5p3>` The creal functions return the real part value.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.9.5p3>`
+
+The creal functions return the real part value.
 
 
 

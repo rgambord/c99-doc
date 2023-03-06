@@ -7,7 +7,11 @@
 
 .. _9899_7.12.3.5p1:
 
-:ref:`1 <9899_7.12.3.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.3.5p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.12.3.5p2:
 
-:ref:`2 <9899_7.12.3.5p2>` The isnormal macro determines whether its argument value is normal (neither zero, subnormal, infinite, nor NaN). First, an argument represented in a format wider than its semantic type is converted to its semantic type. Then determination is based on the type of the argument.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.3.5p2>`
+
+The isnormal macro determines whether its argument value is normal (neither zero, subnormal, infinite, nor NaN). First, an argument represented in a format wider than its semantic type is converted to its semantic type. Then determination is based on the type of the argument.
 
 .. rubric:: Returns
 
 .. _9899_7.12.3.5p3:
 
-:ref:`3 <9899_7.12.3.5p3>` The isnormal macro returns a nonzero value if and only if its argument has a normal value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.3.5p3>`
+
+The isnormal macro returns a nonzero value if and only if its argument has a normal value.
 

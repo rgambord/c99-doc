@@ -7,7 +7,11 @@
 
 .. _9899_7.12.9.8p1:
 
-:ref:`1 <9899_7.12.9.8p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.9.8p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.9.8p2:
 
-:ref:`2 <9899_7.12.9.8p2>` The trunc functions round their argument to the integer value, in floating format, nearest to but no larger in magnitude than the argument.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.9.8p2>`
+
+The trunc functions round their argument to the integer value, in floating format, nearest to but no larger in magnitude than the argument.
 
 .. rubric:: Returns
 
 .. _9899_7.12.9.8p3:
 
-:ref:`3 <9899_7.12.9.8p3>` The trunc functions return the truncated integer value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.9.8p3>`
+
+The trunc functions return the truncated integer value.
 

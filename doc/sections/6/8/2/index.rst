@@ -7,7 +7,11 @@
 
 .. _9899_6.8.2p1:
 
-:ref:`1 <9899_6.8.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.8.2p1>`
+
+
 
 .. container:: syntax-block
 
@@ -103,5 +107,9 @@
 
 .. _9899_6.8.2p2:
 
-:ref:`2 <9899_6.8.2p2>` A compound statement is a block.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.2p2>`
+
+A compound statement is a block.
 

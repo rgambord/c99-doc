@@ -7,7 +7,11 @@
 
 .. _9899_7.13.1.1p1:
 
-:ref:`1 <9899_7.13.1.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.13.1.1p1>`
+
+
 
 ::
 
@@ -18,19 +22,31 @@
 
 .. _9899_7.13.1.1p2:
 
-:ref:`2 <9899_7.13.1.1p2>` The setjmp macro saves its calling environment in its jmp_buf argument for later use by the longjmp function.
+.. container:: snum
+
+   :ref:`2 <9899_7.13.1.1p2>`
+
+The setjmp macro saves its calling environment in its jmp_buf argument for later use by the longjmp function.
 
 .. rubric:: Returns
 
 .. _9899_7.13.1.1p3:
 
-:ref:`3 <9899_7.13.1.1p3>` If the return is from a direct invocation, the setjmp macro returns the value zero. If the return is from a call to the longjmp function, the setjmp macro returns a nonzero value.
+.. container:: snum
+
+   :ref:`3 <9899_7.13.1.1p3>`
+
+If the return is from a direct invocation, the setjmp macro returns the value zero. If the return is from a call to the longjmp function, the setjmp macro returns a nonzero value.
 
 .. rubric:: Environmental limits
 
 .. _9899_7.13.1.1p4:
 
-:ref:`4 <9899_7.13.1.1p4>` An invocation of the setjmp macro shall appear only in one of the following contexts:
+.. container:: snum
+
+   :ref:`4 <9899_7.13.1.1p4>`
+
+An invocation of the setjmp macro shall appear only in one of the following contexts:
 
 -  the entire controlling expression of a selection or iteration statement;
 -  one operand of a relational or equality operator with the other operand an integer constant expression, with the resulting expression being the entire controlling expression of a selection or iteration statement;
@@ -39,5 +55,9 @@
 
 .. _9899_7.13.1.1p5:
 
-:ref:`5 <9899_7.13.1.1p5>` If the invocation appears in any other context, the behavior is undefined.
+.. container:: snum
+
+   :ref:`5 <9899_7.13.1.1p5>`
+
+If the invocation appears in any other context, the behavior is undefined.
 

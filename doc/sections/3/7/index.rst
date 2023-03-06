@@ -1,4 +1,4 @@
-.. _9899_section-10:
+.. _9899_3.7:
 
 3.7 character
 ~~~~~~~~~~~~~
@@ -14,8 +14,10 @@
 
 .. _9899_3.7p1:
 
-:ref:`1 <9899_3.7p1>` character
-    <abstract> member of a set of elements used for the organization, control, or representation of data
+.. container:: snum
 
-.. _9899_3.7.1:
+   :ref:`1 <9899_3.7p1>`
+
+character
+    <abstract> member of a set of elements used for the organization, control, or representation of data
 

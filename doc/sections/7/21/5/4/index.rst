@@ -7,7 +7,11 @@
 
 .. _9899_7.21.5.4p1:
 
-:ref:`1 <9899_7.21.5.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.21.5.4p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.21.5.4p2:
 
-:ref:`2 <9899_7.21.5.4p2>` The strpbrk function locates the first occurrence in the string pointed to by s1 of any character from the string pointed to by s2.
+.. container:: snum
+
+   :ref:`2 <9899_7.21.5.4p2>`
+
+The strpbrk function locates the first occurrence in the string pointed to by s1 of any character from the string pointed to by s2.
 
 .. rubric:: Returns
 
 .. _9899_7.21.5.4p3:
 
-:ref:`3 <9899_7.21.5.4p3>` The strpbrk function returns a pointer to the character, or a null pointer if no character from s2 occurs in s1.
+.. container:: snum
+
+   :ref:`3 <9899_7.21.5.4p3>`
+
+The strpbrk function returns a pointer to the character, or a null pointer if no character from s2 occurs in s1.
 

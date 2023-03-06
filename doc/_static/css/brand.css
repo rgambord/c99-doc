@@ -1,3 +1,11 @@
+.wy-nav-content {
+  overflow-x: auto;
+}
+
+a {
+  color: #3344dd;
+}
+
 img.logo {
   max-width: 60%;
 }
@@ -7,10 +15,77 @@ img.logo {
 }
 
 .syntax-block {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.syntax-block * {
+  display: inline;
+  margin: 0;
+}
+
+/* BEGIN Syntax Tables */
+.syntax-rule-tbl {
+  display: table;
+  border-spacing: 20px 0;
+  padding-left: 5px;
+}
+
+.syntax-rule-tbl .syntax-rule {
+  display: table-row;
+}
+
+.syntax-rule-tbl .syntax-rule > * {
+  display: table-cell;
+  float: none;
+}
+/* END Syntax Tables */
+
+.syntax-definition {
+  display: flex;
+  flex-direction: row;
+}
+
+.syntax-rule {
+  margin-left: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1ch;
+  white-space: nowrap;
+}
+
+
+.syntax-terminal {
+  font-family: monospace;
+  font-weight: bold;
+  color: #B6006A;
+  display: inline;
+}
+
+.syntax-nonterminal {
+  font-style: italic;
+  color: #065b4a;
+  display: inline;
+}
+
+.syntax-text-rule {
+  margin-left: 65px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.syntax-text-rule > :first-child {
+  margin-left: -40px;
+}
+
+/*
+.syntax-block {
   font-family: monospace;
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
+  text-indent 2em;
+  padding-left: -2em;
 }
 
 .syntax-block .syntax-production {
@@ -50,6 +125,7 @@ img.logo {
   white-space: pre;
   margin: 0;
 }
+
 .syntax-block  .syntax-nonterminal {
   font-style: italic;
   display: inline;
@@ -58,4 +134,19 @@ img.logo {
 .syntax-block  .syntax-terminal {
   font-weight: bold;
   display: inline;
+}*/
+
+
+
+.snum {
+  position: relative;
+  left: -10px;
+  width: 0;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.snum > * {
+  position: absolute;
+  right: 0;
 }

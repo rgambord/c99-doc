@@ -13,11 +13,19 @@
 
 .. _9899_7.11p1:
 
-:ref:`1 <9899_7.11p1>` The header :ref:`\<locale.h> <9899_7.11>` declares two functions, one type, and defines several macros.
+.. container:: snum
+
+   :ref:`1 <9899_7.11p1>`
+
+The header :ref:`\<locale.h> <9899_7.11>` declares two functions, one type, and defines several macros.
 
 .. _9899_7.11p2:
 
-:ref:`2 <9899_7.11p2>` The type is
+.. container:: snum
+
+   :ref:`2 <9899_7.11p2>`
+
+The type is
 
 ::
 
@@ -54,7 +62,11 @@ which contains members related to the formatting of numeric values. The structur
 
 .. _9899_7.11p3:
 
-:ref:`3 <9899_7.11p3>` The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); and
+.. container:: snum
+
+   :ref:`3 <9899_7.11p3>`
+
+The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); and
 
 ::
 
@@ -75,4 +87,4 @@ which expand to integer constant expressions with distinct values, suitable for 
 .. rubric:: Footnotes
 
 .. [#9899_note194] ISO/IEC 9945-2 specifies locale and charmap formats that may be used to specify locales for C.
-.. [#9899_note195] See ''future library directions'' (:ref:`7.26.5 <9899_7.26.5>`).
+.. [#9899_note195] See "future library directions" (:ref:`7.26.5 <9899_7.26.5>`).

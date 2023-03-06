@@ -23,5 +23,9 @@
 
 .. _9899_7.4.1p1:
 
-:ref:`1 <9899_7.4.1p1>` The functions in this subclause return nonzero (true) if and only if the value of the argument c conforms to that in the description of the function.
+.. container:: snum
+
+   :ref:`1 <9899_7.4.1p1>`
+
+The functions in this subclause return nonzero (true) if and only if the value of the argument c conforms to that in the description of the function.
 

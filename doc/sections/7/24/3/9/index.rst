@@ -7,7 +7,11 @@
 
 .. _9899_7.24.3.9p1:
 
-:ref:`1 <9899_7.24.3.9p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.3.9p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.24.3.9p2:
 
-:ref:`2 <9899_7.24.3.9p2>` The putwchar function is equivalent to putwc with the second argument stdout.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.3.9p2>`
+
+The putwchar function is equivalent to putwc with the second argument stdout.
 
 .. rubric:: Returns
 
 .. _9899_7.24.3.9p3:
 
-:ref:`3 <9899_7.24.3.9p3>` The putwchar function returns the character written, or WEOF.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.3.9p3>`
+
+The putwchar function returns the character written, or WEOF.
 

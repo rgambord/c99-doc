@@ -7,7 +7,11 @@
 
 .. _9899_7.4.1.1p1:
 
-:ref:`1 <9899_7.4.1.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.4.1.1p1>`
+
+
 
 ::
 
@@ -18,5 +22,9 @@
 
 .. _9899_7.4.1.1p2:
 
-:ref:`2 <9899_7.4.1.1p2>` The isalnum function tests for any character for which isalpha or isdigit is true.
+.. container:: snum
+
+   :ref:`2 <9899_7.4.1.1p2>`
+
+The isalnum function tests for any character for which isalpha or isdigit is true.
 

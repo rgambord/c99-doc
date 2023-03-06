@@ -28,31 +28,59 @@
 
 .. _9899_6.5p1:
 
-:ref:`1 <9899_6.5p1>` An expression is a sequence of operators and operands that specifies computation of a value, or that designates an object or a function, or that generates side effects, or that performs a combination thereof.
+.. container:: snum
+
+   :ref:`1 <9899_6.5p1>`
+
+An expression is a sequence of operators and operands that specifies computation of a value, or that designates an object or a function, or that generates side effects, or that performs a combination thereof.
 
 .. _9899_6.5p2:
 
-:ref:`2 <9899_6.5p2>` Between the previous and next sequence point an object shall have its stored value modified at most once by the evaluation of an expression.\ [#9899_note72]_ Furthermore, the prior value shall be read only to determine the value to be stored.\ [#9899_note73]_
+.. container:: snum
+
+   :ref:`2 <9899_6.5p2>`
+
+Between the previous and next sequence point an object shall have its stored value modified at most once by the evaluation of an expression.\ [#9899_note72]_ Furthermore, the prior value shall be read only to determine the value to be stored.\ [#9899_note73]_
 
 .. _9899_6.5p3:
 
-:ref:`3 <9899_6.5p3>` The grouping of operators and operands is indicated by the syntax.\ [#9899_note74]_ Except as specified later (for the function-call (), &&, \|\|, ?:, and comma operators), the order of evaluation of subexpressions and the order in which side effects take place are both unspecified.
+.. container:: snum
+
+   :ref:`3 <9899_6.5p3>`
+
+The grouping of operators and operands is indicated by the syntax.\ [#9899_note74]_ Except as specified later (for the function-call (), &&, \|\|, ?:, and comma operators), the order of evaluation of subexpressions and the order in which side effects take place are both unspecified.
 
 .. _9899_6.5p4:
 
-:ref:`4 <9899_6.5p4>` Some operators (the unary operator ~, and the binary operators <<, >>, &, ^, and \|, collectively described as bitwise operators) are required to have operands that have integer type. These operators yield values that depend on the internal representations of integers, and have implementation-defined and undefined aspects for signed types.
+.. container:: snum
+
+   :ref:`4 <9899_6.5p4>`
+
+Some operators (the unary operator ~, and the binary operators <<, >>, &, ^, and \|, collectively described as bitwise operators) are required to have operands that have integer type. These operators yield values that depend on the internal representations of integers, and have implementation-defined and undefined aspects for signed types.
 
 .. _9899_6.5p5:
 
-:ref:`5 <9899_6.5p5>` If an exceptional condition occurs during the evaluation of an expression (that is, if the result is not mathematically defined or not in the range of representable values for its type), the behavior is undefined.
+.. container:: snum
+
+   :ref:`5 <9899_6.5p5>`
+
+If an exceptional condition occurs during the evaluation of an expression (that is, if the result is not mathematically defined or not in the range of representable values for its type), the behavior is undefined.
 
 .. _9899_6.5p6:
 
-:ref:`6 <9899_6.5p6>` The effective type of an object for an access to its stored value is the declared type of the object, if any.\ [#9899_note75]_ If a value is stored into an object having no declared type through an lvalue having a type that is not a character type, then the type of the lvalue becomes the effective type of the object for that access and for subsequent accesses that do not modify the stored value. If a value is copied into an object having no declared type using memcpy or memmove, or is copied as an array of character type, then the effective type of the modified object for that access and for subsequent accesses that do not modify the value is the effective type of the object from which the value is copied, if it has one. For all other accesses to an object having no declared type, the effective type of the object is simply the type of the lvalue used for the access.
+.. container:: snum
+
+   :ref:`6 <9899_6.5p6>`
+
+The effective type of an object for an access to its stored value is the declared type of the object, if any.\ [#9899_note75]_ If a value is stored into an object having no declared type through an lvalue having a type that is not a character type, then the type of the lvalue becomes the effective type of the object for that access and for subsequent accesses that do not modify the stored value. If a value is copied into an object having no declared type using memcpy or memmove, or is copied as an array of character type, then the effective type of the modified object for that access and for subsequent accesses that do not modify the value is the effective type of the object from which the value is copied, if it has one. For all other accesses to an object having no declared type, the effective type of the object is simply the type of the lvalue used for the access.
 
 .. _9899_6.5p7:
 
-:ref:`7 <9899_6.5p7>` An object shall have its stored value accessed only by an lvalue expression that has one of the following types:[#9899_note76]_
+.. container:: snum
+
+   :ref:`7 <9899_6.5p7>`
+
+An object shall have its stored value accessed only by an lvalue expression that has one of the following types:[#9899_note76]_
 
 -  a type compatible with the effective type of the object,
 -  a qualified version of a type compatible with the effective type of the object,
@@ -63,9 +91,17 @@
 
 .. _9899_6.5p8:
 
-:ref:`8 <9899_6.5p8>` A floating expression may be contracted, that is, evaluated as though it were an atomic operation, thereby omitting rounding errors implied by the source code and the expression evaluation method.\ [#9899_note77]_ The FP_CONTRACT pragma in :ref:`\<math.h> <9899_7.12>` provides a way to disallow contracted expressions. Otherwise, whether and how expressions are contracted is implementation-defined.\ [#9899_note78]_
+.. container:: snum
 
-**Forward references**: the FP_CONTRACT pragma (:ref:`7.12.2 <9899_7.12.2>`), copying functions (:ref:`7.21.2 <9899_7.21.2>`).
+   :ref:`8 <9899_6.5p8>`
+
+A floating expression may be contracted, that is, evaluated as though it were an atomic operation, thereby omitting rounding errors implied by the source code and the expression evaluation method.\ [#9899_note77]_ The FP_CONTRACT pragma in :ref:`\<math.h> <9899_7.12>` provides a way to disallow contracted expressions. Otherwise, whether and how expressions are contracted is implementation-defined.\ [#9899_note78]_
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.12.2`
+   - :ref:`9899_7.21.2`
 
 
 

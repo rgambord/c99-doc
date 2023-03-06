@@ -7,7 +7,11 @@
 
 .. _9899_7.24.2.2p1:
 
-:ref:`1 <9899_7.24.2.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.2.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.24.2.2p2:
 
-:ref:`2 <9899_7.24.2.2p2>` The fwscanf function reads input from the stream pointed to by stream, under control of the wide string pointed to by format that specifies the admissible input sequences and how they are to be converted for assignment, using subsequent arguments as pointers to the objects to receive the converted input. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.2.2p2>`
+
+The fwscanf function reads input from the stream pointed to by stream, under control of the wide string pointed to by format that specifies the admissible input sequences and how they are to be converted for assignment, using subsequent arguments as pointers to the objects to receive the converted input. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored.
 
 .. _9899_7.24.2.2p3:
 
-:ref:`3 <9899_7.24.2.2p3>` The format is composed of zero or more directives: one or more white-space wide characters, an ordinary wide character (neither % nor a white-space wide character), or a conversion specification. Each conversion specification is introduced by the wide character %. After the %, the following appear in sequence:
+.. container:: snum
+
+   :ref:`3 <9899_7.24.2.2p3>`
+
+The format is composed of zero or more directives: one or more white-space wide characters, an ordinary wide character (neither % nor a white-space wide character), or a conversion specification. Each conversion specification is introduced by the wide character %. After the %, the following appear in sequence:
 
 -  An optional assignment-suppressing wide character \*.
 -  An optional decimal integer greater than zero that specifies the maximum field width (in wide characters).
@@ -33,35 +45,67 @@
 
 .. _9899_7.24.2.2p4:
 
-:ref:`4 <9899_7.24.2.2p4>` The fwscanf function executes each directive of the format in turn. If a directive fails, as detailed below, the function returns. Failures are described as input failures (due to the occurrence of an encoding error or the unavailability of input characters), or matching failures (due to inappropriate input).
+.. container:: snum
+
+   :ref:`4 <9899_7.24.2.2p4>`
+
+The fwscanf function executes each directive of the format in turn. If a directive fails, as detailed below, the function returns. Failures are described as input failures (due to the occurrence of an encoding error or the unavailability of input characters), or matching failures (due to inappropriate input).
 
 .. _9899_7.24.2.2p5:
 
-:ref:`5 <9899_7.24.2.2p5>` A directive composed of white-space wide character(s) is executed by reading input up to the first non-white-space wide character (which remains unread), or until no more wide characters can be read.
+.. container:: snum
+
+   :ref:`5 <9899_7.24.2.2p5>`
+
+A directive composed of white-space wide character(s) is executed by reading input up to the first non-white-space wide character (which remains unread), or until no more wide characters can be read.
 
 .. _9899_7.24.2.2p6:
 
-:ref:`6 <9899_7.24.2.2p6>` A directive that is an ordinary wide character is executed by reading the next wide character of the stream. If that wide character differs from the directive, the directive fails and the differing and subsequent wide characters remain unread. Similarly, if end- of-file, an encoding error, or a read error prevents a wide character from being read, the directive fails.
+.. container:: snum
+
+   :ref:`6 <9899_7.24.2.2p6>`
+
+A directive that is an ordinary wide character is executed by reading the next wide character of the stream. If that wide character differs from the directive, the directive fails and the differing and subsequent wide characters remain unread. Similarly, if end- of-file, an encoding error, or a read error prevents a wide character from being read, the directive fails.
 
 .. _9899_7.24.2.2p7:
 
-:ref:`7 <9899_7.24.2.2p7>` A directive that is a conversion specification defines a set of matching input sequences, as described below for each specifier. A conversion specification is executed in the following steps:
+.. container:: snum
+
+   :ref:`7 <9899_7.24.2.2p7>`
+
+A directive that is a conversion specification defines a set of matching input sequences, as described below for each specifier. A conversion specification is executed in the following steps:
 
 .. _9899_7.24.2.2p8:
 
-:ref:`8 <9899_7.24.2.2p8>` Input white-space wide characters (as specified by the iswspace function) are skipped, unless the specification includes a [, c, or n specifier.\ [#9899_note288]_
+.. container:: snum
+
+   :ref:`8 <9899_7.24.2.2p8>`
+
+Input white-space wide characters (as specified by the iswspace function) are skipped, unless the specification includes a [, c, or n specifier.\ [#9899_note288]_
 
 .. _9899_7.24.2.2p9:
 
-:ref:`9 <9899_7.24.2.2p9>` An input item is read from the stream, unless the specification includes an n specifier. An input item is defined as the longest sequence of input wide characters which does not exceed any specified field width and which is, or is a prefix of, a matching input sequence.\ [#9899_note289]_ The first wide character, if any, after the input item remains unread. If the length of the input item is zero, the execution of the directive fails; this condition is a matching failure unless end-of-file, an encoding error, or a read error prevented input from the stream, in which case it is an input failure.
+.. container:: snum
+
+   :ref:`9 <9899_7.24.2.2p9>`
+
+An input item is read from the stream, unless the specification includes an n specifier. An input item is defined as the longest sequence of input wide characters which does not exceed any specified field width and which is, or is a prefix of, a matching input sequence.\ [#9899_note289]_ The first wide character, if any, after the input item remains unread. If the length of the input item is zero, the execution of the directive fails; this condition is a matching failure unless end-of-file, an encoding error, or a read error prevented input from the stream, in which case it is an input failure.
 
 .. _9899_7.24.2.2p10:
 
-:ref:`10 <9899_7.24.2.2p10>` Except in the case of a % specifier, the input item (or, in the case of a %n directive, the count of input wide characters) is converted to a type appropriate to the conversion specifier. If the input item is not a matching sequence, the execution of the directive fails: this condition is a matching failure. Unless assignment suppression was indicated by a \*, the result of the conversion is placed in the object pointed to by the first argument following the format argument that has not already received a conversion result. If this object does not have an appropriate type, or if the result of the conversion cannot be represented in the object, the behavior is undefined.
+.. container:: snum
+
+   :ref:`10 <9899_7.24.2.2p10>`
+
+Except in the case of a % specifier, the input item (or, in the case of a %n directive, the count of input wide characters) is converted to a type appropriate to the conversion specifier. If the input item is not a matching sequence, the execution of the directive fails: this condition is a matching failure. Unless assignment suppression was indicated by a \*, the result of the conversion is placed in the object pointed to by the first argument following the format argument that has not already received a conversion result. If this object does not have an appropriate type, or if the result of the conversion cannot be represented in the object, the behavior is undefined.
 
 .. _9899_7.24.2.2p11:
 
-:ref:`11 <9899_7.24.2.2p11>` The length modifiers and their meanings are:
+.. container:: snum
+
+   :ref:`11 <9899_7.24.2.2p11>`
+
+The length modifiers and their meanings are:
 
 hh
    Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to signed char or unsigned char.
@@ -84,7 +128,11 @@ If a length modifier appears with any conversion specifier other than as specifi
 
 .. _9899_7.24.2.2p12:
 
-:ref:`12 <9899_7.24.2.2p12>` The conversion specifiers and their meanings are:
+.. container:: snum
+
+   :ref:`12 <9899_7.24.2.2p12>`
+
+The conversion specifiers and their meanings are:
 
 d
    Matches an optionally signed decimal integer, whose format is the same as expected for the subject sequence of the wcstol function with the value 10 for the base argument. The corresponding argument shall be a pointer to signed integer.
@@ -113,25 +161,45 @@ n
 
 .. _9899_7.24.2.2p13:
 
-:ref:`13 <9899_7.24.2.2p13>` If a conversion specification is invalid, the behavior is undefined.\ [#9899_note290]_
+.. container:: snum
+
+   :ref:`13 <9899_7.24.2.2p13>`
+
+If a conversion specification is invalid, the behavior is undefined.\ [#9899_note290]_
 
 .. _9899_7.24.2.2p14:
 
-:ref:`14 <9899_7.24.2.2p14>` The conversion specifiers A, E, F, G, and X are also valid and behave the same as, respectively, a, e, f, g, and x.
+.. container:: snum
+
+   :ref:`14 <9899_7.24.2.2p14>`
+
+The conversion specifiers A, E, F, G, and X are also valid and behave the same as, respectively, a, e, f, g, and x.
 
 .. _9899_7.24.2.2p15:
 
-:ref:`15 <9899_7.24.2.2p15>` Trailing white space (including new-line wide characters) is left unread unless matched by a directive. The success of literal matches and suppressed assignments is not directly determinable other than via the %n directive.
+.. container:: snum
+
+   :ref:`15 <9899_7.24.2.2p15>`
+
+Trailing white space (including new-line wide characters) is left unread unless matched by a directive. The success of literal matches and suppressed assignments is not directly determinable other than via the %n directive.
 
 .. rubric:: Returns
 
 .. _9899_7.24.2.2p16:
 
-:ref:`16 <9899_7.24.2.2p16>` The fwscanf function returns the value of the macro EOF if an input failure occurs before any conversion. Otherwise, the function returns the number of input items assigned, which can be fewer than provided for, or even zero, in the event of an early matching failure.
+.. container:: snum
+
+   :ref:`16 <9899_7.24.2.2p16>`
+
+The fwscanf function returns the value of the macro EOF if an input failure occurs before any conversion. Otherwise, the function returns the number of input items assigned, which can be fewer than provided for, or even zero, in the event of an early matching failure.
 
 .. _9899_7.24.2.2p17:
 
-:ref:`17 <9899_7.24.2.2p17>` EXAMPLE 1 The call:
+.. container:: snum
+
+   :ref:`17 <9899_7.24.2.2p17>`
+
+EXAMPLE 1 The call:
 
 ::
 
@@ -151,7 +219,11 @@ will assign to n the value 3, to i the value 25, to x the value 5.432, and to na
 
 .. _9899_7.24.2.2p18:
 
-:ref:`18 <9899_7.24.2.2p18>` EXAMPLE 2 The call:
+.. container:: snum
+
+   :ref:`18 <9899_7.24.2.2p18>`
+
+EXAMPLE 2 The call:
 
 ::
 
@@ -169,7 +241,12 @@ with input:
 
 will assign to i the value 56 and to x the value 789.0, will skip past 0123, and will assign to y the value 56.0. The next wide character read from the input stream will be a.
 
-**Forward references**: the wcstod, wcstof, and wcstold functions (:ref:`7.24.4.1.1 <9899_7.24.4.1.1>`), the wcstol, wcstoll, wcstoul, and wcstoull functions (:ref:`7.24.4.1.2 <9899_7.24.4.1.2>`), the wcrtomb function (:ref:`7.24.6.3.3 <9899_7.24.6.3.3>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.24.4.1.1`
+   - :ref:`9899_7.24.4.1.2`
+   - :ref:`9899_7.24.6.3.3`
 
 
 
@@ -181,4 +258,4 @@ will assign to i the value 56 and to x the value 789.0, will skip past 0123, and
 
 .. [#9899_note288] These white-space wide characters are not counted against a specified field width.
 .. [#9899_note289] fwscanf pushes back at most one input wide character onto the input stream. Therefore, some sequences that are acceptable to wcstod, wcstol, etc., are unacceptable to fwscanf.
-.. [#9899_note290] See ''future library directions'' (:ref:`7.26.12 <9899_7.26.12>`).
+.. [#9899_note290] See "future library directions" (:ref:`7.26.12 <9899_7.26.12>`).

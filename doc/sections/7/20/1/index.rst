@@ -15,5 +15,9 @@
 
 .. _9899_7.20.1p1:
 
-:ref:`1 <9899_7.20.1p1>` The functions atof, atoi, atol, and atoll need not affect the value of the integer expression errno on an error. If the value of the result cannot be represented, the behavior is undefined.
+.. container:: snum
+
+   :ref:`1 <9899_7.20.1p1>`
+
+The functions atof, atoi, atol, and atoll need not affect the value of the integer expression errno on an error. If the value of the result cannot be represented, the behavior is undefined.
 

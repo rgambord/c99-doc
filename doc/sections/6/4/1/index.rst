@@ -7,7 +7,11 @@
 
 .. _9899_6.4.1p1:
 
-:ref:`1 <9899_6.4.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.1p1>`
+
+
 
 .. container:: syntax-block
 
@@ -196,7 +200,11 @@
 
 .. _9899_6.4.1p2:
 
-:ref:`2 <9899_6.4.1p2>` The above tokens (case sensitive) are reserved (in translation phases 7 and 8) for use as keywords, and shall not be used otherwise. The keyword \_Imaginary is reserved for specifying imaginary types.\ [#9899_note59]_
+.. container:: snum
+
+   :ref:`2 <9899_6.4.1p2>`
+
+The above tokens (case sensitive) are reserved (in translation phases 7 and 8) for use as keywords, and shall not be used otherwise. The keyword \_Imaginary is reserved for specifying imaginary types.\ [#9899_note59]_
 
 
 

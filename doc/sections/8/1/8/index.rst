@@ -100,16 +100,15 @@ A.1.8 Header names
    
          :
    
-      .. container:: syntax-rule
+      .. container:: syntax-text-rule
        
-         any member of the source character set except the
-     
+         any member of the source character set except the |_|
    
          .. container:: syntax-nonterminal
    
             new-line
      
-         character and
+         |_| character and |_|
    
          .. container:: syntax-terminal
    
@@ -163,15 +162,15 @@ A.1.8 Header names
    
          :
    
-      .. container:: syntax-rule
+      .. container:: syntax-text-rule
        
-         any member of the source character set except the
+         any member of the source character set except the |_|
 
          .. container:: syntax-nonterminal
    
             new-line
    
-         character and
+         |_| character and |_|
    
          .. container:: syntax-terminal
    

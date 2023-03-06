@@ -5,7 +5,11 @@
 
 .. _9899_5.2.4.2.1p1:
 
-:ref:`1 <9899_5.2.4.2.1p1>` The values given below shall be replaced by constant expressions suitable for use in #if preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.
+.. container:: snum
+
+   :ref:`1 <9899_5.2.4.2.1p1>`
+
+The values given below shall be replaced by constant expressions suitable for use in `#if` preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.
 
 -  number of bits for smallest object that is not a bit-field (byte)
 
@@ -123,9 +127,17 @@
 
 .. _9899_5.2.4.2.1p2:
 
-:ref:`2 <9899_5.2.4.2.1p2>` If the value of an object of type char is treated as a signed integer when used in an expression, the value of CHAR_MIN shall be the same as that of SCHAR_MIN and the value of CHAR_MAX shall be the same as that of SCHAR_MAX. Otherwise, the value of CHAR_MIN shall be 0 and the value of CHAR_MAX shall be the same as that of UCHAR_MAX.\ [#9899_note15]_ The value UCHAR_MAX shall equal 2\ :sup:`CHAR_BIT` - 1.
+.. container:: snum
 
-**Forward references**: representations of types (:ref:`6.2.6 <9899_6.2.6>`), conditional inclusion (:ref:`6.10.1 <9899_6.10.1>`).
+   :ref:`2 <9899_5.2.4.2.1p2>`
+
+If the value of an object of type char is treated as a signed integer when used in an expression, the value of CHAR_MIN shall be the same as that of SCHAR_MIN and the value of CHAR_MAX shall be the same as that of SCHAR_MAX. Otherwise, the value of CHAR_MIN shall be 0 and the value of CHAR_MAX shall be the same as that of UCHAR_MAX.\ [#9899_note15]_ The value UCHAR_MAX shall equal 2\ :sup:`CHAR_BIT` - 1.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.2.6`
+   - :ref:`9899_6.10.1`
 
 
 

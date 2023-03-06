@@ -5,7 +5,11 @@
 
 .. _9899_5.2.4.1p1:
 
-:ref:`1 <9899_5.2.4.1p1>` The implementation shall be able to translate and execute at least one program that contains at least one instance of every one of the following limits:[#9899_note13]_
+.. container:: snum
+
+   :ref:`1 <9899_5.2.4.1p1>`
+
+The implementation shall be able to translate and execute at least one program that contains at least one instance of every one of the following limits:[#9899_note13]_
 
 -  127 nesting levels of blocks
 -  63 nesting levels of conditional inclusion
@@ -24,7 +28,7 @@
 -  4095 characters in a logical source line
 -  4095 characters in a character string literal or wide string literal (after concatenation)
 -  65535 bytes in an object (in a hosted environment only)
--  15 nesting levels for #included files
+-  15 nesting levels for `#included` files
 -  1023 case labels for a switch statement (excluding those for any nested switch statements)
 -  1023 members in a single structure or union
 -  1023 enumeration constants in a single enumeration
@@ -38,4 +42,4 @@
 .. rubric:: Footnotes
 
 .. [#9899_note13] Implementations should avoid imposing fixed translation limits whenever possible.
-.. [#9899_note14] See ''future language directions'' (:ref:`6.11.3 <9899_6.11.3>`).
+.. [#9899_note14] See "future language directions" (:ref:`6.11.3 <9899_6.11.3>`).

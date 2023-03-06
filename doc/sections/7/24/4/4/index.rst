@@ -16,5 +16,9 @@
 
 .. _9899_7.24.4.4p1:
 
-:ref:`1 <9899_7.24.4.4p1>` Unless explicitly stated otherwise, the functions described in this subclause order two wide characters the same way as two integers of the underlying integer type designated by wchar_t.
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.4p1>`
+
+Unless explicitly stated otherwise, the functions described in this subclause order two wide characters the same way as two integers of the underlying integer type designated by wchar_t.
 

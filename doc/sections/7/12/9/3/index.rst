@@ -7,7 +7,11 @@
 
 .. _9899_7.12.9.3p1:
 
-:ref:`1 <9899_7.12.9.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.9.3p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.9.3p2:
 
-:ref:`2 <9899_7.12.9.3p2>` The nearbyint functions round their argument to an integer value in floating-point format, using the current rounding direction and without raising the ''inexact'' floating- point exception.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.9.3p2>`
+
+The nearbyint functions round their argument to an integer value in floating-point format, using the current rounding direction and without raising the "inexact" floating- point exception.
 
 .. rubric:: Returns
 
 .. _9899_7.12.9.3p3:
 
-:ref:`3 <9899_7.12.9.3p3>` The nearbyint functions return the rounded integer value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.9.3p3>`
+
+The nearbyint functions return the rounded integer value.
 

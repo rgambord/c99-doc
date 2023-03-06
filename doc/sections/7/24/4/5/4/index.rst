@@ -7,7 +7,11 @@
 
 .. _9899_7.24.4.5.4p1:
 
-:ref:`1 <9899_7.24.4.5.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.5.4p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.24.4.5.4p2:
 
-:ref:`2 <9899_7.24.4.5.4p2>` The wcsrchr function locates the last occurrence of c in the wide string pointed to by s. The terminating null wide character is considered to be part of the wide string.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.4.5.4p2>`
+
+The wcsrchr function locates the last occurrence of c in the wide string pointed to by s. The terminating null wide character is considered to be part of the wide string.
 
 .. rubric:: Returns
 
 .. _9899_7.24.4.5.4p3:
 
-:ref:`3 <9899_7.24.4.5.4p3>` The wcsrchr function returns a pointer to the wide character, or a null pointer if c does not occur in the wide string.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.4.5.4p3>`
+
+The wcsrchr function returns a pointer to the wide character, or a null pointer if c does not occur in the wide string.
 

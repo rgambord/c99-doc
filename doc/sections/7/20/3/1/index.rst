@@ -7,7 +7,11 @@
 
 .. _9899_7.20.3.1p1:
 
-:ref:`1 <9899_7.20.3.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.3.1p1>`
+
+
 
 ::
 
@@ -18,13 +22,21 @@
 
 .. _9899_7.20.3.1p2:
 
-:ref:`2 <9899_7.20.3.1p2>` The calloc function allocates space for an array of nmemb objects, each of whose size is size. The space is initialized to all bits zero.\ [#9899_note261]_
+.. container:: snum
+
+   :ref:`2 <9899_7.20.3.1p2>`
+
+The calloc function allocates space for an array of nmemb objects, each of whose size is size. The space is initialized to all bits zero.\ [#9899_note261]_
 
 .. rubric:: Returns
 
 .. _9899_7.20.3.1p3:
 
-:ref:`3 <9899_7.20.3.1p3>` The calloc function returns either a null pointer or a pointer to the allocated space.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.3.1p3>`
+
+The calloc function returns either a null pointer or a pointer to the allocated space.
 
 
 

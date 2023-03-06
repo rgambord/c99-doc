@@ -3,7 +3,7 @@
 Bibliography
 ------------
 
-#. ''The C Reference Manual'' by Dennis M. Ritchie, a version of which was published in The C Programming Language by Brian W. Kernighan and Dennis M. Ritchie, Prentice-Hall, Inc., (1978). Copyright owned by AT&T.
+#. "The C Reference Manual" by Dennis M. Ritchie, a version of which was published in The C Programming Language by Brian W. Kernighan and Dennis M. Ritchie, Prentice-Hall, Inc., (1978). Copyright owned by AT&T.
 #. 1984 /usr/group Standard by the /usr/group Standards Committee, Santa Clara, California, USA, November 1984.
 #. ANSI X3/TR-1-82 (1982), American National Dictionary for Information Processing Systems, Information Processing Systems Technical Report.
 #. ANSI/IEEE 754-1985, American National Standard for Binary Floating-Point Arithmetic.
@@ -35,3 +35,5 @@ Bibliography
 #. ISO/IEC 10646-1/AMD10:1998, Amendment 10 to ISO/IEC 10646-1:1993 Ethiopic.
 #. ISO/IEC 10646-1/AMD11:1998, Amendment 11 to ISO/IEC 10646-1:1993 Unified Canadian Aboriginal Syllabics.
 #. ISO/IEC 10646-1/AMD12:1998, Amendment 12 to ISO/IEC 10646-1:1993 Cherokee.
+#. ISO/IEC 10967-1:1994, Information technology -- Language independent arithmetic -- Part 1: Integer and floating point arithmetic.
+

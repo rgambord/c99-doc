@@ -7,7 +7,11 @@
 
 .. _9899_7.24.5.1p1:
 
-:ref:`1 <9899_7.24.5.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.5.1p1>`
+
+
 
 ::
 
@@ -22,7 +26,11 @@
 
 .. _9899_7.24.5.1p2:
 
-:ref:`2 <9899_7.24.5.1p2>` The wcsftime function is equivalent to the strftime function, except that:
+.. container:: snum
+
+   :ref:`2 <9899_7.24.5.1p2>`
+
+The wcsftime function is equivalent to the strftime function, except that:
 
 -  The argument s points to the initial element of an array of wide characters into which the generated output is to be placed.
 -  The argument maxsize indicates the limiting number of wide characters.
@@ -33,5 +41,9 @@
 
 .. _9899_7.24.5.1p3:
 
-:ref:`3 <9899_7.24.5.1p3>` If the total number of resulting wide characters including the terminating null wide character is not more than maxsize, the wcsftime function returns the number of wide characters placed into the array pointed to by s not including the terminating null wide character. Otherwise, zero is returned and the contents of the array are indeterminate.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.5.1p3>`
+
+If the total number of resulting wide characters including the terminating null wide character is not more than maxsize, the wcsftime function returns the number of wide characters placed into the array pointed to by s not including the terminating null wide character. Otherwise, zero is returned and the contents of the array are indeterminate.
 

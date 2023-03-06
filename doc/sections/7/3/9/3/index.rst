@@ -7,7 +7,11 @@
 
 .. _9899_7.3.9.3p1:
 
-:ref:`1 <9899_7.3.9.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.9.3p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.9.3p2:
 
-:ref:`2 <9899_7.3.9.3p2>` The conj functions compute the complex conjugate of z, by reversing the sign of its imaginary part.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.9.3p2>`
+
+The conj functions compute the complex conjugate of z, by reversing the sign of its imaginary part.
 
 .. rubric:: Returns
 
 .. _9899_7.3.9.3p3:
 
-:ref:`3 <9899_7.3.9.3p3>` The conj functions return the complex conjugate value.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.9.3p3>`
+
+The conj functions return the complex conjugate value.
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.20.4.1p1:
 
-:ref:`1 <9899_7.20.4.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.4.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.20.4.1p2:
 
-:ref:`2 <9899_7.20.4.1p2>` The abort function causes abnormal program termination to occur, unless the signal SIGABRT is being caught and the signal handler does not return. Whether open streams with unwritten buffered data are flushed, open streams are closed, or temporary files are removed is implementation-defined. An implementation-defined form of the status unsuccessful termination is returned to the host environment by means of the function call raise(SIGABRT).
+.. container:: snum
+
+   :ref:`2 <9899_7.20.4.1p2>`
+
+The abort function causes abnormal program termination to occur, unless the signal SIGABRT is being caught and the signal handler does not return. Whether open streams with unwritten buffered data are flushed, open streams are closed, or temporary files are removed is implementation-defined. An implementation-defined form of the status unsuccessful termination is returned to the host environment by means of the function call raise(SIGABRT).
 
 .. rubric:: Returns
 
 .. _9899_7.20.4.1p3:
 
-:ref:`3 <9899_7.20.4.1p3>` The abort function does not return to its caller.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.4.1p3>`
+
+The abort function does not return to its caller.
 

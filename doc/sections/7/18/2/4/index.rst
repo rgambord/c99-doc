@@ -5,7 +5,11 @@
 
 .. _9899_7.18.2.4p1:
 
-:ref:`1 <9899_7.18.2.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.18.2.4p1>`
+
+
 
 -  minimum value of pointer-holding signed integer type
 

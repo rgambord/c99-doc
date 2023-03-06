@@ -19,11 +19,19 @@
 
 .. _9899_7.20p1:
 
-:ref:`1 <9899_7.20p1>` The header :ref:`\<stdlib.h> <9899_7.20>` declares five types and several functions of general utility, and defines several macros.\ [#9899_note257]_
+.. container:: snum
+
+   :ref:`1 <9899_7.20p1>`
+
+The header :ref:`\<stdlib.h> <9899_7.20>` declares five types and several functions of general utility, and defines several macros.\ [#9899_note257]_
 
 .. _9899_7.20p2:
 
-:ref:`2 <9899_7.20p2>` The types declared are size_t and wchar_t (both described in :ref:`7.17 <9899_7.17>`),
+.. container:: snum
+
+   :ref:`2 <9899_7.20p2>`
+
+The types declared are size_t and wchar_t (both described in :ref:`7.17 <9899_7.17>`),
 
 ::
 
@@ -45,7 +53,11 @@ which is a structure type that is the type of the value returned by the lldiv fu
 
 .. _9899_7.20p3:
 
-:ref:`3 <9899_7.20p3>` The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`);
+.. container:: snum
+
+   :ref:`3 <9899_7.20p3>`
+
+The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`);
 
 ::
 
@@ -77,4 +89,4 @@ which expands to a positive integer expression with type size_t that is the maxi
 
 .. rubric:: Footnotes
 
-.. [#9899_note257] See ''future library directions'' (:ref:`7.26.10 <9899_7.26.10>`).
+.. [#9899_note257] See "future library directions" (:ref:`7.26.10 <9899_7.26.10>`).

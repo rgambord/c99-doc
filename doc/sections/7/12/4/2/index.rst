@@ -7,7 +7,11 @@
 
 .. _9899_7.12.4.2p1:
 
-:ref:`1 <9899_7.12.4.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.4.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.4.2p2:
 
-:ref:`2 <9899_7.12.4.2p2>` The asin functions compute the principal value of the arc sine of x. A domain error occurs for arguments not in the interval [-1, +1].
+.. container:: snum
+
+   :ref:`2 <9899_7.12.4.2p2>`
+
+The asin functions compute the principal value of the arc sine of x. A domain error occurs for arguments not in the interval [-1, +1].
 
 .. rubric:: Returns
 
 .. _9899_7.12.4.2p3:
 
-:ref:`3 <9899_7.12.4.2p3>` The asin functions return arcsin x in the interval [-pi /2, +pi /2] radians.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.4.2p3>`
+
+The asin functions return arcsin x in the interval [-pi /2, +pi /2] radians.
 

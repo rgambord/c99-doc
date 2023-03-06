@@ -7,7 +7,11 @@
 
 .. _9899_7.3.6.1p1:
 
-:ref:`1 <9899_7.3.6.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.6.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.6.1p2:
 
-:ref:`2 <9899_7.3.6.1p2>` The cacosh functions compute the complex arc hyperbolic cosine of z, with a branch cut at values less than 1 along the real axis.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.6.1p2>`
+
+The cacosh functions compute the complex arc hyperbolic cosine of z, with a branch cut at values less than 1 along the real axis.
 
 .. rubric:: Returns
 
 .. _9899_7.3.6.1p3:
 
-:ref:`3 <9899_7.3.6.1p3>` The cacosh functions return the complex arc hyperbolic cosine value, in the range of a half-strip of non-negative values along the real axis and in the interval [-ipi , +ipi ] along the imaginary axis.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.6.1p3>`
+
+The cacosh functions return the complex arc hyperbolic cosine value, in the range of a half-strip of non-negative values along the real axis and in the interval [-ipi , +ipi ] along the imaginary axis.
 

@@ -5,7 +5,11 @@ J.3.2 Environment
 
 .. _9899_J.3.2p1:
 
-:ref:`1 <9899_J.3.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_J.3.2p1>`
+
+
 
 -  The mapping between physical source file multibyte characters and the source character set in translation phase 1 (:ref:`5.1.1.2 <9899_5.1.1.2>`).
 -  The name and type of the function called at program startup in a freestanding environment (:ref:`5.1.2.1 <9899_5.1.2.1>`).

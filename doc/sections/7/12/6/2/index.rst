@@ -7,7 +7,11 @@
 
 .. _9899_7.12.6.2p1:
 
-:ref:`1 <9899_7.12.6.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.6.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.6.2p2:
 
-:ref:`2 <9899_7.12.6.2p2>` The exp2 functions compute the base-2 exponential of x. A range error occurs if the magnitude of x is too large.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.6.2p2>`
+
+The exp2 functions compute the base-2 exponential of x. A range error occurs if the magnitude of x is too large.
 
 .. rubric:: Returns
 
 .. _9899_7.12.6.2p3:
 
-:ref:`3 <9899_7.12.6.2p3>` The exp2 functions return 2\ :sup:`x`.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.6.2p3>`
+
+The exp2 functions return 2\ :sup:`x`.
 

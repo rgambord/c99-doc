@@ -7,7 +7,11 @@
 
 .. _9899_6.4.4.1p1:
 
-:ref:`1 <9899_6.4.4.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.4.1p1>`
+
+
 
 .. container:: syntax-block
 
@@ -563,108 +567,185 @@
 
 .. _9899_6.4.4.1p2:
 
-:ref:`2 <9899_6.4.4.1p2>` An integer constant begins with a digit, but has no period or exponent part. It may have a prefix that specifies its base and a suffix that specifies its type.
+.. container:: snum
+
+   :ref:`2 <9899_6.4.4.1p2>`
+
+An integer constant begins with a digit, but has no period or exponent part. It may have a prefix that specifies its base and a suffix that specifies its type.
 
 .. _9899_6.4.4.1p3:
 
-:ref:`3 <9899_6.4.4.1p3>` A decimal constant begins with a nonzero digit and consists of a sequence of decimal digits. An octal constant consists of the prefix 0 optionally followed by a sequence of the digits 0 through 7 only. A hexadecimal constant consists of the prefix 0x or 0X followed by a sequence of the decimal digits and the letters a (or A) through f (or F) with values 10 through 15 respectively.
+.. container:: snum
+
+   :ref:`3 <9899_6.4.4.1p3>`
+
+A decimal constant begins with a nonzero digit and consists of a sequence of decimal digits. An octal constant consists of the prefix 0 optionally followed by a sequence of the digits 0 through 7 only. A hexadecimal constant consists of the prefix 0x or 0X followed by a sequence of the decimal digits and the letters a (or A) through f (or F) with values 10 through 15 respectively.
 
 .. rubric:: Semantics
 
 .. _9899_6.4.4.1p4:
 
-:ref:`4 <9899_6.4.4.1p4>` The value of a decimal constant is computed base 10; that of an octal constant, base 8; that of a hexadecimal constant, base 16. The lexically first digit is the most significant.
+.. container:: snum
+
+   :ref:`4 <9899_6.4.4.1p4>`
+
+The value of a decimal constant is computed base 10; that of an octal constant, base 8; that of a hexadecimal constant, base 16. The lexically first digit is the most significant.
 
 .. _9899_6.4.4.1p5:
 
-:ref:`5 <9899_6.4.4.1p5>` The type of an integer constant is the first of the corresponding list in which its value can be represented.
+.. container:: snum
 
-Suffix
+   :ref:`5 <9899_6.4.4.1p5>`
 
-Decimal Constant
+The type of an integer constant is the first of the corresponding list in which its value can be represented.
 
-Octal or Hexadecimal Constant
+.. list-table::
+   :header-rows: 1
 
-none
+   * - Suffix
+     - Decimal Constant
+     - Octal or Hexadecimal Constant
+   * - 
+      
+       .. container:: syntax-text-rule
 
-::
+          none
 
+     - | `int`
+       | `long int`
+       | `long long int`
+     - | `int`
+       | `unsigned int`
+       | `long int`
+       | `unsigned long int`
+       | `long long int`
+       | `unsigned long long int`
+   * - 
+       
+       .. container:: syntax-text-rule
+          
+          .. container:: syntax-terminal
+            
+             u
 
+          |_| or |_|
 
+          .. container:: syntax-terminal
 
+             U
 
-::
+     - | `unsigned int`
+       | `unsigned long int`
+       | `unsigned long long int`
+     - | `unsigned int`
+       | `unsigned long int`
+       | `unsigned long long int`
+   * - 
+       
+       .. container:: syntax-text-rule
+          
+          .. container:: syntax-terminal
+            
+             l
 
+          |_| or |_|
 
+          .. container:: syntax-terminal
 
+             L
 
+     - | `long int`
+       | `unsigned long long int`
+     - | `long int`
+       | `unsigned long int`
+       | `long long int`
+       | `unsigned long long int`
+   * - 
+       
+       .. container:: syntax-text-rule
+          
+          Both |_|
 
+          .. container:: syntax-terminal
+            
+             u
 
+          |_| or |_|
 
+          .. container:: syntax-terminal
 
-u or U
+             U
+          
+          |_| and |_|
 
-::
+          .. container:: syntax-terminal
+            
+             l
 
+          |_| or |_|
 
+          .. container:: syntax-terminal
 
+             L
 
+     - | `unsigned long int`
+       | `unsigned long long int`
+     - | `unsigned long int`
+       | `unsigned long long int`
+   * - 
+       
+       .. container:: syntax-text-rule
+          
+          .. container:: syntax-terminal
+            
+             ll
 
-::
+          |_| or |_|
 
+          .. container:: syntax-terminal
 
+             LL
 
+     - | `long long int`
+     - | `long long int`
+       | `unsigned long long int`
+   * - 
+       
+       .. container:: syntax-text-rule
+          
+          Both |_|
 
+          .. container:: syntax-terminal
+            
+             u
 
-l or L
+          |_| or |_|
 
-::
+          .. container:: syntax-terminal
 
-             
+             U
+          
+          |_| and |_|
 
+          .. container:: syntax-terminal
+            
+             ll
 
+          |_| or |_|
 
-::
+          .. container:: syntax-terminal
 
+             LL
 
-
-
-
-
-Both u or U and l or L
-
-::
-
-
-
-
-::
-
-
-
-
-ll or LL
-
-::
-
-
-
-::
-
-
-
-
-Both u or U and ll or LL
-
-::
-
-
-
-::
-
+     - | `unsigned long long int`
+     - | `unsigned long long int`
 
 
 .. _9899_6.4.4.1p6:
 
-:ref:`6 <9899_6.4.4.1p6>` If an integer constant cannot be represented by any type in its list, it may have an extended integer type, if the extended integer type can represent its value. If all of the types in the list for the constant are signed, the extended integer type shall be signed. If all of the types in the list for the constant are unsigned, the extended integer type shall be unsigned. If the list contains both signed and unsigned types, the extended integer type may be signed or unsigned. If an integer constant cannot be represented by any type in its list and has no extended integer type, then the integer constant has no type.
+.. container:: snum
+
+   :ref:`6 <9899_6.4.4.1p6>`
+
+If an integer constant cannot be represented by any type in its list, it may have an extended integer type, if the extended integer type can represent its value. If all of the types in the list for the constant are signed, the extended integer type shall be signed. If all of the types in the list for the constant are unsigned, the extended integer type shall be unsigned. If the list contains both signed and unsigned types, the extended integer type may be signed or unsigned. If an integer constant cannot be represented by any type in its list and has no extended integer type, then the integer constant has no type.
 

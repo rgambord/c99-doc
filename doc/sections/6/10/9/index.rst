@@ -7,7 +7,11 @@
 
 .. _9899_6.10.9p1:
 
-:ref:`1 <9899_6.10.9p1>` A unary operator expression of the form:
+.. container:: snum
+
+   :ref:`1 <9899_6.10.9p1>`
+
+A unary operator expression of the form:
 
 .. code-block:: text
 
@@ -17,7 +21,11 @@ is processed as follows: The string literal is destringized by deleting the L pr
 
 .. _9899_6.10.9p2:
 
-:ref:`2 <9899_6.10.9p2>` EXAMPLE A directive of the form:
+.. container:: snum
+
+   :ref:`2 <9899_6.10.9p2>`
+
+EXAMPLE A directive of the form:
 
 ::
 

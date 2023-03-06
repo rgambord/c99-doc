@@ -5,7 +5,11 @@ G.6.4.1 The cpow functions
 
 .. _9899_G.6.4.1p1:
 
-:ref:`1 <9899_G.6.4.1p1>` The cpow functions raise floating-point exceptions if appropriate for the calculation of the parts of the result, and may raise spurious exceptions.\ [#9899_note327]_
+.. container:: snum
+
+   :ref:`1 <9899_G.6.4.1p1>`
+
+The cpow functions raise floating-point exceptions if appropriate for the calculation of the parts of the result, and may raise spurious exceptions.\ [#9899_note327]_
 
 
 

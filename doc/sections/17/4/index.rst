@@ -5,7 +5,11 @@ J.4 Locale-specific behavior
 
 .. _9899_J.4p1:
 
-:ref:`1 <9899_J.4p1>` The following characteristics of a hosted environment are locale-specific and are required to be documented by the implementation:
+.. container:: snum
+
+   :ref:`1 <9899_J.4p1>`
+
+The following characteristics of a hosted environment are locale-specific and are required to be documented by the implementation:
 
 -  Additional members of the source and execution character sets beyond the basic character set (:ref:`5.2.1 <9899_5.2.1>`).
 -  The presence, meaning, and representation of additional multibyte characters in the execution character set beyond the basic character set (:ref:`5.2.1.2 <9899_5.2.1.2>`).

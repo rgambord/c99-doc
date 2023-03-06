@@ -5,7 +5,11 @@
 
 .. _9899_7.9p1:
 
-:ref:`1 <9899_7.9p1>` The header :ref:`\<iso646.h> <9899_7.9>` defines the following eleven macros (on the left) that expand to the corresponding tokens (on the right):
+.. container:: snum
+
+   :ref:`1 <9899_7.9p1>`
+
+The header :ref:`\<iso646.h> <9899_7.9>` defines the following eleven macros (on the left) that expand to the corresponding tokens (on the right):
 
 ::
 
@@ -20,6 +24,4 @@
     or_eq        |=
     xor          ^
     xor_eq       ^=
-
-.. _9899_7.10:
 

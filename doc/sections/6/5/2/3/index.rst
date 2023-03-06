@@ -7,33 +7,61 @@
 
 .. _9899_6.5.2.3p1:
 
-:ref:`1 <9899_6.5.2.3p1>` The first operand of the . operator shall have a qualified or unqualified structure or union type, and the second operand shall name a member of that type.
+.. container:: snum
+
+   :ref:`1 <9899_6.5.2.3p1>`
+
+The first operand of the . operator shall have a qualified or unqualified structure or union type, and the second operand shall name a member of that type.
 
 .. _9899_6.5.2.3p2:
 
-:ref:`2 <9899_6.5.2.3p2>` The first operand of the -> operator shall have type ''pointer to qualified or unqualified structure'' or ''pointer to qualified or unqualified union'', and the second operand shall name a member of the type pointed to.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.2.3p2>`
+
+The first operand of the -> operator shall have type "pointer to qualified or unqualified structure" or "pointer to qualified or unqualified union", and the second operand shall name a member of the type pointed to.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.2.3p3:
 
-:ref:`3 <9899_6.5.2.3p3>` A postfix expression followed by the . operator and an identifier designates a member of a structure or union object. The value is that of the named member,\ [#9899_note82]_ and is an lvalue if the first expression is an lvalue. If the first expression has qualified type, the result has the so-qualified version of the type of the designated member.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.2.3p3>`
+
+A postfix expression followed by the . operator and an identifier designates a member of a structure or union object. The value is that of the named member,\ [#9899_note82]_ and is an lvalue if the first expression is an lvalue. If the first expression has qualified type, the result has the so-qualified version of the type of the designated member.
 
 .. _9899_6.5.2.3p4:
 
-:ref:`4 <9899_6.5.2.3p4>` A postfix expression followed by the -> operator and an identifier designates a member of a structure or union object. The value is that of the named member of the object to which the first expression points, and is an lvalue.\ [#9899_note83]_ If the first expression is a pointer to a qualified type, the result has the so-qualified version of the type of the designated member.
+.. container:: snum
+
+   :ref:`4 <9899_6.5.2.3p4>`
+
+A postfix expression followed by the -> operator and an identifier designates a member of a structure or union object. The value is that of the named member of the object to which the first expression points, and is an lvalue.\ [#9899_note83]_ If the first expression is a pointer to a qualified type, the result has the so-qualified version of the type of the designated member.
 
 .. _9899_6.5.2.3p5:
 
-:ref:`5 <9899_6.5.2.3p5>` One special guarantee is made in order to simplify the use of unions: if a union contains several structures that share a common initial sequence (see below), and if the union object currently contains one of these structures, it is permitted to inspect the common initial part of any of them anywhere that a declaration of the complete type of the union is visible. Two structures share a common initial sequence if corresponding members have compatible types (and, for bit-fields, the same widths) for a sequence of one or more initial members.
+.. container:: snum
+
+   :ref:`5 <9899_6.5.2.3p5>`
+
+One special guarantee is made in order to simplify the use of unions: if a union contains several structures that share a common initial sequence (see below), and if the union object currently contains one of these structures, it is permitted to inspect the common initial part of any of them anywhere that a declaration of the complete type of the union is visible. Two structures share a common initial sequence if corresponding members have compatible types (and, for bit-fields, the same widths) for a sequence of one or more initial members.
 
 .. _9899_6.5.2.3p6:
 
-:ref:`6 <9899_6.5.2.3p6>` EXAMPLE 1 If f is a function returning a structure or union, and x is a member of that structure or union, f().x is a valid postfix expression but is not an lvalue.
+.. container:: snum
+
+   :ref:`6 <9899_6.5.2.3p6>`
+
+EXAMPLE 1 If f is a function returning a structure or union, and x is a member of that structure or union, f().x is a valid postfix expression but is not an lvalue.
 
 .. _9899_6.5.2.3p7:
 
-:ref:`7 <9899_6.5.2.3p7>` EXAMPLE 2 In:
+.. container:: snum
+
+   :ref:`7 <9899_6.5.2.3p7>`
+
+EXAMPLE 2 In:
 
 ::
 
@@ -55,7 +83,11 @@ the various members have the types:
 
 .. _9899_6.5.2.3p8:
 
-:ref:`8 <9899_6.5.2.3p8>` EXAMPLE 3 The following is a valid fragment:
+.. container:: snum
+
+   :ref:`8 <9899_6.5.2.3p8>`
+
+EXAMPLE 3 The following is a valid fragment:
 
 ::
 
@@ -101,7 +133,11 @@ The following is not a valid fragment (because the union type is not visible wit
           return f(&u.s1, &u.s2);
     }
 
-**Forward references**: address and indirection operators (:ref:`6.5.3.2 <9899_6.5.3.2>`), structure and union specifiers (:ref:`6.7.2.1 <9899_6.7.2.1>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.5.3.2`
+   - :ref:`9899_6.7.2.1`
 
 
 
@@ -111,4 +147,4 @@ The following is not a valid fragment (because the union type is not visible wit
 .. rubric:: Footnotes
 
 .. [#9899_note82] If the member used to access the contents of a union object is not the same as the member last used to store a value in the object, the appropriate part of the object representation of the value is reinterpreted as an object representation in the new type as described in :ref:`6.2.6 <9899_6.2.6>` (a process sometimes called "type punning"). This might be a trap representation.
-.. [#9899_note83] If &E is a valid pointer expression (where & is the ''address-of '' operator, which generates a pointer to its operand), the expression (&E)->MOS is the same as E.MOS.
+.. [#9899_note83] If &E is a valid pointer expression (where & is the "address-of '' operator, which generates a pointer to its operand), the expression (&E)->MOS is the same as E.MOS.

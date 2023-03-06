@@ -7,7 +7,11 @@
 
 .. _9899_6.5.12p1:
 
-:ref:`1 <9899_6.5.12p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.12p1>`
+
+
 
 .. container:: syntax-block
 
@@ -51,15 +55,27 @@
 
 .. _9899_6.5.12p2:
 
-:ref:`2 <9899_6.5.12p2>` Each of the operands shall have integer type.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.12p2>`
+
+Each of the operands shall have integer type.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.12p3:
 
-:ref:`3 <9899_6.5.12p3>` The usual arithmetic conversions are performed on the operands.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.12p3>`
+
+The usual arithmetic conversions are performed on the operands.
 
 .. _9899_6.5.12p4:
 
-:ref:`4 <9899_6.5.12p4>` The result of the \| operator is the bitwise inclusive OR of the operands (that is, each bit in the result is set if and only if at least one of the corresponding bits in the converted operands is set).
+.. container:: snum
+
+   :ref:`4 <9899_6.5.12p4>`
+
+The result of the \| operator is the bitwise inclusive OR of the operands (that is, each bit in the result is set if and only if at least one of the corresponding bits in the converted operands is set).
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.23.3.2p1:
 
-:ref:`1 <9899_7.23.3.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.23.3.2p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.23.3.2p2:
 
-:ref:`2 <9899_7.23.3.2p2>` The ctime function converts the calendar time pointed to by timer to local time in the form of a string. It is equivalent to
+.. container:: snum
+
+   :ref:`2 <9899_7.23.3.2p2>`
+
+The ctime function converts the calendar time pointed to by timer to local time in the form of a string. It is equivalent to
 
 ::
 
@@ -28,7 +36,14 @@
 
 .. _9899_7.23.3.2p3:
 
-:ref:`3 <9899_7.23.3.2p3>` The ctime function returns the pointer returned by the asctime function with that broken-down time as argument.
+.. container:: snum
 
-**Forward references**: the localtime function (:ref:`7.23.3.4 <9899_7.23.3.4>`).
+   :ref:`3 <9899_7.23.3.2p3>`
+
+The ctime function returns the pointer returned by the asctime function with that broken-down time as argument.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.23.3.4`
 

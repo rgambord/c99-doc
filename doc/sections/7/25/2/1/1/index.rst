@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.1.1p1:
 
-:ref:`1 <9899_7.25.2.1.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.1.1p1>`
+
+
 
 ::
 
@@ -18,5 +22,9 @@
 
 .. _9899_7.25.2.1.1p2:
 
-:ref:`2 <9899_7.25.2.1.1p2>` The iswalnum function tests for any wide character for which iswalpha or iswdigit is true.
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.1.1p2>`
+
+The iswalnum function tests for any wide character for which iswalpha or iswdigit is true.
 

@@ -7,15 +7,27 @@
 
 .. _9899_6.7.2.3p1:
 
-:ref:`1 <9899_6.7.2.3p1>` A specific type shall have its content defined at most once.
+.. container:: snum
+
+   :ref:`1 <9899_6.7.2.3p1>`
+
+A specific type shall have its content defined at most once.
 
 .. _9899_6.7.2.3p2:
 
-:ref:`2 <9899_6.7.2.3p2>` Where two declarations that use the same tag declare the same type, they shall both use the same choice of struct, union, or enum.
+.. container:: snum
+
+   :ref:`2 <9899_6.7.2.3p2>`
+
+Where two declarations that use the same tag declare the same type, they shall both use the same choice of struct, union, or enum.
 
 .. _9899_6.7.2.3p3:
 
-:ref:`3 <9899_6.7.2.3p3>` A type specifier of the form
+.. container:: snum
+
+   :ref:`3 <9899_6.7.2.3p3>`
+
+A type specifier of the form
 
 .. code-block:: text
 
@@ -27,15 +39,27 @@ without an enumerator list shall only appear after the type it specifies is comp
 
 .. _9899_6.7.2.3p4:
 
-:ref:`4 <9899_6.7.2.3p4>` All declarations of structure, union, or enumerated types that have the same scope and use the same tag declare the same type. The type is incomplete\ [#9899_note111]_ until the closing brace of the list defining the content, and complete thereafter.
+.. container:: snum
+
+   :ref:`4 <9899_6.7.2.3p4>`
+
+All declarations of structure, union, or enumerated types that have the same scope and use the same tag declare the same type. The type is incomplete\ [#9899_note111]_ until the closing brace of the list defining the content, and complete thereafter.
 
 .. _9899_6.7.2.3p5:
 
-:ref:`5 <9899_6.7.2.3p5>` Two declarations of structure, union, or enumerated types which are in different scopes or use different tags declare distinct types. Each declaration of a structure, union, or enumerated type which does not include a tag declares a distinct type.
+.. container:: snum
+
+   :ref:`5 <9899_6.7.2.3p5>`
+
+Two declarations of structure, union, or enumerated types which are in different scopes or use different tags declare distinct types. Each declaration of a structure, union, or enumerated type which does not include a tag declares a distinct type.
 
 .. _9899_6.7.2.3p6:
 
-:ref:`6 <9899_6.7.2.3p6>` A type specifier of the form
+.. container:: snum
+
+   :ref:`6 <9899_6.7.2.3p6>`
+
+A type specifier of the form
 
 .. code-block:: text
 
@@ -57,7 +81,11 @@ declares a structure, union, or enumerated type. The list defines the structure 
 
 .. _9899_6.7.2.3p7:
 
-:ref:`7 <9899_6.7.2.3p7>` A declaration of the form
+.. container:: snum
+
+   :ref:`7 <9899_6.7.2.3p7>`
+
+A declaration of the form
 
 .. code-block:: text
 
@@ -67,7 +95,11 @@ specifies a structure or union type and declares the identifier as a tag of that
 
 .. _9899_6.7.2.3p8:
 
-:ref:`8 <9899_6.7.2.3p8>` If a type specifier of the form
+.. container:: snum
+
+   :ref:`8 <9899_6.7.2.3p8>`
+
+If a type specifier of the form
 
 .. code-block:: text
 
@@ -77,7 +109,11 @@ occurs other than as part of one of the above forms, and no other declaration of
 
 .. _9899_6.7.2.3p9:
 
-:ref:`9 <9899_6.7.2.3p9>` If a type specifier of the form
+.. container:: snum
+
+   :ref:`9 <9899_6.7.2.3p9>`
+
+If a type specifier of the form
 
 .. code-block:: text
 
@@ -93,7 +129,11 @@ occurs other than as part of one of the above forms, and a declaration of the id
 
 .. _9899_6.7.2.3p10:
 
-:ref:`10 <9899_6.7.2.3p10>` EXAMPLE 1 This mechanism allows declaration of a self-referential structure.
+.. container:: snum
+
+   :ref:`10 <9899_6.7.2.3p10>`
+
+EXAMPLE 1 This mechanism allows declaration of a self-referential structure.
 
 ::
 
@@ -112,7 +152,11 @@ declares s to be an object of the given type and sp to be a pointer to an object
 
 .. _9899_6.7.2.3p11:
 
-:ref:`11 <9899_6.7.2.3p11>` The following alternative formulation uses the typedef mechanism:
+.. container:: snum
+
+   :ref:`11 <9899_6.7.2.3p11>`
+
+The following alternative formulation uses the typedef mechanism:
 
 ::
 
@@ -125,7 +169,11 @@ declares s to be an object of the given type and sp to be a pointer to an object
 
 .. _9899_6.7.2.3p12:
 
-:ref:`12 <9899_6.7.2.3p12>` EXAMPLE 2 To illustrate the use of prior declaration of a tag to specify a pair of mutually referential structures, the declarations
+.. container:: snum
+
+   :ref:`12 <9899_6.7.2.3p12>`
+
+EXAMPLE 2 To illustrate the use of prior declaration of a tag to specify a pair of mutually referential structures, the declarations
 
 ::
 
@@ -140,7 +188,12 @@ specify a pair of structures that contain pointers to each other. Note, however,
 
 may be inserted ahead of D1. This declares a new tag s2 in the inner scope; the declaration D2 then completes the specification of the new type.
 
-**Forward references**: declarators (:ref:`6.7.5 <9899_6.7.5>`), array declarators (:ref:`6.7.5.2 <9899_6.7.5.2>`), type definitions (:ref:`6.7.7 <9899_6.7.7>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.7.5`
+   - :ref:`9899_6.7.5.2`
+   - :ref:`9899_6.7.7`
 
 
 

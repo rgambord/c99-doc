@@ -9,7 +9,11 @@ Sequence points
 
 .. _9899_Cp1:
 
-:ref:`1 <9899_Cp1>` The following are the sequence points described in :ref:`5.1.2.3 <9899_5.1.2.3>`:
+.. container:: snum
+
+   :ref:`1 <9899_Cp1>`
+
+The following are the sequence points described in :ref:`5.1.2.3 <9899_5.1.2.3>`:
 
 -  The call to a function, after the arguments have been evaluated (:ref:`6.5.2.2 <9899_6.5.2.2>`).
 -  The end of the first operand of the following operators: logical AND && (:ref:`6.5.13 <9899_6.5.13>`); logical OR \|\| (:ref:`6.5.14 <9899_6.5.14>`); conditional ? (:ref:`6.5.15 <9899_6.5.15>`); comma , (:ref:`6.5.17 <9899_6.5.17>`).

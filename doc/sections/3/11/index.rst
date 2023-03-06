@@ -1,12 +1,14 @@
-.. _9899_section-17:
+.. _9899_3.11:
 
 3.11 forward reference
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. _9899_3.11p1:
 
-:ref:`1 <9899_3.11p1>` forward reference
-    reference to a later subclause of this International Standard that contains additional information relevant to this subclause
+.. container:: snum
 
-.. _9899_3.12:
+   :ref:`1 <9899_3.11p1>`
+
+forward reference
+    reference to a later subclause of this International Standard that contains additional information relevant to this subclause
 

@@ -13,11 +13,19 @@
 
 .. _9899_7.13p1:
 
-:ref:`1 <9899_7.13p1>` The header :ref:`\<setjmp.h> <9899_7.13>` defines the macro setjmp, and declares one function and one type, for bypassing the normal function call and return discipline.\ [#9899_note216]_
+.. container:: snum
+
+   :ref:`1 <9899_7.13p1>`
+
+The header :ref:`\<setjmp.h> <9899_7.13>` defines the macro setjmp, and declares one function and one type, for bypassing the normal function call and return discipline.\ [#9899_note216]_
 
 .. _9899_7.13p2:
 
-:ref:`2 <9899_7.13p2>` The type declared is
+.. container:: snum
+
+   :ref:`2 <9899_7.13p2>`
+
+The type declared is
 
 ::
 
@@ -27,7 +35,11 @@ which is an array type suitable for holding the information needed to restore a 
 
 .. _9899_7.13p3:
 
-:ref:`3 <9899_7.13p3>` It is unspecified whether setjmp is a macro or an identifier declared with external linkage. If a macro definition is suppressed in order to access an actual function, or a program defines an external identifier with the name setjmp, the behavior is undefined.
+.. container:: snum
+
+   :ref:`3 <9899_7.13p3>`
+
+It is unspecified whether setjmp is a macro or an identifier declared with external linkage. If a macro definition is suppressed in order to access an actual function, or a program defines an external identifier with the name setjmp, the behavior is undefined.
 
 
 

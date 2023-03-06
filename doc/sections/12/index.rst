@@ -9,7 +9,11 @@ Implementation limits
 
 .. _9899_Ep1:
 
-:ref:`1 <9899_Ep1>` The contents of the header :ref:`\<limits.h> <9899_7.10>` are given below, in alphabetical order. The minimum magnitudes shown shall be replaced by implementation-defined magnitudes with the same sign. The values shall all be constant expressions suitable for use in #if preprocessing directives. The components are described further in :ref:`5.2.4.2.1 <9899_5.2.4.2.1>`.
+.. container:: snum
+
+   :ref:`1 <9899_Ep1>`
+
+The contents of the header :ref:`\<limits.h> <9899_7.10>` are given below, in alphabetical order. The minimum magnitudes shown shall be replaced by implementation-defined magnitudes with the same sign. The values shall all be constant expressions suitable for use in `#if` preprocessing directives. The components are described further in :ref:`5.2.4.2.1 <9899_5.2.4.2.1>`.
 
 ::
 
@@ -35,11 +39,19 @@ Implementation limits
 
 .. _9899_Ep2:
 
-:ref:`2 <9899_Ep2>` The contents of the header :ref:`\<float.h> <9899_7.7>` are given below. All integer values, except FLT_ROUNDS, shall be constant expressions suitable for use in #if preprocessing directives; all floating values shall be constant expressions. The components are described further in :ref:`5.2.4.2.2 <9899_5.2.4.2.2>`.
+.. container:: snum
+
+   :ref:`2 <9899_Ep2>`
+
+The contents of the header :ref:`\<float.h> <9899_7.7>` are given below. All integer values, except FLT_ROUNDS, shall be constant expressions suitable for use in `#if` preprocessing directives; all floating values shall be constant expressions. The components are described further in :ref:`5.2.4.2.2 <9899_5.2.4.2.2>`.
 
 .. _9899_Ep3:
 
-:ref:`3 <9899_Ep3>` The values given in the following list shall be replaced by implementation-defined expressions:
+.. container:: snum
+
+   :ref:`3 <9899_Ep3>`
+
+The values given in the following list shall be replaced by implementation-defined expressions:
 
 ::
 
@@ -48,7 +60,11 @@ Implementation limits
 
 .. _9899_Ep4:
 
-:ref:`4 <9899_Ep4>` The values given in the following list shall be replaced by implementation-defined constant expressions that are greater or equal in magnitude (absolute value) to those shown, with the same sign:
+.. container:: snum
+
+   :ref:`4 <9899_Ep4>`
+
+The values given in the following list shall be replaced by implementation-defined constant expressions that are greater or equal in magnitude (absolute value) to those shown, with the same sign:
 
 ::
 
@@ -75,7 +91,11 @@ Implementation limits
 
 .. _9899_Ep5:
 
-:ref:`5 <9899_Ep5>` The values given in the following list shall be replaced by implementation-defined constant expressions with values that are greater than or equal to those shown:
+.. container:: snum
+
+   :ref:`5 <9899_Ep5>`
+
+The values given in the following list shall be replaced by implementation-defined constant expressions with values that are greater than or equal to those shown:
 
 ::
 
@@ -85,7 +105,11 @@ Implementation limits
 
 .. _9899_Ep6:
 
-:ref:`6 <9899_Ep6>` The values given in the following list shall be replaced by implementation-defined constant expressions with (positive) values that are less than or equal to those shown:
+.. container:: snum
+
+   :ref:`6 <9899_Ep6>`
+
+The values given in the following list shall be replaced by implementation-defined constant expressions with (positive) values that are less than or equal to those shown:
 
 ::
 

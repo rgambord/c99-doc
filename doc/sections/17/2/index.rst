@@ -5,9 +5,13 @@ J.2 Undefined behavior
 
 .. _9899_J.2p1:
 
-:ref:`1 <9899_J.2p1>` The behavior is undefined in the following circumstances:
+.. container:: snum
 
--  A ''shall'' or ''shall not'' requirement that appears outside of a constraint is violated (clause 4).
+   :ref:`1 <9899_J.2p1>`
+
+The behavior is undefined in the following circumstances:
+
+-  A "shall" or "shall not" requirement that appears outside of a constraint is violated (clause 4).
 -  A nonempty source file does not end in a new-line character which is not immediately preceded by a backslash character or ends in a partial preprocessing token or comment (:ref:`5.1.1.2 <9899_5.1.1.2>`).
 -  Token concatenation produces a character sequence matching the syntax of a universal character name (:ref:`5.1.1.2 <9899_5.1.1.2>`).
 -  A program in a hosted environment does not define a function named main using one of the specified forms (:ref:`5.1.2.2.1 <9899_5.1.2.2.1>`).
@@ -90,16 +94,16 @@ J.2 Undefined behavior
 -  A function that accepts a variable number of arguments is defined without a parameter type list that ends with the ellipsis notation (:ref:`6.9.1 <9899_6.9.1>`).
 -  The } that terminates a function is reached, and the value of the function call is used by the caller (:ref:`6.9.1 <9899_6.9.1>`).
 -  An identifier for an object with internal linkage and an incomplete type is declared with a tentative definition (:ref:`6.9.2 <9899_6.9.2>`).
--  The token defined is generated during the expansion of a #if or #elif preprocessing directive, or the use of the defined unary operator does not match one of the two specified forms prior to macro replacement (:ref:`6.10.1 <9899_6.10.1>`).
--  The #include preprocessing directive that results after expansion does not match one of the two header name forms (:ref:`6.10.2 <9899_6.10.2>`).
--  The character sequence in an #include preprocessing directive does not start with a letter (:ref:`6.10.2 <9899_6.10.2>`).
+-  The token defined is generated during the expansion of a `#if` or `#elif` preprocessing directive, or the use of the defined unary operator does not match one of the two specified forms prior to macro replacement (:ref:`6.10.1 <9899_6.10.1>`).
+-  The `#include` preprocessing directive that results after expansion does not match one of the two header name forms (:ref:`6.10.2 <9899_6.10.2>`).
+-  The character sequence in an `#include` preprocessing directive does not start with a letter (:ref:`6.10.2 <9899_6.10.2>`).
 -  There are sequences of preprocessing tokens within the list of macro arguments that would otherwise act as preprocessing directives (:ref:`6.10.3 <9899_6.10.3>`).
 -  The result of the preprocessing operator # is not a valid character string literal (:ref:`6.10.3.2 <9899_6.10.3.2>`).
 -  The result of the preprocessing operator ## is not a valid preprocessing token (:ref:`6.10.3.3 <9899_6.10.3.3>`).
--  The #line preprocessing directive that results after expansion does not match one of the two well-defined forms, or its digit sequence specifies zero or a number greater than 2147483647 (:ref:`6.10.4 <9899_6.10.4>`).
--  A non-STDC #pragma preprocessing directive that is documented as causing translation failure or some other form of undefined behavior is encountered (:ref:`6.10.6 <9899_6.10.6>`).
--  A #pragma STDC preprocessing directive does not match one of the well-defined forms (:ref:`6.10.6 <9899_6.10.6>`).
--  The name of a predefined macro, or the identifier defined, is the subject of a #define or #undef preprocessing directive (:ref:`6.10.8 <9899_6.10.8>`).
+-  The `#line` preprocessing directive that results after expansion does not match one of the two well-defined forms, or its digit sequence specifies zero or a number greater than 2147483647 (:ref:`6.10.4 <9899_6.10.4>`).
+-  A non-STDC `#pragma` preprocessing directive that is documented as causing translation failure or some other form of undefined behavior is encountered (:ref:`6.10.6 <9899_6.10.6>`).
+-  A `#pragma` STDC preprocessing directive does not match one of the well-defined forms (:ref:`6.10.6 <9899_6.10.6>`).
+-  The name of a predefined macro, or the identifier defined, is the subject of a `#define` or `#undef` preprocessing directive (:ref:`6.10.8 <9899_6.10.8>`).
 -  An attempt is made to copy an object to an overlapping object by use of a library function, other than as explicitly allowed (e.g., memmove) (clause 7).
 -  A file with the same name as one of the standard headers, not provided as part of the implementation, is placed in any of the standard places that are searched for included source files (:ref:`7.1.2 <9899_7.1.2>`).
 -  A header is included within an external declaration or definition (:ref:`7.1.2 <9899_7.1.2>`).
@@ -115,7 +119,7 @@ J.2 Undefined behavior
 -  The CX_LIMITED_RANGE, FENV_ACCESS, or FP_CONTRACT pragma is used in any context other than outside all external declarations or preceding all explicit declarations and statements inside a compound statement (:ref:`7.3.4 <9899_7.3.4>`, :ref:`7.6.1 <9899_7.6.1>`, :ref:`7.12.2 <9899_7.12.2>`).
 -  The value of an argument to a character handling function is neither equal to the value of EOF nor representable as an unsigned char (:ref:`7.4 <9899_7.4>`).
 -  A macro definition of errno is suppressed in order to access an actual object, or the program defines an identifier with the name errno (:ref:`7.5 <9899_7.5>`).
--  Part of the program tests floating-point status flags, sets floating-point control modes, or runs under non-default mode settings, but was translated with the state for the FENV_ACCESS pragma ''off'' (:ref:`7.6.1 <9899_7.6.1>`).
+-  Part of the program tests floating-point status flags, sets floating-point control modes, or runs under non-default mode settings, but was translated with the state for the FENV_ACCESS pragma "off" (:ref:`7.6.1 <9899_7.6.1>`).
 -  The exception-mask argument for one of the functions that provide access to the floating-point status flags has a nonzero value not obtained by bitwise OR of the floating-point exception macros (:ref:`7.6.2 <9899_7.6.2>`).
 -  The fesetexceptflag function is used to set floating-point status flags that were not specified in the call to the fegetexceptflag function that provided the value of the corresponding fexcept_t object (:ref:`7.6.2.4 <9899_7.6.2.4>`).
 -  The argument to fesetenv or feupdateenv is neither an object set by a call to fegetenv or feholdexcept, nor is it an environment macro (:ref:`7.6.4.3 <9899_7.6.4.3>`, :ref:`7.6.4.4 <9899_7.6.4.4>`).

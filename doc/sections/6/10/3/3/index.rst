@@ -7,21 +7,37 @@
 
 .. _9899_6.10.3.3p1:
 
-:ref:`1 <9899_6.10.3.3p1>` A ## preprocessing token shall not occur at the beginning or at the end of a replacement list for either form of macro definition.
+.. container:: snum
+
+   :ref:`1 <9899_6.10.3.3p1>`
+
+A ## preprocessing token shall not occur at the beginning or at the end of a replacement list for either form of macro definition.
 
 .. rubric:: Semantics
 
 .. _9899_6.10.3.3p2:
 
-:ref:`2 <9899_6.10.3.3p2>` If, in the replacement list of a function-like macro, a parameter is immediately preceded or followed by a ## preprocessing token, the parameter is replaced by the corresponding argument's preprocessing token sequence; however, if an argument consists of no preprocessing tokens, the parameter is replaced by a placemarker preprocessing token instead.\ [#9899_note151]_
+.. container:: snum
+
+   :ref:`2 <9899_6.10.3.3p2>`
+
+If, in the replacement list of a function-like macro, a parameter is immediately preceded or followed by a ## preprocessing token, the parameter is replaced by the corresponding argument's preprocessing token sequence; however, if an argument consists of no preprocessing tokens, the parameter is replaced by a placemarker preprocessing token instead.\ [#9899_note151]_
 
 .. _9899_6.10.3.3p3:
 
-:ref:`3 <9899_6.10.3.3p3>` For both object-like and function-like macro invocations, before the replacement list is reexamined for more macro names to replace, each instance of a ## preprocessing token in the replacement list (not from an argument) is deleted and the preceding preprocessing token is concatenated with the following preprocessing token. Placemarker preprocessing tokens are handled specially: concatenation of two placemarkers results in a single placemarker preprocessing token, and concatenation of a placemarker with a non-placemarker preprocessing token results in the non-placemarker preprocessing token. If the result is not a valid preprocessing token, the behavior is undefined. The resulting token is available for further macro replacement. The order of evaluation of ## operators is unspecified.
+.. container:: snum
+
+   :ref:`3 <9899_6.10.3.3p3>`
+
+For both object-like and function-like macro invocations, before the replacement list is reexamined for more macro names to replace, each instance of a ## preprocessing token in the replacement list (not from an argument) is deleted and the preceding preprocessing token is concatenated with the following preprocessing token. Placemarker preprocessing tokens are handled specially: concatenation of two placemarkers results in a single placemarker preprocessing token, and concatenation of a placemarker with a non-placemarker preprocessing token results in the non-placemarker preprocessing token. If the result is not a valid preprocessing token, the behavior is undefined. The resulting token is available for further macro replacement. The order of evaluation of ## operators is unspecified.
 
 .. _9899_6.10.3.3p4:
 
-:ref:`4 <9899_6.10.3.3p4>` EXAMPLE In the following fragment:
+.. container:: snum
+
+   :ref:`4 <9899_6.10.3.3p4>`
+
+EXAMPLE In the following fragment:
 
 ::
 

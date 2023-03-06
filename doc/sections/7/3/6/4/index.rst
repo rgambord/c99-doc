@@ -7,7 +7,11 @@
 
 .. _9899_7.3.6.4p1:
 
-:ref:`1 <9899_7.3.6.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.6.4p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.6.4p2:
 
-:ref:`2 <9899_7.3.6.4p2>` The ccosh functions compute the complex hyperbolic cosine of z.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.6.4p2>`
+
+The ccosh functions compute the complex hyperbolic cosine of z.
 
 .. rubric:: Returns
 
 .. _9899_7.3.6.4p3:
 
-:ref:`3 <9899_7.3.6.4p3>` The ccosh functions return the complex hyperbolic cosine value.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.6.4p3>`
+
+The ccosh functions return the complex hyperbolic cosine value.
 

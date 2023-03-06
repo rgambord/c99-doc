@@ -7,7 +7,11 @@
 
 .. _9899_7.11.2.1p1:
 
-:ref:`1 <9899_7.11.2.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.11.2.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.11.2.1p2:
 
-:ref:`2 <9899_7.11.2.1p2>` The localeconv function sets the components of an object with type struct lconv with values appropriate for the formatting of numeric quantities (monetary and otherwise) according to the rules of the current locale.
+.. container:: snum
+
+   :ref:`2 <9899_7.11.2.1p2>`
+
+The localeconv function sets the components of an object with type struct lconv with values appropriate for the formatting of numeric quantities (monetary and otherwise) according to the rules of the current locale.
 
 .. _9899_7.11.2.1p3:
 
-:ref:`3 <9899_7.11.2.1p3>` The members of the structure with type char \* are pointers to strings, any of which (except decimal_point) can point to "", to indicate that the value is not available in the current locale or is of zero length. Apart from grouping and mon_grouping, the strings shall start and end in the initial shift state. The members with type char are nonnegative numbers, any of which can be CHAR_MAX to indicate that the value is not available in the current locale. The members include the following:
+.. container:: snum
+
+   :ref:`3 <9899_7.11.2.1p3>`
+
+The members of the structure with type char \* are pointers to strings, any of which (except decimal_point) can point to "", to indicate that the value is not available in the current locale or is of zero length. Apart from grouping and mon_grouping, the strings shall start and end in the initial shift state. The members with type char are nonnegative numbers, any of which can be CHAR_MAX to indicate that the value is not available in the current locale. The members include the following:
 
 char \*decimal_point
    The decimal-point character used to format nonmonetary quantities.
@@ -75,7 +87,11 @@ char int_n_sign_posn
 
 .. _9899_7.11.2.1p4:
 
-:ref:`4 <9899_7.11.2.1p4>` The elements of grouping and mon_grouping are interpreted according to the following:
+.. container:: snum
+
+   :ref:`4 <9899_7.11.2.1p4>`
+
+The elements of grouping and mon_grouping are interpreted according to the following:
 
 CHAR_MAX
    No further grouping is to be performed.
@@ -86,7 +102,11 @@ other
 
 .. _9899_7.11.2.1p5:
 
-:ref:`5 <9899_7.11.2.1p5>` The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space, and int_n_sep_by_space are interpreted according to the following:
+.. container:: snum
+
+   :ref:`5 <9899_7.11.2.1p5>`
+
+The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space, and int_n_sep_by_space are interpreted according to the following:
 
 0
    No space separates the currency symbol and value.
@@ -99,7 +119,11 @@ For int_p_sep_by_space and int_n_sep_by_space, the fourth character of int_curr_
 
 .. _9899_7.11.2.1p6:
 
-:ref:`6 <9899_7.11.2.1p6>` The values of p_sign_posn, n_sign_posn, int_p_sign_posn, and int_n_sign_posn are interpreted according to the following:
+.. container:: snum
+
+   :ref:`6 <9899_7.11.2.1p6>`
+
+The values of p_sign_posn, n_sign_posn, int_p_sign_posn, and int_n_sign_posn are interpreted according to the following:
 
 0
    Parentheses surround the quantity and currency symbol.
@@ -114,17 +138,29 @@ For int_p_sep_by_space and int_n_sep_by_space, the fourth character of int_curr_
 
 .. _9899_7.11.2.1p7:
 
-:ref:`7 <9899_7.11.2.1p7>` The implementation shall behave as if no library function calls the localeconv function.
+.. container:: snum
+
+   :ref:`7 <9899_7.11.2.1p7>`
+
+The implementation shall behave as if no library function calls the localeconv function.
 
 .. rubric:: Returns
 
 .. _9899_7.11.2.1p8:
 
-:ref:`8 <9899_7.11.2.1p8>` The localeconv function returns a pointer to the filled-in object. The structure pointed to by the return value shall not be modified by the program, but may be overwritten by a subsequent call to the localeconv function. In addition, calls to the setlocale function with categories LC_ALL, LC_MONETARY, or LC_NUMERIC may overwrite the contents of the structure.
+.. container:: snum
+
+   :ref:`8 <9899_7.11.2.1p8>`
+
+The localeconv function returns a pointer to the filled-in object. The structure pointed to by the return value shall not be modified by the program, but may be overwritten by a subsequent call to the localeconv function. In addition, calls to the setlocale function with categories LC_ALL, LC_MONETARY, or LC_NUMERIC may overwrite the contents of the structure.
 
 .. _9899_7.11.2.1p9:
 
-:ref:`9 <9899_7.11.2.1p9>` EXAMPLE 1 The following table illustrates rules which may well be used by four countries to format monetary quantities.
+.. container:: snum
+
+   :ref:`9 <9899_7.11.2.1p9>`
+
+EXAMPLE 1 The following table illustrates rules which may well be used by four countries to format monetary quantities.
 
 .. code-block:: text
 
@@ -139,7 +175,11 @@ For int_p_sep_by_space and int_n_sep_by_space, the fourth character of int_curr_
 
 .. _9899_7.11.2.1p10:
 
-:ref:`10 <9899_7.11.2.1p10>` For these four countries, the respective values for the monetary members of the structure returned by localeconv could be:
+.. container:: snum
+
+   :ref:`10 <9899_7.11.2.1p10>`
+
+For these four countries, the respective values for the monetary members of the structure returned by localeconv could be:
 
 .. code-block:: text
 
@@ -169,7 +209,11 @@ For int_p_sep_by_space and int_n_sep_by_space, the fourth character of int_curr_
 
 .. _9899_7.11.2.1p11:
 
-:ref:`11 <9899_7.11.2.1p11>` EXAMPLE 2 The following table illustrates how the cs_precedes, sep_by_space, and sign_posn members affect the formatted value.
+.. container:: snum
+
+   :ref:`11 <9899_7.11.2.1p11>`
+
+EXAMPLE 2 The following table illustrates how the cs_precedes, sep_by_space, and sign_posn members affect the formatted value.
 
 .. code-block:: text
 

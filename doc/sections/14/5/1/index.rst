@@ -7,11 +7,19 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p1:
 
-:ref:`1 <9899_G.5.1p1>` If one operand has real type and the other operand has imaginary type, then the result has imaginary type. If both operands have imaginary type, then the result has real type. (If either operand has complex type, then the result has complex type.)
+.. container:: snum
+
+   :ref:`1 <9899_G.5.1p1>`
+
+If one operand has real type and the other operand has imaginary type, then the result has imaginary type. If both operands have imaginary type, then the result has real type. (If either operand has complex type, then the result has complex type.)
 
 .. _9899_G.5.1p2:
 
-:ref:`2 <9899_G.5.1p2>` If the operands are not both complex, then the result and floating-point exception behavior of the \* operator is defined by the usual mathematical formula:
+.. container:: snum
+
+   :ref:`2 <9899_G.5.1p2>`
+
+If the operands are not both complex, then the result and floating-point exception behavior of the \* operator is defined by the usual mathematical formula:
 
 .. code-block:: text
 
@@ -31,7 +39,11 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p3:
 
-:ref:`3 <9899_G.5.1p3>` If the second operand is not complex, then the result and floating-point exception behavior of the / operator is defined by the usual mathematical formula:
+.. container:: snum
+
+   :ref:`3 <9899_G.5.1p3>`
+
+If the second operand is not complex, then the result and floating-point exception behavior of the / operator is defined by the usual mathematical formula:
 
 .. code-block:: text
 
@@ -51,7 +63,11 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p4:
 
-:ref:`4 <9899_G.5.1p4>` The \* and / operators satisfy the following infinity properties for all real, imaginary, and complex operands:[#9899_note325]_
+.. container:: snum
+
+   :ref:`4 <9899_G.5.1p4>`
+
+The \* and / operators satisfy the following infinity properties for all real, imaginary, and complex operands:[#9899_note325]_
 
 -  if one operand is an infinity and the other operand is a nonzero finite number or an infinity, then the result of the \* operator is an infinity;
 -  if the first operand is an infinity and the second operand is a finite number, then the result of the / operator is an infinity;
@@ -60,11 +76,19 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p5:
 
-:ref:`5 <9899_G.5.1p5>` If both operands of the \* operator are complex or if the second operand of the / operator is complex, the operator raises floating-point exceptions if appropriate for the calculation of the parts of the result, and may raise spurious floating-point exceptions.
+.. container:: snum
+
+   :ref:`5 <9899_G.5.1p5>`
+
+If both operands of the \* operator are complex or if the second operand of the / operator is complex, the operator raises floating-point exceptions if appropriate for the calculation of the parts of the result, and may raise spurious floating-point exceptions.
 
 .. _9899_G.5.1p6:
 
-:ref:`6 <9899_G.5.1p6>` EXAMPLE 1 Multiplication of double \_Complex operands could be implemented as follows. Note that the imaginary unit I has imaginary type (see :ref:`G.6 <9899_G.6>`).
+.. container:: snum
+
+   :ref:`6 <9899_G.5.1p6>`
+
+EXAMPLE 1 Multiplication of double \_Complex operands could be implemented as follows. Note that the imaginary unit I has imaginary type (see :ref:`G.6 <9899_G.6>`).
 
 ::
 
@@ -118,11 +142,19 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p7:
 
-:ref:`7 <9899_G.5.1p7>` This implementation achieves the required treatment of infinities at the cost of only one isnan test in ordinary (finite) cases. It is less than ideal in that undue overflow and underflow may occur.
+.. container:: snum
+
+   :ref:`7 <9899_G.5.1p7>`
+
+This implementation achieves the required treatment of infinities at the cost of only one isnan test in ordinary (finite) cases. It is less than ideal in that undue overflow and underflow may occur.
 
 .. _9899_G.5.1p8:
 
-:ref:`8 <9899_G.5.1p8>` EXAMPLE 2 Division of two double \_Complex operands could be implemented as follows.
+.. container:: snum
+
+   :ref:`8 <9899_G.5.1p8>`
+
+EXAMPLE 2 Division of two double \_Complex operands could be implemented as follows.
 
 ::
 
@@ -172,7 +204,11 @@ G.5.1 Multiplicative operators
 
 .. _9899_G.5.1p9:
 
-:ref:`9 <9899_G.5.1p9>` Scaling the denominator alleviates the main overflow and underflow problem, which is more serious than for multiplication. In the spirit of the multiplication example above, this code does not defend against overflow and underflow in the calculation of the numerator. Scaling with the scalbn function, instead of with division, provides better roundoff characteristics.
+.. container:: snum
+
+   :ref:`9 <9899_G.5.1p9>`
+
+Scaling the denominator alleviates the main overflow and underflow problem, which is more serious than for multiplication. In the spirit of the multiplication example above, this code does not defend against overflow and underflow in the calculation of the numerator. Scaling with the scalbn function, instead of with division, provides better roundoff characteristics.
 
 
 
@@ -180,4 +216,4 @@ G.5.1 Multiplicative operators
 
 .. rubric:: Footnotes
 
-.. [#9899_note325] These properties are already implied for those cases covered in the tables, but are required for all cases (at least where the state for CX_LIMITED_RANGE is ''off'').
+.. [#9899_note325] These properties are already implied for those cases covered in the tables, but are required for all cases (at least where the state for CX_LIMITED_RANGE is "off").

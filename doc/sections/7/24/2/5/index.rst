@@ -7,7 +7,11 @@
 
 .. _9899_7.24.2.5p1:
 
-:ref:`1 <9899_7.24.2.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.2.5p1>`
+
+
 
 ::
 
@@ -22,17 +26,29 @@
 
 .. _9899_7.24.2.5p2:
 
-:ref:`2 <9899_7.24.2.5p2>` The vfwprintf function is equivalent to fwprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vfwprintf function does not invoke the va_end macro.\ [#9899_note291]_
+.. container:: snum
+
+   :ref:`2 <9899_7.24.2.5p2>`
+
+The vfwprintf function is equivalent to fwprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vfwprintf function does not invoke the va_end macro.\ [#9899_note291]_
 
 .. rubric:: Returns
 
 .. _9899_7.24.2.5p3:
 
-:ref:`3 <9899_7.24.2.5p3>` The vfwprintf function returns the number of wide characters transmitted, or a negative value if an output or encoding error occurred.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.2.5p3>`
+
+The vfwprintf function returns the number of wide characters transmitted, or a negative value if an output or encoding error occurred.
 
 .. _9899_7.24.2.5p4:
 
-:ref:`4 <9899_7.24.2.5p4>` EXAMPLE The following shows the use of the vfwprintf function in a general error-reporting routine.
+.. container:: snum
+
+   :ref:`4 <9899_7.24.2.5p4>`
+
+EXAMPLE The following shows the use of the vfwprintf function in a general error-reporting routine.
 
 ::
 

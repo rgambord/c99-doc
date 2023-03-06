@@ -5,11 +5,19 @@ F.9.9.2 The fmax functions
 
 .. _9899_F.9.9.2p1:
 
-:ref:`1 <9899_F.9.9.2p1>` If just one argument is a NaN, the fmax functions return the other argument (if both arguments are NaNs, the functions return a NaN).
+.. container:: snum
+
+   :ref:`1 <9899_F.9.9.2p1>`
+
+If just one argument is a NaN, the fmax functions return the other argument (if both arguments are NaNs, the functions return a NaN).
 
 .. _9899_F.9.9.2p2:
 
-:ref:`2 <9899_F.9.9.2p2>` The body of the fmax function might be\ [#9899_note323]_
+.. container:: snum
+
+   :ref:`2 <9899_F.9.9.2p2>`
+
+The body of the fmax function might be\ [#9899_note323]_
 
 ::
 

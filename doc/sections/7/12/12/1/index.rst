@@ -7,7 +7,11 @@
 
 .. _9899_7.12.12.1p1:
 
-:ref:`1 <9899_7.12.12.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.12.1p1>`
+
+
 
 ::
 
@@ -20,7 +24,11 @@
 
 .. _9899_7.12.12.1p2:
 
-:ref:`2 <9899_7.12.12.1p2>` The fdim functions determine the positive difference between their arguments:
+.. container:: snum
+
+   :ref:`2 <9899_7.12.12.1p2>`
+
+The fdim functions determine the positive difference between their arguments:
 
 ::
 
@@ -34,5 +42,9 @@ A range error may occur.
 
 .. _9899_7.12.12.1p3:
 
-:ref:`3 <9899_7.12.12.1p3>` The fdim functions return the positive difference value.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.12.1p3>`
+
+The fdim functions return the positive difference value.
 

@@ -118,7 +118,7 @@ A.1.1 Lexical elements
             punctuator
    
    
-      .. container:: syntax-rule
+      .. container:: syntax-text-rule
        
          each non-white-space character that cannot be one of the above
 

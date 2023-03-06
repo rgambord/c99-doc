@@ -5,5 +5,9 @@
 
 .. _9899_6.11.5p1:
 
-:ref:`1 <9899_6.11.5p1>` The placement of a storage-class specifier other than at the beginning of the declaration specifiers in a declaration is an obsolescent feature.
+.. container:: snum
+
+   :ref:`1 <9899_6.11.5p1>`
+
+The placement of a storage-class specifier other than at the beginning of the declaration specifiers in a declaration is an obsolescent feature.
 

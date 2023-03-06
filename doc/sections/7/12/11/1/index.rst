@@ -7,7 +7,11 @@
 
 .. _9899_7.12.11.1p1:
 
-:ref:`1 <9899_7.12.11.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.11.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.11.1p2:
 
-:ref:`2 <9899_7.12.11.1p2>` The copysign functions produce a value with the magnitude of x and the sign of y. They produce a NaN (with the sign of y) if x is a NaN. On implementations that represent a signed zero but do not treat negative zero consistently in arithmetic operations, the copysign functions regard the sign of zero as positive.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.11.1p2>`
+
+The copysign functions produce a value with the magnitude of x and the sign of y. They produce a NaN (with the sign of y) if x is a NaN. On implementations that represent a signed zero but do not treat negative zero consistently in arithmetic operations, the copysign functions regard the sign of zero as positive.
 
 .. rubric:: Returns
 
 .. _9899_7.12.11.1p3:
 
-:ref:`3 <9899_7.12.11.1p3>` The copysign functions return a value with the magnitude of x and the sign of y.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.11.1p3>`
+
+The copysign functions return a value with the magnitude of x and the sign of y.
 

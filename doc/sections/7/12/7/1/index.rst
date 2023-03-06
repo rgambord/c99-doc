@@ -7,7 +7,11 @@
 
 .. _9899_7.12.7.1p1:
 
-:ref:`1 <9899_7.12.7.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.7.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.7.1p2:
 
-:ref:`2 <9899_7.12.7.1p2>` The cbrt functions compute the real cube root of x.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.7.1p2>`
+
+The cbrt functions compute the real cube root of x.
 
 .. rubric:: Returns
 
 .. _9899_7.12.7.1p3:
 
-:ref:`3 <9899_7.12.7.1p3>` The cbrt functions return x\ :sup:`1/3`.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.7.1p3>`
+
+The cbrt functions return x\ :sup:`1/3`.
 

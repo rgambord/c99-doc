@@ -7,19 +7,35 @@
 
 .. _9899_6.9.2p1:
 
-:ref:`1 <9899_6.9.2p1>` If the declaration of an identifier for an object has file scope and an initializer, the declaration is an external definition for the identifier.
+.. container:: snum
+
+   :ref:`1 <9899_6.9.2p1>`
+
+If the declaration of an identifier for an object has file scope and an initializer, the declaration is an external definition for the identifier.
 
 .. _9899_6.9.2p2:
 
-:ref:`2 <9899_6.9.2p2>` A declaration of an identifier for an object that has file scope without an initializer, and without a storage-class specifier or with the storage-class specifier static, constitutes a tentative definition. If a translation unit contains one or more tentative definitions for an identifier, and the translation unit contains no external definition for that identifier, then the behavior is exactly as if the translation unit contains a file scope declaration of that identifier, with the composite type as of the end of the translation unit, with an initializer equal to 0.
+.. container:: snum
+
+   :ref:`2 <9899_6.9.2p2>`
+
+A declaration of an identifier for an object that has file scope without an initializer, and without a storage-class specifier or with the storage-class specifier static, constitutes a tentative definition. If a translation unit contains one or more tentative definitions for an identifier, and the translation unit contains no external definition for that identifier, then the behavior is exactly as if the translation unit contains a file scope declaration of that identifier, with the composite type as of the end of the translation unit, with an initializer equal to 0.
 
 .. _9899_6.9.2p3:
 
-:ref:`3 <9899_6.9.2p3>` If the declaration of an identifier for an object is a tentative definition and has internal linkage, the declared type shall not be an incomplete type.
+.. container:: snum
+
+   :ref:`3 <9899_6.9.2p3>`
+
+If the declaration of an identifier for an object is a tentative definition and has internal linkage, the declared type shall not be an incomplete type.
 
 .. _9899_6.9.2p4:
 
-:ref:`4 <9899_6.9.2p4>` EXAMPLE 1
+.. container:: snum
+
+   :ref:`4 <9899_6.9.2p4>`
+
+EXAMPLE 1
 
 ::
 
@@ -41,7 +57,11 @@
 
 .. _9899_6.9.2p5:
 
-:ref:`5 <9899_6.9.2p5>` EXAMPLE 2 If at the end of the translation unit containing
+.. container:: snum
+
+   :ref:`5 <9899_6.9.2p5>`
+
+EXAMPLE 2 If at the end of the translation unit containing
 
 ::
 

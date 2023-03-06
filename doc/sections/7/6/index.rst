@@ -15,11 +15,19 @@
 
 .. _9899_7.6p1:
 
-:ref:`1 <9899_7.6p1>` The header :ref:`\<fenv.h> <9899_7.6>` declares two types and several macros and functions to provide access to the floating-point environment. The floating-point environment refers collectively to any floating-point status flags and control modes supported by the implementation.\ [#9899_note178]_ A floating-point status flag is a system variable whose value is set (but never cleared) when a floating-point exception is raised, which occurs as a side effect of exceptional floating-point arithmetic to provide auxiliary information.\ [#9899_note179]_ A floating- point control mode is a system variable whose value may be set by the user to affect the subsequent behavior of floating-point arithmetic.
+.. container:: snum
+
+   :ref:`1 <9899_7.6p1>`
+
+The header :ref:`\<fenv.h> <9899_7.6>` declares two types and several macros and functions to provide access to the floating-point environment. The floating-point environment refers collectively to any floating-point status flags and control modes supported by the implementation.\ [#9899_note178]_ A floating-point status flag is a system variable whose value is set (but never cleared) when a floating-point exception is raised, which occurs as a side effect of exceptional floating-point arithmetic to provide auxiliary information.\ [#9899_note179]_ A floating- point control mode is a system variable whose value may be set by the user to affect the subsequent behavior of floating-point arithmetic.
 
 .. _9899_7.6p2:
 
-:ref:`2 <9899_7.6p2>` Certain programming conventions support the intended model of use for the floating- point environment:[#9899_note180]_
+.. container:: snum
+
+   :ref:`2 <9899_7.6p2>`
+
+Certain programming conventions support the intended model of use for the floating- point environment:[#9899_note180]_
 
 -  a function call does not alter its caller's floating-point control modes, clear its caller's floating-point status flags, nor depend on the state of its caller's floating-point status flags unless the function is so documented;
 -  a function call is assumed to require default floating-point control modes, unless its documentation promises otherwise;
@@ -27,7 +35,11 @@
 
 .. _9899_7.6p3:
 
-:ref:`3 <9899_7.6p3>` The type
+.. container:: snum
+
+   :ref:`3 <9899_7.6p3>`
+
+The type
 
 ::
 
@@ -37,7 +49,11 @@ represents the entire floating-point environment.
 
 .. _9899_7.6p4:
 
-:ref:`4 <9899_7.6p4>` The type
+.. container:: snum
+
+   :ref:`4 <9899_7.6p4>`
+
+The type
 
 ::
 
@@ -47,7 +63,11 @@ represents the floating-point status flags collectively, including any status th
 
 .. _9899_7.6p5:
 
-:ref:`5 <9899_7.6p5>` Each of the macros
+.. container:: snum
+
+   :ref:`5 <9899_7.6p5>`
+
+Each of the macros
 
 ::
 
@@ -61,7 +81,11 @@ is defined if and only if the implementation supports the floating-point excepti
 
 .. _9899_7.6p6:
 
-:ref:`6 <9899_7.6p6>` The macro
+.. container:: snum
+
+   :ref:`6 <9899_7.6p6>`
+
+The macro
 
 ::
 
@@ -71,7 +95,11 @@ is simply the bitwise OR of all floating-point exception macros defined by the i
 
 .. _9899_7.6p7:
 
-:ref:`7 <9899_7.6p7>` Each of the macros
+.. container:: snum
+
+   :ref:`7 <9899_7.6p7>`
+
+Each of the macros
 
 ::
 
@@ -84,17 +112,25 @@ is defined if and only if the implementation supports getting and setting the re
 
 .. _9899_7.6p8:
 
-:ref:`8 <9899_7.6p8>` The macro
+.. container:: snum
+
+   :ref:`8 <9899_7.6p8>`
+
+The macro
 
 ::
 
     FE_DFL_ENV
 
-represents the default floating-point environment -- the one installed at program startup -- and has type ''pointer to const-qualified fenv_t''. It can be used as an argument to :ref:`\<fenv.h> <9899_7.6>` functions that manage the floating-point environment.
+represents the default floating-point environment -- the one installed at program startup -- and has type "pointer to const-qualified fenv_t". It can be used as an argument to :ref:`\<fenv.h> <9899_7.6>` functions that manage the floating-point environment.
 
 .. _9899_7.6p9:
 
-:ref:`9 <9899_7.6p9>` Additional implementation-defined environments, with macro definitions beginning with FE\_ and an uppercase letter, and having type ''pointer to const-qualified fenv_t'', may also be specified by the implementation.
+.. container:: snum
+
+   :ref:`9 <9899_7.6p9>`
+
+Additional implementation-defined environments, with macro definitions beginning with FE\_ and an uppercase letter, and having type "pointer to const-qualified fenv_t", may also be specified by the implementation.
 
 
 

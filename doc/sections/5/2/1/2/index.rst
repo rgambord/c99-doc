@@ -5,7 +5,11 @@
 
 .. _9899_5.2.1.2p1:
 
-:ref:`1 <9899_5.2.1.2p1>` The source character set may contain multibyte characters, used to represent members of the extended character set. The execution character set may also contain multibyte characters, which need not have the same encoding as for the source character set. For both character sets, the following shall hold:
+.. container:: snum
+
+   :ref:`1 <9899_5.2.1.2p1>`
+
+The source character set may contain multibyte characters, used to represent members of the extended character set. The execution character set may also contain multibyte characters, which need not have the same encoding as for the source character set. For both character sets, the following shall hold:
 
 -  The basic character set shall be present and each character shall be encoded as a single byte.
 -  The presence, meaning, and representation of any additional members is locale- specific.
@@ -14,7 +18,11 @@
 
 .. _9899_5.2.1.2p2:
 
-:ref:`2 <9899_5.2.1.2p2>` For source files, the following shall hold:
+.. container:: snum
+
+   :ref:`2 <9899_5.2.1.2p2>`
+
+For source files, the following shall hold:
 
 -  An identifier, comment, string literal, character constant, or header name shall begin and end in the initial shift state.
 -  An identifier, comment, string literal, character constant, or header name shall consist of a sequence of valid multibyte characters.

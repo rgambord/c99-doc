@@ -13,5 +13,9 @@
 
 .. _9899_7.25.3p1:
 
-:ref:`1 <9899_7.25.3p1>` The header :ref:`\<wctype.h> <9899_7.25>` declares several functions useful for mapping wide characters.
+.. container:: snum
+
+   :ref:`1 <9899_7.25.3p1>`
+
+The header :ref:`\<wctype.h> <9899_7.25>` declares several functions useful for mapping wide characters.
 

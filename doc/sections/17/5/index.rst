@@ -28,5 +28,9 @@ J.5 Common extensions
 
 .. _9899_J.5p1:
 
-:ref:`1 <9899_J.5p1>` The following extensions are widely used in many systems, but are not portable to all implementations. The inclusion of any extension that may cause a strictly conforming program to become invalid renders an implementation nonconforming. Examples of such extensions are new keywords, extra library functions declared in standard headers, or predefined macros with names that do not begin with an underscore.
+.. container:: snum
+
+   :ref:`1 <9899_J.5p1>`
+
+The following extensions are widely used in many systems, but are not portable to all implementations. The inclusion of any extension that may cause a strictly conforming program to become invalid renders an implementation nonconforming. Examples of such extensions are new keywords, extra library functions declared in standard headers, or predefined macros with names that do not begin with an underscore.
 

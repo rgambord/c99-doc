@@ -1,4 +1,4 @@
-.. _9899_section-23:
+.. _9899_3.17:
 
 3.17 value
 ~~~~~~~~~~
@@ -14,8 +14,10 @@
 
 .. _9899_3.17p1:
 
-:ref:`1 <9899_3.17p1>` value
-    precise meaning of the contents of an object when interpreted as having a specific type
+.. container:: snum
 
-.. _9899_3.17.1:
+   :ref:`1 <9899_3.17p1>`
+
+value
+    precise meaning of the contents of an object when interpreted as having a specific type
 

@@ -17,7 +17,11 @@
 
 .. _9899_6.4.4p1:
 
-:ref:`1 <9899_6.4.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.4p1>`
+
+
 
 .. container:: syntax-block
 
@@ -67,11 +71,19 @@
 
 .. _9899_6.4.4p2:
 
-:ref:`2 <9899_6.4.4p2>` Each constant shall have a type and the value of a constant shall be in the range of representable values for its type.
+.. container:: snum
+
+   :ref:`2 <9899_6.4.4p2>`
+
+Each constant shall have a type and the value of a constant shall be in the range of representable values for its type.
 
 .. rubric:: Semantics
 
 .. _9899_6.4.4p3:
 
-:ref:`3 <9899_6.4.4p3>` Each constant has a type, determined by its form and value, as detailed later.
+.. container:: snum
+
+   :ref:`3 <9899_6.4.4p3>`
+
+Each constant has a type, determined by its form and value, as detailed later.
 

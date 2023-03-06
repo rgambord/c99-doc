@@ -12,7 +12,11 @@
 
 .. _9899_7.2p1:
 
-:ref:`1 <9899_7.2p1>` The header :ref:`\<assert.h> <9899_7.2>` defines the assert macro and refers to another macro,
+.. container:: snum
+
+   :ref:`1 <9899_7.2p1>`
+
+The header :ref:`\<assert.h> <9899_7.2>` defines the assert macro and refers to another macro,
 
 ::
 
@@ -28,5 +32,9 @@ The assert macro is redefined according to the current state of NDEBUG each time
 
 .. _9899_7.2p2:
 
-:ref:`2 <9899_7.2p2>` The assert macro shall be implemented as a macro, not as an actual function. If the macro definition is suppressed in order to access an actual function, the behavior is undefined.
+.. container:: snum
+
+   :ref:`2 <9899_7.2p2>`
+
+The assert macro shall be implemented as a macro, not as an actual function. If the macro definition is suppressed in order to access an actual function, the behavior is undefined.
 

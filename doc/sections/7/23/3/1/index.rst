@@ -7,7 +7,11 @@
 
 .. _9899_7.23.3.1p1:
 
-:ref:`1 <9899_7.23.3.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.23.3.1p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.23.3.1p2:
 
-:ref:`2 <9899_7.23.3.1p2>` The asctime function converts the broken-down time in the structure pointed to by timeptr into a string in the form
+.. container:: snum
+
+   :ref:`2 <9899_7.23.3.1p2>`
+
+The asctime function converts the broken-down time in the structure pointed to by timeptr into a string in the form
 
 .. code-block:: text
 
@@ -51,5 +59,9 @@ using the equivalent of the following algorithm.
 
 .. _9899_7.23.3.1p3:
 
-:ref:`3 <9899_7.23.3.1p3>` The asctime function returns a pointer to the string.
+.. container:: snum
+
+   :ref:`3 <9899_7.23.3.1p3>`
+
+The asctime function returns a pointer to the string.
 

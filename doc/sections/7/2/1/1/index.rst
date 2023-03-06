@@ -7,7 +7,11 @@
 
 .. _9899_7.2.1.1p1:
 
-:ref:`1 <9899_7.2.1.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.2.1.1p1>`
+
+
 
 ::
 
@@ -18,15 +22,26 @@
 
 .. _9899_7.2.1.1p2:
 
-:ref:`2 <9899_7.2.1.1p2>` The assert macro puts diagnostic tests into programs; it expands to a void expression. When it is executed, if expression (which shall have a scalar type) is false (that is, compares equal to 0), the assert macro writes information about the particular call that failed (including the text of the argument, the name of the source file, the source line number, and the name of the enclosing function -- the latter are respectively the values of the preprocessing macros \__FILE\_\_ and \__LINE\_\_ and of the identifier \__func\_\_) on the standard error stream in an implementation-defined format.\ [#9899_note165]_ It then calls the abort function.
+.. container:: snum
+
+   :ref:`2 <9899_7.2.1.1p2>`
+
+The assert macro puts diagnostic tests into programs; it expands to a void expression. When it is executed, if expression (which shall have a scalar type) is false (that is, compares equal to 0), the assert macro writes information about the particular call that failed (including the text of the argument, the name of the source file, the source line number, and the name of the enclosing function -- the latter are respectively the values of the preprocessing macros \__FILE\_\_ and \__LINE\_\_ and of the identifier \__func\_\_) on the standard error stream in an implementation-defined format.\ [#9899_note165]_ It then calls the abort function.
 
 .. rubric:: Returns
 
 .. _9899_7.2.1.1p3:
 
-:ref:`3 <9899_7.2.1.1p3>` The assert macro returns no value.
+.. container:: snum
 
-**Forward references**: the abort function (:ref:`7.20.4.1 <9899_7.20.4.1>`).
+   :ref:`3 <9899_7.2.1.1p3>`
+
+The assert macro returns no value.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.20.4.1`
 
 
 

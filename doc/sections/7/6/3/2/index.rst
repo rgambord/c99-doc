@@ -7,7 +7,11 @@
 
 .. _9899_7.6.3.2p1:
 
-:ref:`1 <9899_7.6.3.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.6.3.2p1>`
+
+
 
 ::
 
@@ -18,17 +22,29 @@
 
 .. _9899_7.6.3.2p2:
 
-:ref:`2 <9899_7.6.3.2p2>` The fesetround function establishes the rounding direction represented by its argument round. If the argument is not equal to the value of a rounding direction macro, the rounding direction is not changed.
+.. container:: snum
+
+   :ref:`2 <9899_7.6.3.2p2>`
+
+The fesetround function establishes the rounding direction represented by its argument round. If the argument is not equal to the value of a rounding direction macro, the rounding direction is not changed.
 
 .. rubric:: Returns
 
 .. _9899_7.6.3.2p3:
 
-:ref:`3 <9899_7.6.3.2p3>` The fesetround function returns zero if and only if the requested rounding direction was established.
+.. container:: snum
+
+   :ref:`3 <9899_7.6.3.2p3>`
+
+The fesetround function returns zero if and only if the requested rounding direction was established.
 
 .. _9899_7.6.3.2p4:
 
-:ref:`4 <9899_7.6.3.2p4>` EXAMPLE Save, set, and restore the rounding direction. Report an error and abort if setting the rounding direction fails.
+.. container:: snum
+
+   :ref:`4 <9899_7.6.3.2p4>`
+
+EXAMPLE Save, set, and restore the rounding direction. Report an error and abort if setting the rounding direction fails.
 
 ::
 

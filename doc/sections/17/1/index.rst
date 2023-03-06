@@ -5,7 +5,11 @@ J.1 Unspecified behavior
 
 .. _9899_J.1p1:
 
-:ref:`1 <9899_J.1p1>` The following are unspecified:
+.. container:: snum
+
+   :ref:`1 <9899_J.1p1>`
+
+The following are unspecified:
 
 -  The manner and timing of static initialization (:ref:`5.1.2 <9899_5.1.2>`).
 -  The termination status returned to the hosted environment if the return type of main is not compatible with int (:ref:`5.1.2.2.3 <9899_5.1.2.2.3>`).
@@ -33,7 +37,7 @@ J.1 Unspecified behavior
 -  When a fully expanded macro replacement list contains a function-like macro name as its last preprocessing token and the next preprocessing token from the source file is a (, and the fully expanded replacement of that macro ends with the name of the first macro and the next preprocessing token from the source file is again a (, whether that is considered a nested replacement (:ref:`6.10.3 <9899_6.10.3>`).
 -  The order in which # and ## operations are evaluated during macro substitution (:ref:`6.10.3.2 <9899_6.10.3.2>`, :ref:`6.10.3.3 <9899_6.10.3.3>`).
 -  Whether errno is a macro or an identifier with external linkage (:ref:`7.5 <9899_7.5>`).
--  The state of the floating-point status flags when execution passes from a part of the program translated with FENV_ACCESS ''off'' to a part translated with FENV_ACCESS ''on'' (:ref:`7.6.1 <9899_7.6.1>`).
+-  The state of the floating-point status flags when execution passes from a part of the program translated with FENV_ACCESS "off" to a part translated with FENV_ACCESS "on" (:ref:`7.6.1 <9899_7.6.1>`).
 -  The order in which feraiseexcept raises floating-point exceptions, except as stated in :ref:`F.7.6 <9899_F.7.6>` (:ref:`7.6.2.3 <9899_7.6.2.3>`).
 -  Whether math_errhandling is a macro or an identifier with external linkage (:ref:`7.12 <9899_7.12>`).
 -  The results of the frexp functions when the specified value is not a floating-point number (:ref:`7.12.6.4 <9899_7.12.6.4>`).
@@ -54,10 +58,10 @@ J.1 Unspecified behavior
 -  The encoding of the calendar time returned by the time function (:ref:`7.23.2.4 <9899_7.23.2.4>`).
 -  The characters stored by the strftime or wcsftime function if any of the time values being converted is outside the normal range (:ref:`7.23.3.5 <9899_7.23.3.5>`, :ref:`7.24.5.1 <9899_7.24.5.1>`).
 -  The conversion state after an encoding error occurs (:ref:`7.24.6.3.2 <9899_7.24.6.3.2>`, :ref:`7.24.6.3.3 <9899_7.24.6.3.3>`, :ref:`7.24.6.4.1 <9899_7.24.6.4.1>`, :ref:`7.24.6.4.2 <9899_7.24.6.4.2>`,
--  The resulting value when the ''invalid'' floating-point exception is raised during IEC 60559 floating to integer conversion (:ref:`F.4 <9899_F.4>`).
--  Whether conversion of non-integer IEC 60559 floating values to integer raises the ''inexact'' floating-point exception (:ref:`F.4 <9899_F.4>`).
--  Whether or when library functions in :ref:`\<math.h> <9899_7.12>` raise the ''inexact'' floating-point exception in an IEC 60559 conformant implementation (:ref:`F.9 <9899_F.9>`).
--  Whether or when library functions in :ref:`\<math.h> <9899_7.12>` raise an undeserved ''underflow'' floating-point exception in an IEC 60559 conformant implementation (:ref:`F.9 <9899_F.9>`).
+-  The resulting value when the "invalid" floating-point exception is raised during IEC 60559 floating to integer conversion (:ref:`F.4 <9899_F.4>`).
+-  Whether conversion of non-integer IEC 60559 floating values to integer raises the "inexact" floating-point exception (:ref:`F.4 <9899_F.4>`).
+-  Whether or when library functions in :ref:`\<math.h> <9899_7.12>` raise the "inexact" floating-point exception in an IEC 60559 conformant implementation (:ref:`F.9 <9899_F.9>`).
+-  Whether or when library functions in :ref:`\<math.h> <9899_7.12>` raise an undeserved "underflow" floating-point exception in an IEC 60559 conformant implementation (:ref:`F.9 <9899_F.9>`).
 -  The exponent value stored by frexp for a NaN or infinity (:ref:`F.9.3.4 <9899_F.9.3.4>`).
 -  The numeric result returned by the lrint, llrint, lround, and llround functions if the rounded value is outside the range of the return type (:ref:`F.9.6.5 <9899_F.9.6.5>`, :ref:`F.9.6.7 <9899_F.9.6.7>`).
 -  The sign of one part of the complex result of several math functions for certain exceptional values in IEC 60559 compatible implementations (:ref:`G.6.1.1 <9899_G.6.1.1>`, :ref:`G.6.2.2 <9899_G.6.2.2>`, :ref:`G.6.2.3 <9899_G.6.2.3>`, :ref:`G.6.2.4 <9899_G.6.2.4>`, :ref:`G.6.2.5 <9899_G.6.2.5>`, :ref:`G.6.2.6 <9899_G.6.2.6>`, :ref:`G.6.3.1 <9899_G.6.3.1>`, :ref:`G.6.4.2 <9899_G.6.4.2>`).

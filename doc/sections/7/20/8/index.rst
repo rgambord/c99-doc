@@ -13,5 +13,9 @@
 
 .. _9899_7.20.8p1:
 
-:ref:`1 <9899_7.20.8p1>` The behavior of the multibyte string functions is affected by the LC_CTYPE category of the current locale.
+.. container:: snum
+
+   :ref:`1 <9899_7.20.8p1>`
+
+The behavior of the multibyte string functions is affected by the LC_CTYPE category of the current locale.
 

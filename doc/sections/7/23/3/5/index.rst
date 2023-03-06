@@ -7,7 +7,11 @@
 
 .. _9899_7.23.3.5p1:
 
-:ref:`1 <9899_7.23.3.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.23.3.5p1>`
+
+
 
 ::
 
@@ -21,11 +25,19 @@
 
 .. _9899_7.23.3.5p2:
 
-:ref:`2 <9899_7.23.3.5p2>` The strftime function places characters into the array pointed to by s as controlled by the string pointed to by format. The format shall be a multibyte character sequence, beginning and ending in its initial shift state. The format string consists of zero or more conversion specifiers and ordinary multibyte characters. A conversion specifier consists of a % character, possibly followed by an E or O modifier character (described below), followed by a character that determines the behavior of the conversion specifier. All ordinary multibyte characters (including the terminating null character) are copied unchanged into the array. If copying takes place between objects that overlap, the behavior is undefined. No more than maxsize characters are placed into the array.
+.. container:: snum
+
+   :ref:`2 <9899_7.23.3.5p2>`
+
+The strftime function places characters into the array pointed to by s as controlled by the string pointed to by format. The format shall be a multibyte character sequence, beginning and ending in its initial shift state. The format string consists of zero or more conversion specifiers and ordinary multibyte characters. A conversion specifier consists of a % character, possibly followed by an E or O modifier character (described below), followed by a character that determines the behavior of the conversion specifier. All ordinary multibyte characters (including the terminating null character) are copied unchanged into the array. If copying takes place between objects that overlap, the behavior is undefined. No more than maxsize characters are placed into the array.
 
 .. _9899_7.23.3.5p3:
 
-:ref:`3 <9899_7.23.3.5p3>` Each conversion specifier is replaced by appropriate characters as described in the following list. The appropriate characters are determined using the LC_TIME category of the current locale and by the values of zero or more members of the broken-down time structure pointed to by timeptr, as specified in brackets in the description. If any of the specified values is outside the normal range, the characters stored are unspecified.
+.. container:: snum
+
+   :ref:`3 <9899_7.23.3.5p3>`
+
+Each conversion specifier is replaced by appropriate characters as described in the following list. The appropriate characters are determined using the LC_TIME category of the current locale and by the values of zero or more members of the broken-down time structure pointed to by timeptr, as specified in brackets in the description. If any of the specified values is outside the normal range, the characters stored are unspecified.
 
 %a
    is replaced by the locale's abbreviated weekday name. [tm_wday]
@@ -42,17 +54,17 @@
 %d
    is replaced by the day of the month as a decimal number (01-31). [tm_mday]
 %D
-   is equivalent to ''%m/%d/%y''. [tm_mon, tm_mday, tm_year]
+   is equivalent to ''%m/%d/%y". [tm_mon, tm_mday, tm_year]
 %e
    is replaced by the day of the month as a decimal number (1-31); a single digit is preceded by a space. [tm_mday]
 %F
-   is equivalent to ''%Y-%m-%d'' (the ISO 8601 date format). [tm_year, tm_mon, tm_mday]
+   is equivalent to ''%Y-%m-%d" (the ISO 8601 date format). [tm_year, tm_mon, tm_mday]
 %g
    is replaced by the last 2 digits of the week-based year (see below) as a decimal number (00-99). [tm_year, tm_wday, tm_yday]
 %G
    is replaced by the week-based year (see below) as a decimal number (e.g., 1997). [tm_year, tm_wday, tm_yday]
 %h
-   is equivalent to ''%b''. [tm_mon]
+   is equivalent to ''%b". [tm_mon]
 %H
    is replaced by the hour (24-hour clock) as a decimal number (00-23). [tm_hour]
 %I
@@ -70,13 +82,13 @@
 %r
    is replaced by the locale's 12-hour clock time. [tm_hour, tm_min, tm_sec]
 %R
-   is equivalent to ''%H:%M''. [tm_hour, tm_min]
+   is equivalent to ''%H:%M". [tm_hour, tm_min]
 %S
    is replaced by the second as a decimal number (00-60). [tm_sec]
 %t
    is replaced by a horizontal-tab character.
 %T
-   is equivalent to ''%H:%M:%S'' (the ISO 8601 time format). [tm_hour, tm_min, tm_sec]
+   is equivalent to ''%H:%M:%S" (the ISO 8601 time format). [tm_hour, tm_min, tm_sec]
 %u
    is replaced by the ISO 8601 weekday as a decimal number (1-7), where Monday is 1. [tm_wday]
 %U
@@ -96,7 +108,7 @@
 %Y
    is replaced by the year as a decimal number (e.g., 1997). [tm_year]
 %z
-   is replaced by the offset from UTC in the ISO 8601 format ''-0430'' (meaning 4 hours 30 minutes behind UTC, west of Greenwich), or by no characters if no time zone is determinable. [tm_isdst]
+   is replaced by the offset from UTC in the ISO 8601 format ''-0430" (meaning 4 hours 30 minutes behind UTC, west of Greenwich), or by no characters if no time zone is determinable. [tm_isdst]
 %Z
    is replaced by the locale's time zone name or abbreviation, or by no characters if no time zone is determinable. [tm_isdst]
 \%\%
@@ -104,7 +116,11 @@
 
 .. _9899_7.23.3.5p4:
 
-:ref:`4 <9899_7.23.3.5p4>` Some conversion specifiers can be modified by the inclusion of an E or O modifier character to indicate an alternative format or specification. If the alternative format or specification does not exist for the current locale, the modifier is ignored.
+.. container:: snum
+
+   :ref:`4 <9899_7.23.3.5p4>`
+
+Some conversion specifiers can be modified by the inclusion of an E or O modifier character to indicate an alternative format or specification. If the alternative format or specification does not exist for the current locale, the modifier is ignored.
 
 %Ec
    is replaced by the locale's alternative date and time representation.
@@ -147,32 +163,44 @@
 
 .. _9899_7.23.3.5p5:
 
-:ref:`5 <9899_7.23.3.5p5>` %g, %G, and %V give values according to the ISO 8601 week-based year. In this system, weeks begin on a Monday and week 1 of the year is the week that includes January 4th, which is also the week that includes the first Thursday of the year, and is also the first week that contains at least four days in the year. If the first Monday of January is the 2nd, 3rd, or 4th, the preceding days are part of the last week of the preceding year; thus, for Saturday 2nd January 1999, %G is replaced by 1998 and %V is replaced by 53. If December 29th, 30th, or 31st is a Monday, it and any following days are part of week 1 of the following year. Thus, for Tuesday 30th December 1997, %G is replaced by 1998 and %V is replaced by 01.
+.. container:: snum
+
+   :ref:`5 <9899_7.23.3.5p5>`
+
+%g, %G, and %V give values according to the ISO 8601 week-based year. In this system, weeks begin on a Monday and week 1 of the year is the week that includes January 4th, which is also the week that includes the first Thursday of the year, and is also the first week that contains at least four days in the year. If the first Monday of January is the 2nd, 3rd, or 4th, the preceding days are part of the last week of the preceding year; thus, for Saturday 2nd January 1999, %G is replaced by 1998 and %V is replaced by 53. If December 29th, 30th, or 31st is a Monday, it and any following days are part of week 1 of the following year. Thus, for Tuesday 30th December 1997, %G is replaced by 1998 and %V is replaced by 01.
 
 .. _9899_7.23.3.5p6:
 
-:ref:`6 <9899_7.23.3.5p6>` If a conversion specifier is not one of the above, the behavior is undefined.
+.. container:: snum
+
+   :ref:`6 <9899_7.23.3.5p6>`
+
+If a conversion specifier is not one of the above, the behavior is undefined.
 
 .. _9899_7.23.3.5p7:
 
-:ref:`7 <9899_7.23.3.5p7>` In the "C" locale, the E and O modifiers are ignored and the replacement strings for the following specifiers are:
+.. container:: snum
+
+   :ref:`7 <9899_7.23.3.5p7>`
+
+In the "C" locale, the E and O modifiers are ignored and the replacement strings for the following specifiers are:
 
 %a
    the first three characters of %A.
 %A
-   one of ''Sunday'', ''Monday'', \.\.\. , ''Saturday''.
+   one of "Sunday", "Monday", \.\.\. , "Saturday".
 %b
    the first three characters of %B.
 %B
-   one of ''January'', ''February'', \.\.\. , ''December''.
+   one of "January", "February", \.\.\. , "December".
 %c
-   equivalent to ''%a %b %e %T %Y''.
+   equivalent to ''%a %b %e %T %Y".
 %p
-   one of ''AM'' or ''PM''.
+   one of "AM" or "PM".
 %r
-   equivalent to ''%I:%M:%S %p''.
+   equivalent to ''%I:%M:%S %p".
 %x
-   equivalent to ''%m/%d/%y''.
+   equivalent to ''%m/%d/%y".
 %X
    equivalent to %T.
 %Z
@@ -182,5 +210,9 @@
 
 .. _9899_7.23.3.5p8:
 
-:ref:`8 <9899_7.23.3.5p8>` If the total number of resulting characters including the terminating null character is not more than maxsize, the strftime function returns the number of characters placed into the array pointed to by s not including the terminating null character. Otherwise, zero is returned and the contents of the array are indeterminate.
+.. container:: snum
+
+   :ref:`8 <9899_7.23.3.5p8>`
+
+If the total number of resulting characters including the terminating null character is not more than maxsize, the strftime function returns the number of characters placed into the array pointed to by s not including the terminating null character. Otherwise, zero is returned and the contents of the array are indeterminate.
 

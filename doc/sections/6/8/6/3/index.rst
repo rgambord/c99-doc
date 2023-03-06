@@ -7,11 +7,19 @@
 
 .. _9899_6.8.6.3p1:
 
-:ref:`1 <9899_6.8.6.3p1>` A break statement shall appear only in or as a switch body or loop body.
+.. container:: snum
+
+   :ref:`1 <9899_6.8.6.3p1>`
+
+A break statement shall appear only in or as a switch body or loop body.
 
 .. rubric:: Semantics
 
 .. _9899_6.8.6.3p2:
 
-:ref:`2 <9899_6.8.6.3p2>` A break statement terminates execution of the smallest enclosing switch or iteration statement.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.6.3p2>`
+
+A break statement terminates execution of the smallest enclosing switch or iteration statement.
 

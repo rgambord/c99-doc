@@ -7,7 +7,11 @@
 
 .. _9899_7.12.3.6p1:
 
-:ref:`1 <9899_7.12.3.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.3.6p1>`
+
+
 
 ::
 
@@ -18,13 +22,21 @@
 
 .. _9899_7.12.3.6p2:
 
-:ref:`2 <9899_7.12.3.6p2>` The signbit macro determines whether the sign of its argument value is negative.\ [#9899_note207]_
+.. container:: snum
+
+   :ref:`2 <9899_7.12.3.6p2>`
+
+The signbit macro determines whether the sign of its argument value is negative.\ [#9899_note207]_
 
 .. rubric:: Returns
 
 .. _9899_7.12.3.6p3:
 
-:ref:`3 <9899_7.12.3.6p3>` The signbit macro returns a nonzero value if and only if the sign of its argument value is negative.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.3.6p3>`
+
+The signbit macro returns a nonzero value if and only if the sign of its argument value is negative.
 
 
 

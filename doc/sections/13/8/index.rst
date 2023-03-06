@@ -15,5 +15,9 @@ F.8 Optimization
 
 .. _9899_F.8p1:
 
-:ref:`1 <9899_F.8p1>` This section identifies code transformations that might subvert IEC 60559-specified behavior, and others that do not.
+.. container:: snum
+
+   :ref:`1 <9899_F.8p1>`
+
+This section identifies code transformations that might subvert IEC 60559-specified behavior, and others that do not.
 

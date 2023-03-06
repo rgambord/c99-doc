@@ -7,7 +7,11 @@
 
 .. _9899_7.12.4.1p1:
 
-:ref:`1 <9899_7.12.4.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.4.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.12.4.1p2:
 
-:ref:`2 <9899_7.12.4.1p2>` The acos functions compute the principal value of the arc cosine of x. A domain error occurs for arguments not in the interval [-1, +1].
+.. container:: snum
+
+   :ref:`2 <9899_7.12.4.1p2>`
+
+The acos functions compute the principal value of the arc cosine of x. A domain error occurs for arguments not in the interval [-1, +1].
 
 .. rubric:: Returns
 
 .. _9899_7.12.4.1p3:
 
-:ref:`3 <9899_7.12.4.1p3>` The acos functions return arccos x in the interval [0, pi ] radians.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.4.1p3>`
+
+The acos functions return arccos x in the interval [0, pi ] radians.
 

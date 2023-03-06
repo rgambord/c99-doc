@@ -5,11 +5,19 @@
 
 .. _9899_6.10.3.5p1:
 
-:ref:`1 <9899_6.10.3.5p1>` A macro definition lasts (independent of block structure) until a corresponding #undef directive is encountered or (if none is encountered) until the end of the preprocessing translation unit. Macro definitions have no significance after translation phase 4.
+.. container:: snum
+
+   :ref:`1 <9899_6.10.3.5p1>`
+
+A macro definition lasts (independent of block structure) until a corresponding `#undef` directive is encountered or (if none is encountered) until the end of the preprocessing translation unit. Macro definitions have no significance after translation phase 4.
 
 .. _9899_6.10.3.5p2:
 
-:ref:`2 <9899_6.10.3.5p2>` A preprocessing directive of the form
+.. container:: snum
+
+   :ref:`2 <9899_6.10.3.5p2>`
+
+A preprocessing directive of the form
 
 .. code-block:: text
 
@@ -19,7 +27,11 @@ causes the specified identifier no longer to be defined as a macro name. It is i
 
 .. _9899_6.10.3.5p3:
 
-:ref:`3 <9899_6.10.3.5p3>` EXAMPLE 1 The simplest use of this facility is to define a ''manifest constant'', as in
+.. container:: snum
+
+   :ref:`3 <9899_6.10.3.5p3>`
+
+EXAMPLE 1 The simplest use of this facility is to define a "manifest constant", as in
 
 ::
 
@@ -28,7 +40,11 @@ causes the specified identifier no longer to be defined as a macro name. It is i
 
 .. _9899_6.10.3.5p4:
 
-:ref:`4 <9899_6.10.3.5p4>` EXAMPLE 2 The following defines a function-like macro whose value is the maximum of its arguments. It has the advantages of working for any compatible types of the arguments and of generating in-line code without the overhead of function calling. It has the disadvantages of evaluating one or the other of its arguments a second time (including side effects) and generating more code than a function if invoked several times. It also cannot have its address taken, as it has none.
+.. container:: snum
+
+   :ref:`4 <9899_6.10.3.5p4>`
+
+EXAMPLE 2 The following defines a function-like macro whose value is the maximum of its arguments. It has the advantages of working for any compatible types of the arguments and of generating in-line code without the overhead of function calling. It has the disadvantages of evaluating one or the other of its arguments a second time (including side effects) and generating more code than a function if invoked several times. It also cannot have its address taken, as it has none.
 
 ::
 
@@ -38,7 +54,11 @@ The parentheses ensure that the arguments and the resulting expression are bound
 
 .. _9899_6.10.3.5p5:
 
-:ref:`5 <9899_6.10.3.5p5>` EXAMPLE 3 To illustrate the rules for redefinition and reexamination, the sequence
+.. container:: snum
+
+   :ref:`5 <9899_6.10.3.5p5>`
+
+EXAMPLE 3 To illustrate the rules for redefinition and reexamination, the sequence
 
 ::
 
@@ -73,7 +93,11 @@ results in
 
 .. _9899_6.10.3.5p6:
 
-:ref:`6 <9899_6.10.3.5p6>` EXAMPLE 4 To illustrate the rules for creating character string literals and concatenating tokens, the sequence
+.. container:: snum
+
+   :ref:`6 <9899_6.10.3.5p6>`
+
+EXAMPLE 4 To illustrate the rules for creating character string literals and concatenating tokens, the sequence
 
 .. code-block:: text
 
@@ -121,7 +145,11 @@ Space around the # and ## tokens in the macro definition is optional.
 
 .. _9899_6.10.3.5p7:
 
-:ref:`7 <9899_6.10.3.5p7>` EXAMPLE 5 To illustrate the rules for placemarker preprocessing tokens, the sequence
+.. container:: snum
+
+   :ref:`7 <9899_6.10.3.5p7>`
+
+EXAMPLE 5 To illustrate the rules for placemarker preprocessing tokens, the sequence
 
 ::
 
@@ -138,7 +166,11 @@ results in
 
 .. _9899_6.10.3.5p8:
 
-:ref:`8 <9899_6.10.3.5p8>` EXAMPLE 6 To demonstrate the redefinition rules, the following sequence is valid.
+.. container:: snum
+
+   :ref:`8 <9899_6.10.3.5p8>`
+
+EXAMPLE 6 To demonstrate the redefinition rules, the following sequence is valid.
 
 ::
 
@@ -160,7 +192,11 @@ But the following redefinitions are invalid:
 
 .. _9899_6.10.3.5p9:
 
-:ref:`9 <9899_6.10.3.5p9>` EXAMPLE 7 Finally, to show the variable argument list macro facilities:
+.. container:: snum
+
+   :ref:`9 <9899_6.10.3.5p9>`
+
+EXAMPLE 7 Finally, to show the variable argument list macro facilities:
 
 ::
 

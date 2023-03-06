@@ -110,30 +110,29 @@ A.1.6 String literals
    
          :
    
-      .. container:: syntax-rule
+      .. container:: syntax-text-rule
        
-         any member of the source character set except the double-quote
+         any member of the source character set except the double-quote |_|
    
          .. container:: syntax-terminal
    
             "
 
-         , backslash
+         , backslash |_|
    
          .. container:: syntax-terminal
    
             \\
 
-         , or
-   
+         , or |_|
+         
          .. container:: syntax-nonterminal
-   
+
             new-line
-   
-         character
+
+         |_| character |_|
    
       .. container:: syntax-rule
-       
    
          .. container:: syntax-nonterminal
    

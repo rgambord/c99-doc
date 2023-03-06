@@ -1,16 +1,18 @@
-.. _9899_section-20:
+.. _9899_3.14:
 
 3.14 object
 ~~~~~~~~~~~
 
 .. _9899_3.14p1:
 
-:ref:`1 <9899_3.14p1>` object
+.. container:: snum
+
+   :ref:`1 <9899_3.14p1>`
+
+object
     region of data storage in the execution environment, the contents of which can represent values
 
 .. _9899_3.14p2:
 
     :ref:`2 <9899_3.14p2>` NOTE When referenced, an object may be interpreted as having a particular type; see :ref:`6.3.2.1 <9899_6.3.2.1>`.
-
-.. _9899_3.15:
 

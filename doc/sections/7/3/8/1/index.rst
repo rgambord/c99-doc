@@ -7,7 +7,11 @@
 
 .. _9899_7.3.8.1p1:
 
-:ref:`1 <9899_7.3.8.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.8.1p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.8.1p2:
 
-:ref:`2 <9899_7.3.8.1p2>` The cabs functions compute the complex absolute value (also called norm, modulus, or magnitude) of z.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.8.1p2>`
+
+The cabs functions compute the complex absolute value (also called norm, modulus, or magnitude) of z.
 
 .. rubric:: Returns
 
 .. _9899_7.3.8.1p3:
 
-:ref:`3 <9899_7.3.8.1p3>` The cabs functions return the complex absolute value.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.8.1p3>`
+
+The cabs functions return the complex absolute value.
 

@@ -7,7 +7,11 @@
 
 .. _9899_6.5.13p1:
 
-:ref:`1 <9899_6.5.13p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.13p1>`
+
+
 
 .. container:: syntax-block
 
@@ -51,15 +55,27 @@
 
 .. _9899_6.5.13p2:
 
-:ref:`2 <9899_6.5.13p2>` Each of the operands shall have scalar type.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.13p2>`
+
+Each of the operands shall have scalar type.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.13p3:
 
-:ref:`3 <9899_6.5.13p3>` The && operator shall yield 1 if both of its operands compare unequal to 0; otherwise, it yields 0. The result has type int.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.13p3>`
+
+The && operator shall yield 1 if both of its operands compare unequal to 0; otherwise, it yields 0. The result has type int.
 
 .. _9899_6.5.13p4:
 
-:ref:`4 <9899_6.5.13p4>` Unlike the bitwise binary & operator, the && operator guarantees left-to-right evaluation; there is a sequence point after the evaluation of the first operand. If the first operand compares equal to 0, the second operand is not evaluated.
+.. container:: snum
+
+   :ref:`4 <9899_6.5.13p4>`
+
+Unlike the bitwise binary & operator, the && operator guarantees left-to-right evaluation; there is a sequence point after the evaluation of the first operand. If the first operand compares equal to 0, the second operand is not evaluated.
 

@@ -5,7 +5,11 @@
 
 .. _9899_7.18.2.2p1:
 
-:ref:`1 <9899_7.18.2.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.18.2.2p1>`
+
+
 
 -  minimum values of minimum-width signed integer types
 

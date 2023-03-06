@@ -5,11 +5,19 @@ H.2.3.3 Rounding styles
 
 .. _9899_H.2.3.3p1:
 
-:ref:`1 <9899_H.2.3.3p1>` The C Standard requires all floating types to use the same radix and rounding style, so that only one identifier for each is provided to map to LIA-1.
+.. container:: snum
+
+   :ref:`1 <9899_H.2.3.3p1>`
+
+The C Standard requires all floating types to use the same radix and rounding style, so that only one identifier for each is provided to map to LIA-1.
 
 .. _9899_H.2.3.3p2:
 
-:ref:`2 <9899_H.2.3.3p2>` The FLT_ROUNDS parameter can be used to indicate the LIA-1 rounding styles:
+.. container:: snum
+
+   :ref:`2 <9899_H.2.3.3p2>`
+
+The FLT_ROUNDS parameter can be used to indicate the LIA-1 rounding styles:
 
 .. code-block:: text
 

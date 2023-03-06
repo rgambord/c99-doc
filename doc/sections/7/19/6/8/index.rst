@@ -7,7 +7,11 @@
 
 .. _9899_7.19.6.8p1:
 
-:ref:`1 <9899_7.19.6.8p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.6.8p1>`
+
+
 
 ::
 
@@ -21,17 +25,29 @@
 
 .. _9899_7.19.6.8p2:
 
-:ref:`2 <9899_7.19.6.8p2>` The vfprintf function is equivalent to fprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vfprintf function does not invoke the va_end macro.\ [#9899_note254]_
+.. container:: snum
+
+   :ref:`2 <9899_7.19.6.8p2>`
+
+The vfprintf function is equivalent to fprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vfprintf function does not invoke the va_end macro.\ [#9899_note254]_
 
 .. rubric:: Returns
 
 .. _9899_7.19.6.8p3:
 
-:ref:`3 <9899_7.19.6.8p3>` The vfprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.6.8p3>`
+
+The vfprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
 
 .. _9899_7.19.6.8p4:
 
-:ref:`4 <9899_7.19.6.8p4>` EXAMPLE The following shows the use of the vfprintf function in a general error-reporting routine.
+.. container:: snum
+
+   :ref:`4 <9899_7.19.6.8p4>`
+
+EXAMPLE The following shows the use of the vfprintf function in a general error-reporting routine.
 
 ::
 

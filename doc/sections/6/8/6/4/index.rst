@@ -7,21 +7,37 @@
 
 .. _9899_6.8.6.4p1:
 
-:ref:`1 <9899_6.8.6.4p1>` A return statement with an expression shall not appear in a function whose return type is void. A return statement without an expression shall only appear in a function whose return type is void.
+.. container:: snum
+
+   :ref:`1 <9899_6.8.6.4p1>`
+
+A return statement with an expression shall not appear in a function whose return type is void. A return statement without an expression shall only appear in a function whose return type is void.
 
 .. rubric:: Semantics
 
 .. _9899_6.8.6.4p2:
 
-:ref:`2 <9899_6.8.6.4p2>` A return statement terminates execution of the current function and returns control to its caller. A function may have any number of return statements.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.6.4p2>`
+
+A return statement terminates execution of the current function and returns control to its caller. A function may have any number of return statements.
 
 .. _9899_6.8.6.4p3:
 
-:ref:`3 <9899_6.8.6.4p3>` If a return statement with an expression is executed, the value of the expression is returned to the caller as the value of the function call expression. If the expression has a type different from the return type of the function in which it appears, the value is converted as if by assignment to an object having the return type of the function.\ [#9899_note139]_
+.. container:: snum
+
+   :ref:`3 <9899_6.8.6.4p3>`
+
+If a return statement with an expression is executed, the value of the expression is returned to the caller as the value of the function call expression. If the expression has a type different from the return type of the function in which it appears, the value is converted as if by assignment to an object having the return type of the function.\ [#9899_note139]_
 
 .. _9899_6.8.6.4p4:
 
-:ref:`4 <9899_6.8.6.4p4>` EXAMPLE In:
+.. container:: snum
+
+   :ref:`4 <9899_6.8.6.4p4>`
+
+EXAMPLE In:
 
 ::
 

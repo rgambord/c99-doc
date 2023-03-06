@@ -1,11 +1,15 @@
-.. _9899_section-6:
+.. _9899_3.4.3:
 
 3.4.3 undefined behavior
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _9899_3.4.3p1:
 
-:ref:`1 <9899_3.4.3p1>` undefined behavior
+.. container:: snum
+
+   :ref:`1 <9899_3.4.3p1>`
+
+undefined behavior
     behavior, upon use of a nonportable or erroneous program construct or of erroneous data, for which this International Standard imposes no requirements
 
 .. _9899_3.4.3p2:
@@ -15,6 +19,4 @@
 .. _9899_3.4.3p3:
 
     :ref:`3 <9899_3.4.3p3>` EXAMPLE An example of undefined behavior is the behavior on integer overflow.
-
-.. _9899_3.4.4:
 

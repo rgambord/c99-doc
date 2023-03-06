@@ -5,7 +5,11 @@
 
 .. _9899_7.18.4.2p1:
 
-:ref:`1 <9899_7.18.4.2p1>` The following macro expands to an integer constant expression having the value specified by its argument and the type intmax_t:
+.. container:: snum
+
+   :ref:`1 <9899_7.18.4.2p1>`
+
+The following macro expands to an integer constant expression having the value specified by its argument and the type intmax_t:
 
 ::
 

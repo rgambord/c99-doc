@@ -7,7 +7,11 @@
 
 .. _9899_7.19.10.2p1:
 
-:ref:`1 <9899_7.19.10.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.10.2p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.19.10.2p2:
 
-:ref:`2 <9899_7.19.10.2p2>` The feof function tests the end-of-file indicator for the stream pointed to by stream.
+.. container:: snum
+
+   :ref:`2 <9899_7.19.10.2p2>`
+
+The feof function tests the end-of-file indicator for the stream pointed to by stream.
 
 .. rubric:: Returns
 
 .. _9899_7.19.10.2p3:
 
-:ref:`3 <9899_7.19.10.2p3>` The feof function returns nonzero if and only if the end-of-file indicator is set for stream.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.10.2p3>`
+
+The feof function returns nonzero if and only if the end-of-file indicator is set for stream.
 

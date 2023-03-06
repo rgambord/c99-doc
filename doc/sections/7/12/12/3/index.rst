@@ -7,7 +7,11 @@
 
 .. _9899_7.12.12.3p1:
 
-:ref:`1 <9899_7.12.12.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.12.3p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.12.12.3p2:
 
-:ref:`2 <9899_7.12.12.3p2>` The fmin functions determine the minimum numeric value of their arguments.\ [#9899_note214]_
+.. container:: snum
+
+   :ref:`2 <9899_7.12.12.3p2>`
+
+The fmin functions determine the minimum numeric value of their arguments.\ [#9899_note214]_
 
 .. rubric:: Returns
 
 .. _9899_7.12.12.3p3:
 
-:ref:`3 <9899_7.12.12.3p3>` The fmin functions return the minimum numeric value of their arguments.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.12.3p3>`
+
+The fmin functions return the minimum numeric value of their arguments.
 
 
 

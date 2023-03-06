@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.2.1p1:
 
-:ref:`1 <9899_7.25.2.2.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.2.1p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.25.2.2.1p2:
 
-:ref:`2 <9899_7.25.2.2.1p2>` The iswctype function determines whether the wide character wc has the property described by desc. The current setting of the LC_CTYPE category shall be the same as during the call to wctype that returned the value desc.
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.2.1p2>`
+
+The iswctype function determines whether the wide character wc has the property described by desc. The current setting of the LC_CTYPE category shall be the same as during the call to wctype that returned the value desc.
 
 .. _9899_7.25.2.2.1p3:
 
-:ref:`3 <9899_7.25.2.2.1p3>` Each of the following expressions has a truth-value equivalent to the call to the wide character classification function (:ref:`7.25.2.1 <9899_7.25.2.1>`) in the comment that follows the expression:
+.. container:: snum
+
+   :ref:`3 <9899_7.25.2.2.1p3>`
+
+Each of the following expressions has a truth-value equivalent to the call to the wide character classification function (:ref:`7.25.2.1 <9899_7.25.2.1>`) in the comment that follows the expression:
 
 ::
 
@@ -43,7 +55,14 @@
 
 .. _9899_7.25.2.2.1p4:
 
-:ref:`4 <9899_7.25.2.2.1p4>` The iswctype function returns nonzero (true) if and only if the value of the wide character wc has the property described by desc.
+.. container:: snum
 
-**Forward references**: the wctype function (:ref:`7.25.2.2.2 <9899_7.25.2.2.2>`).
+   :ref:`4 <9899_7.25.2.2.1p4>`
+
+The iswctype function returns nonzero (true) if and only if the value of the wide character wc has the property described by desc.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.25.2.2.2`
 

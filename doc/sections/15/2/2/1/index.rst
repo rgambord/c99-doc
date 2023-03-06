@@ -5,7 +5,11 @@ H.2.2.1 Integer operations
 
 .. _9899_H.2.2.1p1:
 
-:ref:`1 <9899_H.2.2.1p1>` The integer operations on integer types are the following:
+.. container:: snum
+
+   :ref:`1 <9899_H.2.2.1p1>`
+
+The integer operations on integer types are the following:
 
 .. code-block:: text
 

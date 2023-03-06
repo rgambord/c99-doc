@@ -54,6 +54,9 @@ rst_prolog = """
    :language: console
 
 .. default-role:: c
+
+.. |_| unicode:: 0xA0 
+   :trim:
 """
 
 extensions = ['sphinx.ext.imgmath']

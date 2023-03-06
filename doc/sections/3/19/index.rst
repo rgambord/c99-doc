@@ -1,11 +1,15 @@
-.. _9899_section-28:
+.. _9899_3.19:
 
 3.19 ⌊ x ⌋
 ~~~~~~~~~~
 
 .. _9899_3.19p1:
 
-:ref:`1 <9899_3.19p1>` ⌊ x ⌋
+.. container:: snum
+
+   :ref:`1 <9899_3.19p1>`
+
+⌊ x ⌋
     floor of x: the greatest integer less than or equal to x
 
 .. _9899_3.19p2:

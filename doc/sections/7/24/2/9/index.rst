@@ -7,7 +7,11 @@
 
 .. _9899_7.24.2.9p1:
 
-:ref:`1 <9899_7.24.2.9p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.2.9p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.24.2.9p2:
 
-:ref:`2 <9899_7.24.2.9p2>` The vwprintf function is equivalent to wprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vwprintf function does not invoke the va_end macro.\ [#9899_note291]_
+.. container:: snum
+
+   :ref:`2 <9899_7.24.2.9p2>`
+
+The vwprintf function is equivalent to wprintf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vwprintf function does not invoke the va_end macro.\ [#9899_note291]_
 
 .. rubric:: Returns
 
 .. _9899_7.24.2.9p3:
 
-:ref:`3 <9899_7.24.2.9p3>` The vwprintf function returns the number of wide characters transmitted, or a negative value if an output or encoding error occurred.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.2.9p3>`
+
+The vwprintf function returns the number of wide characters transmitted, or a negative value if an output or encoding error occurred.
 
 
 

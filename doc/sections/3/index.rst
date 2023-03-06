@@ -30,7 +30,11 @@
 
 .. _9899_3p1:
 
-:ref:`1 <9899_3p1>` For the purposes of this International Standard, the following
+.. container:: snum
+
+   :ref:`1 <9899_3p1>`
+
+For the purposes of this International Standard, the following
 definitions apply. Other terms are defined where they appear in italic type or
 on the left side of a syntax rule. Terms explicitly defined in this
 International Standard are not to be presumed to refer implicitly to similar

@@ -7,7 +7,11 @@
 
 .. _9899_6.5.15p1:
 
-:ref:`1 <9899_6.5.15p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.5.15p1>`
+
+
 
 .. container:: syntax-block
 
@@ -61,11 +65,19 @@
 
 .. _9899_6.5.15p2:
 
-:ref:`2 <9899_6.5.15p2>` The first operand shall have scalar type.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.15p2>`
+
+The first operand shall have scalar type.
 
 .. _9899_6.5.15p3:
 
-:ref:`3 <9899_6.5.15p3>` One of the following shall hold for the second and third operands:
+.. container:: snum
+
+   :ref:`3 <9899_6.5.15p3>`
+
+One of the following shall hold for the second and third operands:
 
 -  both operands have arithmetic type;
 -  both operands have the same structure or union type;
@@ -78,23 +90,43 @@
 
 .. _9899_6.5.15p4:
 
-:ref:`4 <9899_6.5.15p4>` The first operand is evaluated; there is a sequence point after its evaluation. The second operand is evaluated only if the first compares unequal to 0; the third operand is evaluated only if the first compares equal to 0; the result is the value of the second or third operand (whichever is evaluated), converted to the type described below.\ [#9899_note95]_ If an attempt is made to modify the result of a conditional operator or to access it after the next sequence point, the behavior is undefined.
+.. container:: snum
+
+   :ref:`4 <9899_6.5.15p4>`
+
+The first operand is evaluated; there is a sequence point after its evaluation. The second operand is evaluated only if the first compares unequal to 0; the third operand is evaluated only if the first compares equal to 0; the result is the value of the second or third operand (whichever is evaluated), converted to the type described below.\ [#9899_note95]_ If an attempt is made to modify the result of a conditional operator or to access it after the next sequence point, the behavior is undefined.
 
 .. _9899_6.5.15p5:
 
-:ref:`5 <9899_6.5.15p5>` If both the second and third operands have arithmetic type, the result type that would be determined by the usual arithmetic conversions, were they applied to those two operands, is the type of the result. If both the operands have structure or union type, the result has that type. If both operands have void type, the result has void type.
+.. container:: snum
+
+   :ref:`5 <9899_6.5.15p5>`
+
+If both the second and third operands have arithmetic type, the result type that would be determined by the usual arithmetic conversions, were they applied to those two operands, is the type of the result. If both the operands have structure or union type, the result has that type. If both operands have void type, the result has void type.
 
 .. _9899_6.5.15p6:
 
-:ref:`6 <9899_6.5.15p6>` If both the second and third operands are pointers or one is a null pointer constant and the other is a pointer, the result type is a pointer to a type qualified with all the type qualifiers of the types pointed-to by both operands. Furthermore, if both operands are pointers to compatible types or to differently qualified versions of compatible types, the result type is a pointer to an appropriately qualified version of the composite type; if one operand is a null pointer constant, the result has the type of the other operand; otherwise, one operand is a pointer to void or a qualified version of void, in which case the result type is a pointer to an appropriately qualified version of void.
+.. container:: snum
+
+   :ref:`6 <9899_6.5.15p6>`
+
+If both the second and third operands are pointers or one is a null pointer constant and the other is a pointer, the result type is a pointer to a type qualified with all the type qualifiers of the types pointed-to by both operands. Furthermore, if both operands are pointers to compatible types or to differently qualified versions of compatible types, the result type is a pointer to an appropriately qualified version of the composite type; if one operand is a null pointer constant, the result has the type of the other operand; otherwise, one operand is a pointer to void or a qualified version of void, in which case the result type is a pointer to an appropriately qualified version of void.
 
 .. _9899_6.5.15p7:
 
-:ref:`7 <9899_6.5.15p7>` EXAMPLE The common type that results when the second and third operands are pointers is determined in two independent stages. The appropriate qualifiers, for example, do not depend on whether the two pointers have compatible types.
+.. container:: snum
+
+   :ref:`7 <9899_6.5.15p7>`
+
+EXAMPLE The common type that results when the second and third operands are pointers is determined in two independent stages. The appropriate qualifiers, for example, do not depend on whether the two pointers have compatible types.
 
 .. _9899_6.5.15p8:
 
-:ref:`8 <9899_6.5.15p8>` Given the declarations
+.. container:: snum
+
+   :ref:`8 <9899_6.5.15p8>`
+
+Given the declarations
 
 ::
 

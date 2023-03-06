@@ -7,7 +7,11 @@
 
 .. _9899_7.24.6.3.2p1:
 
-:ref:`1 <9899_7.24.6.3.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.6.3.2p1>`
+
+
 
 ::
 
@@ -21,7 +25,11 @@
 
 .. _9899_7.24.6.3.2p2:
 
-:ref:`2 <9899_7.24.6.3.2p2>` If s is a null pointer, the mbrtowc function is equivalent to the call:
+.. container:: snum
+
+   :ref:`2 <9899_7.24.6.3.2p2>`
+
+If s is a null pointer, the mbrtowc function is equivalent to the call:
 
 ::
 
@@ -31,13 +39,21 @@ In this case, the values of the parameters pwc and n are ignored.
 
 .. _9899_7.24.6.3.2p3:
 
-:ref:`3 <9899_7.24.6.3.2p3>` If s is not a null pointer, the mbrtowc function inspects at most n bytes beginning with the byte pointed to by s to determine the number of bytes needed to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character is complete and valid, it determines the value of the corresponding wide character and then, if pwc is not a null pointer, stores that value in the object pointed to by pwc. If the corresponding wide character is the null wide character, the resulting state described is the initial conversion state.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.6.3.2p3>`
+
+If s is not a null pointer, the mbrtowc function inspects at most n bytes beginning with the byte pointed to by s to determine the number of bytes needed to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character is complete and valid, it determines the value of the corresponding wide character and then, if pwc is not a null pointer, stores that value in the object pointed to by pwc. If the corresponding wide character is the null wide character, the resulting state described is the initial conversion state.
 
 .. rubric:: Returns
 
 .. _9899_7.24.6.3.2p4:
 
-:ref:`4 <9899_7.24.6.3.2p4>` The mbrtowc function returns the first of the following that applies (given the current conversion state):
+.. container:: snum
+
+   :ref:`4 <9899_7.24.6.3.2p4>`
+
+The mbrtowc function returns the first of the following that applies (given the current conversion state):
 
 0
    if the next n or fewer bytes complete the multibyte character that corresponds to the null wide character (which is the value stored).

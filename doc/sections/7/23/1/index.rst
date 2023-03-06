@@ -5,11 +5,19 @@
 
 .. _9899_7.23.1p1:
 
-:ref:`1 <9899_7.23.1p1>` The header :ref:`\<time.h> <9899_7.23>` defines two macros, and declares several types and functions for manipulating time. Many functions deal with a calendar time that represents the current date (according to the Gregorian calendar) and time. Some functions deal with local time, which is the calendar time expressed for some specific time zone, and with Daylight Saving Time, which is a temporary change in the algorithm for determining local time. The local time zone and Daylight Saving Time are implementation-defined.
+.. container:: snum
+
+   :ref:`1 <9899_7.23.1p1>`
+
+The header :ref:`\<time.h> <9899_7.23>` defines two macros, and declares several types and functions for manipulating time. Many functions deal with a calendar time that represents the current date (according to the Gregorian calendar) and time. Some functions deal with local time, which is the calendar time expressed for some specific time zone, and with Daylight Saving Time, which is a temporary change in the algorithm for determining local time. The local time zone and Daylight Saving Time are implementation-defined.
 
 .. _9899_7.23.1p2:
 
-:ref:`2 <9899_7.23.1p2>` The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); and
+.. container:: snum
+
+   :ref:`2 <9899_7.23.1p2>`
+
+The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); and
 
 ::
 
@@ -19,7 +27,11 @@ which expands to an expression with type clock_t (described below) that is the n
 
 .. _9899_7.23.1p3:
 
-:ref:`3 <9899_7.23.1p3>` The types declared are size_t (described in :ref:`7.17 <9899_7.17>`);
+.. container:: snum
+
+   :ref:`3 <9899_7.23.1p3>`
+
+The types declared are size_t (described in :ref:`7.17 <9899_7.17>`);
 
 ::
 
@@ -41,7 +53,11 @@ which holds the components of a calendar time, called the broken-down time.
 
 .. _9899_7.23.1p4:
 
-:ref:`4 <9899_7.23.1p4>` The range and precision of times representable in clock_t and time_t are implementation-defined. The tm structure shall contain at least the following members, in any order. The semantics of the members and their normal ranges are expressed in the comments.\ [#9899_note274]_
+.. container:: snum
+
+   :ref:`4 <9899_7.23.1p4>`
+
+The range and precision of times representable in clock_t and time_t are implementation-defined. The tm structure shall contain at least the following members, in any order. The semantics of the members and their normal ranges are expressed in the comments.\ [#9899_note274]_
 
 ::
 

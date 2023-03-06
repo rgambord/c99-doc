@@ -7,7 +7,11 @@
 
 .. _9899_7.6.4.4p1:
 
-:ref:`1 <9899_7.6.4.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.6.4.4p1>`
+
+
 
 ::
 
@@ -18,17 +22,29 @@
 
 .. _9899_7.6.4.4p2:
 
-:ref:`2 <9899_7.6.4.4p2>` The feupdateenv function attempts to save the currently raised floating-point exceptions in its automatic storage, install the floating-point environment represented by the object pointed to by envp, and then raise the saved floating-point exceptions. The argument envp shall point to an object set by a call to feholdexcept or fegetenv, or equal a floating-point environment macro.
+.. container:: snum
+
+   :ref:`2 <9899_7.6.4.4p2>`
+
+The feupdateenv function attempts to save the currently raised floating-point exceptions in its automatic storage, install the floating-point environment represented by the object pointed to by envp, and then raise the saved floating-point exceptions. The argument envp shall point to an object set by a call to feholdexcept or fegetenv, or equal a floating-point environment macro.
 
 .. rubric:: Returns
 
 .. _9899_7.6.4.4p3:
 
-:ref:`3 <9899_7.6.4.4p3>` The feupdateenv function returns zero if all the actions were successfully carried out. Otherwise, it returns a nonzero value.
+.. container:: snum
+
+   :ref:`3 <9899_7.6.4.4p3>`
+
+The feupdateenv function returns zero if all the actions were successfully carried out. Otherwise, it returns a nonzero value.
 
 .. _9899_7.6.4.4p4:
 
-:ref:`4 <9899_7.6.4.4p4>` EXAMPLE Hide spurious underflow floating-point exceptions:
+.. container:: snum
+
+   :ref:`4 <9899_7.6.4.4p4>`
+
+EXAMPLE Hide spurious underflow floating-point exceptions:
 
 ::
 
@@ -48,6 +64,4 @@
                 return /* indication of an environmental problem */;
           return result;
     }
-
-.. _9899_7.7:
 

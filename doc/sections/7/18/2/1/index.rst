@@ -5,7 +5,11 @@
 
 .. _9899_7.18.2.1p1:
 
-:ref:`1 <9899_7.18.2.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.18.2.1p1>`
+
+
 
 -  minimum values of exact-width signed integer types
 

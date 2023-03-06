@@ -1,12 +1,14 @@
-.. _9899_section-19:
+.. _9899_3.13:
 
 3.13 implementation limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _9899_3.13p1:
 
-:ref:`1 <9899_3.13p1>` implementation limit
-    restriction imposed upon programs by the implementation
+.. container:: snum
 
-.. _9899_3.14:
+   :ref:`1 <9899_3.13p1>`
+
+implementation limit
+    restriction imposed upon programs by the implementation
 

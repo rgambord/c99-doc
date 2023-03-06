@@ -7,7 +7,11 @@
 
 .. _9899_7.12.6.13p1:
 
-:ref:`1 <9899_7.12.6.13p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.6.13p1>`
+
+
 
 ::
 
@@ -23,13 +27,21 @@
 
 .. _9899_7.12.6.13p2:
 
-:ref:`2 <9899_7.12.6.13p2>` The scalbn and scalbln functions compute x FLT_RADIX\ :sup:`n` efficiently, not normally by computing FLT_RADIX\ :sup:`n` explicitly. A range error may occur.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.6.13p2>`
+
+The scalbn and scalbln functions compute x FLT_RADIX\ :sup:`n` efficiently, not normally by computing FLT_RADIX\ :sup:`n` explicitly. A range error may occur.
 
 .. rubric:: Returns
 
 .. _9899_7.12.6.13p3:
 
-:ref:`3 <9899_7.12.6.13p3>` The scalbn and scalbln functions return x FLT_RADIX\ :sup:`n` .
+.. container:: snum
+
+   :ref:`3 <9899_7.12.6.13p3>`
+
+The scalbn and scalbln functions return x FLT_RADIX\ :sup:`n` .
 
 .. _9899_7.12.7:
 

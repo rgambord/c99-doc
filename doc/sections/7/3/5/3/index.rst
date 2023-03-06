@@ -7,7 +7,11 @@
 
 .. _9899_7.3.5.3p1:
 
-:ref:`1 <9899_7.3.5.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.5.3p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.5.3p2:
 
-:ref:`2 <9899_7.3.5.3p2>` The catan functions compute the complex arc tangent of z, with branch cuts outside the interval [-i, +i] along the imaginary axis.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.5.3p2>`
+
+The catan functions compute the complex arc tangent of z, with branch cuts outside the interval [-i, +i] along the imaginary axis.
 
 .. rubric:: Returns
 
 .. _9899_7.3.5.3p3:
 
-:ref:`3 <9899_7.3.5.3p3>` The catan functions return the complex arc tangent value, in the range of a strip mathematically unbounded along the imaginary axis and in the interval [-pi /2, +pi /2] along the real axis.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.5.3p3>`
+
+The catan functions return the complex arc tangent value, in the range of a strip mathematically unbounded along the imaginary axis and in the interval [-pi /2, +pi /2] along the real axis.
 

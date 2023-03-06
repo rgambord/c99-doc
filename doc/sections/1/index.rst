@@ -5,7 +5,11 @@
 
 .. _9899_1p1:
 
-:ref:`1 <9899_1p1>` This International Standard specifies the form and establishes the interpretation of programs written in the C programming language.\ [#9899_note1]_ It specifies
+.. container:: snum
+
+   :ref:`1 <9899_1p1>`
+
+This International Standard specifies the form and establishes the interpretation of programs written in the C programming language.\ [#9899_note1]_ It specifies
 
 -  the representation of C programs;
 -  the syntax and constraints of the C language;
@@ -16,7 +20,11 @@
 
 .. _9899_1p2:
 
-:ref:`2 <9899_1p2>` This International Standard does not specify
+.. container:: snum
+
+   :ref:`2 <9899_1p2>`
+
+This International Standard does not specify
 
 -  the mechanism by which C programs are transformed for use by a data-processing system;
 -  the mechanism by which C programs are invoked for use by a data-processing system;

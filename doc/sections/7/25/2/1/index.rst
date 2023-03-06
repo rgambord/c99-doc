@@ -23,13 +23,24 @@
 
 .. _9899_7.25.2.1p1:
 
-:ref:`1 <9899_7.25.2.1p1>` The functions in this subclause return nonzero (true) if and only if the value of the argument wc conforms to that in the description of the function.
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.1p1>`
+
+The functions in this subclause return nonzero (true) if and only if the value of the argument wc conforms to that in the description of the function.
 
 .. _9899_7.25.2.1p2:
 
-:ref:`2 <9899_7.25.2.1p2>` Each of the following functions returns true for each wide character that corresponds (as if by a call to the wctob function) to a single-byte character for which the corresponding character classification function from :ref:`7.4.1 <9899_7.4.1>` returns true, except that the iswgraph and iswpunct functions may differ with respect to wide characters other than L' ' that are both printing and white-space wide characters.\ [#9899_note304]_
+.. container:: snum
 
-**Forward references**: the wctob function (:ref:`7.24.6.1.2 <9899_7.24.6.1.2>`).
+   :ref:`2 <9899_7.25.2.1p2>`
+
+Each of the following functions returns true for each wide character that corresponds (as if by a call to the wctob function) to a single-byte character for which the corresponding character classification function from :ref:`7.4.1 <9899_7.4.1>` returns true, except that the iswgraph and iswpunct functions may differ with respect to wide characters other than L' ' that are both printing and white-space wide characters.\ [#9899_note304]_
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.24.6.1.2`
 
 
 

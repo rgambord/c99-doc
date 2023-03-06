@@ -7,7 +7,11 @@
 
 .. _9899_7.12.3.1p1:
 
-:ref:`1 <9899_7.12.3.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.3.1p1>`
+
+
 
 ::
 
@@ -18,17 +22,29 @@
 
 .. _9899_7.12.3.1p2:
 
-:ref:`2 <9899_7.12.3.1p2>` The fpclassify macro classifies its argument value as NaN, infinite, normal, subnormal, zero, or into another implementation-defined category. First, an argument represented in a format wider than its semantic type is converted to its semantic type. Then classification is based on the type of the argument.\ [#9899_note205]_
+.. container:: snum
+
+   :ref:`2 <9899_7.12.3.1p2>`
+
+The fpclassify macro classifies its argument value as NaN, infinite, normal, subnormal, zero, or into another implementation-defined category. First, an argument represented in a format wider than its semantic type is converted to its semantic type. Then classification is based on the type of the argument.\ [#9899_note205]_
 
 .. rubric:: Returns
 
 .. _9899_7.12.3.1p3:
 
-:ref:`3 <9899_7.12.3.1p3>` The fpclassify macro returns the value of the number classification macro appropriate to the value of its argument.
+.. container:: snum
+
+   :ref:`3 <9899_7.12.3.1p3>`
+
+The fpclassify macro returns the value of the number classification macro appropriate to the value of its argument.
 
 .. _9899_7.12.3.1p4:
 
-:ref:`4 <9899_7.12.3.1p4>` EXAMPLE The fpclassify macro might be implemented in terms of ordinary functions as
+.. container:: snum
+
+   :ref:`4 <9899_7.12.3.1p4>`
+
+EXAMPLE The fpclassify macro might be implemented in terms of ordinary functions as
 
 ::
 

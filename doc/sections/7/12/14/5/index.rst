@@ -7,7 +7,11 @@
 
 .. _9899_7.12.14.5p1:
 
-:ref:`1 <9899_7.12.14.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.14.5p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.12.14.5p2:
 
-:ref:`2 <9899_7.12.14.5p2>` The islessgreater macro determines whether its first argument is less than or greater than its second argument. The islessgreater(x, y) macro is similar to (x) < (y) \|\| (x) > (y); however, islessgreater(x, y) does not raise the ''invalid'' floating-point exception when x and y are unordered (nor does it evaluate x and y twice).
+.. container:: snum
+
+   :ref:`2 <9899_7.12.14.5p2>`
+
+The islessgreater macro determines whether its first argument is less than or greater than its second argument. The islessgreater(x, y) macro is similar to (x) < (y) \|\| (x) > (y); however, islessgreater(x, y) does not raise the "invalid" floating-point exception when x and y are unordered (nor does it evaluate x and y twice).
 
 .. rubric:: Returns
 
 .. _9899_7.12.14.5p3:
 
-:ref:`3 <9899_7.12.14.5p3>` The islessgreater macro returns the value of (x) < (y) \|\| (x) > (y).
+.. container:: snum
+
+   :ref:`3 <9899_7.12.14.5p3>`
+
+The islessgreater macro returns the value of (x) < (y) \|\| (x) > (y).
 

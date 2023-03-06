@@ -7,7 +7,11 @@
 
 .. _9899_7.19.4.4p1:
 
-:ref:`1 <9899_7.19.4.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.4.4p1>`
+
+
 
 ::
 
@@ -18,27 +22,47 @@
 
 .. _9899_7.19.4.4p2:
 
-:ref:`2 <9899_7.19.4.4p2>` The tmpnam function generates a string that is a valid file name and that is not the same as the name of an existing file.\ [#9899_note236]_ The function is potentially capable of generating TMP_MAX different strings, but any or all of them may already be in use by existing files and thus not be suitable return values.
+.. container:: snum
+
+   :ref:`2 <9899_7.19.4.4p2>`
+
+The tmpnam function generates a string that is a valid file name and that is not the same as the name of an existing file.\ [#9899_note236]_ The function is potentially capable of generating TMP_MAX different strings, but any or all of them may already be in use by existing files and thus not be suitable return values.
 
 .. _9899_7.19.4.4p3:
 
-:ref:`3 <9899_7.19.4.4p3>` The tmpnam function generates a different string each time it is called.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.4.4p3>`
+
+The tmpnam function generates a different string each time it is called.
 
 .. _9899_7.19.4.4p4:
 
-:ref:`4 <9899_7.19.4.4p4>` The implementation shall behave as if no library function calls the tmpnam function.
+.. container:: snum
+
+   :ref:`4 <9899_7.19.4.4p4>`
+
+The implementation shall behave as if no library function calls the tmpnam function.
 
 .. rubric:: Returns
 
 .. _9899_7.19.4.4p5:
 
-:ref:`5 <9899_7.19.4.4p5>` If no suitable string can be generated, the tmpnam function returns a null pointer. Otherwise, if the argument is a null pointer, the tmpnam function leaves its result in an internal static object and returns a pointer to that object (subsequent calls to the tmpnam function may modify the same object). If the argument is not a null pointer, it is assumed to point to an array of at least L_tmpnam chars; the tmpnam function writes its result in that array and returns the argument as its value.
+.. container:: snum
+
+   :ref:`5 <9899_7.19.4.4p5>`
+
+If no suitable string can be generated, the tmpnam function returns a null pointer. Otherwise, if the argument is a null pointer, the tmpnam function leaves its result in an internal static object and returns a pointer to that object (subsequent calls to the tmpnam function may modify the same object). If the argument is not a null pointer, it is assumed to point to an array of at least L_tmpnam chars; the tmpnam function writes its result in that array and returns the argument as its value.
 
 .. rubric:: Environmental limits
 
 .. _9899_7.19.4.4p6:
 
-:ref:`6 <9899_7.19.4.4p6>` The value of the macro TMP_MAX shall be at least 25.
+.. container:: snum
+
+   :ref:`6 <9899_7.19.4.4p6>`
+
+The value of the macro TMP_MAX shall be at least 25.
 
 
 

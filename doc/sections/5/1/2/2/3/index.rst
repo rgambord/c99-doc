@@ -5,9 +5,17 @@
 
 .. _9899_5.1.2.2.3p1:
 
-:ref:`1 <9899_5.1.2.2.3p1>` If the return type of the main function is a type compatible with int, a return from the initial call to the main function is equivalent to calling the exit function with the value returned by the main function as its argument;\ [#9899_note10]_ reaching the } that terminates the main function returns a value of 0. If the return type is not compatible with int, the termination status returned to the host environment is unspecified.
+.. container:: snum
 
-**Forward references**: definition of terms (:ref:`7.1.1 <9899_7.1.1>`), the exit function (:ref:`7.20.4.3 <9899_7.20.4.3>`).
+   :ref:`1 <9899_5.1.2.2.3p1>`
+
+If the return type of the main function is a type compatible with int, a return from the initial call to the main function is equivalent to calling the exit function with the value returned by the main function as its argument;\ [#9899_note10]_ reaching the } that terminates the main function returns a value of 0. If the return type is not compatible with int, the termination status returned to the host environment is unspecified.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_7.1.1`
+   - :ref:`9899_7.20.4.3`
 
 
 

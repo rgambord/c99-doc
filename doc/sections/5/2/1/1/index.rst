@@ -5,19 +5,83 @@
 
 .. _9899_5.2.1.1p1:
 
-:ref:`1 <9899_5.2.1.1p1>` Before any other processing takes place, each occurrence of one of the following sequences of three characters (called trigraph sequences\ [#9899_note12]_) is replaced with the corresponding single character.
+.. container:: snum
 
-.. code-block:: text
+   :ref:`1 <9899_5.2.1.1p1>`
 
-    ??=      #                       ??)      ]                       ??!     |
-    ??(      [                       ??'      ^                       ??>     }
-    ??/      \                       ??<      {                       ??-     ~
+Before any other processing takes place, each occurrence of one of the following sequences of three characters (called trigraph sequences\ [#9899_note12]_) is replaced with the corresponding single character.
+
+.. container:: syntax-block
+
+   .. container:: syntax-production
+
+      .. container:: syntax-rule-tbl
+
+         .. container:: syntax-rule
+
+            .. container:: syntax-terminal
+
+               ??= #
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??) ]
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??! |
+
+         .. container:: syntax-rule
+
+            .. container:: syntax-terminal
+
+               ??( [
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??' ^
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??> }
+
+         .. container:: syntax-rule
+
+            .. container:: syntax-terminal
+
+               ??/ \\
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??< {
+
+            |_|
+
+            .. container:: syntax-terminal
+
+               ??- ~
+
+
 
 No other trigraph sequences exist. Each ? that does not begin one of the trigraphs listed above is not changed.
 
 .. _9899_5.2.1.1p2:
 
-:ref:`2 <9899_5.2.1.1p2>` EXAMPLE 1
+.. container:: snum
+
+   :ref:`2 <9899_5.2.1.1p2>`
+
+EXAMPLE 1
 
 ::
 
@@ -31,7 +95,11 @@ becomes
 
 .. _9899_5.2.1.1p3:
 
-:ref:`3 <9899_5.2.1.1p3>` EXAMPLE 2 The following source line
+.. container:: snum
+
+   :ref:`3 <9899_5.2.1.1p3>`
+
+EXAMPLE 2 The following source line
 
 ::
 

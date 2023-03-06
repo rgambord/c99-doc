@@ -7,41 +7,77 @@
 
 .. _9899_6.5.2.5p1:
 
-:ref:`1 <9899_6.5.2.5p1>` The type name shall specify an object type or an array of unknown size, but not a variable length array type.
+.. container:: snum
+
+   :ref:`1 <9899_6.5.2.5p1>`
+
+The type name shall specify an object type or an array of unknown size, but not a variable length array type.
 
 .. _9899_6.5.2.5p2:
 
-:ref:`2 <9899_6.5.2.5p2>` No initializer shall attempt to provide a value for an object not contained within the entire unnamed object specified by the compound literal.
+.. container:: snum
+
+   :ref:`2 <9899_6.5.2.5p2>`
+
+No initializer shall attempt to provide a value for an object not contained within the entire unnamed object specified by the compound literal.
 
 .. _9899_6.5.2.5p3:
 
-:ref:`3 <9899_6.5.2.5p3>` If the compound literal occurs outside the body of a function, the initializer list shall consist of constant expressions.
+.. container:: snum
+
+   :ref:`3 <9899_6.5.2.5p3>`
+
+If the compound literal occurs outside the body of a function, the initializer list shall consist of constant expressions.
 
 .. rubric:: Semantics
 
 .. _9899_6.5.2.5p4:
 
-:ref:`4 <9899_6.5.2.5p4>` A postfix expression that consists of a parenthesized type name followed by a brace- enclosed list of initializers is a compound literal. It provides an unnamed object whose value is given by the initializer list.\ [#9899_note84]_
+.. container:: snum
+
+   :ref:`4 <9899_6.5.2.5p4>`
+
+A postfix expression that consists of a parenthesized type name followed by a brace- enclosed list of initializers is a compound literal. It provides an unnamed object whose value is given by the initializer list.\ [#9899_note84]_
 
 .. _9899_6.5.2.5p5:
 
-:ref:`5 <9899_6.5.2.5p5>` If the type name specifies an array of unknown size, the size is determined by the initializer list as specified in :ref:`6.7.8 <9899_6.7.8>`, and the type of the compound literal is that of the completed array type. Otherwise (when the type name specifies an object type), the type of the compound literal is that specified by the type name. In either case, the result is an lvalue.
+.. container:: snum
+
+   :ref:`5 <9899_6.5.2.5p5>`
+
+If the type name specifies an array of unknown size, the size is determined by the initializer list as specified in :ref:`6.7.8 <9899_6.7.8>`, and the type of the compound literal is that of the completed array type. Otherwise (when the type name specifies an object type), the type of the compound literal is that specified by the type name. In either case, the result is an lvalue.
 
 .. _9899_6.5.2.5p6:
 
-:ref:`6 <9899_6.5.2.5p6>` The value of the compound literal is that of an unnamed object initialized by the initializer list. If the compound literal occurs outside the body of a function, the object has static storage duration; otherwise, it has automatic storage duration associated with the enclosing block.
+.. container:: snum
+
+   :ref:`6 <9899_6.5.2.5p6>`
+
+The value of the compound literal is that of an unnamed object initialized by the initializer list. If the compound literal occurs outside the body of a function, the object has static storage duration; otherwise, it has automatic storage duration associated with the enclosing block.
 
 .. _9899_6.5.2.5p7:
 
-:ref:`7 <9899_6.5.2.5p7>` All the semantic rules and constraints for initializer lists in :ref:`6.7.8 <9899_6.7.8>` are applicable to compound literals.\ [#9899_note85]_
+.. container:: snum
+
+   :ref:`7 <9899_6.5.2.5p7>`
+
+All the semantic rules and constraints for initializer lists in :ref:`6.7.8 <9899_6.7.8>` are applicable to compound literals.\ [#9899_note85]_
 
 .. _9899_6.5.2.5p8:
 
-:ref:`8 <9899_6.5.2.5p8>` String literals, and compound literals with const-qualified types, need not designate distinct objects.\ [#9899_note86]_
+.. container:: snum
+
+   :ref:`8 <9899_6.5.2.5p8>`
+
+String literals, and compound literals with const-qualified types, need not designate distinct objects.\ [#9899_note86]_
 
 .. _9899_6.5.2.5p9:
 
-:ref:`9 <9899_6.5.2.5p9>` EXAMPLE 1 The file scope definition
+.. container:: snum
+
+   :ref:`9 <9899_6.5.2.5p9>`
+
+EXAMPLE 1 The file scope definition
 
 ::
 
@@ -51,7 +87,11 @@ initializes p to point to the first element of an array of two ints, the first h
 
 .. _9899_6.5.2.5p10:
 
-:ref:`10 <9899_6.5.2.5p10>` EXAMPLE 2 In contrast, in
+.. container:: snum
+
+   :ref:`10 <9899_6.5.2.5p10>`
+
+EXAMPLE 2 In contrast, in
 
 ::
 
@@ -67,7 +107,11 @@ p is assigned the address of the first element of an array of two ints, the firs
 
 .. _9899_6.5.2.5p11:
 
-:ref:`11 <9899_6.5.2.5p11>` EXAMPLE 3 Initializers with designations can be combined with compound literals. Structure objects created using compound literals can be passed to functions without depending on member order:
+.. container:: snum
+
+   :ref:`11 <9899_6.5.2.5p11>`
+
+EXAMPLE 3 Initializers with designations can be combined with compound literals. Structure objects created using compound literals can be passed to functions without depending on member order:
 
 ::
 
@@ -83,7 +127,11 @@ Or, if drawline instead expected pointers to struct point:
 
 .. _9899_6.5.2.5p12:
 
-:ref:`12 <9899_6.5.2.5p12>` EXAMPLE 4 A read-only compound literal can be specified through constructions like:
+.. container:: snum
+
+   :ref:`12 <9899_6.5.2.5p12>`
+
+EXAMPLE 4 A read-only compound literal can be specified through constructions like:
 
 ::
 
@@ -91,7 +139,11 @@ Or, if drawline instead expected pointers to struct point:
 
 .. _9899_6.5.2.5p13:
 
-:ref:`13 <9899_6.5.2.5p13>` EXAMPLE 5 The following three expressions have different meanings:
+.. container:: snum
+
+   :ref:`13 <9899_6.5.2.5p13>`
+
+EXAMPLE 5 The following three expressions have different meanings:
 
 ::
 
@@ -103,7 +155,11 @@ The first always has static storage duration and has type array of char, but nee
 
 .. _9899_6.5.2.5p14:
 
-:ref:`14 <9899_6.5.2.5p14>` EXAMPLE 6 Like string literals, const-qualified compound literals can be placed into read-only memory and can even be shared. For example,
+.. container:: snum
+
+   :ref:`14 <9899_6.5.2.5p14>`
+
+EXAMPLE 6 Like string literals, const-qualified compound literals can be placed into read-only memory and can even be shared. For example,
 
 ::
 
@@ -113,7 +169,11 @@ might yield 1 if the literals' storage is shared.
 
 .. _9899_6.5.2.5p15:
 
-:ref:`15 <9899_6.5.2.5p15>` EXAMPLE 7 Since compound literals are unnamed, a single compound literal cannot specify a circularly linked object. For example, there is no way to write a self-referential compound literal that could be used as the function argument in place of the named object endless_zeros below:
+.. container:: snum
+
+   :ref:`15 <9899_6.5.2.5p15>`
+
+EXAMPLE 7 Since compound literals are unnamed, a single compound literal cannot specify a circularly linked object. For example, there is no way to write a self-referential compound literal that could be used as the function argument in place of the named object endless_zeros below:
 
 ::
 
@@ -123,7 +183,11 @@ might yield 1 if the literals' storage is shared.
 
 .. _9899_6.5.2.5p16:
 
-:ref:`16 <9899_6.5.2.5p16>` EXAMPLE 8 Each compound literal creates only a single object in a given scope:
+.. container:: snum
+
+   :ref:`16 <9899_6.5.2.5p16>`
+
+EXAMPLE 8 Each compound literal creates only a single object in a given scope:
 
 ::
 
@@ -142,9 +206,17 @@ The function f() always returns the value 1.
 
 .. _9899_6.5.2.5p17:
 
-:ref:`17 <9899_6.5.2.5p17>` Note that if an iteration statement were used instead of an explicit goto and a labeled statement, the lifetime of the unnamed object would be the body of the loop only, and on entry next time around p would have an indeterminate value, which would result in undefined behavior.
+.. container:: snum
 
-**Forward references**: type names (:ref:`6.7.6 <9899_6.7.6>`), initialization (:ref:`6.7.8 <9899_6.7.8>`).
+   :ref:`17 <9899_6.5.2.5p17>`
+
+Note that if an iteration statement were used instead of an explicit goto and a labeled statement, the lifetime of the unnamed object would be the body of the loop only, and on entry next time around p would have an indeterminate value, which would result in undefined behavior.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.7.6`
+   - :ref:`9899_6.7.8`
 
 
 

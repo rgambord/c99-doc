@@ -24,5 +24,9 @@ J.3 Implementation-defined behavior
 
 .. _9899_J.3p1:
 
-:ref:`1 <9899_J.3p1>` A conforming implementation is required to document its choice of behavior in each of the areas listed in this subclause. The following are implementation-defined:
+.. container:: snum
+
+   :ref:`1 <9899_J.3p1>`
+
+A conforming implementation is required to document its choice of behavior in each of the areas listed in this subclause. The following are implementation-defined:
 

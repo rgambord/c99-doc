@@ -13,15 +13,27 @@
 
 .. _9899_5.2.1p1:
 
-:ref:`1 <9899_5.2.1p1>` Two sets of characters and their associated collating sequences shall be defined: the set in which source files are written (the source character set), and the set interpreted in the execution environment (the execution character set). Each set is further divided into a basic character set, whose contents are given by this subclause, and a set of zero or more locale-specific members (which are not members of the basic character set) called extended characters. The combined set is also called the extended character set. The values of the members of the execution character set are implementation-defined.
+.. container:: snum
+
+   :ref:`1 <9899_5.2.1p1>`
+
+Two sets of characters and their associated collating sequences shall be defined: the set in which source files are written (the source character set), and the set interpreted in the execution environment (the execution character set). Each set is further divided into a basic character set, whose contents are given by this subclause, and a set of zero or more locale-specific members (which are not members of the basic character set) called extended characters. The combined set is also called the extended character set. The values of the members of the execution character set are implementation-defined.
 
 .. _9899_5.2.1p2:
 
-:ref:`2 <9899_5.2.1p2>` In a character constant or string literal, members of the execution character set shall be represented by corresponding members of the source character set or by escape sequences consisting of the backslash \\ followed by one or more characters. A byte with all bits set to 0, called the null character, shall exist in the basic execution character set; it is used to terminate a character string.
+.. container:: snum
+
+   :ref:`2 <9899_5.2.1p2>`
+
+In a character constant or string literal, members of the execution character set shall be represented by corresponding members of the source character set or by escape sequences consisting of the backslash \\ followed by one or more characters. A byte with all bits set to 0, called the null character, shall exist in the basic execution character set; it is used to terminate a character string.
 
 .. _9899_5.2.1p3:
 
-:ref:`3 <9899_5.2.1p3>` Both the basic source and basic execution character sets shall have the following members: the 26 uppercase letters of the Latin alphabet
+.. container:: snum
+
+   :ref:`3 <9899_5.2.1p3>`
+
+Both the basic source and basic execution character sets shall have the following members: the 26 uppercase letters of the Latin alphabet
 
 .. container:: syntax-block
 
@@ -434,11 +446,27 @@ the space character, and control characters representing horizontal tab, vertica
 
 .. _9899_5.2.1p4:
 
-:ref:`4 <9899_5.2.1p4>` A letter is an uppercase letter or a lowercase letter as defined above; in this International Standard the term does not include other characters that are letters in other alphabets.
+.. container:: snum
+
+   :ref:`4 <9899_5.2.1p4>`
+
+A letter is an uppercase letter or a lowercase letter as defined above; in this International Standard the term does not include other characters that are letters in other alphabets.
 
 .. _9899_5.2.1p5:
 
-:ref:`5 <9899_5.2.1p5>` The universal character name construct provides a way to name other characters.
+.. container:: snum
 
-**Forward references**: universal character names (:ref:`6.4.3 <9899_6.4.3>`), character constants (:ref:`6.4.4.4 <9899_6.4.4.4>`), preprocessing directives (:ref:`6.10 <9899_6.10>`), string literals (:ref:`6.4.5 <9899_6.4.5>`), comments (:ref:`6.4.9 <9899_6.4.9>`), string (:ref:`7.1.1 <9899_7.1.1>`).
+   :ref:`5 <9899_5.2.1p5>`
+
+The universal character name construct provides a way to name other characters.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.4.3`
+   - :ref:`9899_6.4.4.4`
+   - :ref:`9899_6.10`
+   - :ref:`9899_6.4.5`
+   - :ref:`9899_6.4.9`
+   - :ref:`9899_7.1.1`
 

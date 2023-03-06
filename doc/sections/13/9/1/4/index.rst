@@ -5,7 +5,11 @@ F.9.1.4 The atan2 functions
 
 .. _9899_F.9.1.4p1:
 
-:ref:`1 <9899_F.9.1.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_F.9.1.4p1>`
+
+
 
 -  atan2((+-)0, -0) returns (+-)pi .\ [#9899_note322]_
 -  atan2((+-)0, +0) returns (+-)0.
@@ -25,4 +29,4 @@ F.9.1.4 The atan2 functions
 
 .. rubric:: Footnotes
 
-.. [#9899_note322] atan2(0, 0) does not raise the ''invalid'' floating-point exception, nor does atan2( y , 0) raise the ''divide-by-zero'' floating-point exception.
+.. [#9899_note322] atan2(0, 0) does not raise the "invalid" floating-point exception, nor does atan2( y , 0) raise the "divide-by-zero" floating-point exception.

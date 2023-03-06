@@ -7,7 +7,11 @@
 
 .. _9899_7.24.4.5.8p1:
 
-:ref:`1 <9899_7.24.4.5.8p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.5.8p1>`
+
+
 
 ::
 
@@ -19,13 +23,21 @@
 
 .. _9899_7.24.4.5.8p2:
 
-:ref:`2 <9899_7.24.4.5.8p2>` The wmemchr function locates the first occurrence of c in the initial n wide characters of the object pointed to by s.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.4.5.8p2>`
+
+The wmemchr function locates the first occurrence of c in the initial n wide characters of the object pointed to by s.
 
 .. rubric:: Returns
 
 .. _9899_7.24.4.5.8p3:
 
-:ref:`3 <9899_7.24.4.5.8p3>` The wmemchr function returns a pointer to the located wide character, or a null pointer if the wide character does not occur in the object.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.4.5.8p3>`
+
+The wmemchr function returns a pointer to the located wide character, or a null pointer if the wide character does not occur in the object.
 
 .. _9899_7.24.4.6:
 

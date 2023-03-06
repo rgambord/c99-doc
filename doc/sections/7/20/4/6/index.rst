@@ -7,7 +7,11 @@
 
 .. _9899_7.20.4.6p1:
 
-:ref:`1 <9899_7.20.4.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.4.6p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.20.4.6p2:
 
-:ref:`2 <9899_7.20.4.6p2>` If string is a null pointer, the system function determines whether the host environment has a command processor. If string is not a null pointer, the system function passes the string pointed to by string to that command processor to be executed in a manner which the implementation shall document; this might then cause the program calling system to behave in a non-conforming manner or to terminate.
+.. container:: snum
+
+   :ref:`2 <9899_7.20.4.6p2>`
+
+If string is a null pointer, the system function determines whether the host environment has a command processor. If string is not a null pointer, the system function passes the string pointed to by string to that command processor to be executed in a manner which the implementation shall document; this might then cause the program calling system to behave in a non-conforming manner or to terminate.
 
 .. rubric:: Returns
 
 .. _9899_7.20.4.6p3:
 
-:ref:`3 <9899_7.20.4.6p3>` If the argument is a null pointer, the system function returns nonzero only if a command processor is available. If the argument is not a null pointer, and the system function does return, it returns an implementation-defined value.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.4.6p3>`
+
+If the argument is a null pointer, the system function returns nonzero only if a command processor is available. If the argument is not a null pointer, and the system function does return, it returns an implementation-defined value.
 

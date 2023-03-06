@@ -5,7 +5,11 @@ J.3.6 Floating point
 
 .. _9899_J.3.6p1:
 
-:ref:`1 <9899_J.3.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_J.3.6p1>`
+
+
 
 -  The accuracy of the floating-point operations and of the library functions in :ref:`\<math.h> <9899_7.12>` and :ref:`\<complex.h> <9899_7.3>` that return floating-point results (:ref:`5.2.4.2.2 <9899_5.2.4.2.2>`).
 -  The accuracy of the conversions between floating-point internal representations and string representations performed by the library functions in :ref:`\<stdio.h> <9899_7.19>`, :ref:`\<stdlib.h> <9899_7.20>`, and :ref:`\<wchar.h> <9899_7.24>` (:ref:`5.2.4.2.2 <9899_5.2.4.2.2>`).

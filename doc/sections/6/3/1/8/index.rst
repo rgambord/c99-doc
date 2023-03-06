@@ -5,7 +5,11 @@
 
 .. _9899_6.3.1.8p1:
 
-:ref:`1 <9899_6.3.1.8p1>` Many operators that expect operands of arithmetic type cause conversions and yield result types in a similar way. The purpose is to determine a common real type for the operands and result. For the specified operands, each operand is converted, without change of type domain, to a type whose corresponding real type is the common real type. Unless explicitly stated otherwise, the common real type is also the corresponding real type of the result, whose type domain is the type domain of the operands if they are the same, and complex otherwise. This pattern is called the usual arithmetic conversions:
+.. container:: snum
+
+   :ref:`1 <9899_6.3.1.8p1>`
+
+Many operators that expect operands of arithmetic type cause conversions and yield result types in a similar way. The purpose is to determine a common real type for the operands and result. For the specified operands, each operand is converted, without change of type domain, to a type whose corresponding real type is the common real type. Unless explicitly stated otherwise, the common real type is also the corresponding real type of the result, whose type domain is the type domain of the operands if they are the same, and complex otherwise. This pattern is called the usual arithmetic conversions:
 
 -  First, if the corresponding real type of either operand is long double, the other operand is converted, without change of type domain, to a type whose corresponding real type is long double.
 -  Otherwise, if the corresponding real type of either operand is double, the other operand is converted, without change of type domain, to a type whose corresponding real type is double.
@@ -20,7 +24,11 @@
 
 .. _9899_6.3.1.8p2:
 
-:ref:`2 <9899_6.3.1.8p2>` The values of floating operands and of the results of floating expressions may be represented in greater precision and range than that required by the type; the types are not changed thereby.\ [#9899_note52]_
+.. container:: snum
+
+   :ref:`2 <9899_6.3.1.8p2>`
+
+The values of floating operands and of the results of floating expressions may be represented in greater precision and range than that required by the type; the types are not changed thereby.\ [#9899_note52]_
 
 
 

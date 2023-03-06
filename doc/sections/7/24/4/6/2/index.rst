@@ -7,7 +7,11 @@
 
 .. _9899_7.24.4.6.2p1:
 
-:ref:`1 <9899_7.24.4.6.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.24.4.6.2p1>`
+
+
 
 ::
 
@@ -18,11 +22,19 @@
 
 .. _9899_7.24.4.6.2p2:
 
-:ref:`2 <9899_7.24.4.6.2p2>` The wmemset function copies the value of c into each of the first n wide characters of the object pointed to by s.
+.. container:: snum
+
+   :ref:`2 <9899_7.24.4.6.2p2>`
+
+The wmemset function copies the value of c into each of the first n wide characters of the object pointed to by s.
 
 .. rubric:: Returns
 
 .. _9899_7.24.4.6.2p3:
 
-:ref:`3 <9899_7.24.4.6.2p3>` The wmemset function returns the value of s.
+.. container:: snum
+
+   :ref:`3 <9899_7.24.4.6.2p3>`
+
+The wmemset function returns the value of s.
 

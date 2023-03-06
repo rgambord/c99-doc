@@ -7,7 +7,11 @@
 
 .. _9899_7.19.6.10p1:
 
-:ref:`1 <9899_7.19.6.10p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.6.10p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.19.6.10p2:
 
-:ref:`2 <9899_7.19.6.10p2>` The vprintf function is equivalent to printf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vprintf function does not invoke the va_end macro.\ [#9899_note254]_
+.. container:: snum
+
+   :ref:`2 <9899_7.19.6.10p2>`
+
+The vprintf function is equivalent to printf, with the variable argument list replaced by arg, which shall have been initialized by the va_start macro (and possibly subsequent va_arg calls). The vprintf function does not invoke the va_end macro.\ [#9899_note254]_
 
 .. rubric:: Returns
 
 .. _9899_7.19.6.10p3:
 
-:ref:`3 <9899_7.19.6.10p3>` The vprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.6.10p3>`
+
+The vprintf function returns the number of characters transmitted, or a negative value if an output or encoding error occurred.
 
 
 

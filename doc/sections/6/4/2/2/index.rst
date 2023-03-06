@@ -7,7 +7,11 @@
 
 .. _9899_6.4.2.2p1:
 
-:ref:`1 <9899_6.4.2.2p1>` The identifier \__func\_\_ shall be implicitly declared by the translator as if, immediately following the opening brace of each function definition, the declaration
+.. container:: snum
+
+   :ref:`1 <9899_6.4.2.2p1>`
+
+The identifier \__func\_\_ shall be implicitly declared by the translator as if, immediately following the opening brace of each function definition, the declaration
 
 ::
 
@@ -17,11 +21,19 @@ appeared, where function-name is the name of the lexically-enclosing function.\ 
 
 .. _9899_6.4.2.2p2:
 
-:ref:`2 <9899_6.4.2.2p2>` This name is encoded as if the implicit declaration had been written in the source character set and then translated into the execution character set as indicated in translation phase 5.
+.. container:: snum
+
+   :ref:`2 <9899_6.4.2.2p2>`
+
+This name is encoded as if the implicit declaration had been written in the source character set and then translated into the execution character set as indicated in translation phase 5.
 
 .. _9899_6.4.2.2p3:
 
-:ref:`3 <9899_6.4.2.2p3>` EXAMPLE Consider the code fragment:
+.. container:: snum
+
+   :ref:`3 <9899_6.4.2.2p3>`
+
+EXAMPLE Consider the code fragment:
 
 ::
 
@@ -38,7 +50,10 @@ Each time the function is called, it will print to the standard output stream:
 
     myfunc
 
-**Forward references**: function definitions (:ref:`6.9.1 <9899_6.9.1>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.9.1`
 
 
 

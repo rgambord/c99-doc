@@ -24,7 +24,11 @@
 
 .. _9899_7.26p1:
 
-:ref:`1 <9899_7.26p1>` The following names are grouped under individual headers for convenience. All external names described below are reserved no matter what headers are included by the program.
+.. container:: snum
+
+   :ref:`1 <9899_7.26p1>`
+
+The following names are grouped under individual headers for convenience. All external names described below are reserved no matter what headers are included by the program.
 
 .. _9899_7.26.1:
 

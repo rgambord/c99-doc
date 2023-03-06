@@ -7,7 +7,11 @@
 
 .. _9899_7.19.9.5p1:
 
-:ref:`1 <9899_7.19.9.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.19.9.5p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.19.9.5p2:
 
-:ref:`2 <9899_7.19.9.5p2>` The rewind function sets the file position indicator for the stream pointed to by stream to the beginning of the file. It is equivalent to
+.. container:: snum
+
+   :ref:`2 <9899_7.19.9.5p2>`
+
+The rewind function sets the file position indicator for the stream pointed to by stream to the beginning of the file. It is equivalent to
 
 ::
 
@@ -30,5 +38,9 @@ except that the error indicator for the stream is also cleared.
 
 .. _9899_7.19.9.5p3:
 
-:ref:`3 <9899_7.19.9.5p3>` The rewind function returns no value.
+.. container:: snum
+
+   :ref:`3 <9899_7.19.9.5p3>`
+
+The rewind function returns no value.
 

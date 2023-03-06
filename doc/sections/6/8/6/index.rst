@@ -17,7 +17,11 @@
 
 .. _9899_6.8.6p1:
 
-:ref:`1 <9899_6.8.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.8.6p1>`
+
+
 
 .. container:: syntax-block
 
@@ -102,5 +106,9 @@
 
 .. _9899_6.8.6p2:
 
-:ref:`2 <9899_6.8.6p2>` A jump statement causes an unconditional jump to another place.
+.. container:: snum
+
+   :ref:`2 <9899_6.8.6p2>`
+
+A jump statement causes an unconditional jump to another place.
 

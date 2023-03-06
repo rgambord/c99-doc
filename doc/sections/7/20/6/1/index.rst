@@ -7,7 +7,11 @@
 
 .. _9899_7.20.6.1p1:
 
-:ref:`1 <9899_7.20.6.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.20.6.1p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.20.6.1p2:
 
-:ref:`2 <9899_7.20.6.1p2>` The abs, labs, and llabs functions compute the absolute value of an integer j. If the result cannot be represented, the behavior is undefined.\ [#9899_note265]_
+.. container:: snum
+
+   :ref:`2 <9899_7.20.6.1p2>`
+
+The abs, labs, and llabs functions compute the absolute value of an integer j. If the result cannot be represented, the behavior is undefined.\ [#9899_note265]_
 
 .. rubric:: Returns
 
 .. _9899_7.20.6.1p3:
 
-:ref:`3 <9899_7.20.6.1p3>` The abs, labs, and llabs, functions return the absolute value.
+.. container:: snum
+
+   :ref:`3 <9899_7.20.6.1p3>`
+
+The abs, labs, and llabs, functions return the absolute value.
 
 
 

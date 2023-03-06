@@ -23,7 +23,11 @@
 
 .. _9899_7.24.2p1:
 
-:ref:`1 <9899_7.24.2p1>` The formatted wide character input/output functions shall behave as if there is a sequence point after the actions associated with each specifier.\ [#9899_note280]_
+.. container:: snum
+
+   :ref:`1 <9899_7.24.2p1>`
+
+The formatted wide character input/output functions shall behave as if there is a sequence point after the actions associated with each specifier.\ [#9899_note280]_
 
 
 

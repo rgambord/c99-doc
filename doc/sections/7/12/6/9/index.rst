@@ -7,7 +7,11 @@
 
 .. _9899_7.12.6.9p1:
 
-:ref:`1 <9899_7.12.6.9p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.6.9p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.12.6.9p2:
 
-:ref:`2 <9899_7.12.6.9p2>` The log1p functions compute the base-e (natural) logarithm of 1 plus the argument.\ [#9899_note209]_ A domain error occurs if the argument is less than -1. A range error may occur if the argument equals -1.
+.. container:: snum
+
+   :ref:`2 <9899_7.12.6.9p2>`
+
+The log1p functions compute the base-e (natural) logarithm of 1 plus the argument.\ [#9899_note209]_ A domain error occurs if the argument is less than -1. A range error may occur if the argument equals -1.
 
 .. rubric:: Returns
 
 .. _9899_7.12.6.9p3:
 
-:ref:`3 <9899_7.12.6.9p3>` The log1p functions return loge (1 + x).
+.. container:: snum
+
+   :ref:`3 <9899_7.12.6.9p3>`
+
+The log1p functions return loge (1 + x).
 
 
 

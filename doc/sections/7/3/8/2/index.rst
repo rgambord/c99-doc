@@ -7,7 +7,11 @@
 
 .. _9899_7.3.8.2p1:
 
-:ref:`1 <9899_7.3.8.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.8.2p1>`
+
+
 
 ::
 
@@ -21,11 +25,19 @@
 
 .. _9899_7.3.8.2p2:
 
-:ref:`2 <9899_7.3.8.2p2>` The cpow functions compute the complex power function x\ :sup:`y` , with a branch cut for the first parameter along the negative real axis.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.8.2p2>`
+
+The cpow functions compute the complex power function x\ :sup:`y` , with a branch cut for the first parameter along the negative real axis.
 
 .. rubric:: Returns
 
 .. _9899_7.3.8.2p3:
 
-:ref:`3 <9899_7.3.8.2p3>` The cpow functions return the complex power function value.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.8.2p3>`
+
+The cpow functions return the complex power function value.
 

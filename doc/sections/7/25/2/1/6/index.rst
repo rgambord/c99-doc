@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.1.6p1:
 
-:ref:`1 <9899_7.25.2.1.6p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.1.6p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.25.2.1.6p2:
 
-:ref:`2 <9899_7.25.2.1.6p2>` The iswgraph function tests for any wide character for which iswprint is true and iswspace is false.\ [#9899_note306]_
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.1.6p2>`
+
+The iswgraph function tests for any wide character for which iswprint is true and iswspace is false.\ [#9899_note306]_
 
 
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.1.9p1:
 
-:ref:`1 <9899_7.25.2.1.9p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.1.9p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.25.2.1.9p2:
 
-:ref:`2 <9899_7.25.2.1.9p2>` The iswpunct function tests for any printing wide character that is one of a locale- specific set of punctuation wide characters for which neither iswspace nor iswalnum is true.\ [#9899_note306]_
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.1.9p2>`
+
+The iswpunct function tests for any printing wide character that is one of a locale- specific set of punctuation wide characters for which neither iswspace nor iswalnum is true.\ [#9899_note306]_
 
 
 

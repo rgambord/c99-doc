@@ -7,7 +7,11 @@
 
 .. _9899_6.4.4.3p1:
 
-:ref:`1 <9899_6.4.4.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.4.3p1>`
+
+
 
 .. container:: syntax-block
 
@@ -33,7 +37,14 @@
 
 .. _9899_6.4.4.3p2:
 
-:ref:`2 <9899_6.4.4.3p2>` An identifier declared as an enumeration constant has type int.
+.. container:: snum
 
-**Forward references**: enumeration specifiers (:ref:`6.7.2.2 <9899_6.7.2.2>`).
+   :ref:`2 <9899_6.4.4.3p2>`
+
+An identifier declared as an enumeration constant has type int.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.7.2.2`
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.3.9.2p1:
 
-:ref:`1 <9899_7.3.9.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.9.2p1>`
+
+
 
 ::
 
@@ -20,13 +24,21 @@
 
 .. _9899_7.3.9.2p2:
 
-:ref:`2 <9899_7.3.9.2p2>` The cimag functions compute the imaginary part of z.\ [#9899_note170]_
+.. container:: snum
+
+   :ref:`2 <9899_7.3.9.2p2>`
+
+The cimag functions compute the imaginary part of z.\ [#9899_note170]_
 
 .. rubric:: Returns
 
 .. _9899_7.3.9.2p3:
 
-:ref:`3 <9899_7.3.9.2p3>` The cimag functions return the imaginary part value (as a real).
+.. container:: snum
+
+   :ref:`3 <9899_7.3.9.2p3>`
+
+The cimag functions return the imaginary part value (as a real).
 
 
 

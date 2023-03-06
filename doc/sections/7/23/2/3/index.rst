@@ -7,7 +7,11 @@
 
 .. _9899_7.23.2.3p1:
 
-:ref:`1 <9899_7.23.2.3p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.23.2.3p1>`
+
+
 
 ::
 
@@ -18,17 +22,29 @@
 
 .. _9899_7.23.2.3p2:
 
-:ref:`2 <9899_7.23.2.3p2>` The mktime function converts the broken-down time, expressed as local time, in the structure pointed to by timeptr into a calendar time value with the same encoding as that of the values returned by the time function. The original values of the tm_wday and tm_yday components of the structure are ignored, and the original values of the other components are not restricted to the ranges indicated above.\ [#9899_note276]_ On successful completion, the values of the tm_wday and tm_yday components of the structure are set appropriately, and the other components are set to represent the specified calendar time, but with their values forced to the ranges indicated above; the final value of tm_mday is not set until tm_mon and tm_year are determined.
+.. container:: snum
+
+   :ref:`2 <9899_7.23.2.3p2>`
+
+The mktime function converts the broken-down time, expressed as local time, in the structure pointed to by timeptr into a calendar time value with the same encoding as that of the values returned by the time function. The original values of the tm_wday and tm_yday components of the structure are ignored, and the original values of the other components are not restricted to the ranges indicated above.\ [#9899_note276]_ On successful completion, the values of the tm_wday and tm_yday components of the structure are set appropriately, and the other components are set to represent the specified calendar time, but with their values forced to the ranges indicated above; the final value of tm_mday is not set until tm_mon and tm_year are determined.
 
 .. rubric:: Returns
 
 .. _9899_7.23.2.3p3:
 
-:ref:`3 <9899_7.23.2.3p3>` The mktime function returns the specified calendar time encoded as a value of type time_t. If the calendar time cannot be represented, the function returns the value (time_t)(-1).
+.. container:: snum
+
+   :ref:`3 <9899_7.23.2.3p3>`
+
+The mktime function returns the specified calendar time encoded as a value of type time_t. If the calendar time cannot be represented, the function returns the value (time_t)(-1).
 
 .. _9899_7.23.2.3p4:
 
-:ref:`4 <9899_7.23.2.3p4>` EXAMPLE What day of the week is July 4, 2001?
+.. container:: snum
+
+   :ref:`4 <9899_7.23.2.3p4>`
+
+EXAMPLE What day of the week is July 4, 2001?
 
 ::
 

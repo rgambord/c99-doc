@@ -7,7 +7,11 @@
 
 .. _9899_7.21.4.1p1:
 
-:ref:`1 <9899_7.21.4.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.21.4.1p1>`
+
+
 
 ::
 
@@ -18,13 +22,21 @@
 
 .. _9899_7.21.4.1p2:
 
-:ref:`2 <9899_7.21.4.1p2>` The memcmp function compares the first n characters of the object pointed to by s1 to the first n characters of the object pointed to by s2.\ [#9899_note271]_
+.. container:: snum
+
+   :ref:`2 <9899_7.21.4.1p2>`
+
+The memcmp function compares the first n characters of the object pointed to by s1 to the first n characters of the object pointed to by s2.\ [#9899_note271]_
 
 .. rubric:: Returns
 
 .. _9899_7.21.4.1p3:
 
-:ref:`3 <9899_7.21.4.1p3>` The memcmp function returns an integer greater than, equal to, or less than zero, accordingly as the object pointed to by s1 is greater than, equal to, or less than the object pointed to by s2.
+.. container:: snum
+
+   :ref:`3 <9899_7.21.4.1p3>`
+
+The memcmp function returns an integer greater than, equal to, or less than zero, accordingly as the object pointed to by s1 is greater than, equal to, or less than the object pointed to by s2.
 
 
 
@@ -32,4 +44,4 @@
 
 .. rubric:: Footnotes
 
-.. [#9899_note271] The contents of ''holes'' used as padding for purposes of alignment within structure objects are indeterminate. Strings shorter than their allocated space and unions may also cause problems in comparison.
+.. [#9899_note271] The contents of "holes" used as padding for purposes of alignment within structure objects are indeterminate. Strings shorter than their allocated space and unions may also cause problems in comparison.

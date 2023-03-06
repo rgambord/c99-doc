@@ -16,7 +16,11 @@
 
 .. _9899_6.7.5p1:
 
-:ref:`1 <9899_6.7.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.7.5p1>`
+
+
 
 .. container:: syntax-block
 
@@ -505,15 +509,27 @@
 
 .. _9899_6.7.5p2:
 
-:ref:`2 <9899_6.7.5p2>` Each declarator declares one identifier, and asserts that when an operand of the same form as the declarator appears in an expression, it designates a function or object with the scope, storage duration, and type indicated by the declaration specifiers.
+.. container:: snum
+
+   :ref:`2 <9899_6.7.5p2>`
+
+Each declarator declares one identifier, and asserts that when an operand of the same form as the declarator appears in an expression, it designates a function or object with the scope, storage duration, and type indicated by the declaration specifiers.
 
 .. _9899_6.7.5p3:
 
-:ref:`3 <9899_6.7.5p3>` A full declarator is a declarator that is not part of another declarator. The end of a full declarator is a sequence point. If, in the nested sequence of declarators in a full declarator, there is a declarator specifying a variable length array type, the type specified by the full declarator is said to be variably modified. Furthermore, any type derived by declarator type derivation from a variably modified type is itself variably modified.
+.. container:: snum
+
+   :ref:`3 <9899_6.7.5p3>`
+
+A full declarator is a declarator that is not part of another declarator. The end of a full declarator is a sequence point. If, in the nested sequence of declarators in a full declarator, there is a declarator specifying a variable length array type, the type specified by the full declarator is said to be variably modified. Furthermore, any type derived by declarator type derivation from a variably modified type is itself variably modified.
 
 .. _9899_6.7.5p4:
 
-:ref:`4 <9899_6.7.5p4>` In the following subclauses, consider a declaration
+.. container:: snum
+
+   :ref:`4 <9899_6.7.5p4>`
+
+In the following subclauses, consider a declaration
 
 .. code-block:: text
 
@@ -523,7 +539,11 @@ where T contains the declaration specifiers that specify a type T (such as int) 
 
 .. _9899_6.7.5p5:
 
-:ref:`5 <9899_6.7.5p5>` If, in the declaration ''T D1'', D1 has the form
+.. container:: snum
+
+   :ref:`5 <9899_6.7.5p5>`
+
+If, in the declaration "T D1", D1 has the form
 
 .. code-block:: text
 
@@ -533,19 +553,31 @@ then the type specified for ident is T .
 
 .. _9899_6.7.5p6:
 
-:ref:`6 <9899_6.7.5p6>` If, in the declaration ''T D1'', D1 has the form
+.. container:: snum
+
+   :ref:`6 <9899_6.7.5p6>`
+
+If, in the declaration "T D1", D1 has the form
 
 .. code-block:: text
 
     ( D )
 
-then ident has the type specified by the declaration ''T D''. Thus, a declarator in parentheses is identical to the unparenthesized declarator, but the binding of complicated declarators may be altered by parentheses.
+then ident has the type specified by the declaration "T D". Thus, a declarator in parentheses is identical to the unparenthesized declarator, but the binding of complicated declarators may be altered by parentheses.
 
 .. rubric:: Implementation limits
 
 .. _9899_6.7.5p7:
 
-:ref:`7 <9899_6.7.5p7>` As discussed in :ref:`5.2.4.1 <9899_5.2.4.1>`, an implementation may limit the number of pointer, array, and function declarators that modify an arithmetic, structure, union, or incomplete type, either directly or via one or more typedefs.
+.. container:: snum
 
-**Forward references**: array declarators (:ref:`6.7.5.2 <9899_6.7.5.2>`), type definitions (:ref:`6.7.7 <9899_6.7.7>`).
+   :ref:`7 <9899_6.7.5p7>`
+
+As discussed in :ref:`5.2.4.1 <9899_5.2.4.1>`, an implementation may limit the number of pointer, array, and function declarators that modify an arithmetic, structure, union, or incomplete type, either directly or via one or more typedefs.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.7.5.2`
+   - :ref:`9899_6.7.7`
 

@@ -7,7 +7,11 @@
 
 .. _9899_7.25.2.1.2p1:
 
-:ref:`1 <9899_7.25.2.1.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.25.2.1.2p1>`
+
+
 
 ::
 
@@ -18,7 +22,11 @@
 
 .. _9899_7.25.2.1.2p2:
 
-:ref:`2 <9899_7.25.2.1.2p2>` The iswalpha function tests for any wide character for which iswupper or iswlower is true, or any wide character that is one of a locale-specific set of alphabetic wide characters for which none of iswcntrl, iswdigit, iswpunct, or iswspace is true.\ [#9899_note305]_
+.. container:: snum
+
+   :ref:`2 <9899_7.25.2.1.2p2>`
+
+The iswalpha function tests for any wide character for which iswupper or iswlower is true, or any wide character that is one of a locale-specific set of alphabetic wide characters for which none of iswcntrl, iswdigit, iswpunct, or iswspace is true.\ [#9899_note305]_
 
 
 

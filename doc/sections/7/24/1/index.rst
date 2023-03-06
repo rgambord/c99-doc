@@ -5,11 +5,19 @@
 
 .. _9899_7.24.1p1:
 
-:ref:`1 <9899_7.24.1p1>` The header :ref:`\<wchar.h> <9899_7.24>` declares four data types, one tag, four macros, and many functions.\ [#9899_note277]_
+.. container:: snum
+
+   :ref:`1 <9899_7.24.1p1>`
+
+The header :ref:`\<wchar.h> <9899_7.24>` declares four data types, one tag, four macros, and many functions.\ [#9899_note277]_
 
 .. _9899_7.24.1p2:
 
-:ref:`2 <9899_7.24.1p2>` The types declared are wchar_t and size_t (both described in :ref:`7.17 <9899_7.17>`);
+.. container:: snum
+
+   :ref:`2 <9899_7.24.1p2>`
+
+The types declared are wchar_t and size_t (both described in :ref:`7.17 <9899_7.17>`);
 
 ::
 
@@ -31,7 +39,11 @@ which is declared as an incomplete structure type (the contents are described in
 
 .. _9899_7.24.1p3:
 
-:ref:`3 <9899_7.24.1p3>` The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); WCHAR_MIN and WCHAR_MAX (described in :ref:`7.18.3 <9899_7.18.3>`); and
+.. container:: snum
+
+   :ref:`3 <9899_7.24.1p3>`
+
+The macros defined are NULL (described in :ref:`7.17 <9899_7.17>`); WCHAR_MIN and WCHAR_MAX (described in :ref:`7.18.3 <9899_7.18.3>`); and
 
 ::
 
@@ -41,7 +53,11 @@ which expands to a constant expression of type wint_t whose value does not corre
 
 .. _9899_7.24.1p4:
 
-:ref:`4 <9899_7.24.1p4>` The functions declared are grouped as follows:
+.. container:: snum
+
+   :ref:`4 <9899_7.24.1p4>`
+
+The functions declared are grouped as follows:
 
 -  Functions that perform input and output of wide characters, or multibyte characters, or both;
 -  Functions that provide wide string numeric conversion;
@@ -51,7 +67,11 @@ which expands to a constant expression of type wint_t whose value does not corre
 
 .. _9899_7.24.1p5:
 
-:ref:`5 <9899_7.24.1p5>` Unless explicitly stated otherwise, if the execution of a function described in this subclause causes copying to take place between objects that overlap, the behavior is undefined.
+.. container:: snum
+
+   :ref:`5 <9899_7.24.1p5>`
+
+Unless explicitly stated otherwise, if the execution of a function described in this subclause causes copying to take place between objects that overlap, the behavior is undefined.
 
 
 
@@ -61,6 +81,6 @@ which expands to a constant expression of type wint_t whose value does not corre
 
 .. rubric:: Footnotes
 
-.. [#9899_note277] See ''future library directions'' (:ref:`7.26.12 <9899_7.26.12>`).
+.. [#9899_note277] See "future library directions" (:ref:`7.26.12 <9899_7.26.12>`).
 .. [#9899_note278] wchar_t and wint_t can be the same integer type.
 .. [#9899_note279] The value of the macro WEOF may differ from that of EOF and need not be negative.

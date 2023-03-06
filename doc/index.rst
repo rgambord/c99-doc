@@ -27,4 +27,8 @@ C99 Language Standard
    sections/18/index
 
 
-(Derived from :title:`ISO/IEC 9899:TC3` hosted at `Open Standards: JTC1/SC22/WG14 - C <https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf>`_)
+Content derived from :title:`ISO/IEC 9899:TC3` hosted at `Open Standards: JTC1/SC22/WG14 - C <https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf>`_
+
+.. note::
+
+   This is a work in progress. A significant amount of processing has been done using custom automated tools to parse the document structure from a pdf format. Manual review of the content is ongoing. Always consult the authoritative source when in doubt.

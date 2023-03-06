@@ -7,7 +7,11 @@
 
 .. _9899_7.3.7.2p1:
 
-:ref:`1 <9899_7.3.7.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.3.7.2p1>`
+
+
 
 ::
 
@@ -20,11 +24,19 @@
 
 .. _9899_7.3.7.2p2:
 
-:ref:`2 <9899_7.3.7.2p2>` The clog functions compute the complex natural (base-e) logarithm of z, with a branch cut along the negative real axis.
+.. container:: snum
+
+   :ref:`2 <9899_7.3.7.2p2>`
+
+The clog functions compute the complex natural (base-e) logarithm of z, with a branch cut along the negative real axis.
 
 .. rubric:: Returns
 
 .. _9899_7.3.7.2p3:
 
-:ref:`3 <9899_7.3.7.2p3>` The clog functions return the complex natural logarithm value, in the range of a strip mathematically unbounded along the real axis and in the interval [-ipi , +ipi ] along the imaginary axis.
+.. container:: snum
+
+   :ref:`3 <9899_7.3.7.2p3>`
+
+The clog functions return the complex natural logarithm value, in the range of a strip mathematically unbounded along the real axis and in the interval [-ipi , +ipi ] along the imaginary axis.
 

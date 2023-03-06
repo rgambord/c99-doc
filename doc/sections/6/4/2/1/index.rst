@@ -7,7 +7,11 @@
 
 .. _9899_6.4.2.1p1:
 
-:ref:`1 <9899_6.4.2.1p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.2.1p1>`
+
+
 
 .. container:: syntax-block
 
@@ -375,27 +379,51 @@
 
 .. _9899_6.4.2.1p2:
 
-:ref:`2 <9899_6.4.2.1p2>` An identifier is a sequence of nondigit characters (including the underscore \_, the lowercase and uppercase Latin letters, and other characters) and digits, which designates one or more entities as described in :ref:`6.2.1 <9899_6.2.1>`. Lowercase and uppercase letters are distinct. There is no specific limit on the maximum length of an identifier.
+.. container:: snum
+
+   :ref:`2 <9899_6.4.2.1p2>`
+
+An identifier is a sequence of nondigit characters (including the underscore \_, the lowercase and uppercase Latin letters, and other characters) and digits, which designates one or more entities as described in :ref:`6.2.1 <9899_6.2.1>`. Lowercase and uppercase letters are distinct. There is no specific limit on the maximum length of an identifier.
 
 .. _9899_6.4.2.1p3:
 
-:ref:`3 <9899_6.4.2.1p3>` Each universal character name in an identifier shall designate a character whose encoding in ISO/IEC 10646 falls into one of the ranges specified in :ref:`annex D <9899_D>`.\ [#9899_note60]_ The initial character shall not be a universal character name designating a digit. An implementation may allow multibyte characters that are not part of the basic source character set to appear in identifiers; which characters and their correspondence to universal character names is implementation-defined.
+.. container:: snum
+
+   :ref:`3 <9899_6.4.2.1p3>`
+
+Each universal character name in an identifier shall designate a character whose encoding in ISO/IEC 10646 falls into one of the ranges specified in :ref:`annex D <9899_D>`.\ [#9899_note60]_ The initial character shall not be a universal character name designating a digit. An implementation may allow multibyte characters that are not part of the basic source character set to appear in identifiers; which characters and their correspondence to universal character names is implementation-defined.
 
 .. _9899_6.4.2.1p4:
 
-:ref:`4 <9899_6.4.2.1p4>` When preprocessing tokens are converted to tokens during translation phase 7, if a preprocessing token could be converted to either a keyword or an identifier, it is converted to a keyword.
+.. container:: snum
+
+   :ref:`4 <9899_6.4.2.1p4>`
+
+When preprocessing tokens are converted to tokens during translation phase 7, if a preprocessing token could be converted to either a keyword or an identifier, it is converted to a keyword.
 
 .. rubric:: Implementation limits
 
 .. _9899_6.4.2.1p5:
 
-:ref:`5 <9899_6.4.2.1p5>` As discussed in :ref:`5.2.4.1 <9899_5.2.4.1>`, an implementation may limit the number of significant initial characters in an identifier; the limit for an external name (an identifier that has external linkage) may be more restrictive than that for an internal name (a macro name or an identifier that does not have external linkage). The number of significant characters in an identifier is implementation-defined.
+.. container:: snum
+
+   :ref:`5 <9899_6.4.2.1p5>`
+
+As discussed in :ref:`5.2.4.1 <9899_5.2.4.1>`, an implementation may limit the number of significant initial characters in an identifier; the limit for an external name (an identifier that has external linkage) may be more restrictive than that for an internal name (a macro name or an identifier that does not have external linkage). The number of significant characters in an identifier is implementation-defined.
 
 .. _9899_6.4.2.1p6:
 
-:ref:`6 <9899_6.4.2.1p6>` Any identifiers that differ in a significant character are different identifiers. If two identifiers differ only in nonsignificant characters, the behavior is undefined.
+.. container:: snum
 
-**Forward references**: universal character names (:ref:`6.4.3 <9899_6.4.3>`), macro replacement (:ref:`6.10.3 <9899_6.10.3>`).
+   :ref:`6 <9899_6.4.2.1p6>`
+
+Any identifiers that differ in a significant character are different identifiers. If two identifiers differ only in nonsignificant characters, the behavior is undefined.
+
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.4.3`
+   - :ref:`9899_6.10.3`
 
 
 

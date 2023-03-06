@@ -7,7 +7,11 @@
 
 .. _9899_7.12.11.4p1:
 
-:ref:`1 <9899_7.12.11.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.12.11.4p1>`
+
+
 
 ::
 
@@ -20,7 +24,11 @@
 
 .. _9899_7.12.11.4p2:
 
-:ref:`2 <9899_7.12.11.4p2>` The nexttoward functions are equivalent to the nextafter functions except that the second parameter has type long double and the functions return y converted to the type of the function if x equals y.\ [#9899_note212]_
+.. container:: snum
+
+   :ref:`2 <9899_7.12.11.4p2>`
+
+The nexttoward functions are equivalent to the nextafter functions except that the second parameter has type long double and the functions return y converted to the type of the function if x equals y.\ [#9899_note212]_
 
 
 

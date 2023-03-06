@@ -7,7 +7,11 @@
 
 .. _9899_7.6.2.5p1:
 
-:ref:`1 <9899_7.6.2.5p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.6.2.5p1>`
+
+
 
 ::
 
@@ -18,17 +22,29 @@
 
 .. _9899_7.6.2.5p2:
 
-:ref:`2 <9899_7.6.2.5p2>` The fetestexcept function determines which of a specified subset of the floating- point exception flags are currently set. The excepts argument specifies the floating- point status flags to be queried.\ [#9899_note188]_
+.. container:: snum
+
+   :ref:`2 <9899_7.6.2.5p2>`
+
+The fetestexcept function determines which of a specified subset of the floating- point exception flags are currently set. The excepts argument specifies the floating- point status flags to be queried.\ [#9899_note188]_
 
 .. rubric:: Returns
 
 .. _9899_7.6.2.5p3:
 
-:ref:`3 <9899_7.6.2.5p3>` The fetestexcept function returns the value of the bitwise OR of the floating-point exception macros corresponding to the currently set floating-point exceptions included in excepts.
+.. container:: snum
+
+   :ref:`3 <9899_7.6.2.5p3>`
+
+The fetestexcept function returns the value of the bitwise OR of the floating-point exception macros corresponding to the currently set floating-point exceptions included in excepts.
 
 .. _9899_7.6.2.5p4:
 
-:ref:`4 <9899_7.6.2.5p4>` EXAMPLE Call f if ''invalid'' is set, then g if ''overflow'' is set:
+.. container:: snum
+
+   :ref:`4 <9899_7.6.2.5p4>`
+
+EXAMPLE Call f if "invalid" is set, then g if "overflow" is set:
 
 ::
 

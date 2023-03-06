@@ -5,7 +5,11 @@
 
 .. _9899_6.11.4p1:
 
-:ref:`1 <9899_6.11.4p1>` Lowercase letters as escape sequences are reserved for future standardization. Other characters may be used in extensions.
+.. container:: snum
+
+   :ref:`1 <9899_6.11.4p1>`
+
+Lowercase letters as escape sequences are reserved for future standardization. Other characters may be used in extensions.
 
 .. _9899_6.11.5:
 

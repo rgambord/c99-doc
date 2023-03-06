@@ -15,5 +15,9 @@
 
 .. _9899_7.6.4p1:
 
-:ref:`1 <9899_7.6.4p1>` The functions in this section manage the floating-point environment -- status flags and control modes -- as one entity.
+.. container:: snum
+
+   :ref:`1 <9899_7.6.4p1>`
+
+The functions in this section manage the floating-point environment -- status flags and control modes -- as one entity.
 

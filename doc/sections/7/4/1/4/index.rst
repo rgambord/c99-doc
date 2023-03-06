@@ -7,7 +7,11 @@
 
 .. _9899_7.4.1.4p1:
 
-:ref:`1 <9899_7.4.1.4p1>`
+.. container:: snum
+
+   :ref:`1 <9899_7.4.1.4p1>`
+
+
 
 ::
 
@@ -18,5 +22,9 @@
 
 .. _9899_7.4.1.4p2:
 
-:ref:`2 <9899_7.4.1.4p2>` The iscntrl function tests for any control character.
+.. container:: snum
+
+   :ref:`2 <9899_7.4.1.4p2>`
+
+The iscntrl function tests for any control character.
 

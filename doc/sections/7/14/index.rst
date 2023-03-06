@@ -13,11 +13,19 @@
 
 .. _9899_7.14p1:
 
-:ref:`1 <9899_7.14p1>` The header :ref:`\<signal.h> <9899_7.14>` declares a type and two functions and defines several macros, for handling various signals (conditions that may be reported during program execution).
+.. container:: snum
+
+   :ref:`1 <9899_7.14p1>`
+
+The header :ref:`\<signal.h> <9899_7.14>` declares a type and two functions and defines several macros, for handling various signals (conditions that may be reported during program execution).
 
 .. _9899_7.14p2:
 
-:ref:`2 <9899_7.14p2>` The type defined is
+.. container:: snum
+
+   :ref:`2 <9899_7.14p2>`
+
+The type defined is
 
 ::
 
@@ -27,7 +35,11 @@ which is the (possibly volatile-qualified) integer type of an object that can be
 
 .. _9899_7.14p3:
 
-:ref:`3 <9899_7.14p3>` The macros defined are
+.. container:: snum
+
+   :ref:`3 <9899_7.14p3>`
+
+The macros defined are
 
 ::
 
@@ -49,7 +61,11 @@ which expand to constant expressions with distinct values that have type compati
 
 .. _9899_7.14p4:
 
-:ref:`4 <9899_7.14p4>` An implementation need not generate any of these signals, except as a result of explicit calls to the raise function. Additional signals and pointers to undeclarable functions, with macro definitions beginning, respectively, with the letters SIG and an uppercase letter or with SIG\_ and an uppercase letter,\ [#9899_note219]_ may also be specified by the implementation. The complete set of signals, their semantics, and their default handling is implementation-defined; all signal numbers shall be positive.
+.. container:: snum
+
+   :ref:`4 <9899_7.14p4>`
+
+An implementation need not generate any of these signals, except as a result of explicit calls to the raise function. Additional signals and pointers to undeclarable functions, with macro definitions beginning, respectively, with the letters SIG and an uppercase letter or with SIG\_ and an uppercase letter,\ [#9899_note219]_ may also be specified by the implementation. The complete set of signals, their semantics, and their default handling is implementation-defined; all signal numbers shall be positive.
 
 
 
@@ -57,4 +73,4 @@ which expand to constant expressions with distinct values that have type compati
 
 .. rubric:: Footnotes
 
-.. [#9899_note219] See ''future library directions'' (:ref:`7.26.9 <9899_7.26.9>`). The names of the signal numbers reflect the following terms (respectively): abort, floating-point exception, illegal instruction, interrupt, segmentation violation, and termination.
+.. [#9899_note219] See "future library directions" (:ref:`7.26.9 <9899_7.26.9>`). The names of the signal numbers reflect the following terms (respectively): abort, floating-point exception, illegal instruction, interrupt, segmentation violation, and termination.

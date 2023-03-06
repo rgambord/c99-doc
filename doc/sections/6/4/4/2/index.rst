@@ -7,7 +7,11 @@
 
 .. _9899_6.4.4.2p1:
 
-:ref:`1 <9899_6.4.4.2p1>`
+.. container:: snum
+
+   :ref:`1 <9899_6.4.4.2p1>`
+
+
 
 .. container:: syntax-block
 
@@ -487,31 +491,55 @@
 
 .. _9899_6.4.4.2p2:
 
-:ref:`2 <9899_6.4.4.2p2>` A floating constant has a significand part that may be followed by an exponent part and a suffix that specifies its type. The components of the significand part may include a digit sequence representing the whole-number part, followed by a period (.), followed by a digit sequence representing the fraction part. The components of the exponent part are an e, E, p, or P followed by an exponent consisting of an optionally signed digit sequence. Either the whole-number part or the fraction part has to be present; for decimal floating constants, either the period or the exponent part has to be present.
+.. container:: snum
+
+   :ref:`2 <9899_6.4.4.2p2>`
+
+A floating constant has a significand part that may be followed by an exponent part and a suffix that specifies its type. The components of the significand part may include a digit sequence representing the whole-number part, followed by a period (.), followed by a digit sequence representing the fraction part. The components of the exponent part are an e, E, p, or P followed by an exponent consisting of an optionally signed digit sequence. Either the whole-number part or the fraction part has to be present; for decimal floating constants, either the period or the exponent part has to be present.
 
 .. rubric:: Semantics
 
 .. _9899_6.4.4.2p3:
 
-:ref:`3 <9899_6.4.4.2p3>` The significand part is interpreted as a (decimal or hexadecimal) rational number; the digit sequence in the exponent part is interpreted as a decimal integer. For decimal floating constants, the exponent indicates the power of 10 by which the significand part is to be scaled. For hexadecimal floating constants, the exponent indicates the power of 2 by which the significand part is to be scaled. For decimal floating constants, and also for hexadecimal floating constants when FLT_RADIX is not a power of 2, the result is either the nearest representable value, or the larger or smaller representable value immediately adjacent to the nearest representable value, chosen in an implementation-defined manner. For hexadecimal floating constants when FLT_RADIX is a power of 2, the result is correctly rounded.
+.. container:: snum
+
+   :ref:`3 <9899_6.4.4.2p3>`
+
+The significand part is interpreted as a (decimal or hexadecimal) rational number; the digit sequence in the exponent part is interpreted as a decimal integer. For decimal floating constants, the exponent indicates the power of 10 by which the significand part is to be scaled. For hexadecimal floating constants, the exponent indicates the power of 2 by which the significand part is to be scaled. For decimal floating constants, and also for hexadecimal floating constants when FLT_RADIX is not a power of 2, the result is either the nearest representable value, or the larger or smaller representable value immediately adjacent to the nearest representable value, chosen in an implementation-defined manner. For hexadecimal floating constants when FLT_RADIX is a power of 2, the result is correctly rounded.
 
 .. _9899_6.4.4.2p4:
 
-:ref:`4 <9899_6.4.4.2p4>` An unsuffixed floating constant has type double. If suffixed by the letter f or F, it has type float. If suffixed by the letter l or L, it has type long double.
+.. container:: snum
+
+   :ref:`4 <9899_6.4.4.2p4>`
+
+An unsuffixed floating constant has type double. If suffixed by the letter f or F, it has type float. If suffixed by the letter l or L, it has type long double.
 
 .. _9899_6.4.4.2p5:
 
-:ref:`5 <9899_6.4.4.2p5>` Floating constants are converted to internal format as if at translation-time. The conversion of a floating constant shall not raise an exceptional condition or a floating- point exception at execution time.
+.. container:: snum
+
+   :ref:`5 <9899_6.4.4.2p5>`
+
+Floating constants are converted to internal format as if at translation-time. The conversion of a floating constant shall not raise an exceptional condition or a floating- point exception at execution time.
 
 .. rubric:: Recommended practice
 
 .. _9899_6.4.4.2p6:
 
-:ref:`6 <9899_6.4.4.2p6>` The implementation should produce a diagnostic message if a hexadecimal constant cannot be represented exactly in its evaluation format; the implementation should then proceed with the translation of the program.
+.. container:: snum
+
+   :ref:`6 <9899_6.4.4.2p6>`
+
+The implementation should produce a diagnostic message if a hexadecimal constant cannot be represented exactly in its evaluation format; the implementation should then proceed with the translation of the program.
 
 .. _9899_6.4.4.2p7:
 
-:ref:`7 <9899_6.4.4.2p7>` The translation-time conversion of floating constants should match the execution-time conversion of character strings by library functions, such as strtod, given matching inputs suitable for both conversions, the same result format, and default execution-time rounding.\ [#9899_note64]_
+.. container:: snum
+
+   :ref:`7 <9899_6.4.4.2p7>`
+
+The translation-time conversion of floating constants should match the execution-time conversion of character strings by library functions, such as strtod, given matching inputs suitable for both conversions, the same result format, and default execution-time rounding.\ [#9899_note64]_
 
 
 

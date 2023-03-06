@@ -5,7 +5,11 @@ F.9.3.12 The modf functions
 
 .. _9899_F.9.3.12p1:
 
-:ref:`1 <9899_F.9.3.12p1>`
+.. container:: snum
+
+   :ref:`1 <9899_F.9.3.12p1>`
+
+
 
 -  modf((+-)x, iptr) returns a result with the same sign as x.
 -  modf((+-)(inf), iptr) returns (+-)0 and stores (+-)(inf) in the object pointed to by iptr.
@@ -13,7 +17,11 @@ F.9.3.12 The modf functions
 
 .. _9899_F.9.3.12p2:
 
-:ref:`2 <9899_F.9.3.12p2>` modf behaves as though implemented by
+.. container:: snum
+
+   :ref:`2 <9899_F.9.3.12p2>`
+
+modf behaves as though implemented by
 
 ::
 

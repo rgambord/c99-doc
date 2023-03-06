@@ -7,13 +7,21 @@
 
 .. _9899_6.10.2p1:
 
-:ref:`1 <9899_6.10.2p1>` A #include directive shall identify a header or source file that can be processed by the implementation.
+.. container:: snum
+
+   :ref:`1 <9899_6.10.2p1>`
+
+A `#include` directive shall identify a header or source file that can be processed by the implementation.
 
 .. rubric:: Semantics
 
 .. _9899_6.10.2p2:
 
-:ref:`2 <9899_6.10.2p2>` A preprocessing directive of the form
+.. container:: snum
+
+   :ref:`2 <9899_6.10.2p2>`
+
+A preprocessing directive of the form
 
 .. code-block:: text
 
@@ -23,7 +31,11 @@ searches a sequence of implementation-defined places for a header identified uni
 
 .. _9899_6.10.2p3:
 
-:ref:`3 <9899_6.10.2p3>` A preprocessing directive of the form
+.. container:: snum
+
+   :ref:`3 <9899_6.10.2p3>`
+
+A preprocessing directive of the form
 
 .. code-block:: text
 
@@ -39,7 +51,11 @@ with the identical contained sequence (including > characters, if any) from the 
 
 .. _9899_6.10.2p4:
 
-:ref:`4 <9899_6.10.2p4>` A preprocessing directive of the form
+.. container:: snum
+
+   :ref:`4 <9899_6.10.2p4>`
+
+A preprocessing directive of the form
 
 .. code-block:: text
 
@@ -49,15 +65,27 @@ with the identical contained sequence (including > characters, if any) from the 
 
 .. _9899_6.10.2p5:
 
-:ref:`5 <9899_6.10.2p5>` The implementation shall provide unique mappings for sequences consisting of one or more nondigits or digits (:ref:`6.4.2.1 <9899_6.4.2.1>`) followed by a period (.) and a single nondigit. The first character shall not be a digit. The implementation may ignore distinctions of alphabetical case and restrict the mapping to eight significant characters before the period.
+.. container:: snum
+
+   :ref:`5 <9899_6.10.2p5>`
+
+The implementation shall provide unique mappings for sequences consisting of one or more nondigits or digits (:ref:`6.4.2.1 <9899_6.4.2.1>`) followed by a period (.) and a single nondigit. The first character shall not be a digit. The implementation may ignore distinctions of alphabetical case and restrict the mapping to eight significant characters before the period.
 
 .. _9899_6.10.2p6:
 
-:ref:`6 <9899_6.10.2p6>` A #include preprocessing directive may appear in a source file that has been read because of a #include directive in another file, up to an implementation-defined nesting limit (see :ref:`5.2.4.1 <9899_5.2.4.1>`).
+.. container:: snum
+
+   :ref:`6 <9899_6.10.2p6>`
+
+A `#include` preprocessing directive may appear in a source file that has been read because of a `#include` directive in another file, up to an implementation-defined nesting limit (see :ref:`5.2.4.1 <9899_5.2.4.1>`).
 
 .. _9899_6.10.2p7:
 
-:ref:`7 <9899_6.10.2p7>` EXAMPLE 1 The most common uses of #include preprocessing directives are as in the following:
+.. container:: snum
+
+   :ref:`7 <9899_6.10.2p7>`
+
+EXAMPLE 1 The most common uses of `#include` preprocessing directives are as in the following:
 
 ::
 
@@ -66,7 +94,11 @@ with the identical contained sequence (including > characters, if any) from the 
 
 .. _9899_6.10.2p8:
 
-:ref:`8 <9899_6.10.2p8>` EXAMPLE 2 This illustrates macro-replaced #include directives:
+.. container:: snum
+
+   :ref:`8 <9899_6.10.2p8>`
+
+EXAMPLE 2 This illustrates macro-replaced `#include` directives:
 
 ::
 
@@ -79,7 +111,10 @@ with the identical contained sequence (including > characters, if any) from the 
     #endif
     #include INCFILE
 
-**Forward references**: macro replacement (:ref:`6.10.3 <9899_6.10.3>`).
+.. rubric:: Forward References
+
+.. hlist::
+   - :ref:`9899_6.10.3`
 
 
 

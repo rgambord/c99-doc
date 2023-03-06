@@ -1276,29 +1276,29 @@ A.1.5 Constants
    
          :
    
-      .. container:: syntax-rule
+      .. container:: syntax-text-rule
        
-         any member the source character set except the single-quote
+         any member of the source character set except the single-quote |_|
      
          .. container:: syntax-terminal
    
             '
             
-         , backslash
+         , backslash |_|
      
    
          .. container:: syntax-terminal
    
             \\
 
-         , or
+         , or |_|
    
          .. container:: syntax-nonterminal
    
             new-line
      
    
-         character
+         |_| character |_|
    
    
       .. container:: syntax-rule

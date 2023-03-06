@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.11 Mathematics &lt;math.h&gt; &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="B.12 Nonlocal jumps &lt;setjmp.h&gt;" href="../12/index.html" />
+    <link rel="prev" title="B.10 Localization &lt;locale.h&gt;" href="../10/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Annex B</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">B.1 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">B.2 Complex &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/index.html">B.3 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">B.4 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/index.html">B.5 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">B.6 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">B.7 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">B.8 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9/index.html">B.9 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10/index.html">B.10 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">B.11 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12/index.html">B.12 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13/index.html">B.13 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14/index.html">B.14 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15/index.html">B.15 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../16/index.html">B.16 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../17/index.html">B.17 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../18/index.html">B.18 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../19/index.html">B.19 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../20/index.html">B.20 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../21/index.html">B.21 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../22/index.html">B.22 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../23/index.html">B.23 Extended multibyte/wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../24/index.html">B.24 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Annex B</a></li>
+      <li class="breadcrumb-item active">B.11 Mathematics &lt;math.h&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../10/index.html" class="btn btn-neutral float-left" title="B.10 Localization &lt;locale.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../12/index.html" class="btn btn-neutral float-right" title="B.12 Nonlocal jumps &lt;setjmp.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="b-11-mathematics-math-h">
+<span id="b-11"></span><h1>B.11 Mathematics &lt;math.h&gt;<a class="headerlink" href="#b-11-mathematics-math-h" title="Permalink to this heading"></a></h1>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">float_t</span><span class="w">               </span><span class="n">FP_INFINITE</span><span class="w">             </span><span class="n">FP_FAST_FMAL</span>
+<span class="n">double_t</span><span class="w">              </span><span class="n">FP_NAN</span><span class="w">                  </span><span class="n">FP_ILOGB0</span>
+<span class="n">HUGE_VAL</span><span class="w">              </span><span class="n">FP_NORMAL</span><span class="w">               </span><span class="n">FP_ILOGBNAN</span>
+<span class="n">HUGE_VALF</span><span class="w">             </span><span class="n">FP_SUBNORMAL</span><span class="w">            </span><span class="n">MATH_ERRNO</span>
+<span class="n">HUGE_VALL</span><span class="w">             </span><span class="n">FP_ZERO</span><span class="w">                 </span><span class="n">MATH_ERREXCEPT</span>
+<span class="n">INFINITY</span><span class="w">              </span><span class="n">FP_FAST_FMA</span><span class="w">             </span><span class="n">math_errhandling</span>
+<span class="n">NAN</span><span class="w">                   </span><span class="n">FP_FAST_FMAF</span>
+
+<span class="cp">#pragma STDC FP_CONTRACT on-off-switch</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">fpclassify</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isfinite</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isinf</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isnan</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isnormal</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">signbit</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">acos</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">acosf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">acosl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">asin</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">asinf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">asinl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">atan</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">atanf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">atanl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">atan2</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">atan2f</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">atan2l</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">cos</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">cosf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cosl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">sinf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sinl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">tan</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">tanf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tanl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">acosh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">acoshf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">acoshl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">asinh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">asinhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">asinhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">atanh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">atanhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">atanhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">cosh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">coshf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">coshl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">sinh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">sinhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sinhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">tanh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">tanhf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tanhl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">expf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">expl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">exp2</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">exp2f</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">exp2l</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">expm1</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">expm1f</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">expm1l</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">frexp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">frexpf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">frexpl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">ilogb</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">ilogbf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">ilogbl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">ldexp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">ldexpf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">ldexpl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">exp</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">logf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">logl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">log10</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">log10f</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">log10l</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">log1p</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">log1pf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">log1pl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">log2</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">log2f</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">log2l</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">logb</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">logbf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">logbl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">modf</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">modff</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">modfl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">iptr</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">scalbn</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">scalbnf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">scalbnl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">scalbln</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">scalblnf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">scalblnl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">cbrt</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">cbrtf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">cbrtl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fabs</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fabsf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fabsl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">hypot</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">hypotf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">hypotl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">pow</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">powf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">powl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">sqrtf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sqrtl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">erf</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">erff</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">erfl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">erfc</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">erfcf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">erfcl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">lgamma</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">lgammaf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">lgammal</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">tgamma</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">tgammaf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">tgammal</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">ceil</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">ceilf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">ceill</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">floor</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">floorf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">floorl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">nearbyint</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">nearbyintf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">nearbyintl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">rint</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">rintf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">rintl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lrint</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lrintf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lrintl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llrint</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llrintf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llrintl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">roundf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">roundl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lround</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lroundf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lroundl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llround</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llroundf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">llroundl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">trunc</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">truncf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">truncl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fmod</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fmodf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fmodl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">remainder</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">remainderf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">remainderl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">remquo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">remquof</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">remquol</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">quo</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">copysign</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">copysignf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">copysignl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">nan</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">nanf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">nanl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tagp</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">nextafter</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">nextafterf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">nextafterl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">nexttoward</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">nexttowardf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">nexttowardl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fdim</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fdimf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fdiml</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fmax</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fmaxf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fmaxl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fmin</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fminf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fminl</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fma</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">fmaf</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">fmal</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isgreater</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isgreaterequal</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isless</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">islessequal</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">islessgreater</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">isunordered</span><span class="p">(</span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../10/index.html" class="btn btn-neutral float-left" title="B.10 Localization &lt;locale.h&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../12/index.html" class="btn btn-neutral float-right" title="B.12 Nonlocal jumps &lt;setjmp.h&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

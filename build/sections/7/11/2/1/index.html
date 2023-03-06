@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.11.2.1 The localeconv function &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="7.12 Mathematics &lt;math.h&gt;" href="../../../12/index.html" />
+    <link rel="prev" title="7.11.2 Numeric formatting convention inquiry" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">7.11 Localization &lt;locale.h&gt;</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">7.11.1 Locale control</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">7.11.2 Numeric formatting convention inquiry</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7.11.2.1 The localeconv function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">7. Library</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7.11.2 Numeric formatting convention inquiry</a></li>
+      <li class="breadcrumb-item active">7.11.2.1 The localeconv function</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.11.2 Numeric formatting convention inquiry" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../12/index.html" class="btn btn-neutral float-right" title="7.12 Mathematics &lt;math.h&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-localeconv-function">
+<span id="id1"></span><h1>7.11.2.1 The localeconv function<a class="headerlink" href="#the-localeconv-function" title="Permalink to this heading"></a></h1>
+<p class="rubric">Synopsis</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;locale.h&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="w"> </span><span class="o">*</span><span class="n">localeconv</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="rubric">Description</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The localeconv function sets the components of an object with type struct lconv with values appropriate for the formatting of numeric quantities (monetary and otherwise) according to the rules of the current locale.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The members of the structure with type char * are pointers to strings, any of which (except decimal_point) can point to “”, to indicate that the value is not available in the current locale or is of zero length. Apart from grouping and mon_grouping, the strings shall start and end in the initial shift state. The members with type char are nonnegative numbers, any of which can be CHAR_MAX to indicate that the value is not available in the current locale. The members include the following:</p>
+<dl class="simple">
+<dt>char *decimal_point</dt><dd><p>The decimal-point character used to format nonmonetary quantities.</p>
+</dd>
+<dt>char *thousands_sep</dt><dd><p>The character used to separate groups of digits before the decimal-point character in formatted nonmonetary quantities.</p>
+</dd>
+<dt>char *grouping</dt><dd><p>A string whose elements indicate the size of each group of digits in formatted nonmonetary quantities.</p>
+</dd>
+<dt>char *mon_decimal_point</dt><dd><p>The decimal-point used to format monetary quantities.</p>
+</dd>
+<dt>char *mon_thousands_sep</dt><dd><p>The separator for groups of digits before the decimal-point in formatted monetary quantities.</p>
+</dd>
+<dt>char *mon_grouping</dt><dd><p>A string whose elements indicate the size of each group of digits in formatted monetary quantities.</p>
+</dd>
+<dt>char *positive_sign</dt><dd><p>The string used to indicate a nonnegative-valued formatted monetary quantity.</p>
+</dd>
+<dt>char *negative_sign</dt><dd><p>The string used to indicate a negative-valued formatted monetary quantity.</p>
+</dd>
+<dt>char *currency_symbol</dt><dd><p>The local currency symbol applicable to the current locale.</p>
+</dd>
+<dt>char frac_digits</dt><dd><p>The number of fractional digits (those after the decimal-point) to be displayed in a locally formatted monetary quantity.</p>
+</dd>
+<dt>char p_cs_precedes</dt><dd><p>Set to 1 or 0 if the currency_symbol respectively precedes or succeeds the value for a nonnegative locally formatted monetary quantity.</p>
+</dd>
+<dt>char n_cs_precedes</dt><dd><p>Set to 1 or 0 if the currency_symbol respectively precedes or succeeds the value for a negative locally formatted monetary quantity.</p>
+</dd>
+<dt>char p_sep_by_space</dt><dd><p>Set to a value indicating the separation of the currency_symbol, the sign string, and the value for a nonnegative locally formatted monetary quantity.</p>
+</dd>
+<dt>char n_sep_by_space</dt><dd><p>Set to a value indicating the separation of the currency_symbol, the sign string, and the value for a negative locally formatted monetary quantity.</p>
+</dd>
+<dt>char p_sign_posn</dt><dd><p>Set to a value indicating the positioning of the positive_sign for a nonnegative locally formatted monetary quantity.</p>
+</dd>
+<dt>char n_sign_posn</dt><dd><p>Set to a value indicating the positioning of the negative_sign for a negative locally formatted monetary quantity.</p>
+</dd>
+<dt>char *int_curr_symbol</dt><dd><p>The international currency symbol applicable to the current locale. The first three characters contain the alphabetic international currency symbol in accordance with those specified in ISO 4217. The fourth character (immediately preceding the null character) is the character used to separate the international currency symbol from the monetary quantity.</p>
+</dd>
+<dt>char int_frac_digits</dt><dd><p>The number of fractional digits (those after the decimal-point) to be displayed in an internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_p_cs_precedes</dt><dd><p>Set to 1 or 0 if the int_curr_symbol respectively precedes or succeeds the value for a nonnegative internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_n_cs_precedes</dt><dd><p>Set to 1 or 0 if the int_curr_symbol respectively precedes or succeeds the value for a negative internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_p_sep_by_space</dt><dd><p>Set to a value indicating the separation of the int_curr_symbol, the sign string, and the value for a nonnegative internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_n_sep_by_space</dt><dd><p>Set to a value indicating the separation of the int_curr_symbol, the sign string, and the value for a negative internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_p_sign_posn</dt><dd><p>Set to a value indicating the positioning of the positive_sign for a nonnegative internationally formatted monetary quantity.</p>
+</dd>
+<dt>char int_n_sign_posn</dt><dd><p>Set to a value indicating the positioning of the negative_sign for a negative internationally formatted monetary quantity.</p>
+</dd>
+</dl>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The elements of grouping and mon_grouping are interpreted according to the following:</p>
+<dl class="simple">
+<dt>CHAR_MAX</dt><dd><p>No further grouping is to be performed.</p>
+</dd>
+<dt>0</dt><dd><p>The previous element is to be repeatedly used for the remainder of the digits.</p>
+</dd>
+<dt>other</dt><dd><p>The integer value is the number of digits that compose the current group. The next element is examined to determine the size of the next group of digits before the current group.</p>
+</dd>
+</dl>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space, and int_n_sep_by_space are interpreted according to the following:</p>
+<dl class="simple">
+<dt>0</dt><dd><p>No space separates the currency symbol and value.</p>
+</dd>
+<dt>1</dt><dd><p>If the currency symbol and sign string are adjacent, a space separates them from the value; otherwise, a space separates the currency symbol from the value.</p>
+</dd>
+<dt>2</dt><dd><p>If the currency symbol and sign string are adjacent, a space separates them; otherwise, a space separates the sign string from the value.</p>
+</dd>
+</dl>
+<p>For int_p_sep_by_space and int_n_sep_by_space, the fourth character of int_curr_symbol is used instead of a space.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>The values of p_sign_posn, n_sign_posn, int_p_sign_posn, and int_n_sign_posn are interpreted according to the following:</p>
+<dl class="simple">
+<dt>0</dt><dd><p>Parentheses surround the quantity and currency symbol.</p>
+</dd>
+<dt>1</dt><dd><p>The sign string precedes the quantity and currency symbol.</p>
+</dd>
+<dt>2</dt><dd><p>The sign string succeeds the quantity and currency symbol.</p>
+</dd>
+<dt>3</dt><dd><p>The sign string immediately precedes the currency symbol.</p>
+</dd>
+<dt>4</dt><dd><p>The sign string immediately succeeds the currency symbol.</p>
+</dd>
+</dl>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The implementation shall behave as if no library function calls the localeconv function.</p>
+<p class="rubric">Returns</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>The localeconv function returns a pointer to the filled-in object. The structure pointed to by the return value shall not be modified by the program, but may be overwritten by a subsequent call to the localeconv function. In addition, calls to the setlocale function with categories LC_ALL, LC_MONETARY, or LC_NUMERIC may overwrite the contents of the structure.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>EXAMPLE 1 The following table illustrates rules which may well be used by four countries to format monetary quantities.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Local format                                     International format
+
+Country        Positive                  Negative                    Positive               Negative
+
+Country1     1.234,56 mk             -1.234,56 mk                  FIM   1.234,56         FIM -1.234,56
+Country2     L.1.234                 -L.1.234                      ITL   1.234            -ITL 1.234
+Country3     fl. 1.234,56            fl. -1.234,56                 NLG   1.234,56         NLG -1.234,56
+Country4     SFrs.1,234.56           SFrs.1,234.56C                CHF   1,234.56         CHF 1,234.56C
+</pre></div>
+</div>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>For these four countries, the respective values for the monetary members of the structure returned by localeconv could be:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Country1              Country2              Country3            Country4
+
+mon_decimal_point                 &quot;,&quot;                   &quot;&quot;                   &quot;,&quot;                 &quot;.&quot;
+mon_thousands_sep                 &quot;.&quot;                   &quot;.&quot;                  &quot;.&quot;                 &quot;,&quot;
+mon_grouping                      &quot;\3&quot;                  &quot;\3&quot;                 &quot;\3&quot;                &quot;\3&quot;
+positive_sign                     &quot;&quot;                    &quot;&quot;                   &quot;&quot;                  &quot;&quot;
+negative_sign                     &quot;-&quot;                   &quot;-&quot;                  &quot;-&quot;                 &quot;C&quot;
+currency_symbol                   &quot;mk&quot;                  &quot;L.&quot;                 &quot;\u0192&quot;            &quot;SFrs.&quot;
+frac_digits                       2                     0                    2                   2
+p_cs_precedes                     0                     1                    1                   1
+n_cs_precedes                     0                     1                    1                   1
+p_sep_by_space                    1                     0                    1                   0
+n_sep_by_space                    1                     0                    2                   0
+p_sign_posn                       1                     1                    1                   1
+n_sign_posn                       1                     1                    4                   2
+int_curr_symbol                   &quot;FIM &quot;                &quot;ITL &quot;               &quot;NLG &quot;              &quot;CHF &quot;
+int_frac_digits                   2                     0                    2                   2
+int_p_cs_precedes                 1                     1                    1                   1
+int_n_cs_precedes                 1                     1                    1                   1
+int_p_sep_by_space                1                     1                    1                   1
+int_n_sep_by_space                2                     1                    2                   1
+int_p_sign_posn                   1                     1                    1                   1
+int_n_sign_posn                   4                     1                    4                   2
+</pre></div>
+</div>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>EXAMPLE 2 The following table illustrates how the cs_precedes, sep_by_space, and sign_posn members affect the formatted value.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p_sep_by_space
+p_cs_precedes           p_sign_posn          0                   1                  2
+
+           0                    0         (1.25$)            (1.25 $)            (1.25$)
+                                1         +1.25$             +1.25 $             + 1.25$
+                                2         1.25$+             1.25 $+             1.25$ +
+                                3         1.25+$             1.25 +$             1.25+ $
+                                4         1.25$+             1.25 $+             1.25$ +
+
+           1                    0         ($1.25)            ($ 1.25)            ($1.25)
+                                1         +$1.25             +$ 1.25             + $1.25
+                                2         $1.25+             $ 1.25+             $1.25 +
+                                3         +$1.25             +$ 1.25             + $1.25
+                                4         $+1.25             $+ 1.25             $ +1.25
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.11.2 Numeric formatting convention inquiry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../12/index.html" class="btn btn-neutral float-right" title="7.12 Mathematics &lt;math.h&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

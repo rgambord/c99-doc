@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F.3 Operators and functions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="F.4 Floating to integer conversion" href="../4/index.html" />
+    <link rel="prev" title="F.2.1 Infinities, signed zeros, and NaNs" href="../2/1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12/index.html">Annex E</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Annex F</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/index.html">F.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/index.html">F.2 Types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">F.3 Operators and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/index.html">F.4 Floating to integer conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/index.html">F.5 Binary-decimal conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/index.html">F.6 Contracted expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/index.html">F.7 Floating-point environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/index.html">F.8 Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9/index.html">F.9 Mathematics &lt;math.h&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Annex F</a></li>
+      <li class="breadcrumb-item active">F.3 Operators and functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../2/1/index.html" class="btn btn-neutral float-left" title="F.2.1 Infinities, signed zeros, and NaNs" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../4/index.html" class="btn btn-neutral float-right" title="F.4 Floating to integer conversion" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="f-3-operators-and-functions">
+<span id="f-3"></span><h1>F.3 Operators and functions<a class="headerlink" href="#f-3-operators-and-functions" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="f-3p1">
+<p><a class="reference internal" href="#f-3p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>C operators and functions provide IEC 60559 required and recommended facilities as listed below.</p>
+<ul class="simple">
+<li><p>The +, -, *, and / operators provide the IEC 60559 add, subtract, multiply, and divide operations.</p></li>
+<li><p>The sqrt functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the IEC 60559 square root operation.</p></li>
+<li><p>The remainder functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the IEC 60559 remainder operation. The remquo functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the same operation but with additional information.</p></li>
+<li><p>The rint functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the IEC 60559 operation that rounds a floating-point number to an integer value (in the same precision). The nearbyint functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the nearbyinteger function recommended in the Appendix to ANSI/IEEE 854.</p></li>
+<li><p>The conversions for floating types provide the IEC 60559 conversions between floating-point precisions.</p></li>
+<li><p>The conversions from integer to floating types provide the IEC 60559 conversions from integer to floating point.</p></li>
+<li><p>The conversions from floating to integer types provide IEC 60559-like conversions but always round toward zero.</p></li>
+<li><p>The lrint and llrint functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the IEC 60559 conversions, which honor the directed rounding mode, from floating point to the long int and long long int integer formats. The lrint and llrint functions can be used to implement IEC 60559 conversions from floating to other integer formats.</p></li>
+<li><p>The translation time conversion of floating constants and the strtod, strtof, strtold, fprintf, fscanf, and related library functions in <a class="reference internal" href="../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, <a class="reference internal" href="../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, and <a class="reference internal" href="../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a> provide IEC 60559 binary-decimal conversions. The strtold function in <a class="reference internal" href="../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a> provides the conv function recommended in the Appendix to ANSI/IEEE 854.</p></li>
+<li><p>The relational and equality operators provide IEC 60559 comparisons. IEC 60559 identifies a need for additional comparison predicates to facilitate writing code that accounts for NaNs. The comparison macros (isgreater, isgreaterequal, isless, islessequal, islessgreater, and isunordered) in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> supplement the language operators to address this need. The islessgreater and isunordered macros provide respectively a quiet version of the &lt;&gt; predicate and the unordered predicate recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The feclearexcept, feraiseexcept, and fetestexcept functions in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> provide the facility to test and alter the IEC 60559 floating-point exception status flags. The fegetexceptflag and fesetexceptflag functions in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> provide the facility to save and restore all five status flags at one time. These functions are used in conjunction with the type fexcept_t and the floating-point exception macros (FE_INEXACT, FE_DIVBYZERO, FE_UNDERFLOW, FE_OVERFLOW, FE_INVALID) also in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p></li>
+<li><p>The fegetround and fesetround functions in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> provide the facility to select among the IEC 60559 directed rounding modes represented by the rounding direction macros in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> (FE_TONEAREST, FE_UPWARD, FE_DOWNWARD, FE_TOWARDZERO) and the values 0, 1, 2, and 3 of FLT_ROUNDS are the IEC 60559 directed rounding modes.</p></li>
+<li><p>The fegetenv, feholdexcept, fesetenv, and feupdateenv functions in <a class="reference internal" href="../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> provide a facility to manage the floating-point environment, comprising the IEC 60559 status flags and control modes.</p></li>
+<li><p>The copysign functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the copysign function recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The unary minus (-) operator provides the minus (-) operation recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The scalbn and scalbln functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the scalb function recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The logb functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the logb function recommended in the Appendix to IEC 60559, but following the newer specifications in ANSI/IEEE 854.</p></li>
+<li><p>The nextafter and nexttoward functions in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provide the nextafter function recommended in the Appendix to IEC 60559 (but with a minor change to better handle signed zeros).</p></li>
+<li><p>The isfinite macro in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provides the finite function recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The isnan macro in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> provides the isnan function recommended in the Appendix to IEC 60559.</p></li>
+<li><p>The signbit macro and the fpclassify macro in <a class="reference internal" href="../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a>, used in conjunction with the number classification macros (FP_NAN, FP_INFINITE, FP_NORMAL, FP_SUBNORMAL, FP_ZERO), provide the facility of the class function recommended in the Appendix to IEC 60559 (except that the classification macros defined in <a class="reference internal" href="../../7/12/3/index.html#id1"><span class="std std-ref">7.12.3</span></a> do not distinguish signaling from quiet NaNs).</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../2/1/index.html" class="btn btn-neutral float-left" title="F.2.1 Infinities, signed zeros, and NaNs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../4/index.html" class="btn btn-neutral float-right" title="F.4 Floating to integer conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

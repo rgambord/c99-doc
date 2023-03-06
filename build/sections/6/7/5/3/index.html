@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.7.5.3 Function declarators (including prototypes) &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.7.6 Type names" href="../../6/index.html" />
+    <link rel="prev" title="6.7.5.2 Array declarators" href="../2/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">6.2 Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.7 Declarations</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.7.1 Storage-class specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">6.7.2 Type specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.7.3 Type qualifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.7.4 Function specifiers</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.7.5 Declarators</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">6.7.5.1 Pointer declarators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.7.5.2 Array declarators</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.7.5.3 Function declarators (including prototypes)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">6.7.6 Type names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.7.7 Type definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">6.7.8 Initialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.7 Declarations</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.7.5 Declarators</a></li>
+      <li class="breadcrumb-item active">6.7.5.3 Function declarators (including prototypes)</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../2/index.html" class="btn btn-neutral float-left" title="6.7.5.2 Array declarators" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../6/index.html" class="btn btn-neutral float-right" title="6.7.6 Type names" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-declarators-including-prototypes">
+<span id="id1"></span><h1>6.7.5.3 Function declarators (including prototypes)<a class="headerlink" href="#function-declarators-including-prototypes" title="Permalink to this heading"></a></h1>
+<p class="rubric">Constraints</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>A function declarator shall not specify a return type that is a function type or an array type.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The only storage-class specifier that shall occur in a parameter declaration is register.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>An identifier list in a function declarator that is not part of a definition of that function shall be empty.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>After adjustment, the parameters in a parameter type list in a function declarator that is part of a definition of that function shall not have incomplete type.</p>
+<p class="rubric">Semantics</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If, in the declaration “T D1”, D1 has the form</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>D( parameter-type-list )
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>D( identifier-listopt )
+</pre></div>
+</div>
+<p>and the type specified for ident in the declaration “T D” is “derived-declarator-type-list T ‘’, then the type specified for ident is “derived-declarator-type-list function returning T ‘’.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>A parameter type list specifies the types of, and may declare identifiers for, the parameters of the function.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>A declaration of a parameter as “array of type” shall be adjusted to “qualified pointer to type”, where the type qualifiers (if any) are those specified within the [ and ] of the array type derivation. If the keyword static also appears within the [ and ] of the array type derivation, then for each call to the function, the value of the corresponding actual argument shall provide access to the first element of an array with at least as many elements as specified by the size expression.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>A declaration of a parameter as “function returning type” shall be adjusted to “pointer to function returning type”, as in <a class="reference internal" href="../../../3/2/1/index.html#id1"><span class="std std-ref">6.3.2.1</span></a>.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>If the list terminates with an ellipsis (, ...), no information about the number or types of the parameters after the comma is supplied.<a class="footnote-reference brackets" href="#note125" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>The special case of an unnamed parameter of type void as the only item in the list specifies that the function has no parameters.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>If, in a parameter declaration, an identifier can be treated either as a typedef name or as a parameter name, it shall be taken as a typedef name.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>If the function declarator is not part of a definition of that function, parameters may have incomplete type and may use the [*] notation in their sequences of declarator specifiers to specify variable length array types.</p>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>The storage-class specifier in the declaration specifiers for a parameter declaration, if present, is ignored unless the declared parameter is one of the members of the parameter type list for a function definition.</p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>An identifier list declares only the identifiers of the parameters of the function. An empty list in a function declarator that is part of a definition of that function specifies that the function has no parameters. The empty list in a function declarator that is not part of a definition of that function specifies that no information about the number or types of the parameters is supplied.<a class="footnote-reference brackets" href="#note126" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>For two function types to be compatible, both shall specify compatible return types.<a class="footnote-reference brackets" href="#note127" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> Moreover, the parameter type lists, if both are present, shall agree in the number of parameters and in use of the ellipsis terminator; corresponding parameters shall have compatible types. If one type has a parameter type list and the other type is specified by a function declarator that is not part of a function definition and that contains an empty identifier list, the parameter list shall not have an ellipsis terminator and the type of each parameter shall be compatible with the type that results from the application of the default argument promotions. If one type has a parameter type list and the other type is specified by a function definition that contains a (possibly empty) identifier list, both shall agree in the number of parameters, and the type of each prototype parameter shall be compatible with the type that results from the application of the default argument promotions to the type of the corresponding identifier. (In the determination of type compatibility and of a composite type, each parameter declared with function or array type is taken as having the adjusted type and each parameter declared with qualified type is taken as having the unqualified version of its declared type.)</p>
+<div class="snum docutils container" id="p16">
+<p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
+</div>
+<p>EXAMPLE 1 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">fip</span><span class="p">(),</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pfi</span><span class="p">)();</span>
+</pre></div>
+</div>
+<p>declares a function f with no parameters returning an int, a function fip with no parameter specification returning a pointer to an int, and a pointer pfi to a function with no parameter specification returning an int. It is especially useful to compare the last two. The binding of *fip() is *(fip()), so that the declaration suggests, and the same construction in an expression requires, the calling of a function fip, and then using indirection through the pointer result to yield an int. In the declarator (*pfi)(), the extra parentheses are necessary to indicate that indirection through a pointer to a function yields a function designator, which is then used to call the function; it returns an int.</p>
+<div class="snum docutils container" id="p17">
+<p><a class="reference internal" href="#p17"><span class="std std-ref">17</span></a></p>
+</div>
+<p>If the declaration occurs outside of any function, the identifiers have file scope and external linkage. If the declaration occurs inside a function, the identifiers of the functions f and fip have block scope and either internal or external linkage (depending on what file scope declarations for these identifiers are visible), and the identifier of the pointer pfi has block scope and no linkage.</p>
+<div class="snum docutils container" id="p18">
+<p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
+</div>
+<p>EXAMPLE 2 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">apfi</span><span class="p">[</span><span class="mi">3</span><span class="p">])(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>declares an array apfi of three pointers to functions returning int. Each of these functions has two parameters that are pointers to int. The identifiers x and y are declared for descriptive purposes only and go out of scope at the end of the declaration of apfi.</p>
+<div class="snum docutils container" id="p19">
+<p><a class="reference internal" href="#p19"><span class="std std-ref">19</span></a></p>
+</div>
+<p>EXAMPLE 3 The declaration</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">fpfi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">long</span><span class="p">),</span><span class="w"> </span><span class="kt">int</span><span class="p">))(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</pre></div>
+</div>
+<p>declares a function fpfi that returns a pointer to a function returning an int. The function fpfi has two parameters: a pointer to a function returning an int (with one parameter of type long int), and an int. The pointer returned by fpfi points to a function that has one int parameter and accepts zero or more additional arguments of any type.</p>
+<div class="snum docutils container" id="p20">
+<p><a class="reference internal" href="#p20"><span class="std std-ref">20</span></a></p>
+</div>
+<p>EXAMPLE 4 The following prototype has a variably modified parameter.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">addscalar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="o">+</span><span class="mi">300</span><span class="p">],</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">308</span><span class="p">];</span>
+<span class="w">      </span><span class="n">addscalar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mf">2.17</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">addscalar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="o">+</span><span class="mi">300</span><span class="p">],</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="o">+</span><span class="mi">300</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">                  </span><span class="c1">// a is a pointer to a VLA with n*m+300 elements</span>
+<span class="w">                  </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p21">
+<p><a class="reference internal" href="#p21"><span class="std std-ref">21</span></a></p>
+</div>
+<p>EXAMPLE 5 The following are all compatible function prototype declarators.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">]);</span>
+<span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="o">*</span><span class="p">][</span><span class="o">*</span><span class="p">]);</span>
+<span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">][</span><span class="o">*</span><span class="p">]);</span>
+<span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">][</span><span class="n">m</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>as are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w">   </span><span class="nf">f</span><span class="p">(</span><span class="kt">double</span><span class="w">     </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">a</span><span class="p">)[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="kt">void</span><span class="w">   </span><span class="nf">f</span><span class="p">(</span><span class="kt">double</span><span class="w">     </span><span class="n">a</span><span class="p">[</span><span class="kr">restrict</span><span class="p">][</span><span class="mi">5</span><span class="p">]);</span>
+<span class="kt">void</span><span class="w">   </span><span class="nf">f</span><span class="p">(</span><span class="kt">double</span><span class="w">     </span><span class="n">a</span><span class="p">[</span><span class="kr">restrict</span><span class="w"> </span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]);</span>
+<span class="kt">void</span><span class="w">   </span><span class="nf">f</span><span class="p">(</span><span class="kt">double</span><span class="w">     </span><span class="n">a</span><span class="p">[</span><span class="kr">restrict</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>(Note that the last declaration also specifies that the argument corresponding to a in any call to f must be a non-null pointer to the first of at least three arrays of 5 doubles, which the others do not.)</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../9/1/index.html#id1"><span class="std std-ref">6.9.1 Function definitions</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../6/index.html#id1"><span class="std std-ref">6.7.6 Type names</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note125" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>The macros defined in the <a class="reference internal" href="../../../../7/15/index.html#id1"><span class="std std-ref">&lt;stdarg.h&gt;</span></a> header (<a class="reference internal" href="../../../../7/15/index.html#id1"><span class="std std-ref">7.15</span></a>) may be used to access arguments that correspond to the ellipsis.</p>
+</aside>
+<aside class="footnote brackets" id="note126" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>See “future language directions” (<a class="reference internal" href="../../../11/6/index.html#id1"><span class="std std-ref">6.11.6</span></a>).</p>
+</aside>
+<aside class="footnote brackets" id="note127" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>If both function types are “old style”, parameter types are not compared.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../2/index.html" class="btn btn-neutral float-left" title="6.7.5.2 Array declarators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../6/index.html" class="btn btn-neutral float-right" title="6.7.6 Type names" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

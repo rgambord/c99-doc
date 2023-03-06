@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.2.7 Compatible type and composite type &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.3 Conversions" href="../../3/index.html" />
+    <link rel="prev" title="6.2.6.2 Integer types" href="../6/2/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">6.2 Concepts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">6.2.1 Scopes of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">6.2.2 Linkages of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">6.2.3 Name spaces of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">6.2.4 Storage durations of objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5/index.html">6.2.5 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">6.2.6 Representations of types</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.2.7 Compatible type and composite type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.2 Concepts</a></li>
+      <li class="breadcrumb-item active">6.2.7 Compatible type and composite type</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../6/2/index.html" class="btn btn-neutral float-left" title="6.2.6.2 Integer types" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../3/index.html" class="btn btn-neutral float-right" title="6.3 Conversions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compatible-type-and-composite-type">
+<span id="id1"></span><h1>6.2.7 Compatible type and composite type<a class="headerlink" href="#compatible-type-and-composite-type" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>Two types have compatible type if their types are the same. Additional rules for determining whether two types are compatible are described in <a class="reference internal" href="../../7/2/index.html#id1"><span class="std std-ref">6.7.2</span></a> for type specifiers, in <a class="reference internal" href="../../7/3/index.html#id1"><span class="std std-ref">6.7.3</span></a> for type qualifiers, and in <a class="reference internal" href="../../7/5/index.html#id1"><span class="std std-ref">6.7.5</span></a> for declarators.<a class="footnote-reference brackets" href="#note46" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Moreover, two structure, union, or enumerated types declared in separate translation units are compatible if their tags and members satisfy the following requirements: If one is declared with a tag, the other shall be declared with the same tag. If both are complete types, then the following additional requirements apply: there shall be a one-to-one correspondence between their members such that each pair of corresponding members are declared with compatible types, and such that if one member of a corresponding pair is declared with a name, the other member is declared with the same name. For two structures, corresponding members shall be declared in the same order. For two structures or unions, corresponding bit-fields shall have the same widths. For two enumerations, corresponding members shall have the same values.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>All declarations that refer to the same object or function shall have compatible type; otherwise, the behavior is undefined.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>A composite type can be constructed from two types that are compatible; it is a type that is compatible with both of the two types and satisfies the following conditions:</p>
+<ul class="simple">
+<li><p>If one type is an array of known constant size, the composite type is an array of that size; otherwise, if one type is a variable length array, the composite type is that type.</p></li>
+<li><p>If only one type is a function type with a parameter type list (a function prototype), the composite type is a function prototype with the parameter type list.</p></li>
+<li><p>If both types are function types with parameter type lists, the type of each parameter in the composite parameter type list is the composite type of the corresponding parameters.</p></li>
+</ul>
+<p>These rules apply recursively to the types from which the two types are derived.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>For an identifier with internal or external linkage declared in a scope in which a prior declaration of that identifier is visible,<a class="footnote-reference brackets" href="#note47" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> if the prior declaration specifies internal or external linkage, the type of the identifier at the later declaration becomes the composite type.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>EXAMPLE Given the following two file scope declarations:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(),</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)[]);</span>
+</pre></div>
+</div>
+<p>The resulting composite type for the function is:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)[</span><span class="mi">3</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note46" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Two types need not be identical to be compatible.</p>
+</aside>
+<aside class="footnote brackets" id="note47" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>As specified in <a class="reference internal" href="../1/index.html#id1"><span class="std std-ref">6.2.1</span></a>, the later declaration might hide the prior declaration.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../6/2/index.html" class="btn btn-neutral float-left" title="6.2.6.2 Integer types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../3/index.html" class="btn btn-neutral float-right" title="6.3 Conversions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

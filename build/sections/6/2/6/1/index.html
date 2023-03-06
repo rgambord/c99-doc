@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.2.6.1 General &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="6.2.6.2 Integer types" href="../2/index.html" />
+    <link rel="prev" title="6.2.6 Representations of types" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">6.2 Concepts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">6.2.1 Scopes of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">6.2.2 Linkages of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">6.2.3 Name spaces of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">6.2.4 Storage durations of objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">6.2.5 Types</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">6.2.6 Representations of types</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.2.6.1 General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">6.2.6.2 Integer types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">6.2.7 Compatible type and composite type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6.2 Concepts</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.2.6 Representations of types</a></li>
+      <li class="breadcrumb-item active">6.2.6.1 General</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../index.html" class="btn btn-neutral float-left" title="6.2.6 Representations of types" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="6.2.6.2 Integer types" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general">
+<span id="id1"></span><h1>6.2.6.1 General<a class="headerlink" href="#general" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The representations of all types are unspecified except as stated in this subclause.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>Except for bit-fields, objects are composed of contiguous sequences of one or more bytes, the number, order, and encoding of which are either explicitly specified or implementation-defined.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>Values stored in unsigned bit-fields and objects of type unsigned char shall be represented using a pure binary notation.<a class="footnote-reference brackets" href="#note40" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>Values stored in non-bit-field objects of any other object type consist of n x CHAR_BIT bits, where n is the size of an object of that type, in bytes. The value may be copied into an object of type unsigned char [n] (e.g., by memcpy); the resulting set of bytes is called the object representation of the value. Values stored in bit-fields consist of m bits, where m is the size specified for the bit-field. The object representation is the set of m bits the bit-field comprises in the addressable storage unit holding it. Two values (other than NaNs) with the same object representation compare equal, but values that compare equal may have different object representations.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>Certain object representations need not represent a value of the object type. If the stored value of an object has such a representation and is read by an lvalue expression that does not have character type, the behavior is undefined. If such a representation is produced by a side effect that modifies all or any part of the object by an lvalue expression that does not have character type, the behavior is undefined.<a class="footnote-reference brackets" href="#note41" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Such a representation is called a trap representation.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>When a value is stored in an object of structure or union type, including in a member object, the bytes of the object representation that correspond to any padding bytes take unspecified values.<a class="footnote-reference brackets" href="#note42" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> The value of a structure or union object is never a trap representation, even though the value of a member of the structure or union object may be a trap representation.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>When a value is stored in a member of an object of union type, the bytes of the object representation that do not correspond to that member but do correspond to other members take unspecified values.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>Where an operator is applied to a value that has more than one object representation, which object representation is used shall not affect the value of the result.<a class="footnote-reference brackets" href="#note43" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> Where a value is stored in an object using a type that has more than one object representation for that value, it is unspecified which representation is used, but a trap representation shall not be generated.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../7/index.html#id1"><span class="std std-ref">6.7 Declarations</span></a></p></li>
+<li><p><a class="reference internal" href="../../../5/index.html#id1"><span class="std std-ref">6.5 Expressions</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../3/2/1/index.html#id1"><span class="std std-ref">6.3.2.1 Lvalues, arrays, and function designators</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note40" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>A positional representation for integers that uses the binary digits 0 and 1, in which the values represented by successive bits are additive, begin with 1, and are multiplied by successive integral powers of 2, except perhaps the bit with the highest position. (Adapted from the American National Dictionary for Information Processing Systems.) A byte contains CHAR_BIT bits, and the values of type unsigned char range from 0 to 2<sup>CHAR_BIT</sup>- 1.</p>
+</aside>
+<aside class="footnote brackets" id="note41" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Thus, an automatic variable can be initialized to a trap representation without causing undefined behavior, but the value of the variable cannot be used until a proper value is stored in it.</p>
+</aside>
+<aside class="footnote brackets" id="note42" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Thus, for example, structure assignment need not copy any padding bits.</p>
+</aside>
+<aside class="footnote brackets" id="note43" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>It is possible for objects x and y with the same effective type T to have the same value when they are accessed as objects of type T, but to have different values in other contexts. In particular, if == is defined for type T, then x == y does not imply that memcmp(&amp;x, &amp;y, sizeof (T)) == 0. Furthermore, x == y does not necessarily imply that x and y have the same value; other operations on values of type T may distinguish between them.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="6.2.6 Representations of types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="6.2.6.2 Integer types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

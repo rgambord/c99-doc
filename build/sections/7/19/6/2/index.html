@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.19.6.2 The fscanf function &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="7.19.6.3 The printf function" href="../3/index.html" />
+    <link rel="prev" title="7.19.6.1 The fprintf function" href="../1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">7.19 Input/output &lt;stdio.h&gt;</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">7.19.1 Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">7.19.2 Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../3/index.html">7.19.3 Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">7.19.4 Operations on files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">7.19.5 File access functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">7.19.6 Formatted input/output functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">7.19.6.1 The fprintf function</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7.19.6.2 The fscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">7.19.6.3 The printf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../4/index.html">7.19.6.4 The scanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../5/index.html">7.19.6.5 The snprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../6/index.html">7.19.6.6 The sprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../7/index.html">7.19.6.7 The sscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../8/index.html">7.19.6.8 The vfprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9/index.html">7.19.6.9 The vfscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../10/index.html">7.19.6.10 The vprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11/index.html">7.19.6.11 The vscanf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../12/index.html">7.19.6.12 The vsnprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../13/index.html">7.19.6.13 The vsprintf function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../14/index.html">7.19.6.14 The vsscanf function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">7.19.7 Character input/output functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">7.19.8 Direct input/output functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">7.19.9 File positioning functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10/index.html">7.19.10 Error-handling functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">7. Library</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7.19.6 Formatted input/output functions</a></li>
+      <li class="breadcrumb-item active">7.19.6.2 The fscanf function</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="7.19.6.1 The fprintf function" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="7.19.6.3 The printf function" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-fscanf-function">
+<span id="id1"></span><h1>7.19.6.2 The fscanf function<a class="headerlink" href="#the-fscanf-function" title="Permalink to this heading"></a></h1>
+<p class="rubric">Synopsis</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#include &lt;stdio.h&gt;
+int fscanf(FILE * restrict stream,
+     const char * restrict format, ...);
+</pre></div>
+</div>
+<p class="rubric">Description</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The fscanf function reads input from the stream pointed to by stream, under control of the string pointed to by format that specifies the admissible input sequences and how they are to be converted for assignment, using subsequent arguments as pointers to the objects to receive the converted input. If there are insufficient arguments for the format, the behavior is undefined. If the format is exhausted while arguments remain, the excess arguments are evaluated (as always) but are otherwise ignored.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The format shall be a multibyte character sequence, beginning and ending in its initial shift state. The format is composed of zero or more directives: one or more white-space characters, an ordinary multibyte character (neither % nor a white-space character), or a conversion specification. Each conversion specification is introduced by the character %. After the %, the following appear in sequence:</p>
+<ul class="simple">
+<li><p>An optional assignment-suppressing character *.</p></li>
+<li><p>An optional decimal integer greater than zero that specifies the maximum field width (in characters).</p></li>
+<li><p>An optional length modifier that specifies the size of the receiving object.</p></li>
+<li><p>A conversion specifier character that specifies the type of conversion to be applied.</p></li>
+</ul>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The fscanf function executes each directive of the format in turn. If a directive fails, as detailed below, the function returns. Failures are described as input failures (due to the occurrence of an encoding error or the unavailability of input characters), or matching failures (due to inappropriate input).</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>A directive composed of white-space character(s) is executed by reading input up to the first non-white-space character (which remains unread), or until no more characters can be read.</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>A directive that is an ordinary multibyte character is executed by reading the next characters of the stream. If any of those characters differ from the ones composing the directive, the directive fails and the differing and subsequent characters remain unread. Similarly, if end-of-file, an encoding error, or a read error prevents a character from being read, the directive fails.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>A directive that is a conversion specification defines a set of matching input sequences, as described below for each specifier. A conversion specification is executed in the following steps:</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>Input white-space characters (as specified by the isspace function) are skipped, unless the specification includes a [, c, or n specifier.<a class="footnote-reference brackets" href="#note250" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>An input item is read from the stream, unless the specification includes an n specifier. An input item is defined as the longest sequence of input characters which does not exceed any specified field width and which is, or is a prefix of, a matching input sequence.<a class="footnote-reference brackets" href="#note251" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> The first character, if any, after the input item remains unread. If the length of the input item is zero, the execution of the directive fails; this condition is a matching failure unless end-of-file, an encoding error, or a read error prevented input from the stream, in which case it is an input failure.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>Except in the case of a % specifier, the input item (or, in the case of a %n directive, the count of input characters) is converted to a type appropriate to the conversion specifier. If the input item is not a matching sequence, the execution of the directive fails: this condition is a matching failure. Unless assignment suppression was indicated by a *, the result of the conversion is placed in the object pointed to by the first argument following the format argument that has not already received a conversion result. If this object does not have an appropriate type, or if the result of the conversion cannot be represented in the object, the behavior is undefined.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>The length modifiers and their meanings are:</p>
+<dl class="simple">
+<dt>hh</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to signed char or unsigned char.</p>
+</dd>
+<dt>h</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to short int or unsigned short int.</p>
+</dd>
+<dt>l (ell)</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to long int or unsigned long int; that a following a, A, e, E, f, F, g, or G conversion specifier applies to an argument with type pointer to double; or that a following c, s, or [ conversion specifier applies to an argument with type pointer to wchar_t.</p>
+</dd>
+<dt>ll (ell-ell)</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to long long int or unsigned long long int.</p>
+</dd>
+<dt>j</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to intmax_t or uintmax_t.</p>
+</dd>
+<dt>z</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to size_t or the corresponding signed integer type.</p>
+</dd>
+<dt>t</dt><dd><p>Specifies that a following d, i, o, u, x, X, or n conversion specifier applies to an argument with type pointer to ptrdiff_t or the corresponding unsigned integer type.</p>
+</dd>
+<dt>L</dt><dd><p>Specifies that a following a, A, e, E, f, F, g, or G conversion specifier applies to an argument with type pointer to long double.</p>
+</dd>
+</dl>
+<p>If a length modifier appears with any conversion specifier other than as specified above, the behavior is undefined.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>The conversion specifiers and their meanings are:</p>
+<dl class="simple">
+<dt>d</dt><dd><p>Matches an optionally signed decimal integer, whose format is the same as expected for the subject sequence of the strtol function with the value 10 for the base argument. The corresponding argument shall be a pointer to signed integer.</p>
+</dd>
+<dt>i</dt><dd><p>Matches an optionally signed integer, whose format is the same as expected for the subject sequence of the strtol function with the value 0 for the base argument. The corresponding argument shall be a pointer to signed integer.</p>
+</dd>
+<dt>o</dt><dd><p>Matches an optionally signed octal integer, whose format is the same as expected for the subject sequence of the strtoul function with the value 8 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>u</dt><dd><p>Matches an optionally signed decimal integer, whose format is the same as expected for the subject sequence of the strtoul function with the value 10 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>x</dt><dd><p>Matches an optionally signed hexadecimal integer, whose format is the same as expected for the subject sequence of the strtoul function with the value 16 for the base argument. The corresponding argument shall be a pointer to unsigned integer.</p>
+</dd>
+<dt>a,e,f,g</dt><dd><p>Matches an optionally signed floating-point number, infinity, or NaN, whose format is the same as expected for the subject sequence of the strtod function. The corresponding argument shall be a pointer to floating.</p>
+</dd>
+<dt>c</dt><dd><p>Matches a sequence of characters of exactly the number specified by the field width (1 if no field width is present in the directive).<a class="footnote-reference brackets" href="#note252" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> If no l length modifier is present, the corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence. No null character is added. If an l length modifier is present, the input shall be a sequence of multibyte characters that begins in the initial shift state. Each multibyte character in the sequence is converted to a wide character as if by a call to the mbrtowc function, with the conversion state described by an mbstate_t object initialized to zero before the first multibyte character is converted. The corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the resulting sequence of wide characters. No null wide character is added.</p>
+</dd>
+<dt>s</dt><dd><p>Matches a sequence of non-white-space characters.<a class="footnote-reference brackets" href="#note252" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> If no l length modifier is present, the corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence and a terminating null character, which will be added automatically. If an l length modifier is present, the input shall be a sequence of multibyte characters that begins in the initial shift state. Each multibyte character is converted to a wide character as if by a call to the mbrtowc function, with the conversion state described by an mbstate_t object initialized to zero before the first multibyte character is converted. The corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the sequence and the terminating null wide character, which will be added automatically.</p>
+</dd>
+<dt>[</dt><dd><p>Matches a nonempty sequence of characters from a set of expected characters (the scanset).<a class="footnote-reference brackets" href="#note252" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> If no l length modifier is present, the corresponding argument shall be a pointer to the initial element of a character array large enough to accept the sequence and a terminating null character, which will be added automatically. If an l length modifier is present, the input shall be a sequence of multibyte characters that begins in the initial shift state. Each multibyte character is converted to a wide character as if by a call to the mbrtowc function, with the conversion state described by an mbstate_t object initialized to zero before the first multibyte character is converted. The corresponding argument shall be a pointer to the initial element of an array of wchar_t large enough to accept the sequence and the terminating null wide character, which will be added automatically. The conversion specifier includes all subsequent characters in the format string, up to and including the matching right bracket (]). The characters between the brackets (the scanlist) compose the scanset, unless the character after the left bracket is a circumflex (^), in which case the scanset contains all characters that do not appear in the scanlist between the circumflex and the right bracket. If the conversion specifier begins with [] or ⌈], the right bracket character is in the scanlist and the next following right bracket character is the matching right bracket that ends the specification; otherwise the first following right bracket character is the one that ends the specification. If a - character is in the scanlist and is not the first, nor the second where the first character is a ^, nor the last character, the behavior is implementation-defined.</p>
+</dd>
+<dt>p</dt><dd><p>Matches an implementation-defined set of sequences, which should be the same as the set of sequences that may be produced by the %p conversion of the fprintf function. The corresponding argument shall be a pointer to a pointer to void. The input item is converted to a pointer value in an implementation-defined manner. If the input item is a value converted earlier during the same program execution, the pointer that results shall compare equal to that value; otherwise the behavior of the %p conversion is undefined.</p>
+</dd>
+<dt>n</dt><dd><p>No input is consumed. The corresponding argument shall be a pointer to signed integer into which is to be written the number of characters read from the input stream so far by this call to the fscanf function. Execution of a %n directive does not increment the assignment count returned at the completion of execution of the fscanf function. No argument is converted, but one is consumed. If the conversion specification includes an assignment- suppressing character or a field width, the behavior is undefined.</p>
+</dd>
+<dt>%</dt><dd><p>Matches a single % character; no conversion or assignment occurs. The complete conversion specification shall be %%.</p>
+</dd>
+</dl>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>If a conversion specification is invalid, the behavior is undefined.<a class="footnote-reference brackets" href="#note253" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>The conversion specifiers A, E, F, G, and X are also valid and behave the same as, respectively, a, e, f, g, and x.</p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>Trailing white space (including new-line characters) is left unread unless matched by a directive. The success of literal matches and suppressed assignments is not directly determinable other than via the %n directive.</p>
+<p class="rubric">Returns</p>
+<div class="snum docutils container" id="p16">
+<p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
+</div>
+<p>The fscanf function returns the value of the macro EOF if an input failure occurs before any conversion. Otherwise, the function returns the number of input items assigned, which can be fewer than provided for, or even zero, in the event of an early matching failure.</p>
+<div class="snum docutils container" id="p17">
+<p><a class="reference internal" href="#p17"><span class="std std-ref">17</span></a></p>
+</div>
+<p>EXAMPLE 1 The call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%d%f%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the input line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>25 54.32E-1 thompson
+</pre></div>
+</div>
+<p>will assign to n the value 3, to i the value 25, to x the value 5.432, and to name the sequence thompson\0.</p>
+<div class="snum docutils container" id="p18">
+<p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
+</div>
+<p>EXAMPLE 2 The call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%2d%f%*d %[0123456789]&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with input:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>56789 0123 56a72
+</pre></div>
+</div>
+<p>will assign to i the value 56 and to x the value 789.0, will skip 0123, and will assign to name the sequence 56\0. The next character read from the input stream will be a.</p>
+<div class="snum docutils container" id="p19">
+<p><a class="reference internal" href="#p19"><span class="std std-ref">19</span></a></p>
+</div>
+<p>EXAMPLE 3 To accept repeatedly from stdin a quantity, a unit of measure, and an item name:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">quant</span><span class="p">;</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">units</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span><span class="w"> </span><span class="n">item</span><span class="p">[</span><span class="mi">21</span><span class="p">];</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%f%20s of %20s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">quant</span><span class="p">,</span><span class="w"> </span><span class="n">units</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">);</span>
+<span class="w">        </span><span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="s">&quot;%*⌈</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">feof</span><span class="p">(</span><span class="n">stdin</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">ferror</span><span class="p">(</span><span class="n">stdin</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p20">
+<p><a class="reference internal" href="#p20"><span class="std std-ref">20</span></a></p>
+</div>
+<p>If the stdin stream contains the following lines:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2 quarts of oil
+-12.8degrees Celsius
+lots of luck
+10.0LBS      of
+dirt
+100ergs of energy
+</pre></div>
+</div>
+<p>the execution of the above example will be analogous to the following assignments:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">quant</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">strcpy</span><span class="p">(</span><span class="n">units</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;quarts&quot;</span><span class="p">);</span><span class="w"> </span><span class="n">strcpy</span><span class="p">(</span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;oil&quot;</span><span class="p">);</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">quant</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mf">-12.8</span><span class="p">;</span><span class="w"> </span><span class="n">strcpy</span><span class="p">(</span><span class="n">units</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;degrees&quot;</span><span class="p">);</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;C&quot; fails to match &quot;o&quot;</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;l&quot; fails to match &quot;%f&quot;</span>
+<span class="n">quant</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mf">10.0</span><span class="p">;</span><span class="w"> </span><span class="n">strcpy</span><span class="p">(</span><span class="n">units</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LBS&quot;</span><span class="p">);</span><span class="w"> </span><span class="n">strcpy</span><span class="p">(</span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dirt&quot;</span><span class="p">);</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;100e&quot; fails to match &quot;%f&quot;</span>
+<span class="n">count</span><span class="w">     </span><span class="o">=</span><span class="w">    </span><span class="n">EOF</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p21">
+<p><a class="reference internal" href="#p21"><span class="std std-ref">21</span></a></p>
+</div>
+<p>EXAMPLE 4 In:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="n">d2</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sscanf</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%d%n%n%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>the value 123 is assigned to d1 and the value 3 to n1. Because %n can never get an input failure the value of 3 is also assigned to n2. The value of d2 is not affected. The value 1 is assigned to i.</p>
+<div class="snum docutils container" id="p22">
+<p><a class="reference internal" href="#p22"><span class="std std-ref">22</span></a></p>
+</div>
+<p>EXAMPLE 5 In these examples, multibyte characters do have a state-dependent encoding, and the members of the extended character set that consist of more than one byte each consist of exactly two bytes, the first of which is denoted here by a and the second by an uppercase letter, but are only recognized as such when in the alternate shift state. The shift sequences are denoted by (uparrow) and (downarrow), in which the first causes entry into the alternate shift state.</p>
+<div class="snum docutils container" id="p23">
+<p><a class="reference internal" href="#p23"><span class="std std-ref">23</span></a></p>
+</div>
+<p>After the call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the input line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a(uparrow) X Y(downarrow) bc
+</pre></div>
+</div>
+<p>str will contain (uparrow) X Y(downarrow)\0 assuming that none of the bytes of the shift sequences (or of the multibyte characters, in the more general case) appears to be a single-byte white-space character.</p>
+<div class="snum docutils container" id="p24">
+<p><a class="reference internal" href="#p24"><span class="std std-ref">24</span></a></p>
+</div>
+<p>In contrast, after the call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">wchar_t</span><span class="w"> </span><span class="n">wstr</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a%ls&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wstr</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the same input line, wstr will contain the two wide characters that correspond to X and Y and a terminating null wide character.</p>
+<div class="snum docutils container" id="p25">
+<p><a class="reference internal" href="#p25"><span class="std std-ref">25</span></a></p>
+</div>
+<p>However, the call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">wchar_t</span><span class="w"> </span><span class="n">wstr</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a(uparrow) X(downarrow)%ls&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wstr</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the same input line will return zero due to a matching failure against the (downarrow) sequence in the format string.</p>
+<div class="snum docutils container" id="p26">
+<p><a class="reference internal" href="#p26"><span class="std std-ref">26</span></a></p>
+</div>
+<p>Assuming that the first byte of the multibyte character X is the same as the first byte of the multibyte character Y, after the call:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
+<span class="cm">/* ... */</span>
+<span class="kt">wchar_t</span><span class="w"> </span><span class="n">wstr</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">fscanf</span><span class="p">(</span><span class="n">stdin</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a(uparrow) Y(downarrow)%ls&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wstr</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>with the same input line, zero will again be returned, but stdin will be left with a partially consumed multibyte character.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../20/1/3/index.html#id1"><span class="std std-ref">7.20.1.3 The strtod, strtof, and strtold functions</span></a></p></li>
+<li><p><a class="reference internal" href="../../../20/1/4/index.html#id1"><span class="std std-ref">7.20.1.4 The strtol, strtoll, strtoul, and strtoull functions</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../24/6/index.html#id1"><span class="std std-ref">7.24.6 Extended multibyte/wide character conversion utilities</span></a></p></li>
+<li><p><a class="reference internal" href="../../../24/6/3/3/index.html#id1"><span class="std std-ref">7.24.6.3.3 The wcrtomb function</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note250" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>These white-space characters are not counted against a specified field width.</p>
+</aside>
+<aside class="footnote brackets" id="note251" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>fscanf pushes back at most one input character onto the input stream. Therefore, some sequences that are acceptable to strtod, strtol, etc., are unacceptable to fscanf.</p>
+</aside>
+<aside class="footnote brackets" id="note252" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id5">2</a>,<a role="doc-backlink" href="#id6">3</a>)</span>
+<p>No special provisions are made for multibyte characters in the matching rules used by the c, s, and [ conversion specifiers – the extent of the input field is determined on a byte-by-byte basis. The resulting field is nevertheless a sequence of multibyte characters that begins in the initial shift state.</p>
+</aside>
+<aside class="footnote brackets" id="note253" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">4</a><span class="fn-bracket">]</span></span>
+<p>See “future library directions” (<a class="reference internal" href="../../../26/9/index.html#id1"><span class="std std-ref">7.26.9</span></a>).</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1/index.html" class="btn btn-neutral float-left" title="7.19.6.1 The fprintf function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../3/index.html" class="btn btn-neutral float-right" title="7.19.6.3 The printf function" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

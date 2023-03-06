@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F.9.3.4 The frexp functions &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="F.9.3.5 The ilogb functions" href="../5/index.html" />
+    <link rel="prev" title="F.9.3.3 The expm1 functions" href="../3/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Annex F</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">F.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">F.2 Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">F.3 Operators and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">F.4 Floating to integer conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">F.5 Binary-decimal conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">F.6 Contracted expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">F.7 Floating-point environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">F.8 Optimization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">F.9 Mathematics &lt;math.h&gt;</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../1/index.html">F.9.1 Trigonometric functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">F.9.2 Hyperbolic functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">F.9.3 Exponential and logarithmic functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../1/index.html">F.9.3.1 The exp functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2/index.html">F.9.3.2 The exp2 functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3/index.html">F.9.3.3 The expm1 functions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">F.9.3.4 The frexp functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../5/index.html">F.9.3.5 The ilogb functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../6/index.html">F.9.3.6 The ldexp functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../7/index.html">F.9.3.7 The log functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../8/index.html">F.9.3.8 The log10 functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9/index.html">F.9.3.9 The log1p functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../10/index.html">F.9.3.10 The log2 functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11/index.html">F.9.3.11 The logb functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../12/index.html">F.9.3.12 The modf functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../13/index.html">F.9.3.13 The scalbn and scalbln functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../4/index.html">F.9.4 Power and absolute value functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../5/index.html">F.9.5 Error and gamma functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../6/index.html">F.9.6 Nearest integer functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../7/index.html">F.9.7 Remainder functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../8/index.html">F.9.8 Manipulation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9/index.html">F.9.9 Maximum, minimum, and positive difference functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../10/index.html">F.9.10 Floating multiply-add</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Annex F</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">F.9 Mathematics &lt;math.h&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">F.9.3 Exponential and logarithmic functions</a></li>
+      <li class="breadcrumb-item active">F.9.3.4 The frexp functions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../3/index.html" class="btn btn-neutral float-left" title="F.9.3.3 The expm1 functions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../5/index.html" class="btn btn-neutral float-right" title="F.9.3.5 The ilogb functions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="f-9-3-4-the-frexp-functions">
+<span id="f-9-3-4"></span><h1>F.9.3.4 The frexp functions<a class="headerlink" href="#f-9-3-4-the-frexp-functions" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="f-9-3-4p1">
+<p><a class="reference internal" href="#f-9-3-4p1"><span class="std std-ref">1</span></a></p>
+</div>
+<ul class="simple">
+<li><p>frexp((+-)0, exp) returns (+-)0, and stores 0 in the object pointed to by exp.</p></li>
+<li><p>frexp((+-)(inf), exp) returns (+-)(inf), and stores an unspecified value in the object pointed to by exp.</p></li>
+<li><p>frexp(NaN, exp) stores an unspecified value in the object pointed to by exp (and returns a NaN).</p></li>
+</ul>
+<div class="snum docutils container" id="f-9-3-4p2">
+<p><a class="reference internal" href="#f-9-3-4p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>frexp raises no floating-point exceptions.</p>
+<div class="snum docutils container" id="f-9-3-4p3">
+<p><a class="reference internal" href="#f-9-3-4p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>On a binary system, the body of the frexp function might be</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">       </span><span class="o">*</span><span class="n">exp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">logb</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">scalbn</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="o">*</span><span class="n">exp</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../3/index.html" class="btn btn-neutral float-left" title="F.9.3.3 The expm1 functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../5/index.html" class="btn btn-neutral float-right" title="F.9.3.5 The ilogb functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

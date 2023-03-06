@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.8.1 Macros for format specifiers &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="7.8.2 Functions for greatest-width integer types" href="../2/index.html" />
+    <link rel="prev" title="7.8 Format conversion of integer types &lt;inttypes.h&gt;" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">7.8.1 Macros for format specifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">7.8.2 Functions for greatest-width integer types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../14/index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">7. Library</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+      <li class="breadcrumb-item active">7.8.1 Macros for format specifiers</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.8 Format conversion of integer types &lt;inttypes.h&gt;" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="7.8.2 Functions for greatest-width integer types" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="macros-for-format-specifiers">
+<span id="id1"></span><h1>7.8.1 Macros for format specifiers<a class="headerlink" href="#macros-for-format-specifiers" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>Each of the following object-like macros<a class="footnote-reference brackets" href="#note191" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> expands to a character string literal containing a conversion specifier, possibly modified by a length modifier, suitable for use within the format argument of a formatted input/output function when converting the corresponding integer type. These macro names have the general form of PRI (character string literals for the fprintf and fwprintf family) or SCN (character string literals for the fscanf and fwscanf family),<a class="footnote-reference brackets" href="#note192" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> followed by the conversion specifier, followed by a name corresponding to a similar type name in <a class="reference internal" href="../../18/index.html#id4"><span class="std std-ref">7.18.1</span></a>. In these names, N represents the width of the type as described in <a class="reference internal" href="../../18/index.html#id4"><span class="std std-ref">7.18.1</span></a>. For example, PRIdFAST32 can be used in a format string to print the value of an integer of type int_fast32_t.</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The fprintf macros for signed integers are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PRIdN</span><span class="w">             </span><span class="n">PRIdLEASTN</span><span class="w">                </span><span class="n">PRIdFASTN</span><span class="w">          </span><span class="n">PRIdMAX</span><span class="w">             </span><span class="n">PRIdPTR</span>
+<span class="n">PRIiN</span><span class="w">             </span><span class="n">PRIiLEASTN</span><span class="w">                </span><span class="n">PRIiFASTN</span><span class="w">          </span><span class="n">PRIiMAX</span><span class="w">             </span><span class="n">PRIiPTR</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>The fprintf macros for unsigned integers are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PRIoN</span><span class="w">           </span><span class="n">PRIoLEASTN</span><span class="w">               </span><span class="n">PRIoFASTN</span><span class="w">              </span><span class="n">PRIoMAX</span><span class="w">             </span><span class="n">PRIoPTR</span>
+<span class="n">PRIuN</span><span class="w">           </span><span class="n">PRIuLEASTN</span><span class="w">               </span><span class="n">PRIuFASTN</span><span class="w">              </span><span class="n">PRIuMAX</span><span class="w">             </span><span class="n">PRIuPTR</span>
+<span class="n">PRIxN</span><span class="w">           </span><span class="n">PRIxLEASTN</span><span class="w">               </span><span class="n">PRIxFASTN</span><span class="w">              </span><span class="n">PRIxMAX</span><span class="w">             </span><span class="n">PRIxPTR</span>
+<span class="n">PRIXN</span><span class="w">           </span><span class="n">PRIXLEASTN</span><span class="w">               </span><span class="n">PRIXFASTN</span><span class="w">              </span><span class="n">PRIXMAX</span><span class="w">             </span><span class="n">PRIXPTR</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>The fscanf macros for signed integers are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SCNdN</span><span class="w">           </span><span class="n">SCNdLEASTN</span><span class="w">               </span><span class="n">SCNdFASTN</span><span class="w">              </span><span class="n">SCNdMAX</span><span class="w">             </span><span class="n">SCNdPTR</span>
+<span class="n">SCNiN</span><span class="w">           </span><span class="n">SCNiLEASTN</span><span class="w">               </span><span class="n">SCNiFASTN</span><span class="w">              </span><span class="n">SCNiMAX</span><span class="w">             </span><span class="n">SCNiPTR</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>The fscanf macros for unsigned integers are:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SCNoN</span><span class="w">           </span><span class="n">SCNoLEASTN</span><span class="w">               </span><span class="n">SCNoFASTN</span><span class="w">              </span><span class="n">SCNoMAX</span><span class="w">             </span><span class="n">SCNoPTR</span>
+<span class="n">SCNuN</span><span class="w">           </span><span class="n">SCNuLEASTN</span><span class="w">               </span><span class="n">SCNuFASTN</span><span class="w">              </span><span class="n">SCNuMAX</span><span class="w">             </span><span class="n">SCNuPTR</span>
+<span class="n">SCNxN</span><span class="w">           </span><span class="n">SCNxLEASTN</span><span class="w">               </span><span class="n">SCNxFASTN</span><span class="w">              </span><span class="n">SCNxMAX</span><span class="w">             </span><span class="n">SCNxPTR</span>
+</pre></div>
+</div>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>For each type that the implementation provides in <a class="reference internal" href="../../18/index.html#id1"><span class="std std-ref">&lt;stdint.h&gt;</span></a>, the corresponding fprintf macros shall be defined and the corresponding fscanf macros shall be defined unless the implementation does not have a suitable fscanf length modifier for the type.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>EXAMPLE</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">      </span><span class="kt">uintmax_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UINTMAX_MAX</span><span class="p">;</span><span class="w">    </span><span class="c1">// this type always exists</span>
+<span class="w">      </span><span class="n">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&quot;The largest integer value is %020&quot;</span>
+<span class="w">            </span><span class="n">PRIxMAX</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note191" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>C++ implementations should define these macros only when __STDC_FORMAT_MACROS is defined before <a class="reference internal" href="../index.html#id1"><span class="std std-ref">&lt;inttypes.h&gt;</span></a> is included.</p>
+</aside>
+<aside class="footnote brackets" id="note192" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Separate macros are given for use with fprintf and fscanf functions because, in the general case, different format specifiers may be required for fprintf and fscanf, even when the type is the same.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.8 Format conversion of integer types &lt;inttypes.h&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../2/index.html" class="btn btn-neutral float-right" title="7.8.2 Functions for greatest-width integer types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

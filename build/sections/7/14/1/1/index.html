@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.14.1.1 The signal function &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="7.14.2 Send signal" href="../../2/index.html" />
+    <link rel="prev" title="7.14.1 Specify signal handling" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../6/index.html">6. Language</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">7. Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../1/index.html">7.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../2/index.html">7.2 Diagnostics &lt;assert.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../3/index.html">7.3 Complex arithmetic &lt;complex.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../4/index.html">7.4 Character handling &lt;ctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../5/index.html">7.5 Errors &lt;errno.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../6/index.html">7.6 Floating-point environment &lt;fenv.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../7/index.html">7.7 Characteristics of floating types &lt;float.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../8/index.html">7.8 Format conversion of integer types &lt;inttypes.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../9/index.html">7.9 Alternative spellings &lt;iso646.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../10/index.html">7.10 Sizes of integer types &lt;limits.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../11/index.html">7.11 Localization &lt;locale.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../12/index.html">7.12 Mathematics &lt;math.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../13/index.html">7.13 Nonlocal jumps &lt;setjmp.h&gt;</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">7.14 Signal handling &lt;signal.h&gt;</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">7.14.1 Specify signal handling</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">7.14.1.1 The signal function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2/index.html">7.14.2 Send signal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../15/index.html">7.15 Variable arguments &lt;stdarg.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../16/index.html">7.16 Boolean type and values &lt;stdbool.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../17/index.html">7.17 Common definitions &lt;stddef.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../18/index.html">7.18 Integer types &lt;stdint.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../19/index.html">7.19 Input/output &lt;stdio.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../20/index.html">7.20 General utilities &lt;stdlib.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../21/index.html">7.21 String handling &lt;string.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../22/index.html">7.22 Type-generic math &lt;tgmath.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../23/index.html">7.23 Date and time &lt;time.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../24/index.html">7.24 Extended multibyte and wide character utilities &lt;wchar.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../25/index.html">7.25 Wide character classification and mapping utilities &lt;wctype.h&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../26/index.html">7.26 Future library directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">7. Library</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">7.14 Signal handling &lt;signal.h&gt;</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">7.14.1 Specify signal handling</a></li>
+      <li class="breadcrumb-item active">7.14.1.1 The signal function</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.14.1 Specify signal handling" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../2/index.html" class="btn btn-neutral float-right" title="7.14.2 Send signal" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-signal-function">
+<span id="id1"></span><h1>7.14.1.1 The signal function<a class="headerlink" href="#the-signal-function" title="Permalink to this heading"></a></h1>
+<p class="rubric">Synopsis</p>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;signal.h&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">signal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="rubric">Description</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>The signal function chooses one of three ways in which receipt of the signal number sig is to be subsequently handled. If the value of func is SIG_DFL, default handling for that signal will occur. If the value of func is SIG_IGN, the signal will be ignored. Otherwise, func shall point to a function to be called when that signal occurs. An invocation of such a function because of a signal, or (recursively) of any further functions called by that invocation (other than functions in the standard library), is called a signal handler.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>When a signal occurs and func points to a function, it is implementation-defined whether the equivalent of signal(sig, SIG_DFL); is executed or the implementation prevents some implementation-defined set of signals (at least including sig) from occurring until the current signal handling has completed; in the case of SIGILL, the implementation may alternatively define that no action is taken. Then the equivalent of (*func)(sig); is executed. If and when the function returns, if the value of sig is SIGFPE, SIGILL, SIGSEGV, or any other implementation-defined value corresponding to a computational exception, the behavior is undefined; otherwise the program will resume execution at the point it was interrupted.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>If the signal occurs as the result of calling the abort or raise function, the signal handler shall not call the raise function.</p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>If the signal occurs other than as the result of calling the abort or raise function, the behavior is undefined if the signal handler refers to any object with static storage duration other than by assigning a value to an object declared as volatile sig_atomic_t, or the signal handler calls any function in the standard library other than the abort function, the _Exit function, or the signal function with the first argument equal to the signal number corresponding to the signal that caused the invocation of the handler. Furthermore, if such a call to the signal function results in a SIG_ERR return, the value of errno is indeterminate.<a class="footnote-reference brackets" href="#note220" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>At program startup, the equivalent of</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">signal</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="n">SIG_IGN</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>may be executed for some signals selected in an implementation-defined manner; the equivalent of</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">signal</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="n">SIG_DFL</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>is executed for all other signals defined by the implementation.</p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The implementation shall behave as if no library function calls the signal function.</p>
+<p class="rubric">Returns</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>If the request can be honored, the signal function returns the value of func for the most recent successful call to signal for the specified signal sig. Otherwise, a value of SIG_ERR is returned and a positive value is stored in errno.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../20/4/1/index.html#id1"><span class="std std-ref">7.20.4.1 The abort function</span></a></p></li>
+<li><p><a class="reference internal" href="../../../20/4/3/index.html#id1"><span class="std std-ref">7.20.4.3 The exit function</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../../20/4/4/index.html#id1"><span class="std std-ref">7.20.4.4 The _Exit function</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note220" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>If any signal is generated by an asynchronous signal handler, the behavior is undefined.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="7.14.1 Specify signal handling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../2/index.html" class="btn btn-neutral float-right" title="7.14.2 Send signal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

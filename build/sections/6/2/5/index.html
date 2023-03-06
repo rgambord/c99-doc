@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.2.5 Types &mdash; C99 Language Standard  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/brand.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6.2.6 Representations of types" href="../6/index.html" />
+    <link rel="prev" title="6.2.4 Storage durations of objects" href="../4/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            C99 Language Standard
+              <img src="../../../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../1/index.html">1. Scope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../2/index.html">2. Normative references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../3/index.html">3. Terms, definitions, and symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../4/index.html">4. Conformance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../5/index.html">5. Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">6. Language</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1/index.html">6.1 Notation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">6.2 Concepts</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1/index.html">6.2.1 Scopes of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2/index.html">6.2.2 Linkages of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3/index.html">6.2.3 Name spaces of identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4/index.html">6.2.4 Storage durations of objects</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.2.5 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6/index.html">6.2.6 Representations of types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7/index.html">6.2.7 Compatible type and composite type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../3/index.html">6.3 Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../4/index.html">6.4 Lexical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../5/index.html">6.5 Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../6/index.html">6.6 Constant expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../7/index.html">6.7 Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../8/index.html">6.8 Statements and blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../9/index.html">6.9 External definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../10/index.html">6.10 Preprocessing directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../11/index.html">6.11 Future language directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../7/index.html">7. Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../8/index.html">Annex A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../9/index.html">Annex B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../10/index.html">Annex C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../11/index.html">Annex D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../12/index.html">Annex E</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../13/index.html">Annex F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../14/index.html">Annex G</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../15/index.html">Annex H</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../16/index.html">Annex I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../17/index.html">Annex J</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../18/index.html">Bibliography</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">C99 Language Standard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">6. Language</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">6.2 Concepts</a></li>
+      <li class="breadcrumb-item active">6.2.5 Types</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="6.2.4 Storage durations of objects" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../6/index.html" class="btn btn-neutral float-right" title="6.2.6 Representations of types" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="types">
+<span id="id1"></span><h1>6.2.5 Types<a class="headerlink" href="#types" title="Permalink to this heading"></a></h1>
+<div class="snum docutils container" id="p1">
+<p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
+</div>
+<p>The meaning of a value stored in an object or returned by a function is determined by the type of the expression used to access it. (An identifier declared to be an object is the simplest such expression; the type is specified in the declaration of the identifier.) Types are partitioned into object types (types that fully describe objects), function types (types that describe functions), and incomplete types (types that describe objects but lack information needed to determine their sizes).</p>
+<div class="snum docutils container" id="p2">
+<p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
+</div>
+<p>An object declared as type _Bool is large enough to store the values 0 and 1.</p>
+<div class="snum docutils container" id="p3">
+<p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
+</div>
+<p>An object declared as type char is large enough to store any member of the basic execution character set. If a member of the basic execution character set is stored in a char object, its value is guaranteed to be nonnegative. If any other character is stored in a char object, the resulting value is implementation-defined but shall be within the range of values that can be represented in that type.</p>
+<div class="snum docutils container" id="p4">
+<p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
+</div>
+<p>There are five standard signed integer types, designated as signed char, short int, int, long int, and long long int. (These and other types may be designated in several additional ways, as described in <a class="reference internal" href="../../7/2/index.html#id1"><span class="std std-ref">6.7.2</span></a>.) There may also be implementation-defined extended signed integer types.<a class="footnote-reference brackets" href="#note28" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The standard and extended signed integer types are collectively called signed integer types.<a class="footnote-reference brackets" href="#note29" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p5">
+<p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
+</div>
+<p>An object declared as type signed char occupies the same amount of storage as a “plain” char object. A “plain” int object has the natural size suggested by the architecture of the execution environment (large enough to contain any value in the range INT_MIN to INT_MAX as defined in the header <a class="reference internal" href="../../../7/10/index.html#id1"><span class="std std-ref">&lt;limits.h&gt;</span></a>).</p>
+<div class="snum docutils container" id="p6">
+<p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
+</div>
+<p>For each of the signed integer types, there is a corresponding (but different) unsigned integer type (designated with the keyword unsigned) that uses the same amount of storage (including sign information) and has the same alignment requirements. The type _Bool and the unsigned integer types that correspond to the standard signed integer types are the standard unsigned integer types. The unsigned integer types that correspond to the extended signed integer types are the extended unsigned integer types. The standard and extended unsigned integer types are collectively called unsigned integer types.<a class="footnote-reference brackets" href="#note30" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p7">
+<p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
+</div>
+<p>The standard signed integer types and standard unsigned integer types are collectively called the standard integer types, the extended signed integer types and extended unsigned integer types are collectively called the extended integer types.</p>
+<div class="snum docutils container" id="p8">
+<p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
+</div>
+<p>For any two integer types with the same signedness and different integer conversion rank (see <a class="reference internal" href="../../3/1/1/index.html#id1"><span class="std std-ref">6.3.1.1</span></a>), the range of values of the type with smaller integer conversion rank is a subrange of the values of the other type.</p>
+<div class="snum docutils container" id="p9">
+<p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
+</div>
+<p>The range of nonnegative values of a signed integer type is a subrange of the corresponding unsigned integer type, and the representation of the same value in each type is the same.<a class="footnote-reference brackets" href="#note31" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> A computation involving unsigned operands can never overflow, because a result that cannot be represented by the resulting unsigned integer type is reduced modulo the number that is one greater than the largest value that can be represented by the resulting type.</p>
+<div class="snum docutils container" id="p10">
+<p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
+</div>
+<p>There are three real floating types, designated as float, double, and long double.<a class="footnote-reference brackets" href="#note32" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> The set of values of the type float is a subset of the set of values of the type double; the set of values of the type double is a subset of the set of values of the type long double.</p>
+<div class="snum docutils container" id="p11">
+<p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
+</div>
+<p>There are three complex types, designated as float _Complex, double _Complex, and long double _Complex.<a class="footnote-reference brackets" href="#note33" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> The real floating and complex types are collectively called the floating types.</p>
+<div class="snum docutils container" id="p12">
+<p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
+</div>
+<p>For each floating type there is a corresponding real type, which is always a real floating type. For real floating types, it is the same type. For complex types, it is the type given by deleting the keyword _Complex from the type name.</p>
+<div class="snum docutils container" id="p13">
+<p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
+</div>
+<p>Each complex type has the same representation and alignment requirements as an array type containing exactly two elements of the corresponding real type; the first element is equal to the real part, and the second element to the imaginary part, of the complex number.</p>
+<div class="snum docutils container" id="p14">
+<p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
+</div>
+<p>The type char, the signed and unsigned integer types, and the floating types are collectively called the basic types. Even if the implementation defines two or more basic types to have the same representation, they are nevertheless different types.<a class="footnote-reference brackets" href="#note34" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p15">
+<p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
+</div>
+<p>The three types char, signed char, and unsigned char are collectively called the character types. The implementation shall define char to have the same range, representation, and behavior as either signed char or unsigned char.<a class="footnote-reference brackets" href="#note35" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p16">
+<p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
+</div>
+<p>An enumeration comprises a set of named integer constant values. Each distinct enumeration constitutes a different enumerated type.</p>
+<div class="snum docutils container" id="p17">
+<p><a class="reference internal" href="#p17"><span class="std std-ref">17</span></a></p>
+</div>
+<p>The type char, the signed and unsigned integer types, and the enumerated types are collectively called integer types. The integer and real floating types are collectively called real types.</p>
+<div class="snum docutils container" id="p18">
+<p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
+</div>
+<p>Integer and floating types are collectively called arithmetic types. Each arithmetic type belongs to one type domain: the real type domain comprises the real types, the complex type domain comprises the complex types.</p>
+<div class="snum docutils container" id="p19">
+<p><a class="reference internal" href="#p19"><span class="std std-ref">19</span></a></p>
+</div>
+<p>The void type comprises an empty set of values; it is an incomplete type that cannot be completed.</p>
+<div class="snum docutils container" id="p20">
+<p><a class="reference internal" href="#p20"><span class="std std-ref">20</span></a></p>
+</div>
+<p>Any number of derived types can be constructed from the object, function, and incomplete types, as follows:</p>
+<ul class="simple">
+<li><p>An array type describes a contiguously allocated nonempty set of objects with a particular member object type, called the element type.<a class="footnote-reference brackets" href="#note36" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> Array types are characterized by their element type and by the number of elements in the array. An array type is said to be derived from its element type, and if its element type is T , the array type is sometimes called “array of T ‘’. The construction of an array type from an element type is called “array type derivation”.</p></li>
+<li><p>A structure type describes a sequentially allocated nonempty set of member objects (and, in certain circumstances, an incomplete array), each of which has an optionally specified name and possibly distinct type.</p></li>
+<li><p>A union type describes an overlapping nonempty set of member objects, each of which has an optionally specified name and possibly distinct type.</p></li>
+<li><p>A function type describes a function with specified return type. A function type is characterized by its return type and the number and types of its parameters. A function type is said to be derived from its return type, and if its return type is T , the function type is sometimes called “function returning T ‘’. The construction of a function type from a return type is called “function type derivation”.</p></li>
+<li><p>A pointer type may be derived from a function type, an object type, or an incomplete type, called the referenced type. A pointer type describes an object whose value provides a reference to an entity of the referenced type. A pointer type derived from the referenced type T is sometimes called “pointer to T ‘’. The construction of a pointer type from a referenced type is called “pointer type derivation”.</p></li>
+</ul>
+<p>These methods of constructing derived types can be applied recursively.</p>
+<div class="snum docutils container" id="p21">
+<p><a class="reference internal" href="#p21"><span class="std std-ref">21</span></a></p>
+</div>
+<p>Arithmetic types and pointer types are collectively called scalar types. Array and structure types are collectively called aggregate types.<a class="footnote-reference brackets" href="#note37" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
+<div class="snum docutils container" id="p22">
+<p><a class="reference internal" href="#p22"><span class="std std-ref">22</span></a></p>
+</div>
+<p>An array type of unknown size is an incomplete type. It is completed, for an identifier of that type, by specifying the size in a later declaration (with internal or external linkage). A structure or union type of unknown content (as described in <a class="reference internal" href="../../7/2/3/index.html#id1"><span class="std std-ref">6.7.2.3</span></a>) is an incomplete type. It is completed, for all declarations of that type, by declaring the same structure or union tag with its defining content later in the same scope.</p>
+<div class="snum docutils container" id="p23">
+<p><a class="reference internal" href="#p23"><span class="std std-ref">23</span></a></p>
+</div>
+<p>A type has known constant size if the type is not incomplete and is not a variable length array type.</p>
+<div class="snum docutils container" id="p24">
+<p><a class="reference internal" href="#p24"><span class="std std-ref">24</span></a></p>
+</div>
+<p>Array, function, and pointer types are collectively called derived declarator types. A declarator type derivation from a type T is the construction of a derived declarator type from T by the application of an array-type, a function-type, or a pointer-type derivation to T.</p>
+<div class="snum docutils container" id="p25">
+<p><a class="reference internal" href="#p25"><span class="std std-ref">25</span></a></p>
+</div>
+<p>A type is characterized by its type category, which is either the outermost derivation of a derived type (as noted above in the construction of derived types), or the type itself if the type consists of no derived types.</p>
+<div class="snum docutils container" id="p26">
+<p><a class="reference internal" href="#p26"><span class="std std-ref">26</span></a></p>
+</div>
+<p>Any type so far mentioned is an unqualified type. Each unqualified type has several qualified versions of its type,<a class="footnote-reference brackets" href="#note38" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a> corresponding to the combinations of one, two, or all three of the const, volatile, and restrict qualifiers. The qualified or unqualified versions of a type are distinct types that belong to the same type category and have the same representation and alignment requirements.<a class="footnote-reference brackets" href="#note39" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> A derived type is not qualified by the qualifiers (if any) of the type from which it is derived.</p>
+<div class="snum docutils container" id="p27">
+<p><a class="reference internal" href="#p27"><span class="std std-ref">27</span></a></p>
+</div>
+<p>A pointer to void shall have the same representation and alignment requirements as a pointer to a character type.<a class="footnote-reference brackets" href="#note39" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> Similarly, pointers to qualified or unqualified versions of compatible types shall have the same representation and alignment requirements. All pointers to structure types shall have the same representation and alignment requirements as each other. All pointers to union types shall have the same representation and alignment requirements as each other. Pointers to other types need not have the same representation or alignment requirements.</p>
+<div class="snum docutils container" id="p28">
+<p><a class="reference internal" href="#p28"><span class="std std-ref">28</span></a></p>
+</div>
+<p>EXAMPLE 1 The type designated as “float *’’ has type “pointer to float”. Its type category is pointer, not a floating type. The const-qualified version of this type is designated as “float * const” whereas the type designated as “const float *’’ is not a qualified type – its type is “pointer to const- qualified float” and is a pointer to a qualified type.</p>
+<div class="snum docutils container" id="p29">
+<p><a class="reference internal" href="#p29"><span class="std std-ref">29</span></a></p>
+</div>
+<p>EXAMPLE 2 The type designated as “struct tag (*[5])(float)’’ has type “array of pointer to function returning struct tag”. The array has length five and the function has a single parameter of type float. Its type category is array.</p>
+<p class="rubric">Forward References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><a class="reference internal" href="../7/index.html#id1"><span class="std std-ref">6.2.7 Compatible type and composite type</span></a></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><a class="reference internal" href="../../7/index.html#id1"><span class="std std-ref">6.7 Declarations</span></a></p></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Footnotes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="note28" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Implementation-defined keywords shall have the form of an identifier reserved for any use as described in <a class="reference internal" href="../../../7/1/3/index.html#id1"><span class="std std-ref">7.1.3</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="note29" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Therefore, any statement in this Standard about signed integer types also applies to the extended signed integer types.</p>
+</aside>
+<aside class="footnote brackets" id="note30" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Therefore, any statement in this Standard about unsigned integer types also applies to the extended unsigned integer types.</p>
+</aside>
+<aside class="footnote brackets" id="note31" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>The same representation and alignment requirements are meant to imply interchangeability as arguments to functions, return values from functions, and members of unions.</p>
+</aside>
+<aside class="footnote brackets" id="note32" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>See “future language directions” (<a class="reference internal" href="../../11/1/index.html#id1"><span class="std std-ref">6.11.1</span></a>).</p>
+</aside>
+<aside class="footnote brackets" id="note33" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">6</a><span class="fn-bracket">]</span></span>
+<p>A specification for imaginary types is in informative <a class="reference internal" href="../../../14/index.html#g"><span class="std std-ref">annex G</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="note34" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">7</a><span class="fn-bracket">]</span></span>
+<p>An implementation may define new keywords that provide alternative ways to designate a basic (or any other) type; this does not violate the requirement that all basic types be different. Implementation-defined keywords shall have the form of an identifier reserved for any use as described in <a class="reference internal" href="../../../7/1/3/index.html#id1"><span class="std std-ref">7.1.3</span></a>.</p>
+</aside>
+<aside class="footnote brackets" id="note35" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">8</a><span class="fn-bracket">]</span></span>
+<p>CHAR_MIN, defined in <a class="reference internal" href="../../../7/10/index.html#id1"><span class="std std-ref">&lt;limits.h&gt;</span></a>, will have one of the values 0 or SCHAR_MIN, and this can be used to distinguish the two options. Irrespective of the choice made, char is a separate type from the other two and is not compatible with either.</p>
+</aside>
+<aside class="footnote brackets" id="note36" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">9</a><span class="fn-bracket">]</span></span>
+<p>Since object types do not include incomplete types, an array of incomplete type cannot be constructed.</p>
+</aside>
+<aside class="footnote brackets" id="note37" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">10</a><span class="fn-bracket">]</span></span>
+<p>Note that aggregate type does not include union type because an object with union type can only contain one member at a time.</p>
+</aside>
+<aside class="footnote brackets" id="note38" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">11</a><span class="fn-bracket">]</span></span>
+<p>See <a class="reference internal" href="../../7/3/index.html#id1"><span class="std std-ref">6.7.3</span></a> regarding qualified array and function types.</p>
+</aside>
+<aside class="footnote brackets" id="note39" role="note">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id13">1</a>,<a role="doc-backlink" href="#id14">2</a>)</span>
+<p>The same representation and alignment requirements are meant to imply interchangeability as arguments to functions, return values from functions, and members of unions.</p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../4/index.html" class="btn btn-neutral float-left" title="6.2.4 Storage durations of objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../6/index.html" class="btn btn-neutral float-right" title="6.2.6 Representations of types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

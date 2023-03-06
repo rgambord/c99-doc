@@ -2,6 +2,10 @@
   overflow-x: auto;
 }
 
+.rst-content {
+  position: relative;
+}
+
 a {
   color: #3344dd;
 }
@@ -91,14 +95,14 @@ img.logo {
 
 
 .snum {
-  position: relative;
+  position: absolute;
   left: -10px;
   width: 0;
   white-space: nowrap;
-  width: max-content;
+  text-align: right
 }
 
-.snum > * {
+.snum > *{
   position: absolute;
   right: 0;
 }

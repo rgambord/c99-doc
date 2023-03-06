@@ -200,7 +200,7 @@
 <div class="snum docutils container" id="p16">
 <p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
 </div>
-<p>EXAMPLE 1 The declaration</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The declaration</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">fip</span><span class="p">(),</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pfi</span><span class="p">)();</span>
 </pre></div>
 </div>
@@ -212,7 +212,7 @@
 <div class="snum docutils container" id="p18">
 <p><a class="reference internal" href="#p18"><span class="std std-ref">18</span></a></p>
 </div>
-<p>EXAMPLE 2 The declaration</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The declaration</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">apfi</span><span class="p">[</span><span class="mi">3</span><span class="p">])(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -220,7 +220,7 @@
 <div class="snum docutils container" id="p19">
 <p><a class="reference internal" href="#p19"><span class="std std-ref">19</span></a></p>
 </div>
-<p>EXAMPLE 3 The declaration</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> The declaration</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">fpfi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">long</span><span class="p">),</span><span class="w"> </span><span class="kt">int</span><span class="p">))(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
 </pre></div>
 </div>
@@ -228,7 +228,7 @@
 <div class="snum docutils container" id="p20">
 <p><a class="reference internal" href="#p20"><span class="std std-ref">20</span></a></p>
 </div>
-<p>EXAMPLE 4 The following prototype has a variably modified parameter.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">4</span></code> The following prototype has a variably modified parameter.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">addscalar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
 <span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="o">+</span><span class="mi">300</span><span class="p">],</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
@@ -250,7 +250,7 @@
 <div class="snum docutils container" id="p21">
 <p><a class="reference internal" href="#p21"><span class="std std-ref">21</span></a></p>
 </div>
-<p>EXAMPLE 5 The following are all compatible function prototype declarators.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">5</span></code> The following are all compatible function prototype declarators.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">]);</span>
 <span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="o">*</span><span class="p">][</span><span class="o">*</span><span class="p">]);</span>
 <span class="kt">double</span><span class="w">    </span><span class="nf">maximum</span><span class="p">(</span><span class="kt">int</span><span class="w">       </span><span class="n">n</span><span class="p">,</span><span class="w">   </span><span class="kt">int</span><span class="w">   </span><span class="n">m</span><span class="p">,</span><span class="w">   </span><span class="kt">double</span><span class="w">   </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">][</span><span class="o">*</span><span class="p">]);</span>

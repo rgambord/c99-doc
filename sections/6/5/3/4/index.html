@@ -158,7 +158,7 @@
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>EXAMPLE 1 A principal use of the sizeof operator is in communication with routines such as storage allocators and I/O systems. A storage-allocation function might accept a size (in bytes) of an object to allocate and return a pointer to void. For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> A principal use of the sizeof operator is in communication with routines such as storage allocators and I/O systems. A storage-allocation function might accept a size (in bytes) of an object to allocate and return a pointer to void. For example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">alloc</span><span class="p">(</span><span class="kt">size_t</span><span class="p">);</span>
 <span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alloc</span><span class="p">(</span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">dp</span><span class="p">);</span>
 </pre></div>
@@ -167,14 +167,14 @@
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>EXAMPLE 2 Another use of the sizeof operator is to compute the number of elements in an array:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> Another use of the sizeof operator is to compute the number of elements in an array:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p>EXAMPLE 3 In this example, the size of a variable length array is computed and returned from a function:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> In this example, the size of a variable length array is computed and returned from a function:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stddef.h&gt;</span>
 <span class="kt">size_t</span><span class="w"> </span><span class="nf">fsize3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>

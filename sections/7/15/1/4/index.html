@@ -165,7 +165,7 @@
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>EXAMPLE 1 The function f1 gathers into an array a list of arguments that are pointers to strings (but not more than MAXARGS arguments), then passes the array as a single argument to function f2. The number of pointers is specified by the first argument to f1.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The function f1 gathers into an array a list of arguments that are pointers to strings (but not more than MAXARGS arguments), then passes the array as a single argument to function f2. The number of pointers is specified by the first argument to f1.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#define MAXARGS   31</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
@@ -190,7 +190,7 @@
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p>EXAMPLE 2 The function f3 is similar, but saves the status of the variable argument list after the indicated number of arguments; after f2 has been called once with the whole list, the trailing part of the list is gathered again and passed to function f4.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The function f3 is similar, but saves the status of the variable argument list after the indicated number of arguments; after f2 has been called once with the whole list, the trailing part of the list is gathered again and passed to function f4.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#define MAXARGS 31</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f4_after</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>

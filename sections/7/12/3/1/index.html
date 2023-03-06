@@ -172,7 +172,7 @@
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>EXAMPLE The fpclassify macro might be implemented in terms of ordinary functions as</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> The fpclassify macro might be implemented in terms of ordinary functions as</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define fpclassify(x) \</span>
 <span class="cp">      ((sizeof (x) == sizeof (float)) ? __fpclassifyf(x) : \</span>
 <span class="cp">       (sizeof (x) == sizeof (double)) ? __fpclassifyd(x) : \</span>

@@ -213,11 +213,11 @@
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>EXAMPLE 1 The program fragment 1Ex is parsed as a preprocessing number token (one that is not a valid floating or integer constant token), even though a parse as the pair of preprocessing tokens 1 and Ex might produce a valid expression (for example, if Ex were a macro defined as +1). Similarly, the program fragment 1E1 is parsed as a preprocessing number (one that is a valid floating constant token), whether or not E is a macro name.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The program fragment 1Ex is parsed as a preprocessing number token (one that is not a valid floating or integer constant token), even though a parse as the pair of preprocessing tokens 1 and Ex might produce a valid expression (for example, if Ex were a macro defined as +1). Similarly, the program fragment 1E1 is parsed as a preprocessing number (one that is a valid floating constant token), whether or not E is a macro name.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>EXAMPLE 2 The program fragment x+++++y is parsed as x ++ ++ + y, which violates a constraint on increment operators, even though the parse x ++ + ++ y might yield a correct expression.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The program fragment x+++++y is parsed as x ++ ++ + y, which violates a constraint on increment operators, even though the parse x ++ + ++ y might yield a correct expression.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="4/4/index.html#id1"><span class="std std-ref">6.4.4.4 Character constants</span></a></p></li>

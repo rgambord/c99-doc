@@ -139,7 +139,7 @@
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>EXAMPLE 1 It is sometimes convenient to jump into the middle of a complicated set of statements. The following outline presents one possible approach to a problem based on these three assumptions:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> It is sometimes convenient to jump into the middle of a complicated set of statements. The following outline presents one possible approach to a problem based on these three assumptions:</p>
 <ol class="arabic simple">
 <li><p>The general initialization code accesses objects only visible to the current function.</p></li>
 <li><p>The general initialization code is too large to warrant duplication.</p></li>
@@ -166,7 +166,7 @@
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>EXAMPLE 2 A goto statement is not allowed to jump past any declarations of objects with variably modified types. A jump within the scope, however, is permitted.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> A goto statement is not allowed to jump past any declarations of objects with variably modified types. A jump within the scope, however, is permitted.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">goto</span><span class="w"> </span><span class="n">lab3</span><span class="p">;</span><span class="w">                         </span><span class="c1">// invalid: going INTO scope of VLA.</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>

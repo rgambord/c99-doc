@@ -120,7 +120,7 @@
 <ul class="simple">
 <li><p>The basic character set shall be present and each character shall be encoded as a single byte.</p></li>
 <li><p>The presence, meaning, and representation of any additional members is locale- specific.</p></li>
-<li><p>A multibyte character set may have a state-dependent encoding, wherein each sequence of multibyte characters begins in an initial shift state and enters other locale-specific shift states when specific multibyte characters are encountered in the sequence. While in the initial shift state, all single-byte characters retain their usual interpretation and do not alter the shift state. The interpretation for subsequent bytes in the sequence is a function of the current shift state.</p></li>
+<li><p>A multibyte character set may have a <em>state-dependent encoding</em>, wherein each sequence of multibyte characters begins in an <em>initial shift state</em> and enters other locale-specific <em>shift states</em> when specific multibyte characters are encountered in the sequence. While in the initial shift state, all single-byte characters retain their usual interpretation and do not alter the shift state. The interpretation for subsequent bytes in the sequence is a function of the current shift state.</p></li>
 <li><p>A byte with all bits zero shall be interpreted as a null character independent of shift state. Such a byte shall not occur as part of any other multibyte character.</p></li>
 </ul>
 <div class="snum docutils container" id="p2">

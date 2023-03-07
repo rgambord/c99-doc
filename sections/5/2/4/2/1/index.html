@@ -121,125 +121,160 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>The values given below shall be replaced by constant expressions suitable for use in <code class="code docutils literal notranslate"><span class="pre">#if</span></code> preprocessing directives. Moreover, except for CHAR_BIT and MB_LEN_MAX, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.</p>
-<ul class="simple">
-<li><p>number of bits for smallest object that is not a bit-field (byte)</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">CHAR_BIT</span><span class="w">                                            </span><span class="mi">8</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type signed char</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SCHAR_MIN</span><span class="w">                                </span><span class="mi">-127</span><span class="w"> </span><span class="c1">// -(27 - 1)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type signed char</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SCHAR_MAX</span><span class="w">                                </span><span class="o">+</span><span class="mi">127</span><span class="w"> </span><span class="c1">// 27 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type unsigned char</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">UCHAR_MAX</span><span class="w">                                 </span><span class="mi">255</span><span class="w"> </span><span class="c1">// 28 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type char</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">CHAR_MIN</span><span class="w">                               </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type char</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">CHAR_MAX</span><span class="w">                              </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum number of bytes in a multibyte character, for any supported locale</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MB_LEN_MAX</span><span class="w">                                    </span><span class="mi">1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type short int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SHRT_MIN</span><span class="w">                               </span><span class="mi">-32767</span><span class="w"> </span><span class="c1">// -(215 - 1)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type short int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SHRT_MAX</span><span class="w">                               </span><span class="o">+</span><span class="mi">32767</span><span class="w"> </span><span class="c1">// 215 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type unsigned short int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">USHRT_MAX</span><span class="w">                               </span><span class="mi">65535</span><span class="w"> </span><span class="c1">// 216 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INT_MIN</span><span class="w">                                 </span><span class="mi">-32767</span><span class="w"> </span><span class="c1">// -(215 - 1)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INT_MAX</span><span class="w">                                </span><span class="o">+</span><span class="mi">32767</span><span class="w"> </span><span class="c1">// 215 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type unsigned int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">UINT_MAX</span><span class="w">                                </span><span class="mi">65535</span><span class="w"> </span><span class="c1">// 216 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">LONG_MIN</span><span class="w">                         </span><span class="mi">-2147483647</span><span class="w"> </span><span class="c1">// -(231 - 1)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">LONG_MAX</span><span class="w">                         </span><span class="o">+</span><span class="mi">2147483647</span><span class="w"> </span><span class="c1">// 231 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type unsigned long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">ULONG_MAX</span><span class="w">                         </span><span class="mi">4294967295</span><span class="w"> </span><span class="c1">// 232 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>minimum value for an object of type long long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">LLONG_MIN</span><span class="w">          </span><span class="mi">-9223372036854775807</span><span class="w"> </span><span class="c1">// -(263 - 1)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type long long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">LLONG_MAX</span><span class="w">          </span><span class="o">+</span><span class="mi">9223372036854775807</span><span class="w"> </span><span class="c1">// 263 - 1</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum value for an object of type unsigned long long int</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">ULLONG_MAX</span><span class="w">         </span><span class="mi">18446744073709551615</span><span class="w"> </span><span class="c1">// 264 - 1</span>
-</pre></div>
-</div>
+<p>The values given below shall be replaced by constant expressions suitable for use in <code class="code docutils literal notranslate"><span class="pre">#if</span></code> preprocessing directives. Moreover, except for <code class="code docutils literal notranslate"><span class="pre">CHAR_BIT</span></code> and <code class="code docutils literal notranslate"><span class="pre">MB_LEN_MAX</span></code>, the following shall be replaced by expressions that have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Their implementation-defined values shall be equal or greater in magnitude (absolute value) to those shown, with the same sign.</p>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p class="rubric">number of bits for smallest object that is not a bit-field (byte)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">CHAR_BIT</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">8</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td colspan="3"></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">signed</span> <span class="pre">char</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">SCHAR_MIN</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/7b59a8b2b8ca20b8f23856392b8be36452d83c17.svg" alt="-127"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/6504ae55b8da92130493ff3320023548e155e0a7.svg" alt="-(2^7 - 1)"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">signed</span> <span class="pre">char</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">SCHAR_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/97f8080b9545dfb8d842ac676cbdd4d136443785.svg" alt="+127"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/d112cc59d72f4d9203879b1b8f92a93e7122458c.svg" alt="2^7 - 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">UCHAR_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/ee888887306aa8d5c4607a52ac32edcad07ec107.svg" alt="255"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/002ef02ba23289ca8ffdada48ad1c6485233a167.svg" alt="2^8 - 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">char</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">CHAR_MIN</span></code></p></td>
+<td></td>
+<td><p><em>see below</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">char</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">CHAR_MAX</span></code></p></td>
+<td></td>
+<td><p><em>see below</em></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum number of bytes in a multibyte character, for any supported locale</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">MB_LEN_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">short</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">SHRT_MIN</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/80fd92748175f5b01716662b8776e850978722c2.svg" alt="-32767"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/108e6c78b9e980fe502064e8ce0e17712b06e46a.svg" alt="-(2^{15} - 1)"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">short</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">SHRT_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/e10a942b36cd67723a286fc227a137f3a7fbd539.svg" alt="+32767"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/0213084b0625671d81be637f3b18e35cd1a4292a.svg" alt="2^{15} - 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">short</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">USHRT_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/65362f0664df0026b26043498eb3f740984551b5.svg" alt="65535"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/e78d1ec7ea90e5a8be754a7468f1c0a94acb9117.svg" alt="2^{16}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">INT_MIN</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/80fd92748175f5b01716662b8776e850978722c2.svg" alt="-32767"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/82de217177fcb9a831586c64f588b9e04d8a161e.svg" alt="-(2^{15}- 1)"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">INT_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/e10a942b36cd67723a286fc227a137f3a7fbd539.svg" alt="+32767"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/f5daa07a8bc00029d35a1c5441842ea09ee16dc1.svg" alt="2^{15}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">UINT_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/65362f0664df0026b26043498eb3f740984551b5.svg" alt="65535"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/e78d1ec7ea90e5a8be754a7468f1c0a94acb9117.svg" alt="2^{16}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LONG_MIN</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/c3f8ceb12cb1cf129a3df2a55bddfaace3dc089e.svg" alt="-2147483647"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/097961e7bd0fb67dc53b3671616bbe173477f84d.svg" alt="-(2^{31}- 1)"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LONG_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/6fd802b4db6e5ca5e2f97afb19c887ed20f75bd0.svg" alt="+2147483647"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/c928e40b549676a477ca86e540c8a452b87c93f1.svg" alt="2^{31}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">ULONG_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/874010615bea902192fc9810b9a1cfe98b0bec1c.svg" alt="4294967295"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/5698a61bfab240be495d21348343ebcef75ad964.svg" alt="2^{32}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">minimum value for an object of type <code class="code docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LLONG_MIN</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/f309805769aef14d82a52a6c78fb1d9f24f795a9.svg" alt="-9223372036854775807"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/3a94cc3df7ca5f0d3783b09caa05b5fb5411b979.svg" alt="-(2^{63}- 1)"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LLONG_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/ab5aea89b472f02ba894bee16c565323f8fd8186.svg" alt="+9223372036854775807"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/e0641e92b8d114723ec143cca400ae33d73d7f5d.svg" alt="2^{63}- 1"/></p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p class="rubric">maximum value for an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">int</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">ULLONG_MAX</span></code></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/c9d035021a26c47e8551795ce30d8997fba8cd8f.svg" alt="18446744073709551615"/></p></td>
+<td><p><img class="math" src="../../../../../../_images/math/1d326c4549f5c6eb0d1a010afa46cc70b28e8728.svg" alt="2^{64}- 1"/></p></td>
+</tr>
+</tbody>
+</table>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>If the value of an object of type char is treated as a signed integer when used in an expression, the value of CHAR_MIN shall be the same as that of SCHAR_MIN and the value of CHAR_MAX shall be the same as that of SCHAR_MAX. Otherwise, the value of CHAR_MIN shall be 0 and the value of CHAR_MAX shall be the same as that of UCHAR_MAX.<a class="footnote-reference brackets" href="#note15" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The value UCHAR_MAX shall equal 2<sup>CHAR_BIT</sup> - 1.</p>
+<p>If the value of an object of type char is treated as a signed integer when used in an expression, the value of <code class="code docutils literal notranslate"><span class="pre">CHAR_MIN</span></code> shall be the same as that of <code class="code docutils literal notranslate"><span class="pre">SCHAR_MIN</span></code> and the value of <code class="code docutils literal notranslate"><span class="pre">CHAR_MAX</span></code> shall be the same as that of <code class="code docutils literal notranslate"><span class="pre">SCHAR_MAX</span></code>. Otherwise, the value of <code class="code docutils literal notranslate"><span class="pre">CHAR_MIN</span></code> shall be 0 and the value of <code class="code docutils literal notranslate"><span class="pre">CHAR_MAX</span></code> shall be the same as that of <code class="code docutils literal notranslate"><span class="pre">UCHAR_MAX</span></code>.<a class="footnote-reference brackets" href="#note15" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The value <code class="code docutils literal notranslate"><span class="pre">UCHAR_MAX</span></code> shall equal 2<sup>CHAR_BIT</sup> - 1.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="../../../../../6/2/6/index.html#id1"><span class="std std-ref">6.2.6 Representations of types</span></a></p></li>

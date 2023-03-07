@@ -122,26 +122,35 @@
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
 <p>The characteristics of floating types are defined in terms of a model that describes a representation of floating-point numbers and values that provide information about an implementation’s floating-point arithmetic.<a class="footnote-reference brackets" href="#note16" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The following parameters are used to define the model for each floating-point type:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>s          sign ((+-)1)
-b          base or radix of exponent representation (an integer &gt; 1)
-e          exponent (an integer between a minimum emin and a maximum emax )
-p          precision (the number of base-b digits in the significand)
-fk         nonnegative integers less than b (the significand digits)
-</pre></div>
-</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/106b04b320e75010b1d8029e59244f234f75e6f9.svg" alt="s"/></p></td>
+<td><p>sign (<img class="math" src="../../../../../../_images/math/63f55cc34bffd02da09f7e722f6b17514d73f671.svg" alt="\pm\ 1"/>)</p></td>
+</tr>
+<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/></p></td>
+<td><p>base or radix of exponent representation (an integer <img class="math" src="../../../../../../_images/math/6d3151275c219f6623672b405417264b67fe8fb0.svg" alt="&gt; 1"/>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/60f4822f02b44d931c5d0595da71dcf34e270437.svg" alt="e"/></p></td>
+<td><p>exponent (an integer between a minimum <img class="math" src="../../../../../../_images/math/07877119b0c8265bfbdf2f984fd24df97e25bdb5.svg" alt="e_{\text{min}}"/> and a maximum <img class="math" src="../../../../../../_images/math/5ebed6426f1e1e269f4c8d7f79559091e0e9f374.svg" alt="e_{\text{max}}"/>)</p></td>
+</tr>
+<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></td>
+<td><p>precision (the number of base-<img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits in the significand)</p></td>
+</tr>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/0edac3a6b0973196c5005c560d87e755c0ea5c86.svg" alt="f_k"/></p></td>
+<td><p>nonnegative integers less than <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> (the significand digits)</p></td>
+</tr>
+</tbody>
+</table>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>A floating-point number (x) is defined by the following model:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p
-       x = s be  (Sum) fk b-k ,   emin &lt;= e &lt;= emax
-                  k=1
-</pre></div>
-</div>
-<div class="snum docutils container" id="p3">
+<p>A <em>floating-point number</em> (<img class="math" src="../../../../../../_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.svg" alt="x"/>) is defined by the following model:</p>
+<div class="math">
+<p><img src="../../../../../../_images/math/a664eae5b8225b72add27be531094e04a84934f2.svg" alt="x = sb^e \sum\limits^p_{k=1} f_kb^{-k},\ e_\text{min} \le e \le e_\text{max}"/></p>
+</div><div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>In addition to normalized floating-point numbers ( f<sub>1</sub> &gt; 0 if x != 0), floating types may be able to contain other kinds of floating-point numbers, such as subnormal floating-point numbers (x != 0, e = emin , f<sub>1</sub> = 0) and unnormalized floating-point numbers (x != 0, e &gt; emin , f<sub>1</sub> = 0), and values that are not floating-point numbers, such as infinities and NaNs. A NaN is an encoding signifying Not-a-Number. A quiet NaN propagates through almost every arithmetic operation without raising a floating-point exception; a signaling NaN generally raises a floating-point exception when occurring as an arithmetic operand.<code class="code docutils literal notranslate"><span class="pre">17)</span> <span class="pre">&lt;note17&gt;</span></code></p>
+<p>In addition to normalized floating-point numbers (<img class="math" src="../../../../../../_images/math/2d19db2c5f5db78a74546ab535c55d736b80dce5.svg" alt="f_1 &gt; 0\ \text{if}\ x \not= 0"/>), floating types may be able to contain other kinds of floating-point numbers, such as subnormal floating-point numbers (<img class="math" src="../../../../../../_images/math/6262e36fccf776c706ad17b5956e19b800097b76.svg" alt="x \not= 0, e = e_\text{min}, f_1 = 0"/>) and unnormalized floating-point numbers (<img class="math" src="../../../../../../_images/math/5a6f36b9411e0fb3d1ff8250549ac116d70c2604.svg" alt="x \not= 0, e &gt; e_\text{min}, f_1 = 0"/>), and values that are not floating-point numbers, such as infinities and NaNs. A <em>NaN</em> is an encoding signifying Not-a-Number. A <em>quiet</em> NaN propagates through almost every arithmetic operation without raising a floating-point exception; a <em>signaling NaN</em> generally raises a floating-point exception when occurring as an arithmetic operand.<a class="footnote-reference brackets" href="#note17" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
@@ -149,216 +158,492 @@ fk         nonnegative integers less than b (the significand digits)
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>The accuracy of the floating-point operations (+, -, *, /) and of the library functions in <a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that return floating-point results is implementation- defined, as is the accuracy of the conversion between floating-point internal representations and string representations performed by the library functions in <a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, <a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, and <a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a>. The implementation may state that the accuracy is unknown.</p>
+<p>The accuracy of the floating-point operations (<strong>+</strong>, <strong>-</strong>, <strong>*</strong>, <strong>/</strong>) and of the library functions in <a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that return floating-point results is implementation- defined, as is the accuracy of the conversion between floating-point internal representations and string representations performed by the library functions in <a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, <a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, and <a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a>. The implementation may state that the accuracy is unknown.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>All integer values in the <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header, except FLT_ROUNDS, shall be constant expressions suitable for use in <code class="code docutils literal notranslate"><span class="pre">#if</span></code> preprocessing directives; all floating values shall be constant expressions. All except DECIMAL_DIG, FLT_EVAL_METHOD, FLT_RADIX, and FLT_ROUNDS have separate names for all three floating-point types. The floating-point model representation is provided for all values except FLT_EVAL_METHOD and FLT_ROUNDS.</p>
+<p>All integer values in the <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header, except <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code>, shall be constant expressions suitable for use in <code class="code docutils literal notranslate"><span class="pre">#if</span></code> preprocessing directives; all floating values shall be constant expressions. All except <code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code>, <code class="code docutils literal notranslate"><span class="pre">FLT_EVAL_METHOD</span></code>, <code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code>, and <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code> have separate names for all three floating-point types. The floating-point model representation is provided for all values except <code class="code docutils literal notranslate"><span class="pre">FLT_EVAL_METHOD</span></code> and <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code>.</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p>The rounding mode for floating-point addition is characterized by the implementation- defined value of FLT_ROUNDS:<a class="footnote-reference brackets" href="#note18" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-1      indeterminable
- 0      toward zero
- 1      to nearest
- 2      toward positive infinity
- 3      toward negative infinity
-</pre></div>
-</div>
-<p>All other values for FLT_ROUNDS characterize implementation-defined rounding behavior.</p>
+<p>The rounding mode for floating-point addition is characterized by the implementation- defined value of <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code>:<a class="footnote-reference brackets" href="#note18" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/bb3bcf4d88dfa961f520a0d0cea612b738596d66.svg" alt="-1"/></p></td>
+<td><p>indeterminable</p></td>
+</tr>
+<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.svg" alt="0"/></p></td>
+<td><p>toward zero</p></td>
+</tr>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.svg" alt="1"/></p></td>
+<td><p>to nearest</p></td>
+</tr>
+<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.svg" alt="2"/></p></td>
+<td><p>toward positive infinity</p></td>
+</tr>
+<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/3204f0580808cc1d3ded72d87384c025c9e7e272.svg" alt="3"/></p></td>
+<td><p>toward negative infinity</p></td>
+</tr>
+</tbody>
+</table>
+<p>All other values for <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code> characterize implementation-defined rounding behavior.</p>
 <div class="snum docutils container" id="p8">
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
-<p>Except for assignment and cast (which remove all extra range and precision), the values of operations with floating operands and values subject to the usual arithmetic conversions and of floating constants are evaluated to a format whose range and precision may be greater than required by the type. The use of evaluation formats is characterized by the implementation-defined value of FLT_EVAL_METHOD:<a class="footnote-reference brackets" href="#note19" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-1        indeterminable;
- 0        evaluate all operations and constants just to the range and precision of the
-          type;
- 1        evaluate operations and constants of type float and double to the
-          range and precision of the double type, evaluate long double
-          operations and constants to the range and precision of the long double
-          type;
- 2        evaluate all operations and constants to the range and precision of the
-          long double type.
-</pre></div>
-</div>
-<p>All other negative values for FLT_EVAL_METHOD characterize implementation-defined behavior.</p>
+<p>Except for assignment and cast (which remove all extra range and precision), the values of operations with floating operands and values subject to the usual arithmetic conversions and of floating constants are evaluated to a format whose range and precision may be greater than required by the type. The use of evaluation formats is characterized by the implementation-defined value of <code class="code docutils literal notranslate"><span class="pre">FLT_EVAL_METHOD</span></code>:<a class="footnote-reference brackets" href="#note19" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>indeterminable;</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>evaluate all operations and constants just to the range and precision of the type;</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>evaluate operations and constants of type float and double to the range and precision of the double type, evaluate long double operations and constants to the range and precision of the long double type;</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>evaluate all operations and constants to the range and precision of the long double type.</p></td>
+</tr>
+</tbody>
+</table>
+<p>All other negative values for <code class="code docutils literal notranslate"><span class="pre">FLT_EVAL_METHOD</span></code> characterize implementation-defined behavior.</p>
 <div class="snum docutils container" id="p9">
 <p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater or equal in magnitude (absolute value) to those shown, with the same sign:</p>
-<ul class="simple">
-<li><p>radix of exponent representation, b</p></li>
+<ul>
+<li><p>radix of exponent representation, <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/></p>
+<p><code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code> 2</p>
+</li>
+<li><p>number of base-<code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code> digits in the floating-point significand, <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_RADIX</span><span class="w">                                                 </span><span class="mi">2</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MANT_DIG</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MANT_DIG</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MANT_DIG</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>number of base-FLT_RADIX digits in the floating-point significand, p</p></li>
+<li><p>number of decimal digits, <img class="math" src="../../../../../../_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.svg" alt="n"/>, such that any floating-point number in the widest supported floating type with <img class="math" src="../../../../../../_images/math/f4f12aa03c9b30b06dd9eeb6f1481efee8596243.svg" alt="p_\text{max}"/> radix <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits can be rounded to a floating-point number with <img class="math" src="../../../../../../_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.svg" alt="n"/> decimal digits and back again without change to the value,</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MANT_DIG</span>
-<span class="n">DBL_MANT_DIG</span>
-<span class="n">LDBL_MANT_DIG</span>
-</pre></div>
-</div>
+<div class="math">
+<p><img src="../../../../../../_images/math/9a3f7650c16ff8a7433cd03702331dfacd4f5bfb.svg" alt="\begin{cases}
+p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
+\lceil 1 + p_\text{max} \log_{10} b \rceil &amp; \text{otherwise}
+\end{cases}"/></p>
+</div><table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>number of decimal digits, n, such that any floating-point number in the widest supported floating type with pmax radix b digits can be rounded to a floating-point number with n decimal digits and back again without change to the value,</p></li>
+<li><p>number of decimal digits, <img class="math" src="../../../../../../_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.svg" alt="q"/>, such that any floating-point number with q decimal digits can be rounded into a floating-point number with <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/> radix <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits and back again without change to the <img class="math" src="../../../../../../_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.svg" alt="q"/> decimal digits,</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{ pmax log10 b       if b is a power of 10
-{
-{ ⌈1 + pmax log10 b⌉ otherwise
-</pre></div>
-</div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">DECIMAL_DIG</span><span class="w">                                            </span><span class="mi">10</span>
-</pre></div>
-</div>
+<div class="math">
+<p><img src="../../../../../../_images/math/5004f4e9b17aacbadab19cdbe5ece4dc7c05975c.svg" alt="\begin{cases}
+p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
+\lfloor (p-1) \log_{10} b \rfloor &amp; \text{otherwise}
+\end{cases}"/></p>
+</div><table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">10</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>number of decimal digits, q, such that any floating-point number with q decimal digits can be rounded into a floating-point number with p radix b digits and back again without change to the q decimal digits,</p></li>
+<li><p>minimum negative integer such that <code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code> raised to one less than that power is a normalized floating-point number, <img class="math" src="../../../../../../_images/math/f6373322e6d1f97f8a551ef6201de0c8c63e8ef1.svg" alt="e_\text{min}"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">log10</span><span class="w"> </span><span class="n">b</span><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">power</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">10</span>
-<span class="p">{</span>
-<span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">log10</span><span class="w"> </span><span class="n">b_</span><span class="p">]</span><span class="w"> </span><span class="n">otherwise</span>
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_DIG                                         6
-DBL_DIG                                        10
-LDBL_DIG                                       10
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_EXP</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN_EXP</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MIN_EXP</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>minimum negative integer such that FLT_RADIX raised to one less than that power is a normalized floating-point number, emin</p></li>
+<li><p>minimum negative integer such that 10 raised to that power is in the range of normalized floating-point numbers, <img class="math" src="../../../../../../_images/math/87686e93925640b5bbaabc73b6a1febf3d432947.svg" alt="\left\lceil\log_{10}b^{e_\text{min}-1}\right\rceil"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN_EXP</span>
-<span class="n">DBL_MIN_EXP</span>
-<span class="n">LDBL_MIN_EXP</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-37</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-37</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-37</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>minimum negative integer such that 10 raised to that power is in the range of normalized floating-point numbers, ⌈log10 b<sup>emin -1</sup>⌉</p></li>
+<li><p>maximum integer such that <code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code> raised to one less than that power is a representable finite floating-point number, <img class="math" src="../../../../../../_images/math/5e67779c7fa51b8cd119199653abefcb9a9d3fb8.svg" alt="e_\text{max}"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN_10_EXP</span><span class="w">                                 </span><span class="mi">-37</span>
-<span class="n">DBL_MIN_10_EXP</span><span class="w">                                 </span><span class="mi">-37</span>
-<span class="n">LDBL_MIN_10_EXP</span><span class="w">                                </span><span class="mi">-37</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_EXP</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX_EXP</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MAX_EXP</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>maximum integer such that FLT_RADIX raised to one less than that power is a representable finite floating-point number, emax</p></li>
+<li><p>maximum integer such that 10 raised to that power is in the range of representable finite floating-point numbers, <img class="math" src="../../../../../../_images/math/a4ad168566fba9331d70bd16315144cd28ec2c7c.svg" alt="\left\lfloor\log_{10}((1-b^{-p})b^{e_\text{max}}\right\rfloor"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX_EXP</span>
-<span class="n">DBL_MAX_EXP</span>
-<span class="n">LDBL_MAX_EXP</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>maximum integer such that 10 raised to that power is in the range of representable finite floating-point numbers, ⌊log10 ((1 - b<sup>-p</sup>)b<sup>emax</sup>)⌋</p></li>
-</ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX_10_EXP</span><span class="w">                                 </span><span class="o">+</span><span class="mi">37</span>
-<span class="n">DBL_MAX_10_EXP</span><span class="w">                                 </span><span class="o">+</span><span class="mi">37</span>
-<span class="n">LDBL_MAX_10_EXP</span><span class="w">                                </span><span class="o">+</span><span class="mi">37</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+37</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+37</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+37</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="snum docutils container" id="p10">
 <p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater than or equal to those shown:</p>
 <ul class="simple">
-<li><p>maximum representable finite floating-point number, (1 - b<sup>-p</sup>)b<sup>emax</sup></p></li>
+<li><p>maximum representable finite floating-point number, <img class="math" src="../../../../../../_images/math/03ff8412547bd71128fb4a366889835453cc0aaf.svg" alt="(1-b^{-p})b^{e_\text{max}}"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MAX</span><span class="w">                                     </span><span class="mf">1E+37</span>
-<span class="n">DBL_MAX</span><span class="w">                                     </span><span class="mf">1E+37</span>
-<span class="n">LDBL_MAX</span><span class="w">                                    </span><span class="mf">1E+37</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E+37</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E+37</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E+37</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="snum docutils container" id="p11">
 <p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined (positive) values that are less than or equal to those shown:</p>
 <ul class="simple">
-<li><p>the difference between 1 and the least value greater than 1 that is representable in the given floating point type, b<sup>1-p</sup></p></li>
+<li><p>the difference between 1 and the least value greater than 1 that is representable in the given floating point type, <img class="math" src="../../../../../../_images/math/73c2bf2614be6961512a0b6962a9128e7f7d97b5.svg" alt="b^{1-p}"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_EPSILON</span><span class="w">                                         </span><span class="mf">1E-5</span>
-<span class="n">DBL_EPSILON</span><span class="w">                                         </span><span class="mf">1E-9</span>
-<span class="n">LDBL_EPSILON</span><span class="w">                                        </span><span class="mf">1E-9</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-5</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-9</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-9</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
-<li><p>minimum normalized positive floating-point number, b<sup>emin -1</sup></p></li>
+<li><p>minimum normalized positive floating-point number, <img class="math" src="../../../../../../_images/math/6c0fceaac7d485c4eb54c0cff93737f761c2ef70.svg" alt="b^{e_\text{min}-1}"/></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FLT_MIN</span><span class="w">                                            </span><span class="mf">1E-37</span>
-<span class="n">DBL_MIN</span><span class="w">                                            </span><span class="mf">1E-37</span>
-<span class="n">LDBL_MIN</span><span class="w">                                           </span><span class="mf">1E-37</span>
-</pre></div>
-</div>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-37</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-37</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">LDBL_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1E-37</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Recommended practice</p>
 <div class="snum docutils container" id="p12">
 <p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
 </div>
-<p>Conversion from (at least) double to decimal with DECIMAL_DIG digits and back should be the identity function.</p>
+<p>Conversion from (at least) <code class="code docutils literal notranslate"><span class="pre">double</span></code> to decimal with <code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code> digits and back should be the identity function.</p>
 <div class="snum docutils container" id="p13">
 <p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type float:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6
-      x = s 16e   (Sum) fk 16-k ,   -31 &lt;= e &lt;= +32
-                  k=1
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_RADIX                                  16
-FLT_MANT_DIG                                6
-FLT_EPSILON                   9.53674316E-07F
-FLT_DIG                                     6
-FLT_MIN_EXP                               -31
-FLT_MIN                       2.93873588E-39F
-FLT_MIN_10_EXP                            -38
-FLT_MAX_EXP                               +32
-FLT_MAX                       3.40282347E+38F
-FLT_MAX_10_EXP                            +38
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type <code class="code docutils literal notranslate"><span class="pre">float</span></code>:</p>
+<div class="math">
+<p><img src="../../../../../../_images/math/8679e6e37f02f05109b679f16c6b540097abf8d7.svg" alt="x = s16^e \sum\limits_{k=1}^6 f_k 16^{-k},\ -31 \le e \le +32"/></p>
+</div><table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Identifier</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">16</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MANT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">9.53674316E-07F</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">6</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-31</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">2.93873588E-39F</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-38</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+32</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">3.40282347E+38F</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+38</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="snum docutils container" id="p14">
 <p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types float and double:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>24
-      xf = s 2e  (Sum) fk 2-k ,   -125 &lt;= e &lt;= +128
-                  k=1
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>53
-      xd = s 2e  (Sum) fk 2-k ,   -1021 &lt;= e &lt;= +1024
-                  k=1
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_RADIX                                   2
-DECIMAL_DIG                                17
-FLT_MANT_DIG                               24
-FLT_EPSILON                   1.19209290E-07F // decimal constant
-FLT_EPSILON                          0X1P-23F // hex constant
-</pre></div>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FLT_DIG                           6
-FLT_MIN_EXP                    -125
-FLT_MIN             1.17549435E-38F               // decimal constant
-FLT_MIN                   0X1P-126F               // hex constant
-FLT_MIN_10_EXP                  -37
-FLT_MAX_EXP                    +128
-FLT_MAX             3.40282347E+38F               // decimal constant
-FLT_MAX             0X1.fffffeP127F               // hex constant
-FLT_MAX_10_EXP                  +38
-DBL_MANT_DIG                     53
-DBL_EPSILON 2.2204460492503131E-16                // decimal constant
-DBL_EPSILON                 0X1P-52               // hex constant
-DBL_DIG                          15
-DBL_MIN_EXP                   -1021
-DBL_MIN     2.2250738585072014E-308               // decimal constant
-DBL_MIN                   0X1P-1022               // hex constant
-DBL_MIN_10_EXP                 -307
-DBL_MAX_EXP                   +1024
-DBL_MAX     1.7976931348623157E+308               // decimal constant
-DBL_MAX      0X1.fffffffffffffP1023               // hex constant
-DBL_MAX_10_EXP                 +308
-</pre></div>
-</div>
-<p>If a type wider than double were supported, then DECIMAL_DIG would be greater than 17. For example, if the widest type were to use the minimal-width IEC 60559 double-extended format (64 bits of precision), then DECIMAL_DIG would be 21.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types <code class="code docutils literal notranslate"><span class="pre">float</span></code> and <code class="code docutils literal notranslate"><span class="pre">double</span></code>:</p>
+<div class="math">
+<p><img src="../../../../../../_images/math/574351b1d6f606e50cfa35969540c5940292d12e.svg" alt="x_f = s2^e \sum\limits_{k=1}^{24} f_k 2^{-k},\ -125 \le e \le +128
+
+x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le 1024"/></p>
+</div><table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>Identifier
+- Value
+- Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_RADIX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">17</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MANT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">24</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1.19209290E-07F</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1P-23F</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">6</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-125</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1.17549435E-38F</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1P-126F</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-37</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+128</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">3.40282347E+38F</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1.fffffeP127F</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">FLT_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+38</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MANT_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">53</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">2.2204460492503131E-16</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_EPSILON</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1P-52</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_DIG</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">15</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-1021</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">2.2250738585072014E-308</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1P-1022</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MIN_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">-307</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+1024</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">1.7976931348623157E+308</span></code></p></td>
+<td><p><em>decimal constant</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">0X1.fffffffffffffP1023</span></code></p></td>
+<td><p><em>hex constant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">DBL_MAX_10_EXP</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">+308</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>If a type wider than <code class="code docutils literal notranslate"><span class="pre">double</span></code> were supported, then <code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code> would be greater than 17. For example, if the widest type were to use the minimal-width IEC 60559 double-extended format (64 bits of precision), then <code class="code docutils literal notranslate"><span class="pre">DECIMAL_DIG</span></code> would be 21.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="../../../../../6/10/1/index.html#id1"><span class="std std-ref">6.10.1 Conditional inclusion</span></a></p></li>
@@ -384,17 +669,21 @@ DBL_MAX_10_EXP                 +308
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p>The floating-point model is intended to clarify the description of each floating-point characteristic and does not require the floating-point arithmetic of the implementation to be identical.</p>
 </aside>
-<aside class="footnote brackets" id="note18" role="note">
+<aside class="footnote brackets" id="note17" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>Evaluation of FLT_ROUNDS correctly reflects any execution-time change of rounding mode through the function fesetround in <a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
+<p>IEC 60559:1989 specifies quiet and signaling NaNs. For implementations that do not support IEC 60559:1989, the terms quiet NaN and signaling NaN are intended to apply to encodings with similar behavior.</p>
+</aside>
+<aside class="footnote brackets" id="note18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Evaluation of <code class="code docutils literal notranslate"><span class="pre">FLT_ROUNDS</span></code> correctly reflects any execution-time change of rounding mode through the function <code class="code docutils literal notranslate"><span class="pre">fesetround</span></code> in <a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
 </aside>
 <aside class="footnote brackets" id="note19" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
-<p>The evaluation method determines evaluation formats of expressions involving all floating types, not just real types. For example, if FLT_EVAL_METHOD is 1, then the product of two float _Complex operands is represented in the double _Complex format, and its parts are evaluated to double.</p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>The evaluation method determines evaluation formats of expressions involving all floating types, not just real types. For example, if <code class="code docutils literal notranslate"><span class="pre">FLT_EVAL_METHOD</span></code> is 1, then the product of two <code class="code docutils literal notranslate"><span class="pre">float</span> <span class="pre">_Complex</span></code> operands is represented in the <code class="code docutils literal notranslate"><span class="pre">double</span> <span class="pre">_Complex</span></code> format, and its parts are evaluated to <code class="code docutils literal notranslate"><span class="pre">double</span></code>.</p>
 </aside>
 <aside class="footnote brackets" id="note20" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
-<p>The floating-point model in that standard sums powers of b from zero, so the values of the exponent limits are one less than shown here.</p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
+<p>The floating-point model in that standard sums powers of <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> from zero, so the values of the exponent limits are one less than shown here.</p>
 </aside>
 </aside>
 </section>

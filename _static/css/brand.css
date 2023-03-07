@@ -2,6 +2,9 @@
   overflow-x: auto;
 }
 
+.wy-table-responsive * {
+  white-space: normal;
+}
 .rst-content {
   position: relative;
 }

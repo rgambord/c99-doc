@@ -123,19 +123,19 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>An object has a storage duration that determines its lifetime. There are three storage durations: static, automatic, and allocated. Allocated storage is described in <a class="reference internal" href="../../../7/20/3/index.html#id1"><span class="std std-ref">7.20.3</span></a>.</p>
+<p>An object has a <em>storage duration</em> that determines its lifetime. There are three storage durations: static, automatic, and allocated. Allocated storage is described in <a class="reference internal" href="../../../7/20/3/index.html#id1"><span class="std std-ref">7.20.3</span></a>.</p>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>The lifetime of an object is the portion of program execution during which storage is guaranteed to be reserved for it. An object exists, has a constant address,<a class="footnote-reference brackets" href="#note25" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and retains its last-stored value throughout its lifetime.<a class="footnote-reference brackets" href="#note26" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> If an object is referred to outside of its lifetime, the behavior is undefined. The value of a pointer becomes indeterminate when the object it points to reaches the end of its lifetime.</p>
+<p>The <em>lifetime</em> of an object is the portion of program execution during which storage is guaranteed to be reserved for it. An object exists, has a constant address,<a class="footnote-reference brackets" href="#note25" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> and retains its last-stored value throughout its lifetime.<a class="footnote-reference brackets" href="#note26" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> If an object is referred to outside of its lifetime, the behavior is undefined. The value of a pointer becomes indeterminate when the object it points to reaches the end of its lifetime.</p>
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>An object whose identifier is declared with external or internal linkage, or with the storage-class specifier static has static storage duration. Its lifetime is the entire execution of the program and its stored value is initialized only once, prior to program startup.</p>
+<p>An object whose identifier is declared with external or internal linkage, or with the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">static</span></code> has <em>static storage duration</em>. Its lifetime is the entire execution of the program and its stored value is initialized only once, prior to program startup.</p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>An object whose identifier is declared with no linkage and without the storage-class specifier static has automatic storage duration.</p>
+<p>An object whose identifier is declared with no linkage and without the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">static</span></code> has <em>automatic storage duration</em>.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>

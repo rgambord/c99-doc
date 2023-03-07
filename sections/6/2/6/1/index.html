@@ -136,15 +136,15 @@
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>Values stored in unsigned bit-fields and objects of type unsigned char shall be represented using a pure binary notation.<a class="footnote-reference brackets" href="#note40" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Values stored in unsigned bit-fields and objects of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code> shall be represented using a pure binary notation.<a class="footnote-reference brackets" href="#note40" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>Values stored in non-bit-field objects of any other object type consist of n x CHAR_BIT bits, where n is the size of an object of that type, in bytes. The value may be copied into an object of type unsigned char [n] (e.g., by memcpy); the resulting set of bytes is called the object representation of the value. Values stored in bit-fields consist of m bits, where m is the size specified for the bit-field. The object representation is the set of m bits the bit-field comprises in the addressable storage unit holding it. Two values (other than NaNs) with the same object representation compare equal, but values that compare equal may have different object representations.</p>
+<p>Values stored in non-bit-field objects of any other object type consist of <em>n</em> x <code class="code docutils literal notranslate"><span class="pre">CHAR_BIT</span></code> bits, where n is the size of an object of that type, in bytes. The value may be copied into an object of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">[n]</span></code> (e.g., by <code class="code docutils literal notranslate"><span class="pre">memcpy</span></code>); the resulting set of bytes is called the <em>object representation</em> of the value. Values stored in bit-fields consist of <em>m</em> bits, where <em>m</em> is the size specified for the bit-field. The object representation is the set of <em>m</em> bits the bit-field comprises in the addressable storage unit holding it. Two values (other than NaNs) with the same object representation compare equal, but values that compare equal may have different object representations.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>Certain object representations need not represent a value of the object type. If the stored value of an object has such a representation and is read by an lvalue expression that does not have character type, the behavior is undefined. If such a representation is produced by a side effect that modifies all or any part of the object by an lvalue expression that does not have character type, the behavior is undefined.<a class="footnote-reference brackets" href="#note41" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Such a representation is called a trap representation.</p>
+<p>Certain object representations need not represent a value of the object type. If the stored value of an object has such a representation and is read by an lvalue expression that does not have character type, the behavior is undefined. If such a representation is produced by a side effect that modifies all or any part of the object by an lvalue expression that does not have character type, the behavior is undefined.<a class="footnote-reference brackets" href="#note41" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Such a representation is called a <em>trap representation</em>.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
@@ -170,7 +170,247 @@
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="note40" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>A positional representation for integers that uses the binary digits 0 and 1, in which the values represented by successive bits are additive, begin with 1, and are multiplied by successive integral powers of 2, except perhaps the bit with the highest position. (Adapted from the American National Dictionary for Information Processing Systems.) A byte contains CHAR_BIT bits, and the values of type unsigned char range from 0 to 2<sup>CHAR_BIT</sup>- 1.</p>
+<p>A positional representation for integers that uses the binary digits 0 and 1, in which the values represented by successive bits are additive, begin with 1, and are multiplied by successive integral powers of 2, except perhaps the bit with the highest position. (Adapted from the <em>American National Dictionary for Information Processing Systems</em>.) A byte contains <code class="code docutils literal notranslate"><span class="pre">CHAR_BIT</span></code> bits, and the values of type <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code> range from 0 to <aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">2^\text{CHAR_BIT}- 1</span>)</p>
+<p>latex exited with error
+[stdout]
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2021-11-15&gt; patch level 1
+L3 programming layer &lt;2022-04-10&gt;
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty)
+(/usr/share/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-dvips.def)
+No file math.aux.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...th {#1}\let \f&#64;size #2\selectfont #3}
+                                                  }
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...h {#1}\let \f&#64;size #2\selectfont #3}}
+                                                  
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\text&#64; ...e {\textdef&#64; \displaystyle \f&#64;size {#1}}
+                                                  {\textdef&#64; \textstyle \f&#64;s...
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...th {#1}\let \f&#64;size #2\selectfont #3}
+                                                  }
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...h {#1}\let \f&#64;size #2\selectfont #3}}
+                                                  
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\text&#64; ...xtstyle \f&#64;size {\firstchoice&#64;false #1}}
+                                                  {\textdef&#64; \textstyle \sf&#64;...
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...th {#1}\let \f&#64;size #2\selectfont #3}
+                                                  }
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...h {#1}\let \f&#64;size #2\selectfont #3}}
+                                                  
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\text&#64; ...tstyle \sf&#64;size {\firstchoice&#64;false #1}}
+                                                  {\textdef&#64; \textstyle \ssf...
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...th {#1}\let \f&#64;size #2\selectfont #3}
+                                                  }
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\textdef&#64; ...h {#1}\let \f&#64;size #2\selectfont #3}}
+                                                  
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\text&#64; ...style \ssf&#64;size {\firstchoice&#64;false #1}}
+                                                  \check&#64;mathfonts }
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Extra }, or forgotten $.
+\text&#64; ...firstchoice&#64;false #1}}\check&#64;mathfonts }
+                                                  
+l.13 ...size{12}{14}\selectfont $2^\text{CHAR_BIT}
+                                                  - 1$
+! Improper \prevdepth.
+\newpage ...everypar {}\fi \par \ifdim \prevdepth 
+                                                  &gt;\z&#64; \vskip -\ifdim \prevd...
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing $ inserted.
+&lt;inserted text&gt; 
+                $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing { inserted.
+&lt;to be read again&gt; 
+                   $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing { inserted.
+&lt;to be read again&gt; 
+                   $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing { inserted.
+&lt;to be read again&gt; 
+                   $
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.14 \end{document}
+                   
+[1] (./math.aux) )
+(see the transcript file for additional information)
+Output written on math.dvi (1 page, 236 bytes).
+Transcript written on math.log.
+</p>
+</aside>
+.</p>
 </aside>
 <aside class="footnote brackets" id="note41" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
@@ -182,7 +422,7 @@
 </aside>
 <aside class="footnote brackets" id="note43" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
-<p>It is possible for objects x and y with the same effective type T to have the same value when they are accessed as objects of type T, but to have different values in other contexts. In particular, if == is defined for type T, then x == y does not imply that memcmp(&amp;x, &amp;y, sizeof (T)) == 0. Furthermore, x == y does not necessarily imply that x and y have the same value; other operations on values of type T may distinguish between them.</p>
+<p>It is possible for objects <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> with the same effective type <code class="code docutils literal notranslate"><span class="pre">T</span></code> to have the same value when they are accessed as objects of type <code class="code docutils literal notranslate"><span class="pre">T</span></code>, but to have different values in other contexts. In particular, if <code class="code docutils literal notranslate"><span class="pre">==</span></code> is defined for type <code class="code docutils literal notranslate"><span class="pre">T</span></code>, then <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code> does not imply that <code class="code docutils literal notranslate"><span class="pre">memcmp(&amp;x,</span> <span class="pre">&amp;y,</span> <span class="pre">sizeof</span> <span class="pre">(T))</span> <span class="pre">==</span> <span class="pre">0</span></code>. Furthermore, <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code> does not necessarily imply that <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> have the same value; other operations on values of type <code class="code docutils literal notranslate"><span class="pre">T</span></code> may distinguish between them.</p>
 </aside>
 </aside>
 </section>

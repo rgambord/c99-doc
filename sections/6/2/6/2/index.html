@@ -128,44 +128,45 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>For unsigned integer types other than unsigned char, the bits of the object representation shall be divided into two groups: value bits and padding bits (there need not be any of the latter). If there are N value bits, each bit shall represent a different power of 2 between 1 and <img class="math" src="../../../../../_images/math/62a5e8c5828b56806c56205fd490b25a1b8ef9a4.svg" alt="2\ :sup:`N-1"/> , so that objects of that type shall be capable of representing values from 0 to 2<sup>N</sup> - 1 using a pure binary representation; this shall be known as the value representation. The values of any padding bits are unspecified.<code class="code docutils literal notranslate"><span class="pre">44)</span> <span class="pre">&lt;note44&gt;</span></code></p>
+<p>For unsigned integer types other than <code class="code docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code>, the bits of the object representation shall be divided into two groups: value bits and padding bits (there need not be any of the latter). If there are <img class="math" src="../../../../../_images/math/3bfb3a64189a14b2704f4610827762d5e3145114.svg" alt="N"/> value bits, each bit shall represent a different power of 2 between 1 and <img class="math" src="../../../../../_images/math/b92fe311deb8b05d0cfc996dea837e1e6b466d6b.svg" alt="2^{N-1}"/> , so that objects of that type shall be capable of representing values from 0 to <img class="math" src="../../../../../_images/math/d1a575bb7c566c41a6e07bca3205653658d2b822.svg" alt="2^N - 1"/> using a pure binary representation; this shall be known as the value representation. The values of any padding bits are unspecified.<a class="footnote-reference brackets" href="#note44" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>For signed integer types, the bits of the object representation shall be divided into three groups: value bits, padding bits, and the sign bit. There need not be any padding bits; there shall be exactly one sign bit. Each bit that is a value bit shall have the same value as the same bit in the object representation of the corresponding unsigned type (if there are M value bits in the signed type and N in the unsigned type, then M &lt;= N ). If the sign bit is zero, it shall not affect the resulting value. If the sign bit is one, the value shall be modified in one of the following ways:</p>
+<p>For signed integer types, the bits of the object representation shall be divided into three groups: value bits, padding bits, and the sign bit. There need not be any padding bits; there shall be exactly one sign bit. Each bit that is a value bit shall have the same value as the same bit in the object representation of the corresponding unsigned type (if there are <img class="math" src="../../../../../_images/math/4abba779877abb276b98ccb2b4ba9bf2e41947ab.svg" alt="M"/> value bits in the signed type and <img class="math" src="../../../../../_images/math/3bfb3a64189a14b2704f4610827762d5e3145114.svg" alt="N"/> in the unsigned type, then <img class="math" src="../../../../../_images/math/19dbc3b265d9f8dc58d03f35c5379da6888cc948.svg" alt="M \le N"/>). If the sign bit iws zero, it shall not affect the resulting value. If the sign bit is one, the value shall be modified in one of the following ways:</p>
 <ul class="simple">
-<li><p>the corresponding value with sign bit 0 is negated (sign and magnitude);</p></li>
-<li><p>the sign bit has the value -(2<sup>N</sup> ) (two’s complement);</p></li>
-<li><p>the sign bit has the value -(2<sup>N</sup> - 1) (ones’ complement ).</p></li>
+<li><p>the corresponding value with sign bit 0 is negated (<em>sign and magnitude</em>);</p></li>
+<li><p>the sign bit has the value <img class="math" src="../../../../../_images/math/d4d8854e47bfa5565a9f7f52900c0568f7d63542.svg" alt="-(2^N)"/> (<em>two’s complement</em>);</p></li>
+<li><p>the sign bit has the value <img class="math" src="../../../../../_images/math/f1880dbd73e08eff40383615ed41fca13cbe9623.svg" alt="-(2^N - 1)"/> (<em>ones’ complement</em>).</p></li>
 </ul>
-<p>Which of these applies is implementation-defined, as is whether the value with sign bit 1 and all value bits zero (for the first two), or with sign bit and all value bits 1 (for ones’ complement), is a trap representation or a normal value. In the case of sign and magnitude and ones’ complement, if this representation is a normal value it is called a negative zero.</p>
+<p>Which of these applies is implementation-defined, as is whether the value with sign bit 1 and all value bits zero (for the first two), or with sign bit and all value bits 1 (for ones’ complement), is a trap representation or a normal value. In the case of sign and magnitude and ones’ complement, if this representation is a normal value it is called a <em>negative zero</em>.</p>
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>If the implementation supports negative zeros, they shall be generated only by:</p>
 <ul class="simple">
-<li><p>the &amp;, |, ^, ~, &lt;&lt;, and &gt;&gt; operators with arguments that produce such a value;</p></li>
-<li><p>the +, -, *, /, and % operators where one argument is a negative zero and the result is zero;</p></li>
+<li><p>the <code class="code docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="code docutils literal notranslate"><span class="pre">|</span></code>, <code class="code docutils literal notranslate"><span class="pre">^</span></code>, <code class="code docutils literal notranslate"><span class="pre">~</span></code>, <code class="code docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>, and <code class="code docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> operators with arguments that produce such a value;</p></li>
+<li><p>the <code class="code docutils literal notranslate"><span class="pre">+</span></code>, <code class="code docutils literal notranslate"><span class="pre">-</span></code>, <code class="code docutils literal notranslate"><span class="pre">*</span></code>, <code class="code docutils literal notranslate"><span class="pre">/</span></code>, and <code class="code docutils literal notranslate"><span class="pre">%</span></code> operators where one argument is a negative zero and the result is zero;</p></li>
 <li><p>compound assignment operators based on the above cases.</p></li>
 </ul>
 <p>It is unspecified whether these cases actually generate a negative zero or a normal zero, and whether a negative zero becomes a normal zero when stored in an object.</p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>If the implementation does not support negative zeros, the behavior of the &amp;, |, ^, ~, &lt;&lt;, and &gt;&gt; operators with arguments that would produce such a value is undefined.</p>
+<p>If the implementation does not support negative zeros, the behavior of the <code class="code docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="code docutils literal notranslate"><span class="pre">|</span></code>, <code class="code docutils literal notranslate"><span class="pre">^</span></code>, <code class="code docutils literal notranslate"><span class="pre">~</span></code>, <code class="code docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>, and <code class="code docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> operators with arguments that would produce such a value is undefined.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>The values of any padding bits are unspecified.<a class="footnote-reference brackets" href="#note45" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> A valid (non-trap) object representation of a signed integer type where the sign bit is zero is a valid object representation of the corresponding unsigned type, and shall represent the same value. For any integer type, the object representation where all the bits are zero shall be a representation of the value zero in that type.</p>
+<p>The values of any padding bits are unspecified.<a class="footnote-reference brackets" href="#note44" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> A valid (non-trap) object representation of a signed integer type where the sign bit is zero is a valid object representation of the corresponding unsigned type, and shall represent the same value. For any integer type, the object representation where all the bits are zero shall be a representation of the value zero in that type.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>The precision of an integer type is the number of bits it uses to represent values, excluding any sign and padding bits. The width of an integer type is the same but including any sign bit; thus for unsigned integer types the two values are the same, while for signed integer types the width is one greater than the precision.</p>
+<p>The <em>precision</em> of an integer type is the number of bits it uses to represent values, excluding any sign and padding bits. The <em>width</em> of an integer type is the same but including any sign bit; thus for unsigned integer types the two values are the same, while for signed integer types the width is one greater than the precision.</p>
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="note45" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>Some combinations of padding bits might generate trap representations, for example, if one padding bit is a parity bit. Regardless, no arithmetic operation on valid values can generate a trap representation other than as part of an exceptional condition such as an overflow. All other combinations of padding bits are alternative object representations of the value specified by the value bits.</p>
+<aside class="footnote brackets" id="note44" role="note">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Some combinations of padding bits might generate trap representations, for example, if one padding bit is a parity bit. Regardless, no arithmetic operation on valid values can generate a trap representation other than as part of an exceptional condition such as an overflow, and this cannot occur with unsigned types. All other combinations of padding bits are alternative object representations of the value specified by the value bits.</p>
 </aside>
 </aside>
 </section>

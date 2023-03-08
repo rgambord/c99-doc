@@ -126,7 +126,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>A <code class="code docutils literal notranslate"><span class="pre">#include</span></code> directive shall identify a header or source file that can be processed by the implementation.</p>
+<p>A <span class="c-texpr sig sig-inline highlight c">#include</span> directive shall identify a header or source file that can be processed by the implementation.</p>
 <p class="rubric">Semantics</p>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
@@ -163,11 +163,11 @@
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>A <code class="code docutils literal notranslate"><span class="pre">#include</span></code> preprocessing directive may appear in a source file that has been read because of a <code class="code docutils literal notranslate"><span class="pre">#include</span></code> directive in another file, up to an implementation-defined nesting limit (see <a class="reference internal" href="../../../5/2/4/1/index.html#id1"><span class="std std-ref">5.2.4.1</span></a>).</p>
+<p>A <span class="c-texpr sig sig-inline highlight c">#include</span> preprocessing directive may appear in a source file that has been read because of a <span class="c-texpr sig sig-inline highlight c">#include</span> directive in another file, up to an implementation-defined nesting limit (see <a class="reference internal" href="../../../5/2/4/1/index.html#id1"><span class="std std-ref">5.2.4.1</span></a>).</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The most common uses of <code class="code docutils literal notranslate"><span class="pre">#include</span></code> preprocessing directives are as in the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The most common uses of <span class="c-texpr sig sig-inline highlight c">#include</span> preprocessing directives are as in the following:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myprog.h&quot;</span>
 </pre></div>
@@ -175,7 +175,7 @@
 <div class="snum docutils container" id="p8">
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> This illustrates macro-replaced <code class="code docutils literal notranslate"><span class="pre">#include</span></code> directives:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> This illustrates macro-replaced <span class="c-texpr sig sig-inline highlight c">#include</span> directives:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#if VERSION == 1</span>
 <span class="w">      </span><span class="cp">#define INCFILE        &quot;vers1.h&quot;</span>
 <span class="cp">#elif VERSION == 2</span>

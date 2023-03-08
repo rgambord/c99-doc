@@ -131,19 +131,19 @@
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>If the declaration of a file scope identifier for an object or a function contains the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">static</span></code>, the identifier has internal linkage.<a class="footnote-reference brackets" href="#note22" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>If the declaration of a file scope identifier for an object or a function contains the storage-class specifier <span class="c-texpr sig sig-inline highlight c">static</span>, the identifier has internal linkage.<a class="footnote-reference brackets" href="#note22" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>For an identifier declared with the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">extern</span></code> in a scope in which a prior declaration of that identifier is visible,<a class="footnote-reference brackets" href="#note23" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> if the prior declaration specifies internal or external linkage, the linkage of the identifier at the later declaration is the same as the linkage specified at the prior declaration. If no prior declaration is visible, or if the prior declaration specifies no linkage, then the identifier has external linkage.</p>
+<p>For an identifier declared with the storage-class specifier <span class="c-texpr sig sig-inline highlight c">extern</span> in a scope in which a prior declaration of that identifier is visible,<a class="footnote-reference brackets" href="#note23" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> if the prior declaration specifies internal or external linkage, the linkage of the identifier at the later declaration is the same as the linkage specified at the prior declaration. If no prior declaration is visible, or if the prior declaration specifies no linkage, then the identifier has external linkage.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>If the declaration of an identifier for a function has no storage-class specifier, its linkage is determined exactly as if it were declared with the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">extern</span></code>. If the declaration of an identifier for an object has file scope and no storage-class specifier, its linkage is external.</p>
+<p>If the declaration of an identifier for a function has no storage-class specifier, its linkage is determined exactly as if it were declared with the storage-class specifier <span class="c-texpr sig sig-inline highlight c">extern</span>. If the declaration of an identifier for an object has file scope and no storage-class specifier, its linkage is external.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>The following identifiers have no linkage: an identifier declared to be anything other than an object or a function; an identifier declared to be a function parameter; a block scope identifier for an object declared without the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">extern</span></code>.</p>
+<p>The following identifiers have no linkage: an identifier declared to be anything other than an object or a function; an identifier declared to be a function parameter; a block scope identifier for an object declared without the storage-class specifier <span class="c-texpr sig sig-inline highlight c">extern</span>.</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
@@ -166,7 +166,7 @@
 </aside>
 <aside class="footnote brackets" id="note22" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>A function declaration can contain the storage-class specifier <code class="code docutils literal notranslate"><span class="pre">static</span></code> only if it is at file scope; see <a class="reference internal" href="../../7/1/index.html#id1"><span class="std std-ref">6.7.1</span></a>.</p>
+<p>A function declaration can contain the storage-class specifier <span class="c-texpr sig sig-inline highlight c">static</span> only if it is at file scope; see <a class="reference internal" href="../../7/1/index.html#id1"><span class="std std-ref">6.7.1</span></a>.</p>
 </aside>
 <aside class="footnote brackets" id="note23" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>

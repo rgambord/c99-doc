@@ -17,6 +17,7 @@
         <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
         <script src="../../../../../../_static/doctools.js"></script>
         <script src="../../../../../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
@@ -35,13 +36,20 @@
           <a href="../../../../../../index.html" class="icon icon-home">
             C99 Language Standard
               <img src="../../../../../../_static/logo.svg" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+          </a><div>
+<h3>Quick search</h3>
+<script>
+  (function() {
+    var cx = '......';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=071d6321bf4c049e7' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
@@ -124,33 +132,33 @@
 <p>The characteristics of floating types are defined in terms of a model that describes a representation of floating-point numbers and values that provide information about an implementation’s floating-point arithmetic.<a class="footnote-reference brackets" href="#note16" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The following parameters are used to define the model for each floating-point type:</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/106b04b320e75010b1d8029e59244f234f75e6f9.svg" alt="s"/></p></td>
-<td><p>sign (<img class="math" src="../../../../../../_images/math/07c8cc2f44b70e742434e428da238fecafd073c0.svg" alt="\pm 1"/>)</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(s\)</span></p></td>
+<td><p>sign (<span class="math notranslate nohighlight">\(\pm 1\)</span>)</p></td>
 </tr>
-<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(b\)</span></p></td>
 <td><p>base or radix of exponent representation (an integer &gt; 1)</p></td>
 </tr>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/60f4822f02b44d931c5d0595da71dcf34e270437.svg" alt="e"/></p></td>
-<td><p>exponent (an integer between a minimum <img class="math" src="../../../../../../_images/math/07877119b0c8265bfbdf2f984fd24df97e25bdb5.svg" alt="e_{\text{min}}"/> and a maximum <img class="math" src="../../../../../../_images/math/5ebed6426f1e1e269f4c8d7f79559091e0e9f374.svg" alt="e_{\text{max}}"/>)</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(e\)</span></p></td>
+<td><p>exponent (an integer between a minimum <span class="math notranslate nohighlight">\(e_{\text{min}}\)</span> and a maximum <span class="math notranslate nohighlight">\(e_{\text{max}}\)</span>)</p></td>
 </tr>
-<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></td>
-<td><p>precision (the number of base-<img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits in the significand)</p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>precision (the number of base-<span class="math notranslate nohighlight">\(b\)</span> digits in the significand)</p></td>
 </tr>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/0edac3a6b0973196c5005c560d87e755c0ea5c86.svg" alt="f_k"/></p></td>
-<td><p>nonnegative integers less than <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> (the significand digits)</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(f_k\)</span></p></td>
+<td><p>nonnegative integers less than <span class="math notranslate nohighlight">\(b\)</span> (the significand digits)</p></td>
 </tr>
 </tbody>
 </table>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>A <em>floating-point number</em> (<img class="math" src="../../../../../../_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.svg" alt="x"/>) is defined by the following model:</p>
-<div class="math">
-<p><img src="../../../../../../_images/math/a664eae5b8225b72add27be531094e04a84934f2.svg" alt="x = sb^e \sum\limits^p_{k=1} f_kb^{-k},\ e_\text{min} \le e \le e_\text{max}"/></p>
-</div><div class="snum docutils container" id="p3">
+<p>A <em>floating-point number</em> (<span class="math notranslate nohighlight">\(x\)</span>) is defined by the following model:</p>
+<div class="math notranslate nohighlight">
+\[x = sb^e \sum\limits^p_{k=1} f_kb^{-k},\ e_\text{min} \le e \le e_\text{max}\]</div>
+<div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>In addition to normalized floating-point numbers (<img class="math" src="../../../../../../_images/math/2d19db2c5f5db78a74546ab535c55d736b80dce5.svg" alt="f_1 &gt; 0\ \text{if}\ x \not= 0"/>), floating types may be able to contain other kinds of floating-point numbers, such as subnormal floating-point numbers (<img class="math" src="../../../../../../_images/math/6262e36fccf776c706ad17b5956e19b800097b76.svg" alt="x \not= 0, e = e_\text{min}, f_1 = 0"/>) and unnormalized floating-point numbers (<img class="math" src="../../../../../../_images/math/5a6f36b9411e0fb3d1ff8250549ac116d70c2604.svg" alt="x \not= 0, e &gt; e_\text{min}, f_1 = 0"/>), and values that are not floating-point numbers, such as infinities and NaNs. A <em>NaN</em> is an encoding signifying Not-a-Number. A <em>quiet</em> NaN propagates through almost every arithmetic operation without raising a floating-point exception; a <em>signaling NaN</em> generally raises a floating-point exception when occurring as an arithmetic operand.<a class="footnote-reference brackets" href="#note17" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>In addition to normalized floating-point numbers (<span class="math notranslate nohighlight">\(f_1 &gt; 0\ \text{if}\ x \not= 0\)</span>), floating types may be able to contain other kinds of floating-point numbers, such as subnormal floating-point numbers (<span class="math notranslate nohighlight">\(x \not= 0, e = e_\text{min}, f_1 = 0\)</span>) and unnormalized floating-point numbers (<span class="math notranslate nohighlight">\(x \not= 0, e &gt; e_\text{min}, f_1 = 0\)</span>), and values that are not floating-point numbers, such as infinities and NaNs. A <em>NaN</em> is an encoding signifying Not-a-Number. A <em>quiet</em> NaN propagates through almost every arithmetic operation without raising a floating-point exception; a <em>signaling NaN</em> generally raises a floating-point exception when occurring as an arithmetic operand.<a class="footnote-reference brackets" href="#note17" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
@@ -169,19 +177,19 @@
 <p>The rounding mode for floating-point addition is characterized by the implementation- defined value of <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span>:<a class="footnote-reference brackets" href="#note18" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/bb3bcf4d88dfa961f520a0d0cea612b738596d66.svg" alt="-1"/></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-1\)</span></p></td>
 <td><p>indeterminable</p></td>
 </tr>
-<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/31fdf41b39df23c95e52c5aef07f59d9adf82f3c.svg" alt="0"/></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
 <td><p>toward zero</p></td>
 </tr>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/ec830c85a5fbb48028fe797044da6bdfb924c2fa.svg" alt="1"/></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
 <td><p>to nearest</p></td>
 </tr>
-<tr class="row-even"><td><p><img class="math" src="../../../../../../_images/math/d94997a2318fec7e8e5bc4d8d79bb633675f9411.svg" alt="2"/></p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
 <td><p>toward positive infinity</p></td>
 </tr>
-<tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/3204f0580808cc1d3ded72d87384c025c9e7e272.svg" alt="3"/></p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
 <td><p>toward negative infinity</p></td>
 </tr>
 </tbody>
@@ -213,7 +221,7 @@
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater or equal in magnitude (absolute value) to those shown, with the same sign:</p>
 <ul class="simple">
-<li><p>radix of exponent representation, <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/></p></li>
+<li><p>radix of exponent representation, <span class="math notranslate nohighlight">\(b\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -232,7 +240,7 @@
 </tbody>
 </table>
 <ul class="simple">
-<li><p>number of base-<span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> digits in the floating-point significand, <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></li>
+<li><p>number of base-<span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> digits in the floating-point significand, <span class="math notranslate nohighlight">\(p\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -252,14 +260,14 @@
 </tbody>
 </table>
 <ul class="simple">
-<li><p>number of decimal digits, <img class="math" src="../../../../../../_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.svg" alt="n"/>, such that any floating-point number in the widest supported floating type with <img class="math" src="../../../../../../_images/math/f4f12aa03c9b30b06dd9eeb6f1481efee8596243.svg" alt="p_\text{max}"/> radix <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits can be rounded to a floating-point number with <img class="math" src="../../../../../../_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.svg" alt="n"/> decimal digits and back again without change to the value,</p></li>
+<li><p>number of decimal digits, <span class="math notranslate nohighlight">\(n\)</span>, such that any floating-point number in the widest supported floating type with <span class="math notranslate nohighlight">\(p_\text{max}\)</span> radix <span class="math notranslate nohighlight">\(b\)</span> digits can be rounded to a floating-point number with <span class="math notranslate nohighlight">\(n\)</span> decimal digits and back again without change to the value,</p></li>
 </ul>
-<div class="math">
-<p><img src="../../../../../../_images/math/9a3f7650c16ff8a7433cd03702331dfacd4f5bfb.svg" alt="\begin{cases}
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
 p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 \lceil 1 + p_\text{max} \log_{10} b \rceil &amp; \text{otherwise}
-\end{cases}"/></p>
-</div><table class="docutils align-default" style="width: 100%">
+\end{cases}\end{split}\]</div>
+<table class="docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -276,14 +284,14 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>number of decimal digits, <img class="math" src="../../../../../../_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.svg" alt="q"/>, such that any floating-point number with q decimal digits can be rounded into a floating-point number with <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/> radix <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> digits and back again without change to the <img class="math" src="../../../../../../_images/math/a5fa84b363f309ebc8fe7db38304541732c7de9a.svg" alt="q"/> decimal digits,</p></li>
+<li><p>number of decimal digits, <span class="math notranslate nohighlight">\(q\)</span>, such that any floating-point number with q decimal digits can be rounded into a floating-point number with <span class="math notranslate nohighlight">\(p\)</span> radix <span class="math notranslate nohighlight">\(b\)</span> digits and back again without change to the <span class="math notranslate nohighlight">\(q\)</span> decimal digits,</p></li>
 </ul>
-<div class="math">
-<p><img src="../../../../../../_images/math/5004f4e9b17aacbadab19cdbe5ece4dc7c05975c.svg" alt="\begin{cases}
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
 p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 \lfloor (p-1) \log_{10} b \rfloor &amp; \text{otherwise}
-\end{cases}"/></p>
-</div><table class="docutils align-default" style="width: 100%">
+\end{cases}\end{split}\]</div>
+<table class="docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -306,7 +314,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>minimum negative integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a normalized floating-point number, <img class="math" src="../../../../../../_images/math/f6373322e6d1f97f8a551ef6201de0c8c63e8ef1.svg" alt="e_\text{min}"/></p></li>
+<li><p>minimum negative integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a normalized floating-point number, <span class="math notranslate nohighlight">\(e_\text{min}\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -326,7 +334,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>minimum negative integer such that 10 raised to that power is in the range of normalized floating-point numbers, <img class="math" src="../../../../../../_images/math/87686e93925640b5bbaabc73b6a1febf3d432947.svg" alt="\left\lceil\log_{10}b^{e_\text{min}-1}\right\rceil"/></p></li>
+<li><p>minimum negative integer such that 10 raised to that power is in the range of normalized floating-point numbers, <span class="math notranslate nohighlight">\(\left\lceil\log_{10}b^{e_\text{min}-1}\right\rceil\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -351,7 +359,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>maximum integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a representable finite floating-point number, <img class="math" src="../../../../../../_images/math/5e67779c7fa51b8cd119199653abefcb9a9d3fb8.svg" alt="e_\text{max}"/></p></li>
+<li><p>maximum integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a representable finite floating-point number, <span class="math notranslate nohighlight">\(e_\text{max}\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -371,7 +379,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>maximum integer such that 10 raised to that power is in the range of representable finite floating-point numbers, <img class="math" src="../../../../../../_images/math/a4ad168566fba9331d70bd16315144cd28ec2c7c.svg" alt="\left\lfloor\log_{10}((1-b^{-p})b^{e_\text{max}}\right\rfloor"/></p></li>
+<li><p>maximum integer such that 10 raised to that power is in the range of representable finite floating-point numbers, <span class="math notranslate nohighlight">\(\left\lfloor\log_{10}((1-b^{-p})b^{e_\text{max}}\right\rfloor\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -400,7 +408,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined values that are greater than or equal to those shown:</p>
 <ul class="simple">
-<li><p>maximum representable finite floating-point number, <img class="math" src="../../../../../../_images/math/03ff8412547bd71128fb4a366889835453cc0aaf.svg" alt="(1-b^{-p})b^{e_\text{max}}"/></p></li>
+<li><p>maximum representable finite floating-point number, <span class="math notranslate nohighlight">\((1-b^{-p})b^{e_\text{max}}\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -429,7 +437,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </div>
 <p>The values given in the following list shall be replaced by constant expressions with implementation-defined (positive) values that are less than or equal to those shown:</p>
 <ul class="simple">
-<li><p>the difference between 1 and the least value greater than 1 that is representable in the given floating point type, <img class="math" src="../../../../../../_images/math/73c2bf2614be6961512a0b6962a9128e7f7d97b5.svg" alt="b^{1-p}"/></p></li>
+<li><p>the difference between 1 and the least value greater than 1 that is representable in the given floating point type, <span class="math notranslate nohighlight">\(b^{1-p}\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -454,7 +462,7 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tbody>
 </table>
 <ul class="simple">
-<li><p>minimum normalized positive floating-point number, <img class="math" src="../../../../../../_images/math/6c0fceaac7d485c4eb54c0cff93737f761c2ef70.svg" alt="b^{e_\text{min}-1}"/></p></li>
+<li><p>minimum normalized positive floating-point number, <span class="math notranslate nohighlight">\(b^{e_\text{min}-1}\)</span></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -487,9 +495,9 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 <p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type <span class="c-texpr sig sig-inline highlight c"><span class="kt">float</span></span>:</p>
-<div class="math">
-<p><img src="../../../../../../_images/math/8679e6e37f02f05109b679f16c6b540097abf8d7.svg" alt="x = s16^e \sum\limits_{k=1}^6 f_k 16^{-k},\ -31 \le e \le +32"/></p>
-</div><table class="docutils align-default" style="width: 100%">
+<div class="math notranslate nohighlight">
+\[x = s16^e \sum\limits_{k=1}^6 f_k 16^{-k},\ -31 \le e \le +32\]</div>
+<table class="docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -536,11 +544,9 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 <p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types <span class="c-texpr sig sig-inline highlight c"><span class="kt">float</span></span> and <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span></span>:</p>
-<div class="math">
-<p><img src="../../../../../../_images/math/76bb72f34640fb0c08929ad844c7c3e543f8b346.svg" alt="x_f = s2^e \sum\limits_{k=1}^{24} f_k 2^{-k},\ -125 \le e \le +128
-
-x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le +1024"/></p>
-</div><table class="docutils align-default" style="width: 100%">
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}x_f = s2^e \sum\limits_{k=1}^{24} f_k 2^{-k},\ -125 \le e \le +128\\x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le +1024\end{aligned}\end{align} \]</div>
+<table class="docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -699,7 +705,7 @@ x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le +1024"/></p>
 </aside>
 <aside class="footnote brackets" id="note20" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>
-<p>The floating-point model in that standard sums powers of <img class="math" src="../../../../../../_images/math/68c7c8c65602677ab56cf7fd88002023f0edc575.svg" alt="b"/> from zero, so the values of the exponent limits are one less than shown here.</p>
+<p>The floating-point model in that standard sums powers of <span class="math notranslate nohighlight">\(b\)</span> from zero, so the values of the exponent limits are one less than shown here.</p>
 </aside>
 </aside>
 </section>

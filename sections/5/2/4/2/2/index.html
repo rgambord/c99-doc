@@ -165,15 +165,15 @@
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>The accuracy of the floating-point operations (<strong>+</strong>, <strong>-</strong>, <strong>*</strong>, <strong>/</strong>) and of the library functions in <a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that return floating-point results is implementation- defined, as is the accuracy of the conversion between floating-point internal representations and string representations performed by the library functions in <a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, <a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, and <a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a>. The implementation may state that the accuracy is unknown.</p>
+<p>The accuracy of the floating-point operations (<span class="highlight context-highlighting"><span class="o">+</span></span>, <span class="highlight context-highlighting"><span class="o">-</span></span>, <span class="highlight context-highlighting"><span class="o">*</span></span>, <span class="highlight context-highlighting"><span class="o">/</span></span>) and of the library functions in <a class="reference internal" href="../../../../../7/12/index.html#id1"><span class="std std-ref">&lt;math.h&gt;</span></a> and <a class="reference internal" href="../../../../../7/3/index.html#id1"><span class="std std-ref">&lt;complex.h&gt;</span></a> that return floating-point results is implementation- defined, as is the accuracy of the conversion between floating-point internal representations and string representations performed by the library functions in <a class="reference internal" href="../../../../../7/19/index.html#id1"><span class="std std-ref">&lt;stdio.h&gt;</span></a>, <a class="reference internal" href="../../../../../7/20/index.html#id1"><span class="std std-ref">&lt;stdlib.h&gt;</span></a>, and <a class="reference internal" href="../../../../../7/24/index.html#id1"><span class="std std-ref">&lt;wchar.h&gt;</span></a>. The implementation may state that the accuracy is unknown.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>All integer values in the <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header, except <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span>, shall be constant expressions suitable for use in <span class="c-texpr sig sig-inline highlight c">#if</span> preprocessing directives; all floating values shall be constant expressions. All except <span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span>, <span class="sig sig-inline highlight c"><span class="no">FLT_EVAL_METHOD</span></span>, <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span>, and <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span> have separate names for all three floating-point types. The floating-point model representation is provided for all values except <span class="sig sig-inline highlight c"><span class="no">FLT_EVAL_METHOD</span></span> and <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span>.</p>
+<p>All integer values in the <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header, except <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span>, shall be constant expressions suitable for use in <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">if</span></span> preprocessing directives; all floating values shall be constant expressions. All except <span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span>, <span class="highlight context-highlighting"><span class="no">FLT_EVAL_METHOD</span></span>, <span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span>, and <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span> have separate names for all three floating-point types. The floating-point model representation is provided for all values except <span class="highlight context-highlighting"><span class="no">FLT_EVAL_METHOD</span></span> and <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span>.</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p>The rounding mode for floating-point addition is characterized by the implementation- defined value of <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span>:<a class="footnote-reference brackets" href="#note18" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<p>The rounding mode for floating-point addition is characterized by the implementation- defined value of <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span>:<a class="footnote-reference brackets" href="#note18" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><img class="math" src="../../../../../../_images/math/bb3bcf4d88dfa961f520a0d0cea612b738596d66.svg" alt="-1"/></p></td>
@@ -193,11 +193,11 @@
 </tr>
 </tbody>
 </table>
-<p>All other values for <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span> characterize implementation-defined rounding behavior.</p>
+<p>All other values for <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span> characterize implementation-defined rounding behavior.</p>
 <div class="snum docutils container" id="p8">
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
-<p>Except for assignment and cast (which remove all extra range and precision), the values of operations with floating operands and values subject to the usual arithmetic conversions and of floating constants are evaluated to a format whose range and precision may be greater than required by the type. The use of evaluation formats is characterized by the implementation-defined value of <span class="sig sig-inline highlight c"><span class="no">FLT_EVAL_METHOD</span></span>:<a class="footnote-reference brackets" href="#note19" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<p>Except for assignment and cast (which remove all extra range and precision), the values of operations with floating operands and values subject to the usual arithmetic conversions and of floating constants are evaluated to a format whose range and precision may be greater than required by the type. The use of evaluation formats is characterized by the implementation-defined value of <span class="highlight context-highlighting"><span class="no">FLT_EVAL_METHOD</span></span>:<a class="footnote-reference brackets" href="#note19" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p>-1</p></td>
@@ -214,7 +214,7 @@
 </tr>
 </tbody>
 </table>
-<p>All other negative values for <span class="sig sig-inline highlight c"><span class="no">FLT_EVAL_METHOD</span></span> characterize implementation-defined behavior.</p>
+<p>All other negative values for <span class="highlight context-highlighting"><span class="no">FLT_EVAL_METHOD</span></span> characterize implementation-defined behavior.</p>
 <div class="snum docutils container" id="p9">
 <p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
 </div>
@@ -233,13 +233,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">2</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">2</span></span></p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>number of base-<span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> digits in the floating-point significand, <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></li>
+<li><p>number of base-<span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span> digits in the floating-point significand, <img class="math" src="../../../../../../_images/math/141bbefb74014fc5e43499901bf78607ae335583.svg" alt="p"/></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -250,11 +250,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MANT_DIG</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MANT_DIG</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MANT_DIG</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MANT_DIG</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_MANT_DIG</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MANT_DIG</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -277,8 +277,8 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">10</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">10</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -301,19 +301,19 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">6</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">6</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">10</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">10</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">10</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">10</span></span></p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>minimum negative integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a normalized floating-point number, <img class="math" src="../../../../../../_images/math/f6373322e6d1f97f8a551ef6201de0c8c63e8ef1.svg" alt="e_\text{min}"/></p></li>
+<li><p>minimum negative integer such that <span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a normalized floating-point number, <img class="math" src="../../../../../../_images/math/f6373322e6d1f97f8a551ef6201de0c8c63e8ef1.svg" alt="e_\text{min}"/></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -324,11 +324,11 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN_EXP</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_EXP</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MIN_EXP</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN_EXP</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_MIN_EXP</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MIN_EXP</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -346,19 +346,19 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-37</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">DBL_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">37</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-37</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">LDBL_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-37</span></span></p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>maximum integer such that <span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a representable finite floating-point number, <img class="math" src="../../../../../../_images/math/5e67779c7fa51b8cd119199653abefcb9a9d3fb8.svg" alt="e_\text{max}"/></p></li>
+<li><p>maximum integer such that <span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span> raised to one less than that power is a representable finite floating-point number, <img class="math" src="../../../../../../_images/math/5e67779c7fa51b8cd119199653abefcb9a9d3fb8.svg" alt="e_\text{max}"/></p></li>
 </ul>
 <table class="docutils align-default" style="width: 100%">
 <colgroup>
@@ -369,11 +369,11 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX_EXP</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_EXP</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MAX_EXP</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX_EXP</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_MAX_EXP</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MAX_EXP</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -391,14 +391,14 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">37</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">DBL_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">37</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">37</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">LDBL_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">37</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -420,14 +420,14 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E+37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E+37</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E+37</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E+37</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E+37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E+37</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -449,14 +449,14 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-5</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-5</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-9</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-9</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-9</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-9</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -474,14 +474,14 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-37</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-37</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-37</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">LDBL_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1E-37</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">LDBL_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1E-37</span></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -489,11 +489,11 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 <div class="snum docutils container" id="p12">
 <p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
 </div>
-<p>Conversion from (at least) <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span></span> to decimal with <span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span> digits and back should be the identity function.</p>
+<p>Conversion from (at least) <span class="highlight context-highlighting"><span class="kt">double</span></span> to decimal with <span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span> digits and back should be the identity function.</p>
 <div class="snum docutils container" id="p13">
 <p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type <span class="c-texpr sig sig-inline highlight c"><span class="kt">float</span></span>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The following describes an artificial floating-point representation that meets the minimum requirements of this International Standard, and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for type <span class="highlight context-highlighting"><span class="kt">float</span></span>:</p>
 <div class="math">
 <p><img src="../../../../../../_images/math/8679e6e37f02f05109b679f16c6b540097abf8d7.svg" alt="x = s16^e \sum\limits_{k=1}^6 f_k 16^{-k},\ -31 \le e \le +32"/></p>
 </div><table class="docutils align-default" style="width: 100%">
@@ -507,42 +507,42 @@ p_\text{max}\log_{10} b &amp; \text{if}\ b\ \text{is a power of}\ 10\\
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">16</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">16</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MANT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">6</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MANT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">6</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">9.53674316E-07F</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">9.53674316E-07F</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">6</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">6</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">31</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-31</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">2.93873588E-39F</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">2.93873588E-39F</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">38</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-38</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">32</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">32</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">3.40282347E+38F</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">3.40282347E+38F</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">38</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">38</span></span></p></td>
 </tr>
 </tbody>
 </table>
 <div class="snum docutils container" id="p14">
 <p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types <span class="c-texpr sig sig-inline highlight c"><span class="kt">float</span></span> and <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span></span>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following describes floating-point representations that also meet the requirements for single-precision and double-precision normalized numbers in IEC 60559,<a class="footnote-reference brackets" href="#note20" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and the appropriate values in a <a class="reference internal" href="../../../../../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> header for types <span class="highlight context-highlighting"><span class="kt">float</span></span> and <span class="highlight context-highlighting"><span class="kt">double</span></span>:</p>
 <div class="math">
 <p><img src="../../../../../../_images/math/76bb72f34640fb0c08929ad844c7c3e543f8b346.svg" alt="x_f = s2^e \sum\limits_{k=1}^{24} f_k 2^{-k},\ -125 \le e \le +128
 
@@ -560,113 +560,113 @@ x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le +1024"/></p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_RADIX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">2</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_RADIX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">2</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">17</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">17</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MANT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">24</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MANT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">24</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1.19209290E-07F</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1.19209290E-07F</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1P-23F</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1P-23F</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">6</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">6</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">125</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-125</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1.17549435E-38F</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1.17549435E-38F</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1P-126F</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1P-126F</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">37</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-37</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">128</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">128</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">3.40282347E+38F</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">3.40282347E+38F</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">FLT_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1.fffffeP127F</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1.fffffeP127F</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">FLT_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">38</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">FLT_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">38</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MANT_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">53</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MANT_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">53</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">2.2204460492503131E-16</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">2.2204460492503131E-16</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_EPSILON</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1P-52</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_EPSILON</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1P-52</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_DIG</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">15</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_DIG</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">15</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MIN_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">1021</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-1021</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">2.2250738585072014E-308</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">2.2250738585072014E-308</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MIN</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1P-1022</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1P-1022</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">DBL_MIN_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">307</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MIN_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mi">-307</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MAX_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">1024</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">1024</span></span></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">1.7976931348623157E+308</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">1.7976931348623157E+308</span></span></p></td>
 <td><p><em>decimal constant</em></p></td>
 </tr>
-<tr class="row-even"><td><p><span class="sig sig-inline highlight c"><span class="no">DBL_MAX</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="m">0X1.fffffffffffffP1023</span></span></p></td>
+<tr class="row-even"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="mf">0X1.fffffffffffffP1023</span></span></p></td>
 <td><p><em>hex constant</em></p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="c-texpr sig sig-inline highlight c"><span class="n">DBL_MAX_10_EXP</span></span></p></td>
-<td><p><span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">308</span></span></p></td>
+<tr class="row-odd"><td><p><span class="highlight context-highlighting"><span class="no">DBL_MAX_10_EXP</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="o">+</span><span class="mi">308</span></span></p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>If a type wider than <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span></span> were supported, then <span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span> would be greater than 17. For example, if the widest type were to use the minimal-width IEC 60559 double-extended format (64 bits of precision), then <span class="sig sig-inline highlight c"><span class="no">DECIMAL_DIG</span></span> would be 21.</p>
+<p>If a type wider than <span class="highlight context-highlighting"><span class="kt">double</span></span> were supported, then <span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span> would be greater than 17. For example, if the widest type were to use the minimal-width IEC 60559 double-extended format (64 bits of precision), then <span class="highlight context-highlighting"><span class="no">DECIMAL_DIG</span></span> would be 21.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="../../../../../6/10/1/index.html#id1"><span class="std std-ref">6.10.1 Conditional inclusion</span></a></p></li>
@@ -698,11 +698,11 @@ x_d = s2^e \sum\limits_{k=1}^{53} f_k 2^{-k},\ -1021 \le e \le +1024"/></p>
 </aside>
 <aside class="footnote brackets" id="note18" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
-<p>Evaluation of <span class="sig sig-inline highlight c"><span class="no">FLT_ROUNDS</span></span> correctly reflects any execution-time change of rounding mode through the function <span class="c-texpr sig sig-inline highlight c"><span class="n">fesetround</span></span> in <a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
+<p>Evaluation of <span class="highlight context-highlighting"><span class="no">FLT_ROUNDS</span></span> correctly reflects any execution-time change of rounding mode through the function <span class="highlight context-highlighting"><span class="nf">fesetround</span></span> in <a class="reference internal" href="../../../../../7/6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>
 </aside>
 <aside class="footnote brackets" id="note19" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
-<p>The evaluation method determines evaluation formats of expressions involving all floating types, not just real types. For example, if <span class="sig sig-inline highlight c"><span class="no">FLT_EVAL_METHOD</span></span> is 1, then the product of two <span class="c-texpr sig sig-inline highlight c"><span class="kt">float</span><span class="w"> </span><span class="kt">_Complex</span></span> operands is represented in the <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span><span class="w"> </span><span class="kt">_Complex</span></span> format, and its parts are evaluated to <span class="c-texpr sig sig-inline highlight c"><span class="kt">double</span></span>.</p>
+<p>The evaluation method determines evaluation formats of expressions involving all floating types, not just real types. For example, if <span class="highlight context-highlighting"><span class="no">FLT_EVAL_METHOD</span></span> is 1, then the product of two <span class="highlight context-highlighting"><span class="kt">float</span><span class="w"> </span><span class="kt">_Complex</span></span> operands is represented in the <span class="highlight context-highlighting"><span class="kt">double</span><span class="w"> </span><span class="kt">_Complex</span></span> format, and its parts are evaluated to <span class="highlight context-highlighting"><span class="kt">double</span></span>.</p>
 </aside>
 <aside class="footnote brackets" id="note20" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">5</a><span class="fn-bracket">]</span></span>

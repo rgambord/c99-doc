@@ -142,7 +142,7 @@
 <p><a class="reference internal" href="#f-8-3p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls g and raises &quot;invalid&quot; if a and b are unordered</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls g and raises &quot;invalid&quot; if a and b are unordered</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
 <span class="w">        </span><span class="n">f</span><span class="p">();</span>
 <span class="k">else</span>
@@ -150,7 +150,7 @@
 </pre></div>
 </div>
 <p>is not equivalent to</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls f and raises &quot;invalid&quot; if a and b are unordered</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls f and raises &quot;invalid&quot; if a and b are unordered</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
 <span class="w">        </span><span class="n">g</span><span class="p">();</span>
 <span class="k">else</span>
@@ -158,23 +158,23 @@
 </pre></div>
 </div>
 <p>nor to</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls f without raising &quot;invalid&quot; if a and b are unordered</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isgreaterequal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls f without raising &quot;invalid&quot; if a and b are unordered</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">isgreaterequal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
 <span class="w">        </span><span class="n">g</span><span class="p">();</span>
 <span class="k">else</span>
 <span class="w">        </span><span class="n">f</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>nor, unless the state of the FENV_ACCESS pragma is “off”, to</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls g without raising &quot;invalid&quot; if a and b are unordered</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isless</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="c1">// calls g without raising &quot;invalid&quot; if a and b are unordered</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">isless</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
 <span class="w">        </span><span class="n">f</span><span class="p">();</span>
 <span class="k">else</span>
 <span class="w">        </span><span class="n">g</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>but is equivalent to</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">))</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">))</span>
 <span class="w">      </span><span class="n">g</span><span class="p">();</span>
 <span class="k">else</span>
 <span class="w">      </span><span class="n">f</span><span class="p">();</span>

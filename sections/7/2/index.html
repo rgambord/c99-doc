@@ -147,11 +147,11 @@
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
 <p>The header <a class="reference internal" href="#id1"><span class="std std-ref">&lt;assert.h&gt;</span></a> defines the assert macro and refers to another macro,</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">NDEBUG</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">NDEBUG</span>
 </pre></div>
 </div>
 <p>which is not defined by <a class="reference internal" href="#id1"><span class="std std-ref">&lt;assert.h&gt;</span></a>. If NDEBUG is defined as a macro name at the point in the source file where <a class="reference internal" href="#id1"><span class="std std-ref">&lt;assert.h&gt;</span></a> is included, the assert macro is defined simply as</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define assert(ignore) ((void)0)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define assert(ignore) ((void)0)</span>
 </pre></div>
 </div>
 <p>The assert macro is redefined according to the current state of NDEBUG each time that <a class="reference internal" href="#id1"><span class="std std-ref">&lt;assert.h&gt;</span></a> is included.</p>

@@ -140,15 +140,15 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The types are</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">ptrdiff_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">ptrdiff_t</span>
 </pre></div>
 </div>
 <p>which is the signed integer type of the result of subtracting two pointers;</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">size_t</span>
 </pre></div>
 </div>
 <p>which is the unsigned integer type of the result of the sizeof operator; and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">wchar_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">wchar_t</span>
 </pre></div>
 </div>
 <p>which is an integer type whose range of values can represent distinct codes for all members of the largest extended character set specified among the supported locales; the null character shall have the code value zero. Each member of the basic character set shall have a code value equal to its value when used as the lone character in an integer character constant if an implementation does not define __STDC_MB_MIGHT_NEQ_WC__.</p>
@@ -156,15 +156,15 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros are</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="nb">NULL</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">NULL</span>
 </pre></div>
 </div>
 <p>which expands to an implementation-defined null pointer constant; and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">offsetof</span><span class="p">(</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">member</span><span class="o">-</span><span class="n">designator</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="nf">offsetof</span><span class="p">(</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">member</span><span class="o">-</span><span class="n">designator</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which expands to an integer constant expression that has type size_t, the value of which is the offset in bytes, to the structure member (designated by member-designator), from the beginning of its structure (designated by type). The type and member designator shall be such that given</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>then the expression &amp;(t.member-designator) evaluates to an address constant. (If the specified member is a bit-field, the behavior is undefined.)</p>

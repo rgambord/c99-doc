@@ -183,7 +183,7 @@
 <p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The file scope definition</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">[]){</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">[]){</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span>
 </pre></div>
 </div>
 <p>initializes p to point to the first element of an array of two ints, the first having the value two and the second, four. The expressions in this compound literal are required to be constant. The unnamed object has static storage duration.</p>
@@ -191,7 +191,7 @@
 <p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> In contrast, in</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
 <span class="w">      </span><span class="cm">/*...*/</span>
@@ -205,12 +205,12 @@
 <p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> Initializers with designations can be combined with compound literals. Structure objects created using compound literals can be passed to functions without depending on member order:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">drawline</span><span class="p">((</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="n">drawline</span><span class="p">((</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span>
 <span class="w">      </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>Or, if drawline instead expected pointers to struct point:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">drawline</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="n">drawline</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span>
 <span class="w">      </span><span class="o">&amp;</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="p">){.</span><span class="n">x</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">});</span>
 </pre></div>
 </div>
@@ -218,14 +218,14 @@
 <p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">4</span></code> A read-only compound literal can be specified through constructions like:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="p">[]){</span><span class="mf">1e0</span><span class="p">,</span><span class="w"> </span><span class="mf">1e1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e2</span><span class="p">,</span><span class="w"> </span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="mf">1e4</span><span class="p">,</span><span class="w"> </span><span class="mf">1e5</span><span class="p">,</span><span class="w"> </span><span class="mf">1e6</span><span class="p">}</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="p">[]){</span><span class="mf">1e0</span><span class="p">,</span><span class="w"> </span><span class="mf">1e1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e2</span><span class="p">,</span><span class="w"> </span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="mf">1e4</span><span class="p">,</span><span class="w"> </span><span class="mf">1e5</span><span class="p">,</span><span class="w"> </span><span class="mf">1e6</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p13">
 <p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">5</span></code> The following three expressions have different meanings:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;/tmp/fileXXXXXX&quot;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;/tmp/fileXXXXXX&quot;</span>
 <span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="p">[]){</span><span class="s">&quot;/tmp/fileXXXXXX&quot;</span><span class="p">}</span>
 <span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[]){</span><span class="s">&quot;/tmp/fileXXXXXX&quot;</span><span class="p">}</span>
 </pre></div>
@@ -235,7 +235,7 @@
 <p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">6</span></code> Like string literals, const-qualified compound literals can be placed into read-only memory and can even be shared. For example,</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[]){</span><span class="s">&quot;abc&quot;</span><span class="p">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;abc&quot;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[]){</span><span class="s">&quot;abc&quot;</span><span class="p">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;abc&quot;</span>
 </pre></div>
 </div>
 <p>might yield 1 if the literals’ storage is shared.</p>
@@ -243,7 +243,7 @@
 <p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">7</span></code> Since compound literals are unnamed, a single compound literal cannot specify a circularly linked object. For example, there is no way to write a self-referential compound literal that could be used as the function argument in place of the named object endless_zeros below:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">int_list</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">car</span><span class="p">;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">int_list</span><span class="w"> </span><span class="o">*</span><span class="n">cdr</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">int_list</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">car</span><span class="p">;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">int_list</span><span class="w"> </span><span class="o">*</span><span class="n">cdr</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">int_list</span><span class="w"> </span><span class="n">endless_zeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">endless_zeros</span><span class="p">};</span>
 <span class="n">eval</span><span class="p">(</span><span class="n">endless_zeros</span><span class="p">);</span>
 </pre></div>
@@ -252,7 +252,7 @@
 <p><a class="reference internal" href="#p16"><span class="std std-ref">16</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">8</span></code> Each compound literal creates only a single object in a given scope:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="k">struct</span><span class="w"> </span><span class="nc">s</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">q</span><span class="p">;</span>

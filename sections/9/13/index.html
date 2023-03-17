@@ -130,10 +130,10 @@
              
   <section id="b-13-signal-handling-signal-h">
 <span id="b-13"></span><h1>B.13 Signal handling &lt;signal.h&gt;<a class="headerlink" href="#b-13-signal-handling-signal-h" title="Permalink to this heading"></a></h1>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">sig_atomic_t</span><span class="w">   </span><span class="n">SIG_IGN</span><span class="w">            </span><span class="n">SIGILL</span><span class="w">            </span><span class="n">SIGTERM</span>
-<span class="n">SIG_DFL</span><span class="w">        </span><span class="n">SIGABRT</span><span class="w">            </span><span class="n">SIGINT</span>
-<span class="n">SIG_ERR</span><span class="w">        </span><span class="n">SIGFPE</span><span class="w">             </span><span class="n">SIGSEGV</span>
-<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">signal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">sig_atomic_t</span><span class="w">   </span><span class="no">SIG_IGN</span><span class="w">            </span><span class="no">SIGILL</span><span class="w">            </span><span class="no">SIGTERM</span>
+<span class="no">SIG_DFL</span><span class="w">        </span><span class="no">SIGABRT</span><span class="w">            </span><span class="no">SIGINT</span>
+<span class="no">SIG_ERR</span><span class="w">        </span><span class="no">SIGFPE</span><span class="w">             </span><span class="no">SIGSEGV</span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">raise</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sig</span><span class="p">);</span>
 </pre></div>
 </div>

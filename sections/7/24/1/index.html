@@ -149,15 +149,15 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The types declared are wchar_t and size_t (both described in <a class="reference internal" href="../../17/index.html#id1"><span class="std std-ref">7.17</span></a>);</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">mbstate_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">mbstate_t</span>
 </pre></div>
 </div>
 <p>which is an object type other than an array type that can hold the conversion state information necessary to convert between sequences of multibyte characters and wide characters;</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">wint_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">wint_t</span>
 </pre></div>
 </div>
 <p>which is an integer type unchanged by default argument promotions that can hold any value corresponding to members of the extended character set, as well as at least one value that does not correspond to any member of the extended character set (see WEOF below);<a class="footnote-reference brackets" href="#note278" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span>
 </pre></div>
 </div>
 <p>which is declared as an incomplete structure type (the contents are described in <a class="reference internal" href="../../23/1/index.html#id1"><span class="std std-ref">7.23.1</span></a>).</p>
@@ -165,7 +165,7 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros defined are NULL (described in <a class="reference internal" href="../../17/index.html#id1"><span class="std std-ref">7.17</span></a>); WCHAR_MIN and WCHAR_MAX (described in <a class="reference internal" href="../../18/3/index.html#id1"><span class="std std-ref">7.18.3</span></a>); and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">WEOF</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">WEOF</span>
 </pre></div>
 </div>
 <p>which expands to a constant expression of type wint_t whose value does not correspond to any member of the extended character set.<a class="footnote-reference brackets" href="#note279" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> It is accepted (and returned) by several functions in this subclause to indicate end-of-file, that is, no more input from a stream. It is also used as a wide character value that does not correspond to any member of the extended character set.</p>

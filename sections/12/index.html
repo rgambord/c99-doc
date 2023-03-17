@@ -108,8 +108,8 @@
 <div class="snum docutils container" id="ep1">
 <p><a class="reference internal" href="#ep1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>The contents of the header <a class="reference internal" href="../7/10/index.html#id1"><span class="std std-ref">&lt;limits.h&gt;</span></a> are given below, in alphabetical order. The minimum magnitudes shown shall be replaced by implementation-defined magnitudes with the same sign. The values shall all be constant expressions suitable for use in <span class="c-texpr sig sig-inline highlight c">#if</span> preprocessing directives. The components are described further in <a class="reference internal" href="../5/2/4/2/1/index.html#id1"><span class="std std-ref">5.2.4.2.1</span></a>.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define     CHAR_BIT                               8</span>
+<p>The contents of the header <a class="reference internal" href="../7/10/index.html#id1"><span class="std std-ref">&lt;limits.h&gt;</span></a> are given below, in alphabetical order. The minimum magnitudes shown shall be replaced by implementation-defined magnitudes with the same sign. The values shall all be constant expressions suitable for use in <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">if</span></span> preprocessing directives. The components are described further in <a class="reference internal" href="../5/2/4/2/1/index.html#id1"><span class="std std-ref">5.2.4.2.1</span></a>.</p>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define     CHAR_BIT                               8</span>
 <span class="cp">#define     CHAR_MAX          UCHAR_MAX or SCHAR_MAX</span>
 <span class="cp">#define     CHAR_MIN                  0 or SCHAR_MIN</span>
 <span class="cp">#define     INT_MAX                           +32767</span>
@@ -133,12 +133,12 @@
 <div class="snum docutils container" id="ep2">
 <p><a class="reference internal" href="#ep2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>The contents of the header <a class="reference internal" href="../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> are given below. All integer values, except FLT_ROUNDS, shall be constant expressions suitable for use in <span class="c-texpr sig sig-inline highlight c">#if</span> preprocessing directives; all floating values shall be constant expressions. The components are described further in <a class="reference internal" href="../5/2/4/2/2/index.html#id1"><span class="std std-ref">5.2.4.2.2</span></a>.</p>
+<p>The contents of the header <a class="reference internal" href="../7/7/index.html#id1"><span class="std std-ref">&lt;float.h&gt;</span></a> are given below. All integer values, except FLT_ROUNDS, shall be constant expressions suitable for use in <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">if</span></span> preprocessing directives; all floating values shall be constant expressions. The components are described further in <a class="reference internal" href="../5/2/4/2/2/index.html#id1"><span class="std std-ref">5.2.4.2.2</span></a>.</p>
 <div class="snum docutils container" id="ep3">
 <p><a class="reference internal" href="#ep3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by implementation-defined expressions:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define FLT_EVAL_METHOD</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define FLT_EVAL_METHOD</span>
 <span class="cp">#define FLT_ROUNDS</span>
 </pre></div>
 </div>
@@ -146,7 +146,7 @@
 <p><a class="reference internal" href="#ep4"><span class="std std-ref">4</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by implementation-defined constant expressions that are greater or equal in magnitude (absolute value) to those shown, with the same sign:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define    DBL_DIG                                        10</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define    DBL_DIG                                        10</span>
 <span class="cp">#define    DBL_MANT_DIG</span>
 <span class="cp">#define    DBL_MAX_10_EXP                               +37</span>
 <span class="cp">#define    DBL_MAX_EXP</span>
@@ -172,7 +172,7 @@
 <p><a class="reference internal" href="#ep5"><span class="std std-ref">5</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by implementation-defined constant expressions with values that are greater than or equal to those shown:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define DBL_MAX                                      1E+37</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define DBL_MAX                                      1E+37</span>
 <span class="cp">#define FLT_MAX                                      1E+37</span>
 <span class="cp">#define LDBL_MAX                                     1E+37</span>
 </pre></div>
@@ -181,7 +181,7 @@
 <p><a class="reference internal" href="#ep6"><span class="std std-ref">6</span></a></p>
 </div>
 <p>The values given in the following list shall be replaced by implementation-defined constant expressions with (positive) values that are less than or equal to those shown:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define    DBL_EPSILON                                1E-9</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define    DBL_EPSILON                                1E-9</span>
 <span class="cp">#define    DBL_MIN                                   1E-37</span>
 <span class="cp">#define    FLT_EPSILON                                1E-5</span>
 <span class="cp">#define    FLT_MIN                                   1E-37</span>

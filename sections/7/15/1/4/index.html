@@ -147,7 +147,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">va_start</span><span class="p">(</span><span class="kt">va_list</span><span class="w"> </span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">parmN</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -173,7 +173,7 @@
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The function f1 gathers into an array a list of arguments that are pointers to strings (but not more than MAXARGS arguments), then passes the array as a single argument to function f2. The number of pointers is specified by the first argument to f1.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#define MAXARGS   31</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="p">{</span>
@@ -182,23 +182,23 @@
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_ptrs</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MAXARGS</span><span class="p">)</span>
 <span class="w">            </span><span class="n">n_ptrs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAXARGS</span><span class="p">;</span>
-<span class="w">      </span><span class="n">va_start</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">va_start</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">);</span>
 <span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr_no</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">)</span>
-<span class="w">            </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
-<span class="w">      </span><span class="n">va_end</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
+<span class="w">            </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">va_arg</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">va_end</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
 <span class="w">      </span><span class="n">f2</span><span class="p">(</span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Each call to f1 is required to have visible the definition of the function or a declaration such as</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The function f3 is similar, but saves the status of the variable argument list after the indicated number of arguments; after f2 has been called once with the whole list, the trailing part of the list is gathered again and passed to function f4.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#define MAXARGS 31</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f4_after</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="p">{</span>
@@ -207,20 +207,20 @@
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">ptr_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_ptrs</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MAXARGS</span><span class="p">)</span>
 <span class="w">            </span><span class="n">n_ptrs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAXARGS</span><span class="p">;</span>
-<span class="w">      </span><span class="n">va_start</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">f4_after</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">va_start</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="n">f4_after</span><span class="p">);</span>
 <span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr_no</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
+<span class="w">            </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">va_arg</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptr_no</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f4_after</span><span class="p">)</span>
-<span class="w">                  </span><span class="n">va_copy</span><span class="p">(</span><span class="n">ap_save</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span>
+<span class="w">                  </span><span class="nf">va_copy</span><span class="p">(</span><span class="n">ap_save</span><span class="p">,</span><span class="w"> </span><span class="n">ap</span><span class="p">);</span>
 <span class="w">      </span><span class="p">}</span>
-<span class="w">      </span><span class="n">va_end</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">va_end</span><span class="p">(</span><span class="n">ap</span><span class="p">);</span>
 <span class="w">      </span><span class="n">f2</span><span class="p">(</span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">);</span>
 <span class="w">         </span><span class="c1">// Now process the saved copy.</span>
 <span class="w">         </span><span class="n">n_ptrs</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">f4_after</span><span class="p">;</span>
 <span class="w">         </span><span class="n">ptr_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">         </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr_no</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n_ptrs</span><span class="p">)</span>
-<span class="w">               </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">va_arg</span><span class="p">(</span><span class="n">ap_save</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
-<span class="w">         </span><span class="n">va_end</span><span class="p">(</span><span class="n">ap_save</span><span class="p">);</span>
+<span class="w">               </span><span class="n">array</span><span class="p">[</span><span class="n">ptr_no</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">va_arg</span><span class="p">(</span><span class="n">ap_save</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
+<span class="w">         </span><span class="nf">va_end</span><span class="p">(</span><span class="n">ap_save</span><span class="p">);</span>
 <span class="w">         </span><span class="n">f4</span><span class="p">(</span><span class="n">n_ptrs</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>

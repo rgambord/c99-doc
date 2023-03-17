@@ -156,7 +156,7 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The type defined is</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">sig_atomic_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">sig_atomic_t</span>
 </pre></div>
 </div>
 <p>which is the (possibly volatile-qualified) integer type of an object that can be accessed as an atomic entity, even in the presence of asynchronous interrupts.</p>
@@ -164,9 +164,9 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros defined are</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SIG_DFL</span>
-<span class="n">SIG_ERR</span>
-<span class="n">SIG_IGN</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">SIG_DFL</span>
+<span class="no">SIG_ERR</span>
+<span class="no">SIG_IGN</span>
 </pre></div>
 </div>
 <p>which expand to constant expressions with distinct values that have type compatible with the second argument to, and the return value of, the signal function, and whose values compare unequal to the address of any declarable function; and the following, which expand to positive integer constant expressions with type int and distinct values that are the signal numbers, each corresponding to the specified condition:</p>

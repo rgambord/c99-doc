@@ -146,39 +146,39 @@
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>Each instance of these macros shall be replaced by a constant expression suitable for use in <span class="c-texpr sig sig-inline highlight c">#if</span> preprocessing directives, and this expression shall have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Its implementation-defined value shall be equal to or greater in magnitude (absolute value) than the corresponding value given below, with the same sign. An implementation shall define only the macros corresponding to those typedef names it actually provides.<a class="footnote-reference brackets" href="#note228" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>Each instance of these macros shall be replaced by a constant expression suitable for use in <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">if</span></span> preprocessing directives, and this expression shall have the same type as would an expression that is an object of the corresponding type converted according to the integer promotions. Its implementation-defined value shall be equal to or greater in magnitude (absolute value) than the corresponding value given below, with the same sign. An implementation shall define only the macros corresponding to those typedef names it actually provides.<a class="footnote-reference brackets" href="#note228" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <ul class="simple">
 <li><p>limits of ptrdiff_t</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">PTRDIFF_MIN</span><span class="w">                                            </span><span class="mi">-65535</span>
-<span class="n">PTRDIFF_MAX</span><span class="w">                                            </span><span class="o">+</span><span class="mi">65535</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">PTRDIFF_MIN</span><span class="w">                                            </span><span class="mi">-65535</span>
+<span class="no">PTRDIFF_MAX</span><span class="w">                                            </span><span class="o">+</span><span class="mi">65535</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>limits of sig_atomic_t</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SIG_ATOMIC_MIN</span><span class="w">                                         </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
-<span class="n">SIG_ATOMIC_MAX</span><span class="w">                                         </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">SIG_ATOMIC_MIN</span><span class="w">                                         </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<span class="no">SIG_ATOMIC_MAX</span><span class="w">                                         </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>limit of size_t</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">SIZE_MAX</span><span class="w">                                               </span><span class="mi">65535</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">SIZE_MAX</span><span class="w">                                               </span><span class="mi">65535</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>limits of wchar_t</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">WCHAR_MIN</span><span class="w">                                              </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
-<span class="n">WCHAR_MAX</span><span class="w">                                              </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">WCHAR_MIN</span><span class="w">                                              </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<span class="no">WCHAR_MAX</span><span class="w">                                              </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>limits of wint_t</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">WINT_MIN</span><span class="w">                                               </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
-<span class="n">WINT_MAX</span><span class="w">                                               </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">WINT_MIN</span><span class="w">                                               </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
+<span class="no">WINT_MAX</span><span class="w">                                               </span><span class="n">see</span><span class="w"> </span><span class="n">below</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p3">

@@ -200,10 +200,10 @@
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> This pair of adjacent character string literals</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\x12</span><span class="s">&quot;</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\x12</span><span class="s">&quot;</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 </pre></div>
 </div>
-<p>produces a single character string literal containing the two characters whose values are <span class="c-texpr sig sig-inline highlight c"><span class="sc">'\x12'</span></span> and <span class="c-texpr sig sig-inline highlight c"><span class="sc">'3'</span></span>, because escape sequences are converted into single members of the execution character set just prior to adjacent string literal concatenation.</p>
+<p>produces a single character string literal containing the two characters whose values are <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\x12</span><span class="sc">'</span></span> and <span class="highlight context-highlighting"><span class="sc">'</span><span class="sc">3</span><span class="sc">'</span></span>, because escape sequences are converted into single members of the execution character set just prior to adjacent string literal concatenation.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>

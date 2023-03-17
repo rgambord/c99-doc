@@ -157,8 +157,8 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">rewind</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">stream</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">rewind</span><span class="p">(</span><span class="no">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">stream</span><span class="p">);</span>
 </pre></div>
 </div>
 <p class="rubric">Description</p>
@@ -166,7 +166,7 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The rewind function sets the file position indicator for the stream pointed to by stream to the beginning of the file. It is equivalent to</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">fseek</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="mf">0L</span><span class="p">,</span><span class="w"> </span><span class="n">SEEK_SET</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fseek</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="mf">0L</span><span class="p">,</span><span class="w"> </span><span class="no">SEEK_SET</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>except that the error indicator for the stream is also cleared.</p>

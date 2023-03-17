@@ -130,11 +130,11 @@
              
   <section id="b-10-localization-locale-h">
 <span id="b-10"></span><h1>B.10 Localization &lt;locale.h&gt;<a class="headerlink" href="#b-10-localization-locale-h" title="Permalink to this heading"></a></h1>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="w">    </span><span class="n">LC_ALL</span><span class="w">            </span><span class="n">LC_CTYPE</span><span class="w">          </span><span class="n">LC_NUMERIC</span>
-<span class="nb">NULL</span><span class="w">            </span><span class="n">LC_COLLATE</span><span class="w">        </span><span class="n">LC_MONETARY</span><span class="w">       </span><span class="n">LC_TIME</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="w">    </span><span class="no">LC_ALL</span><span class="w">            </span><span class="no">LC_CTYPE</span><span class="w">          </span><span class="no">LC_NUMERIC</span>
+<span class="no">NULL</span><span class="w">            </span><span class="no">LC_COLLATE</span><span class="w">        </span><span class="no">LC_MONETARY</span><span class="w">       </span><span class="no">LC_TIME</span>
 
-<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">setlocale</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">locale</span><span class="p">);</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="w"> </span><span class="o">*</span><span class="n">localeconv</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">setlocale</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">locale</span><span class="p">);</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="w"> </span><span class="o">*</span><span class="nf">localeconv</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>

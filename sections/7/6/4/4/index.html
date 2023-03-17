@@ -150,8 +150,8 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">feupdateenv</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">fenv_t</span><span class="w"> </span><span class="o">*</span><span class="n">envp</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">feupdateenv</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">fenv_t</span><span class="w"> </span><span class="o">*</span><span class="n">envp</span><span class="p">);</span>
 </pre></div>
 </div>
 <p class="rubric">Description</p>
@@ -168,19 +168,19 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> Hide spurious underflow floating-point exceptions:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="kt">double</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="w">      </span><span class="n">fenv_t</span><span class="w"> </span><span class="n">save_env</span><span class="p">;</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">feholdexcept</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">))</span>
+<span class="w">      </span><span class="kt">fenv_t</span><span class="w"> </span><span class="n">save_env</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">feholdexcept</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">))</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="cm">/* indication of an environmental problem */</span><span class="p">;</span>
 <span class="w">      </span><span class="c1">// compute result</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="cm">/* test spurious underflow */</span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">feclearexcept</span><span class="p">(</span><span class="n">FE_UNDERFLOW</span><span class="p">))</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">feclearexcept</span><span class="p">(</span><span class="no">FE_UNDERFLOW</span><span class="p">))</span>
 <span class="w">                     </span><span class="k">return</span><span class="w"> </span><span class="cm">/* indication of an environmental problem */</span><span class="p">;</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">feupdateenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">))</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">feupdateenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">))</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="cm">/* indication of an environmental problem */</span><span class="p">;</span>
 <span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>

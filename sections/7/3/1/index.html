@@ -152,11 +152,11 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">complex</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">complex</span>
 </pre></div>
 </div>
 <p>expands to _Complex; the macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">_Complex_I</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">_Complex_I</span>
 </pre></div>
 </div>
 <p>expands to a constant expression of type const float _Complex, with the value of the imaginary unit.<a class="footnote-reference brackets" href="#note167" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
@@ -164,11 +164,11 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">imaginary</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">imaginary</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">_Imaginary_I</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">_Imaginary_I</span>
 </pre></div>
 </div>
 <p>are defined if and only if the implementation supports imaginary types;<a class="footnote-reference brackets" href="#note168" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> if defined, they expand to _Imaginary and a constant expression of type const float _Imaginary with the value of the imaginary unit.</p>
@@ -176,7 +176,7 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">I</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">I</span>
 </pre></div>
 </div>
 <p>expands to either _Imaginary_I or _Complex_I. If _Imaginary_I is not defined, I shall expand to _Complex_I.</p>

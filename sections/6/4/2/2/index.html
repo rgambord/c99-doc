@@ -139,7 +139,7 @@
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
 <p>The identifier __func__ shall be implicitly declared by the translator as if, immediately following the opening brace of each function definition, the declaration</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">__func__</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;function-name&quot;</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="no">__func__</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;function-name&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>appeared, where function-name is the name of the lexically-enclosing function.<a class="footnote-reference brackets" href="#note61" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
@@ -151,10 +151,10 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> Consider the code fragment:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">myfunc</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">__func__</span><span class="p">);</span>
+<span class="w">      </span><span class="nf">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="no">__func__</span><span class="p">);</span>
 <span class="w">      </span><span class="cm">/* ... */</span>
 <span class="p">}</span>
 </pre></div>

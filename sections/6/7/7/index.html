@@ -152,7 +152,7 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>In a declaration whose storage-class specifier is typedef, each declarator defines an identifier to be a typedef name that denotes the type specified for the identifier in the way described in <a class="reference internal" href="../5/index.html#id1"><span class="std std-ref">6.7.5</span></a>. Any array size expressions associated with variable length array declarators are evaluated each time the declaration of the typedef name is reached in the order of execution. A typedef declaration does not introduce a new type, only a synonym for the type so specified. That is, in the following declarations:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">type_ident</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">T</span><span class="w"> </span><span class="n">type_ident</span><span class="p">;</span>
 <span class="n">type_ident</span><span class="w"> </span><span class="n">D</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -161,12 +161,12 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> After</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MILES</span><span class="p">,</span><span class="w"> </span><span class="n">KLICKSP</span><span class="p">();</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MILES</span><span class="p">,</span><span class="w"> </span><span class="n">KLICKSP</span><span class="p">();</span>
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">hi</span><span class="p">,</span><span class="w"> </span><span class="n">lo</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">range</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>the constructions</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MILES</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="n">MILES</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
 <span class="k">extern</span><span class="w"> </span><span class="n">KLICKSP</span><span class="w"> </span><span class="o">*</span><span class="n">metricp</span><span class="p">;</span>
 <span class="n">range</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="n">range</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">zp</span><span class="p">;</span>
@@ -177,7 +177,7 @@
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> After the declarations</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tp1</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tp1</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tp2</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -186,7 +186,7 @@
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> The following obscure constructions</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">signed</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">signed</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">plain</span><span class="p">;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">tag</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">t</span><span class="o">:</span><span class="mi">4</span><span class="p">;</span>
@@ -196,7 +196,7 @@
 </pre></div>
 </div>
 <p>declare a typedef name t with type signed int, a typedef name plain with type int, and a structure with three bit-field members, one named t that contains values in the range [0, 15], an unnamed const- qualified bit-field which (if it could be accessed) would contain values in either the range [-15, +15] or [-16, +15], and one named r that contains values in one of the ranges [0, 31], [-15, +15], or [-16, +15]. (The choice of range is implementation-defined.) The first two bit-field declarations differ in that unsigned is a type specifier (which forces t to be the name of a structure member), while const is a type qualifier (which modifies t which is still visible as a typedef name). If these declarations are followed in an inner scope by</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
 <span class="kt">long</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -205,8 +205,8 @@
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">4</span></code> On the other hand, typedef names can be used to improve code readability. All three of the following declarations of the signal function specify exactly the same type, the first without making use of any typedef names.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fv</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pfv</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
-<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fv</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">pfv</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">int</span><span class="p">)))(</span><span class="kt">int</span><span class="p">);</span>
 <span class="n">fv</span><span class="w"> </span><span class="o">*</span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">fv</span><span class="w"> </span><span class="o">*</span><span class="p">);</span>
 <span class="n">pfv</span><span class="w"> </span><span class="nf">signal</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">pfv</span><span class="p">);</span>
 </pre></div>
@@ -215,7 +215,7 @@
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">5</span></code> If a typedef name denotes a variable length array type, the length of the array is fixed at the time the typedef name is defined, not each time it is used:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">copyt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">copyt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w">    </span><span class="c1">//               B is n ints, n evaluated now</span>
 <span class="w">      </span><span class="n">n</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>

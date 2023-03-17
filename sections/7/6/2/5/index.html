@@ -151,7 +151,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">fetestexcept</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">excepts</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -169,16 +169,16 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> Call f if “invalid” is set, then g if “overflow” is set:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="cm">/* ... */</span>
 <span class="p">{</span>
 <span class="w">        </span><span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">set_excepts</span><span class="p">;</span>
-<span class="w">        </span><span class="n">feclearexcept</span><span class="p">(</span><span class="n">FE_INVALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">FE_OVERFLOW</span><span class="p">);</span>
+<span class="w">        </span><span class="nf">feclearexcept</span><span class="p">(</span><span class="no">FE_INVALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="no">FE_OVERFLOW</span><span class="p">);</span>
 <span class="w">        </span><span class="c1">// maybe raise exceptions</span>
-<span class="w">        </span><span class="n">set_excepts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_INVALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">FE_OVERFLOW</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set_excepts</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">FE_INVALID</span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">();</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set_excepts</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">FE_OVERFLOW</span><span class="p">)</span><span class="w"> </span><span class="n">g</span><span class="p">();</span>
+<span class="w">        </span><span class="n">set_excepts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fetestexcept</span><span class="p">(</span><span class="no">FE_INVALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="no">FE_OVERFLOW</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set_excepts</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="no">FE_INVALID</span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">set_excepts</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="no">FE_OVERFLOW</span><span class="p">)</span><span class="w"> </span><span class="n">g</span><span class="p">();</span>
 <span class="w">        </span><span class="cm">/* ... */</span>
 <span class="p">}</span>
 </pre></div>

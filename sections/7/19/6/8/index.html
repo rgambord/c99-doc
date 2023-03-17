@@ -166,9 +166,9 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">vfprintf</span><span class="p">(</span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">vfprintf</span><span class="p">(</span><span class="no">FILE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span>
 <span class="w">     </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">format</span><span class="p">,</span>
 <span class="w">     </span><span class="kt">va_list</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
 </pre></div>
@@ -187,17 +187,17 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code> The following shows the use of the vfprintf function in a general error-reporting routine.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdarg.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">function_name</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 <span class="p">{</span>
 <span class="w">      </span><span class="kt">va_list</span><span class="w"> </span><span class="n">args</span><span class="p">;</span>
-<span class="w">         </span><span class="n">va_start</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="p">);</span>
+<span class="w">         </span><span class="nf">va_start</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="p">);</span>
 <span class="w">         </span><span class="c1">// print out name of function causing error</span>
-<span class="w">         </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ERROR in %s: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">function_name</span><span class="p">);</span>
+<span class="w">         </span><span class="nf">fprintf</span><span class="p">(</span><span class="nv">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ERROR in %s: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">function_name</span><span class="p">);</span>
 <span class="w">         </span><span class="c1">// print out remainder of message</span>
-<span class="w">         </span><span class="n">vfprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
-<span class="w">         </span><span class="n">va_end</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">         </span><span class="nf">vfprintf</span><span class="p">(</span><span class="nv">stderr</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<span class="w">         </span><span class="nf">va_end</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

@@ -133,7 +133,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<p>A <span class="c-texpr sig sig-inline highlight c">#include</span> directive shall identify a header or source file that can be processed by the implementation.</p>
+<p>A <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">include</span></span> directive shall identify a header or source file that can be processed by the implementation.</p>
 <p class="rubric">Semantics</p>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
@@ -166,24 +166,24 @@
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
-<p>The implementation shall provide unique mappings for sequences consisting of one or more nondigits or digits (<a class="reference internal" href="../../4/2/index.html#id2"><span class="std std-ref">6.4.2.1</span></a>) followed by a period (.) and a single nondigit. The first character shall not be a digit. The implementation may ignore distinctions of alphabetical case and restrict the mapping to eight significant characters before the period.</p>
+<p>The implementation shall provide unique mappings for sequences consisting of one or more nondigits or digits (<a class="reference internal" href="../../4/2/1/index.html#id1"><span class="std std-ref">6.4.2.1</span></a>) followed by a period (.) and a single nondigit. The first character shall not be a digit. The implementation may ignore distinctions of alphabetical case and restrict the mapping to eight significant characters before the period.</p>
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>A <span class="c-texpr sig sig-inline highlight c">#include</span> preprocessing directive may appear in a source file that has been read because of a <span class="c-texpr sig sig-inline highlight c">#include</span> directive in another file, up to an implementation-defined nesting limit (see <a class="reference internal" href="../../../5/2/4/1/index.html#id1"><span class="std std-ref">5.2.4.1</span></a>).</p>
+<p>A <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">include</span></span> preprocessing directive may appear in a source file that has been read because of a <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">include</span></span> directive in another file, up to an implementation-defined nesting limit (see <a class="reference internal" href="../../../5/2/4/1/index.html#id1"><span class="std std-ref">5.2.4.1</span></a>).</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The most common uses of <span class="c-texpr sig sig-inline highlight c">#include</span> preprocessing directives are as in the following:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The most common uses of <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">include</span></span> preprocessing directives are as in the following:</p>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myprog.h&quot;</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p8">
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> This illustrates macro-replaced <span class="c-texpr sig sig-inline highlight c">#include</span> directives:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#if VERSION == 1</span>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> This illustrates macro-replaced <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">include</span></span> directives:</p>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#if VERSION == 1</span>
 <span class="w">      </span><span class="cp">#define INCFILE        &quot;vers1.h&quot;</span>
 <span class="cp">#elif VERSION == 2</span>
 <span class="w">      </span><span class="cp">#define INCFILE        &quot;vers2.h&quot;      </span><span class="c1">// and so on</span>

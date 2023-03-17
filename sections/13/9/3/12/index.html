@@ -156,17 +156,17 @@
 <p><a class="reference internal" href="#f-9-3-12p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>modf behaves as though implemented by</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="kt">double</span><span class="w"> </span><span class="nf">modf</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">iptr</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">save_round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fegetround</span><span class="p">();</span>
-<span class="w">     </span><span class="n">fesetround</span><span class="p">(</span><span class="n">FE_TOWARDZERO</span><span class="p">);</span>
-<span class="w">     </span><span class="o">*</span><span class="n">iptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nearbyint</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-<span class="w">     </span><span class="n">fesetround</span><span class="p">(</span><span class="n">save_round</span><span class="p">);</span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">copysign</span><span class="p">(</span>
-<span class="w">          </span><span class="n">isinf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">:</span>
+<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">save_round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fegetround</span><span class="p">();</span>
+<span class="w">     </span><span class="nf">fesetround</span><span class="p">(</span><span class="no">FE_TOWARDZERO</span><span class="p">);</span>
+<span class="w">     </span><span class="o">*</span><span class="n">iptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">nearbyint</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="w">     </span><span class="nf">fesetround</span><span class="p">(</span><span class="n">save_round</span><span class="p">);</span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nf">copysign</span><span class="p">(</span>
+<span class="w">          </span><span class="nf">isinf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">:</span>
 <span class="w">               </span><span class="n">value</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">iptr</span><span class="p">),</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>

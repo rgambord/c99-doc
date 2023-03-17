@@ -118,7 +118,7 @@
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>The implementation shall not successfully translate a preprocessing translation unit containing a <span class="c-texpr sig sig-inline highlight c">#error</span> preprocessing directive unless it is part of a group skipped by conditional inclusion.</p>
+<p>The implementation shall not successfully translate a preprocessing translation unit containing a <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">error</span></span> preprocessing directive unless it is part of a group skipped by conditional inclusion.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
@@ -157,9 +157,9 @@
 <li><p><a class="reference internal" href="../7/18/index.html#id1"><span class="std std-ref">7.18 Integer types &lt;stdint.h&gt;</span></a></p></li>
 </ul>
 </td></tr></table>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef __STDC_IEC_559__ </span><span class="cm">/* FE_UPWARD defined */</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef __STDC_IEC_559__ </span><span class="cm">/* FE_UPWARD defined */</span>
 <span class="w">   </span><span class="cm">/* ... */</span>
-<span class="w">   </span><span class="n">fesetround</span><span class="p">(</span><span class="n">FE_UPWARD</span><span class="p">);</span>
+<span class="w">   </span><span class="nf">fesetround</span><span class="p">(</span><span class="no">FE_UPWARD</span><span class="p">);</span>
 <span class="w">   </span><span class="cm">/* ... */</span>
 <span class="cp">#endif</span>
 </pre></div>
@@ -168,7 +168,7 @@
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="note2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>A strictly conforming program can use conditional features (such as those in <a class="reference internal" href="../13/index.html#f"><span class="std std-ref">annex F</span></a>) provided the use is guarded by a <span class="c-texpr sig sig-inline highlight c">#ifdef</span> directive with the appropriate macro. For example:</p>
+<p>A strictly conforming program can use conditional features (such as those in <a class="reference internal" href="../13/index.html#f"><span class="std std-ref">annex F</span></a>) provided the use is guarded by a <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">ifdef</span></span> directive with the appropriate macro. For example:</p>
 </aside>
 <aside class="footnote brackets" id="note3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>

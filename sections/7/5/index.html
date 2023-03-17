@@ -140,13 +140,13 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The macros are</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">EDOM</span>
-<span class="n">EILSEQ</span>
-<span class="n">ERANGE</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">EDOM</span>
+<span class="no">EILSEQ</span>
+<span class="no">ERANGE</span>
 </pre></div>
 </div>
-<p>which expand to integer constant expressions with type int, distinct positive values, and which are suitable for use in <span class="c-texpr sig sig-inline highlight c">#if</span> preprocessing directives; and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">errno</span>
+<p>which expand to integer constant expressions with type int, distinct positive values, and which are suitable for use in <span class="highlight context-highlighting"><span class="cp">#</span><span class="cp">if</span></span> preprocessing directives; and</p>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="nv">errno</span>
 </pre></div>
 </div>
 <p>which expands to a modifiable lvalue<a class="footnote-reference brackets" href="#note175" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> that has type int, the value of which is set to a positive error number by several library functions. It is unspecified whether errno is a macro or an identifier declared with external linkage. If a macro definition is suppressed in order to access an actual object, or a program defines an identifier with the name errno, the behavior is undefined.</p>

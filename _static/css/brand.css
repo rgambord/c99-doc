@@ -116,3 +116,11 @@ img.logo {
   position: absolute;
   right: 0;
 }
+
+.context-highlighting {
+  font-family: monospace;
+  font-weight: bold;
+  /* background: #f7f7f7; */
+  padding: 0 0.25ch;
+  margin: 0 0.25ch
+}

@@ -132,7 +132,7 @@
 <p><a class="reference internal" href="#f-7-5p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
@@ -150,7 +150,7 @@
 <p><a class="reference internal" href="#f-7-5p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The static initialization of v raises no (execution-time) floating-point exceptions because its computation is done at translation time. The automatic initialization of u and w require an execution-time conversion to float of the wider value 1.1e75, which raises floating-point exceptions. The automatic initializations of x and y entail execution-time conversion; however, in some expression evaluation methods, the conversions is not to a narrower format, in which case no floating-point exception is raised.<a class="footnote-reference brackets" href="#note316" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The automatic initialization of z entails execution-time conversion, but not to a narrower format, so no floating- point exception is raised. Note that the conversions of the floating constants 1.1e75 and 1.1e75f to their internal representations occur at translation time in all cases.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">double_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1e75</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">double_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1e75</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>could be done at translation time, regardless of the expression evaluation method.</p>

@@ -146,15 +146,15 @@
 <p><a class="reference internal" href="#f-9-7-1p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The double version of fmod behaves as though implemented by</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="kt">double</span><span class="w"> </span><span class="nf">fmod</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="w">     </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remainder</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">y</span><span class="p">)));</span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">signbit</span><span class="p">(</span><span class="n">result</span><span class="p">))</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">copysign</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">     </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">remainder</span><span class="p">(</span><span class="nf">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fabs</span><span class="p">(</span><span class="n">y</span><span class="p">)));</span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">signbit</span><span class="p">(</span><span class="n">result</span><span class="p">))</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nf">copysign</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

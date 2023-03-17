@@ -180,7 +180,7 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The type</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">fenv_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">fenv_t</span>
 </pre></div>
 </div>
 <p>represents the entire floating-point environment.</p>
@@ -188,7 +188,7 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p>The type</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">fexcept_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">fexcept_t</span>
 </pre></div>
 </div>
 <p>represents the floating-point status flags collectively, including any status the implementation associates with the flags.</p>
@@ -196,11 +196,11 @@
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
 <p>Each of the macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FE_DIVBYZERO</span>
-<span class="n">FE_INEXACT</span>
-<span class="n">FE_INVALID</span>
-<span class="n">FE_OVERFLOW</span>
-<span class="n">FE_UNDERFLOW</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FE_DIVBYZERO</span>
+<span class="no">FE_INEXACT</span>
+<span class="no">FE_INVALID</span>
+<span class="no">FE_OVERFLOW</span>
+<span class="no">FE_UNDERFLOW</span>
 </pre></div>
 </div>
 <p>is defined if and only if the implementation supports the floating-point exception by means of the functions in 7.6.2.<a class="footnote-reference brackets" href="#note181" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> Additional implementation-defined floating-point exceptions, with macro definitions beginning with FE_ and an uppercase letter, may also be specified by the implementation. The defined macros expand to integer constant expressions with values such that bitwise ORs of all combinations of the macros result in distinct values, and furthermore, bitwise ANDs of all combinations of the macros result in zero.<a class="footnote-reference brackets" href="#note182" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
@@ -208,7 +208,7 @@
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FE_ALL_EXCEPT</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FE_ALL_EXCEPT</span>
 </pre></div>
 </div>
 <p>is simply the bitwise OR of all floating-point exception macros defined by the implementation. If no such macros are defined, FE_ALL_EXCEPT shall be defined as 0.</p>
@@ -216,10 +216,10 @@
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
 <p>Each of the macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FE_DOWNWARD</span>
-<span class="n">FE_TONEAREST</span>
-<span class="n">FE_TOWARDZERO</span>
-<span class="n">FE_UPWARD</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FE_DOWNWARD</span>
+<span class="no">FE_TONEAREST</span>
+<span class="no">FE_TOWARDZERO</span>
+<span class="no">FE_UPWARD</span>
 </pre></div>
 </div>
 <p>is defined if and only if the implementation supports getting and setting the represented rounding direction by means of the fegetround and fesetround functions. Additional implementation-defined rounding directions, with macro definitions beginning with FE_ and an uppercase letter, may also be specified by the implementation. The defined macros expand to integer constant expressions whose values are distinct nonnegative values.<a class="footnote-reference brackets" href="#note183" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
@@ -227,7 +227,7 @@
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FE_DFL_ENV</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FE_DFL_ENV</span>
 </pre></div>
 </div>
 <p>represents the default floating-point environment – the one installed at program startup – and has type “pointer to const-qualified fenv_t”. It can be used as an argument to <a class="reference internal" href="#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a> functions that manage the floating-point environment.</p>

@@ -158,7 +158,7 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The type declared is</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">va_list</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">va_list</span>
 </pre></div>
 </div>
 <p>which is an object type suitable for holding information needed by the macros va_start, va_arg, va_end, and va_copy. If access to the varying arguments is desired, the called function shall declare an object (generally referred to as ap in this subclause) having type va_list. The object ap may be passed as an argument to another function; if that function invokes the va_arg macro with parameter ap, the value of ap in the calling function is indeterminate and shall be passed to the va_end macro prior to any further reference to ap.<a class="footnote-reference brackets" href="#note221" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>

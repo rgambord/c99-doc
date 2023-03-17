@@ -158,7 +158,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wchar.h&gt;</span>
 <span class="kt">size_t</span><span class="w"> </span><span class="nf">mbrlen</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s</span><span class="p">,</span>
 <span class="w">     </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
 <span class="w">     </span><span class="kt">mbstate_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">ps</span><span class="p">);</span>
@@ -169,7 +169,7 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The mbrlen function is equivalent to the call:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">mbrtowc</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&amp;</span><span class="n">internal</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="nf">mbrtowc</span><span class="p">(</span><span class="no">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&amp;</span><span class="n">internal</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>where internal is the mbstate_t object for the mbrlen function, except that the expression designated by ps is evaluated only once.</p>

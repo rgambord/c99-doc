@@ -208,14 +208,14 @@
 <p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> This mechanism allows declaration of a self-referential structure.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
 <span class="w">      </span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>specifies a structure that contains an integer and two pointers to objects of the same type. Once this declaration has been given, the declaration</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>declares s to be an object of the given type and sp to be a pointer to an object of the given type. With these declarations, the expression sp-&gt;left refers to the left struct tnode pointer of the object to which sp points; the expression s.right-&gt;count designates the count member of the right struct tnode pointed to from s.</p>
@@ -223,24 +223,24 @@
 <p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
 </div>
 <p>The following alternative formulation uses the typedef mechanism:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="n">TNODE</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="kt">T</span><span class="n">NODE</span><span class="p">;</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">tnode</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
-<span class="w">      </span><span class="n">TNODE</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">T</span><span class="n">NODE</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="n">TNODE</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
+<span class="kt">T</span><span class="n">NODE</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p12">
 <p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> To illustrate the use of prior declaration of a tag to specify a pair of mutually referential structures, the declarations</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="o">*</span><span class="n">s2p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// D1</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="o">*</span><span class="n">s2p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// D1</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">s1</span><span class="w"> </span><span class="o">*</span><span class="n">s1p</span><span class="p">;</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// D2</span>
 </pre></div>
 </div>
 <p>specify a pair of structures that contain pointers to each other. Note, however, that if s2 were already declared as a tag in an enclosing scope, the declaration D1 would refer to it, not to the tag s2 declared in D2. To eliminate this context sensitivity, the declaration</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">s2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>may be inserted ahead of D1. This declares a new tag s2 in the inner scope; the declaration D2 then completes the specification of the new type.</p>

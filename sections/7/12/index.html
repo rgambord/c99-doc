@@ -264,8 +264,8 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The types</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">float_t</span>
-<span class="n">double_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">float_t</span>
+<span class="kt">double_t</span>
 </pre></div>
 </div>
 <p>are floating types at least as wide as float and double, respectively, and such that double_t is at least as wide as float_t. If FLT_EVAL_METHOD equals 0, float_t and double_t are float and double, respectively; if FLT_EVAL_METHOD equals 1, they are both double; if FLT_EVAL_METHOD equals 2, they are both long double; and for other values of FLT_EVAL_METHOD, they are otherwise implementation-defined.<a class="footnote-reference brackets" href="#note199" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
@@ -273,12 +273,12 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HUGE_VAL</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">HUGE_VAL</span>
 </pre></div>
 </div>
 <p>expands to a positive double constant expression, not necessarily representable as a float. The macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">HUGE_VALF</span>
-<span class="n">HUGE_VALL</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">HUGE_VALF</span>
+<span class="no">HUGE_VALL</span>
 </pre></div>
 </div>
 <p>are respectively float and long double analogs of HUGE_VAL.<a class="footnote-reference brackets" href="#note200" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
@@ -286,7 +286,7 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">INFINITY</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">INFINITY</span>
 </pre></div>
 </div>
 <p>expands to a constant expression of type float representing positive or unsigned infinity, if available; else to a positive constant of type float that overflows at translation time.<a class="footnote-reference brackets" href="#note201" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
@@ -294,7 +294,7 @@
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">NAN</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">NAN</span>
 </pre></div>
 </div>
 <p>is defined if and only if the implementation supports quiet NaNs for the float type. It expands to a constant expression of type float representing a quiet NaN.</p>
@@ -302,11 +302,11 @@
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
 <p>The number classification macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_INFINITE</span>
-<span class="n">FP_NAN</span>
-<span class="n">FP_NORMAL</span>
-<span class="n">FP_SUBNORMAL</span>
-<span class="n">FP_ZERO</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FP_INFINITE</span>
+<span class="no">FP_NAN</span>
+<span class="no">FP_NORMAL</span>
+<span class="no">FP_SUBNORMAL</span>
+<span class="no">FP_ZERO</span>
 </pre></div>
 </div>
 <p>represent the mutually exclusive kinds of floating-point values. They expand to integer constant expressions with distinct values. Additional implementation-defined floating- point classifications, with macro definitions beginning with FP_ and an uppercase letter, may also be specified by the implementation.</p>
@@ -314,12 +314,12 @@
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
 <p>The macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_FAST_FMA</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FP_FAST_FMA</span>
 </pre></div>
 </div>
 <p>is optionally defined. If defined, it indicates that the fma function generally executes about as fast as, or faster than, a multiply and an add of double operands.<a class="footnote-reference brackets" href="#note202" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> The macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_FAST_FMAF</span>
-<span class="n">FP_FAST_FMAL</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FP_FAST_FMAF</span>
+<span class="no">FP_FAST_FMAL</span>
 </pre></div>
 </div>
 <p>are, respectively, float and long double analogs of FP_FAST_FMA. If defined, these macros expand to the integer constant 1.</p>
@@ -327,8 +327,8 @@
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
 <p>The macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">FP_ILOGB0</span>
-<span class="n">FP_ILOGBNAN</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">FP_ILOGB0</span>
+<span class="no">FP_ILOGBNAN</span>
 </pre></div>
 </div>
 <p>expand to integer constant expressions whose values are returned by ilogb(x) if x is zero or NaN, respectively. The value of FP_ILOGB0 shall be either INT_MIN or -INT_MAX. The value of FP_ILOGBNAN shall be either INT_MAX or INT_MIN.</p>
@@ -336,12 +336,12 @@
 <p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
 </div>
 <p>The macros</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MATH_ERRNO</span>
-<span class="n">MATH_ERREXCEPT</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">MATH_ERRNO</span>
+<span class="no">MATH_ERREXCEPT</span>
 </pre></div>
 </div>
 <p>expand to the integer constants 1 and 2, respectively; the macro</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">math_errhandling</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">math_errhandling</span>
 </pre></div>
 </div>
 <p>expands to an expression that has type int and the value MATH_ERRNO, MATH_ERREXCEPT, or the bitwise OR of both. The value of math_errhandling is constant for the duration of the program. It is unspecified whether math_errhandling is a macro or an identifier with external linkage. If a macro definition is suppressed or a program defines an identifier with the name math_errhandling, the behavior is undefined. If the expression math_errhandling &amp; MATH_ERREXCEPT can be nonzero, the implementation shall define the macros FE_DIVBYZERO, FE_INVALID, and FE_OVERFLOW in <a class="reference internal" href="../6/index.html#id1"><span class="std std-ref">&lt;fenv.h&gt;</span></a>.</p>

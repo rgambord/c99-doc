@@ -156,11 +156,11 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The type is</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span>
 </pre></div>
 </div>
 <p>which contains members related to the formatting of numeric values. The structure shall contain at least the following members, in any order. The semantics of the members and their normal ranges are explained in <a class="reference internal" href="2/1/index.html#id1"><span class="std std-ref">7.11.2.1</span></a>. In the “C” locale, the members shall have the values specified in the comments.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w">   </span><span class="o">*</span><span class="n">decimal_point</span><span class="p">;</span><span class="w">                 </span><span class="c1">//   &quot;.&quot;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w">   </span><span class="o">*</span><span class="n">decimal_point</span><span class="p">;</span><span class="w">                 </span><span class="c1">//   &quot;.&quot;</span>
 <span class="kt">char</span><span class="w">   </span><span class="o">*</span><span class="n">thousands_sep</span><span class="p">;</span><span class="w">                 </span><span class="c1">//   &quot;&quot;</span>
 <span class="kt">char</span><span class="w">   </span><span class="o">*</span><span class="n">grouping</span><span class="p">;</span><span class="w">                      </span><span class="c1">//   &quot;&quot;</span>
 <span class="kt">char</span><span class="w">   </span><span class="o">*</span><span class="n">mon_decimal_point</span><span class="p">;</span><span class="w">             </span><span class="c1">//   &quot;&quot;</span>
@@ -190,12 +190,12 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros defined are NULL (described in <a class="reference internal" href="../17/index.html#id1"><span class="std std-ref">7.17</span></a>); and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">LC_ALL</span>
-<span class="n">LC_COLLATE</span>
-<span class="n">LC_CTYPE</span>
-<span class="n">LC_MONETARY</span>
-<span class="n">LC_NUMERIC</span>
-<span class="n">LC_TIME</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">LC_ALL</span>
+<span class="no">LC_COLLATE</span>
+<span class="no">LC_CTYPE</span>
+<span class="no">LC_MONETARY</span>
+<span class="no">LC_NUMERIC</span>
+<span class="no">LC_TIME</span>
 </pre></div>
 </div>
 <p>which expand to integer constant expressions with distinct values, suitable for use as the first argument to the setlocale function.<a class="footnote-reference brackets" href="#note194" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Additional macro definitions, beginning with the characters LC_ and an uppercase letter,<a class="footnote-reference brackets" href="#note195" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> may also be specified by the implementation.</p>

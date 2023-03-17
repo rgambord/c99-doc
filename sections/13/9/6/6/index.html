@@ -150,20 +150,20 @@
 <p><a class="reference internal" href="#f-9-6-6p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The double version of round behaves as though implemented by</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fenv.h&gt;</span>
 <span class="cp">#pragma STDC FENV_ACCESS ON</span>
 <span class="kt">double</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">     </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="w">     </span><span class="n">fenv_t</span><span class="w"> </span><span class="n">save_env</span><span class="p">;</span>
-<span class="w">     </span><span class="n">feholdexcept</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">);</span>
-<span class="w">     </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fetestexcept</span><span class="p">(</span><span class="n">FE_INEXACT</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="n">fesetround</span><span class="p">(</span><span class="n">FE_TOWARDZERO</span><span class="p">);</span>
-<span class="w">          </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rint</span><span class="p">(</span><span class="n">copysign</span><span class="p">(</span><span class="mf">0.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">));</span>
+<span class="w">     </span><span class="kt">fenv_t</span><span class="w"> </span><span class="n">save_env</span><span class="p">;</span>
+<span class="w">     </span><span class="nf">feholdexcept</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">);</span>
+<span class="w">     </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rint</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">fetestexcept</span><span class="p">(</span><span class="no">FE_INEXACT</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nf">fesetround</span><span class="p">(</span><span class="no">FE_TOWARDZERO</span><span class="p">);</span>
+<span class="w">          </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rint</span><span class="p">(</span><span class="nf">copysign</span><span class="p">(</span><span class="mf">0.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">));</span>
 <span class="w">     </span><span class="p">}</span>
-<span class="w">     </span><span class="n">feupdateenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">);</span>
+<span class="w">     </span><span class="nf">feupdateenv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">save_env</span><span class="p">);</span>
 <span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>

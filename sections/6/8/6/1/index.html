@@ -152,7 +152,7 @@
 <li><p>The general initialization code is too large to warrant duplication.</p></li>
 <li><p>The code to determine the next operation is at the head of the loop. (To allow it to be reached by continue statements, for example.)</p></li>
 </ol>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* ... */</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cm">/* ... */</span>
 <span class="k">goto</span><span class="w"> </span><span class="n">first_time</span><span class="p">;</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(;;)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// determine next operation</span>
@@ -174,16 +174,16 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> A goto statement is not allowed to jump past any declarations of objects with variably modified types. A jump within the scope, however, is permitted.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">goto</span><span class="w"> </span><span class="n">lab3</span><span class="p">;</span><span class="w">                         </span><span class="c1">// invalid: going INTO scope of VLA.</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">goto</span><span class="w"> </span><span class="n">lab3</span><span class="p">;</span><span class="w">                         </span><span class="c1">// invalid: going INTO scope of VLA.</span>
 <span class="p">{</span>
-<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-<span class="w">      </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.4</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="kt">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+<span class="w">      </span><span class="kt">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.4</span><span class="p">;</span>
 <span class="nl">lab3</span><span class="p">:</span>
-<span class="w">      </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.3</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.3</span><span class="p">;</span>
 <span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="n">lab4</span><span class="p">;</span><span class="w">                   </span><span class="c1">// valid: going WITHIN scope of VLA.</span>
-<span class="w">      </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
 <span class="nl">lab4</span><span class="p">:</span>
-<span class="w">      </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.6</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.6</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">goto</span><span class="w"> </span><span class="n">lab4</span><span class="p">;</span><span class="w">                         </span><span class="c1">// invalid: going INTO scope of VLA.</span>
 </pre></div>

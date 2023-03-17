@@ -240,37 +240,37 @@
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
-<p>An integer character constant is a sequence of one or more multibyte characters enclosed in single-quotes, as in <span class="c-texpr sig sig-inline highlight c"><span class="sc">'x'</span></span>. A wide character constant is the same, except prefixed by the letter <strong>L</strong>. With a few exceptions detailed later, the elements of the sequence are any members of the source character set; they are mapped in an implementation-defined manner to members of the execution character set.</p>
+<p>An integer character constant is a sequence of one or more multibyte characters enclosed in single-quotes, as in <span class="highlight context-highlighting"><span class="sc">'</span><span class="sc">x</span><span class="sc">'</span></span>. A wide character constant is the same, except prefixed by the letter <span class="highlight context-highlighting"><span class="n">L</span></span>. With a few exceptions detailed later, the elements of the sequence are any members of the source character set; they are mapped in an implementation-defined manner to members of the execution character set.</p>
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
-<p>The single-quote <strong>‘</strong>, the double-quote <strong>“</strong>, the question-mark <strong>?</strong>, the backslash <strong>\</strong>, and arbitrary integer values are representable according to the following table of escape sequences:</p>
+<p>The single-quote <span class="highlight context-highlighting"><span class="sc">'</span></span>, the double-quote <span class="highlight context-highlighting"><span class="s">&quot;</span></span>, the question-mark <span class="highlight context-highlighting"><span class="o">?</span></span>, the backslash <span class="highlight context-highlighting"><span>\</span></span>, and arbitrary integer values are representable according to the following table of escape sequences:</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p>single quote <strong>‘</strong></p></td>
-<td><p><strong>\’</strong></p></td>
+<tr class="row-odd"><td><p>single quote <span class="highlight context-highlighting"><span class="sc">'</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="se">\'</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p>double quote <strong>“</strong></p></td>
-<td><p><strong>\”</strong></p></td>
+<tr class="row-even"><td><p>double quote <span class="highlight context-highlighting"><span class="s">&quot;</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="se">\&quot;</span></span></p></td>
 </tr>
-<tr class="row-odd"><td><p>question mark <strong>?</strong></p></td>
-<td><p><strong>\?</strong></p></td>
+<tr class="row-odd"><td><p>question mark <span class="highlight context-highlighting"><span class="o">?</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="se">\?</span></span></p></td>
 </tr>
-<tr class="row-even"><td><p>backslash <strong>\</strong></p></td>
-<td><p><strong>\\</strong></p></td>
+<tr class="row-even"><td><p>backslash <span class="highlight context-highlighting"><span>\</span></span></p></td>
+<td><p><span class="highlight context-highlighting"><span class="se">\\</span></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>octal character</p></td>
-<td><p><strong>\</strong><em>octal digits</em></p></td>
+<td><p><span class="highlight context-highlighting"><span>\</span></span><em>octal digits</em></p></td>
 </tr>
 <tr class="row-even"><td><p>hexadecimal character</p></td>
-<td><p><strong>\x</strong> <em>hexadecimal digits</em></p></td>
+<td><p><span class="highlight context-highlighting"><span class="se">\x</span></span> <em>hexadecimal digits</em></p></td>
 </tr>
 </tbody>
 </table>
 <div class="snum docutils container" id="p4">
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
-<p>The double-quote <strong>“</strong> and question-mark <strong>?</strong> are representable either by themselves or by the escape sequences <strong>\”</strong> and <strong>\?</strong>, respectively, but the single-quote <strong>‘</strong> and the backslash <strong>\</strong> shall be represented, respectively, by the escape sequences <strong>\’</strong> and <strong>\\</strong>.</p>
+<p>The double-quote <span class="highlight context-highlighting"><span class="s">&quot;</span></span> and question-mark <span class="highlight context-highlighting"><span class="o">?</span></span> are representable either by themselves or by the escape sequences <span class="highlight context-highlighting"><span class="se">\&quot;</span></span> and <span class="highlight context-highlighting"><span class="se">\?</span></span>, respectively, but the single-quote <span class="highlight context-highlighting"><span class="sc">'</span></span> and the backslash <span class="highlight context-highlighting"><span>\</span></span> shall be represented, respectively, by the escape sequences <span class="highlight context-highlighting"><span class="se">\'</span></span> and <span class="highlight context-highlighting"><span class="se">\\</span></span>.</p>
 <div class="snum docutils container" id="p5">
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
@@ -278,7 +278,7 @@
 <div class="snum docutils container" id="p6">
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
-<p>The hexadecimal digits that follow the backslash and the letter <strong>x</strong> in a hexadecimal escape sequence are taken to be part of the construction of a single character for an integer character constant or of a single wide character for a wide character constant. The numerical value of the hexadecimal integer so formed specifies the value of the desired character or wide character.</p>
+<p>The hexadecimal digits that follow the backslash and the letter <span class="highlight context-highlighting"><span class="n">x</span></span> in a hexadecimal escape sequence are taken to be part of the construction of a single character for an integer character constant or of a single wide character for a wide character constant. The numerical value of the hexadecimal integer so formed specifies the value of the desired character or wide character.</p>
 <div class="snum docutils container" id="p7">
 <p><a class="reference internal" href="#p7"><span class="std std-ref">7</span></a></p>
 </div>
@@ -286,37 +286,37 @@
 <div class="snum docutils container" id="p8">
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
-<p>In addition, characters not in the basic character set are representable by universal character names and certain nongraphic characters are representable by escape sequences consisting of the backslash <strong>\</strong> followed by a lowercase letter: <strong>\a</strong>, <strong>\b</strong>, <strong>\f</strong>, <strong>\n</strong>, <strong>\r</strong>, <strong>\t</strong>, and <strong>\v</strong>.<a class="footnote-reference brackets" href="#note65" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>In addition, characters not in the basic character set are representable by universal character names and certain nongraphic characters are representable by escape sequences consisting of the backslash <span class="highlight context-highlighting"><span>\</span></span> followed by a lowercase letter: <span class="highlight context-highlighting"><span class="se">\a</span></span>, <span class="highlight context-highlighting"><span class="se">\b</span></span>, <span class="highlight context-highlighting"><span class="se">\f</span></span>, <span class="highlight context-highlighting"><span class="se">\n</span></span>, <span class="highlight context-highlighting"><span class="se">\r</span></span>, <span class="highlight context-highlighting"><span class="se">\t</span></span>, and <span class="highlight context-highlighting"><span class="se">\v</span></span>.<a class="footnote-reference brackets" href="#note65" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p class="rubric">Constraints</p>
 <div class="snum docutils container" id="p9">
 <p><a class="reference internal" href="#p9"><span class="std std-ref">9</span></a></p>
 </div>
-<p>The value of an octal or hexadecimal escape sequence shall be in the range of representable values for the type <span class="c-texpr sig sig-inline highlight c"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span></span> for an integer character constant, or the unsigned type corresponding to <span class="c-texpr sig sig-inline highlight c"><span class="n">wchar_t</span></span> for a wide character constant.</p>
+<p>The value of an octal or hexadecimal escape sequence shall be in the range of representable values for the type <span class="highlight context-highlighting"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span></span> for an integer character constant, or the unsigned type corresponding to <span class="highlight context-highlighting"><span class="kt">wchar_t</span></span> for a wide character constant.</p>
 <p class="rubric">Semantics</p>
 <div class="snum docutils container" id="p10">
 <p><a class="reference internal" href="#p10"><span class="std std-ref">10</span></a></p>
 </div>
-<p>An integer character constant has type <span class="c-texpr sig sig-inline highlight c"><span class="kt">int</span></span>. The value of an integer character constant containing a single character that maps to a single-byte execution character is the numerical value of the representation of the mapped character interpreted as an integer. The value of an integer character constant containing more than one character (e.g., <span class="c-texpr sig sig-inline highlight c">'ab'</span>), or containing a character or escape sequence that does not map to a single-byte execution character, is implementation-defined. If an integer character constant contains a single character or escape sequence, its value is the one that results when an object with type <span class="c-texpr sig sig-inline highlight c"><span class="kt">char</span></span> whose value is that of the single character or escape sequence is converted to type <span class="c-texpr sig sig-inline highlight c"><span class="kt">int</span></span>.</p>
+<p>An integer character constant has type <span class="highlight context-highlighting"><span class="kt">int</span></span>. The value of an integer character constant containing a single character that maps to a single-byte execution character is the numerical value of the representation of the mapped character interpreted as an integer. The value of an integer character constant containing more than one character (e.g., <span class="highlight context-highlighting"><span class="sc">'ab'</span></span>), or containing a character or escape sequence that does not map to a single-byte execution character, is implementation-defined. If an integer character constant contains a single character or escape sequence, its value is the one that results when an object with type <span class="highlight context-highlighting"><span class="kt">char</span></span> whose value is that of the single character or escape sequence is converted to type <span class="highlight context-highlighting"><span class="kt">int</span></span>.</p>
 <div class="snum docutils container" id="p11">
 <p><a class="reference internal" href="#p11"><span class="std std-ref">11</span></a></p>
 </div>
-<p>A wide character constant has type <span class="c-texpr sig sig-inline highlight c"><span class="n">wchar_t</span></span>, an integer type defined in the <a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">&lt;stddef.h&gt;</span></a> header. The value of a wide character constant containing a single multibyte character that maps to a member of the extended execution character set is the wide character corresponding to that multibyte character, as defined by the mbtowc function, with an implementation-defined current locale. The value of a wide character constant containing more than one multibyte character, or containing a multibyte character or escape sequence not represented in the extended execution character set, is implementation-defined.</p>
+<p>A wide character constant has type <span class="highlight context-highlighting"><span class="kt">wchar_t</span></span>, an integer type defined in the <a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">&lt;stddef.h&gt;</span></a> header. The value of a wide character constant containing a single multibyte character that maps to a member of the extended execution character set is the wide character corresponding to that multibyte character, as defined by the mbtowc function, with an implementation-defined current locale. The value of a wide character constant containing more than one multibyte character, or containing a multibyte character or escape sequence not represented in the extended execution character set, is implementation-defined.</p>
 <div class="snum docutils container" id="p12">
 <p><a class="reference internal" href="#p12"><span class="std std-ref">12</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The construction <span class="c-texpr sig sig-inline highlight c"><span class="sc">'\0'</span></span> is commonly used to represent the null character.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> The construction <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\0</span><span class="sc">'</span></span> is commonly used to represent the null character.</p>
 <div class="snum docutils container" id="p13">
 <p><a class="reference internal" href="#p13"><span class="std std-ref">13</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> Consider implementations that use two’s-complement representation for integers and eight bits for objects that have type <span class="c-texpr sig sig-inline highlight c"><span class="kt">char</span></span>. In an implementation in which type char has the same range of values as <span class="c-texpr sig sig-inline highlight c"><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span></span>, the integer character constant <span class="c-texpr sig sig-inline highlight c"><span class="sc">'\xFF'</span></span> has the value <span class="c-texpr sig sig-inline highlight c"><span class="o">-</span><span class="m">1</span></span>; if type <span class="c-texpr sig sig-inline highlight c"><span class="kt">char</span></span> has the same range of values as <span class="c-texpr sig sig-inline highlight c"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span></span>, the character constant <span class="c-texpr sig sig-inline highlight c"><span class="sc">'\xFF'</span></span> has the value <span class="c-texpr sig sig-inline highlight c"><span class="o">+</span><span class="m">255</span></span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> Consider implementations that use two’s-complement representation for integers and eight bits for objects that have type <span class="highlight context-highlighting"><span class="kt">char</span></span>. In an implementation in which type char has the same range of values as <span class="highlight context-highlighting"><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span></span>, the integer character constant <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\xFF</span><span class="sc">'</span></span> has the value <span class="highlight context-highlighting"><span class="mi">-1</span></span>; if type <span class="highlight context-highlighting"><span class="kt">char</span></span> has the same range of values as <span class="highlight context-highlighting"><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span></span>, the character constant <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\xFF</span><span class="sc">'</span></span> has the value <span class="highlight context-highlighting"><span class="o">+</span><span class="mi">255</span></span>.</p>
 <div class="snum docutils container" id="p14">
 <p><a class="reference internal" href="#p14"><span class="std std-ref">14</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> Even if eight bits are used for objects that have type char, the construction <span class="c-texpr sig sig-inline highlight c">'\x123'</span> specifies an integer character constant containing only one character, since a hexadecimal escape sequence is terminated only by a non-hexadecimal character. To specify an integer character constant containing the two characters whose values are <span class="c-texpr sig sig-inline highlight c"><span class="sc">'\x12'</span></span> and <span class="c-texpr sig sig-inline highlight c"><span class="sc">'3'</span></span>, the construction <span class="c-texpr sig sig-inline highlight c">'\0223'</span> may be used, since an octal escape sequence is terminated after three octal digits. (The value of this two-character integer character constant is implementation-defined.)</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> Even if eight bits are used for objects that have type char, the construction <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\x123</span><span class="sc">'</span></span> specifies an integer character constant containing only one character, since a hexadecimal escape sequence is terminated only by a non-hexadecimal character. To specify an integer character constant containing the two characters whose values are <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\x12</span><span class="sc">'</span></span> and <span class="highlight context-highlighting"><span class="sc">'</span><span class="sc">3</span><span class="sc">'</span></span>, the construction <span class="highlight context-highlighting"><span class="sc">'</span><span class="se">\022</span><span class="sc">3</span><span class="sc">'</span></span> may be used, since an octal escape sequence is terminated after three octal digits. (The value of this two-character integer character constant is implementation-defined.)</p>
 <div class="snum docutils container" id="p15">
 <p><a class="reference internal" href="#p15"><span class="std std-ref">15</span></a></p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">4</span></code> Even if 12 or more bits are used for objects that have type <span class="c-texpr sig sig-inline highlight c"><span class="n">wchar_t</span></span>, the construction <span class="c-texpr sig sig-inline highlight c">L'\1234'</span> specifies the implementation-defined value that results from the combination of the values <span class="c-texpr sig sig-inline highlight c"><span class="m">0123</span></span> and <span class="c-texpr sig sig-inline highlight c"><span class="sc">'4'</span></span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">4</span></code> Even if 12 or more bits are used for objects that have type <span class="highlight context-highlighting"><span class="kt">wchar_t</span></span>, the construction <span class="highlight context-highlighting"><span class="sa">L</span><span class="sc">'</span><span class="se">\123</span><span class="sc">4</span><span class="sc">'</span></span> specifies the implementation-defined value that results from the combination of the values <span class="highlight context-highlighting"><span class="mo">0123</span></span> and <span class="highlight context-highlighting"><span class="sc">'</span><span class="sc">4</span><span class="sc">'</span></span>.</p>
 <p class="rubric">Forward References</p>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p><a class="reference internal" href="../../../../7/17/index.html#id1"><span class="std std-ref">7.17 Common definitions &lt;stddef.h&gt;</span></a></p></li>

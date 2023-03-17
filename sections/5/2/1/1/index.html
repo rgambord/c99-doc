@@ -137,27 +137,27 @@
 </div>
 </div>
 </div>
-<p>No other trigraph sequences exist. Each <strong>?</strong> that does not begin one of the trigraphs listed above is not changed.</p>
+<p>No other trigraph sequences exist. Each <span class="highlight context-highlighting"><span class="o">?</span></span> that does not begin one of the trigraphs listed above is not changed.</p>
 <div class="snum docutils container" id="p2">
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="o">??=</span><span class="n">define</span><span class="w"> </span><span class="n">arraycheck</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="o">??</span><span class="p">(</span><span class="n">b</span><span class="o">??</span><span class="p">)</span><span class="w"> </span><span class="o">??!??!</span><span class="w"> </span><span class="n">b</span><span class="o">??</span><span class="p">(</span><span class="n">a</span><span class="o">??</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="o">??=</span><span class="n">define</span><span class="w"> </span><span class="n">arraycheck</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="o">??</span><span class="p">(</span><span class="n">b</span><span class="o">??</span><span class="p">)</span><span class="w"> </span><span class="o">??!??!</span><span class="w"> </span><span class="n">b</span><span class="o">??</span><span class="p">(</span><span class="n">a</span><span class="o">??</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>becomes</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define arraycheck(a, b) a[b] || b[a]</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#define arraycheck(a, b) a[b] || b[a]</span>
 </pre></div>
 </div>
 <div class="snum docutils container" id="p3">
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> The following source line</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Eh???/n&quot;</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="nf">printf</span><span class="p">(</span><span class="s">&quot;Eh???/n&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>becomes (after replacement of the trigraph sequence ??/)</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Eh?</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="nf">printf</span><span class="p">(</span><span class="s">&quot;Eh?</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p class="rubric">Footnotes</p>

@@ -203,15 +203,15 @@
 <p><a class="reference internal" href="#p2"><span class="std std-ref">2</span></a></p>
 </div>
 <p>The types declared are size_t and wchar_t (both described in <a class="reference internal" href="../17/index.html#id1"><span class="std std-ref">7.17</span></a>),</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">div_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">div_t</span>
 </pre></div>
 </div>
 <p>which is a structure type that is the type of the value returned by the div function,</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">ldiv_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">ldiv_t</span>
 </pre></div>
 </div>
 <p>which is a structure type that is the type of the value returned by the ldiv function, and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">lldiv_t</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">lldiv_t</span>
 </pre></div>
 </div>
 <p>which is a structure type that is the type of the value returned by the lldiv function.</p>
@@ -219,19 +219,19 @@
 <p><a class="reference internal" href="#p3"><span class="std std-ref">3</span></a></p>
 </div>
 <p>The macros defined are NULL (described in <a class="reference internal" href="../17/index.html#id1"><span class="std std-ref">7.17</span></a>);</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">EXIT_FAILURE</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">EXIT_FAILURE</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">EXIT_SUCCESS</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">EXIT_SUCCESS</span>
 </pre></div>
 </div>
 <p>which expand to integer constant expressions that can be used as the argument to the exit function to return unsuccessful or successful termination status, respectively, to the host environment;</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">RAND_MAX</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">RAND_MAX</span>
 </pre></div>
 </div>
 <p>which expands to an integer constant expression that is the maximum value returned by the rand function; and</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">MB_CUR_MAX</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="no">MB_CUR_MAX</span>
 </pre></div>
 </div>
 <p>which expands to a positive integer expression with type size_t that is the maximum number of bytes in a multibyte character for the extended character set specified by the current locale (category LC_CTYPE), which is never greater than MB_LEN_MAX.</p>
@@ -239,7 +239,7 @@
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="note257" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>See “future library directions” (<a class="reference internal" href="../26/9/index.html#id2"><span class="std std-ref">7.26.10</span></a>).</p>
+<p>See “future library directions” (<a class="reference internal" href="../26/10/index.html#id1"><span class="std std-ref">7.26.10</span></a>).</p>
 </aside>
 </aside>
 </section>

@@ -150,7 +150,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">asctime</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span><span class="w"> </span><span class="o">*</span><span class="n">timeptr</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -163,7 +163,7 @@
 </pre></div>
 </div>
 <p>using the equivalent of the following algorithm.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">asctime</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span><span class="w"> </span><span class="o">*</span><span class="n">timeptr</span><span class="p">)</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">asctime</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tm</span><span class="w"> </span><span class="o">*</span><span class="n">timeptr</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">     </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">wday_name</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="s">&quot;Sun&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wed&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fri&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sat&quot;</span>
@@ -173,7 +173,7 @@
 <span class="w">          </span><span class="s">&quot;Jul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Aug&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sep&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Oct&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nov&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Dec&quot;</span>
 <span class="w">     </span><span class="p">};</span>
 <span class="w">     </span><span class="k">static</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="mi">26</span><span class="p">];</span>
-<span class="w">       </span><span class="n">sprintf</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.3s %.3s%3d %.2d:%.2d:%.2d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nf">sprintf</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.3s %.3s%3d %.2d:%.2d:%.2d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="n">wday_name</span><span class="p">[</span><span class="n">timeptr</span><span class="o">-&gt;</span><span class="n">tm_wday</span><span class="p">],</span>
 <span class="w">            </span><span class="n">mon_name</span><span class="p">[</span><span class="n">timeptr</span><span class="o">-&gt;</span><span class="n">tm_mon</span><span class="p">],</span>
 <span class="w">            </span><span class="n">timeptr</span><span class="o">-&gt;</span><span class="n">tm_mday</span><span class="p">,</span><span class="w"> </span><span class="n">timeptr</span><span class="o">-&gt;</span><span class="n">tm_hour</span><span class="p">,</span>

@@ -192,7 +192,7 @@
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
 <p>Given the declarations</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">c_vp</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">c_vp</span><span class="p">;</span>
 <span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">vp</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">c_ip</span><span class="p">;</span>
 <span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">v_ip</span><span class="p">;</span>
@@ -201,7 +201,7 @@
 </pre></div>
 </div>
 <p>the third column in the following table is the common type that is the result of a conditional expression in which the first two columns are the second and third operands (in either order):</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">c_vp</span><span class="w">     </span><span class="n">c_ip</span><span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="n">c_vp</span><span class="w">     </span><span class="n">c_ip</span><span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span>
 <span class="n">v_ip</span><span class="w">     </span><span class="mi">0</span><span class="w">         </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span>
 <span class="n">c_ip</span><span class="w">     </span><span class="n">v_ip</span><span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">volatile</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span>
 <span class="n">vp</span><span class="w">       </span><span class="n">c_cp</span><span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span>

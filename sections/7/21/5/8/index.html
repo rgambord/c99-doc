@@ -156,7 +156,7 @@
 <div class="snum docutils container" id="p1">
 <p><a class="reference internal" href="#p1"><span class="std std-ref">1</span></a></p>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">strtok</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span>
 <span class="w">     </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">restrict</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span>
 </pre></div>
@@ -191,13 +191,13 @@
 <p><a class="reference internal" href="#p8"><span class="std std-ref">8</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
 <span class="k">static</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;?a???b,,,#c&quot;</span><span class="p">;</span>
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">;</span>
-<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="n">strtok</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="p">);</span><span class="w">       </span><span class="c1">//   t   points to the token &quot;a&quot;</span>
-<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">//   t   points to the token &quot;??b&quot;</span>
-<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#,&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">//   t   points to the token &quot;c&quot;</span>
-<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">//   t   is a null pointer</span>
+<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="nf">strtok</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="p">);</span><span class="w">       </span><span class="c1">//   t   points to the token &quot;a&quot;</span>
+<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="nf">strtok</span><span class="p">(</span><span class="no">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">//   t   points to the token &quot;??b&quot;</span>
+<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="nf">strtok</span><span class="p">(</span><span class="no">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#,&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">//   t   points to the token &quot;c&quot;</span>
+<span class="n">t</span><span class="w">   </span><span class="o">=</span><span class="w">   </span><span class="nf">strtok</span><span class="p">(</span><span class="no">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">//   t   is a null pointer</span>
 </pre></div>
 </div>
 </section>

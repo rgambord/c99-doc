@@ -153,7 +153,7 @@
 <p><a class="reference internal" href="#p4"><span class="std std-ref">4</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">1</span></code> If a function call is evaluated as an expression statement for its side effects only, the discarding of its value may be made explicit by converting the expression to a void expression by means of a cast:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
 <span class="cm">/* ... */</span>
 <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">p</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
@@ -162,9 +162,9 @@
 <p><a class="reference internal" href="#p5"><span class="std std-ref">5</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">2</span></code> In the program fragment</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">;</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">;</span>
 <span class="cm">/* ... */</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="o">++</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="o">++</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;</span><span class="se">\0</span><span class="sc">&#39;</span><span class="p">)</span>
 <span class="w">        </span><span class="p">;</span>
 </pre></div>
 </div>
@@ -173,7 +173,7 @@
 <p><a class="reference internal" href="#p6"><span class="std std-ref">6</span></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">EXAMPLE</span> <span class="pre">3</span></code> A null statement may also be used to carry a label just before the closing } of a compound statement.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">loop1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-c99 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">loop1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="cm">/* ... */</span>
 <span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">loop2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">              </span><span class="cm">/* ... */</span>
